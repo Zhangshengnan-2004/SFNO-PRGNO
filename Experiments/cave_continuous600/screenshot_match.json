@@ -1,0 +1,41 @@
+{
+  "train_seed": 42,
+  "test_seed": 1,
+  "epochs": 600,
+  "train_sf": 4,
+  "models": {
+    "SFNO": "sfno",
+    "SPGFNet": "sfno_prgno_v3 with ablation=deform_stage3"
+  },
+  "note": "Screenshot values match seed42, not the three-seed averages.",
+  "rows": [
+    {
+      "model": "sfno",
+      "sf": 4,
+      "psnr": 51.897,
+      "sam": 2.027,
+      "ergas": 0.7789
+    },
+    {
+      "model": "sfno",
+      "sf": 8,
+      "psnr": 49.5333,
+      "sam": 2.5104,
+      "ergas": 0.5371
+    },
+    {
+      "model": "v3_stage3",
+      "sf": 4,
+      "psnr": 52.0181,
+      "sam": 1.9487,
+      "ergas": 0.7661
+    },
+    {
+      "model": "v3_stage3",
+      "sf": 8,
+      "psnr": 49.7121,
+      "sam": 2.4015,
+      "ergas": 0.5298
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "phase": "training",
+  "epoch": 16,
+  "epochs": 600,
+  "patches": 500,
+  "samples": 1000,
+  "optimizer_steps": 15500,
+  "lr": 0.0001,
+  "L1": 0.004202937458641827,
+  "elapsed_seconds": 23.17976531200111
+}

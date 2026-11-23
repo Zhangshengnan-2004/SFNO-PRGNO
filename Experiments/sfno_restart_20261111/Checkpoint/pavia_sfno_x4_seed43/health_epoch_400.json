@@ -1,0 +1,15 @@
+{
+  "epoch": 400,
+  "optimizer_steps": 8000,
+  "convergence_guard_active": true,
+  "better_than_bicubic": true,
+  "consecutive_failures": 0,
+  "L1": 0.003310679516289383,
+  "bicubic_L1": 0.012712150113657117,
+  "psnr": 48.66098043740162,
+  "bicubic_psnr": 40.06910702674382,
+  "sam_degrees": 5.0374960423431725,
+  "bicubic_sam_degrees": 6.6297854385080175,
+  "ergas": 4.404482000594957,
+  "bicubic_ergas": 7.091208991263288
+}

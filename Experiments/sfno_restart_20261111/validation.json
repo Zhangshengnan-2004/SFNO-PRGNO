@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "protocol_sha256": "6ca1db3308a2ae506dfc85984a7cf091ef5e4bde21e27a415938c0b922aff16d",
+  "technical_preflight_passed": true,
+  "budget_600x1000": true,
+  "optimizer_updates_per_seed": 12000,
+  "paper_known_optimizer_settings": true,
+  "shared_pr_accumulation_verified": true,
+  "runtime_quality_guards": true,
+  "convergence_policy_warmup_and_patience_verified": true,
+  "save_before_stop_verified": {
+    "path": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_restart_20261111/Preflight/forced_stop_1794368660537372920",
+    "epoch_saved": 1,
+    "forced_bad_loss_stopped": true
+  },
+  "training_convergence_not_yet_assessed": true,
+  "exact_resume_model_and_adam": true,
+  "full_test_entry_and_logs": true,
+  "persistent_preflight_path": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_restart_20261111/Preflight/resume_1794368636220065180",
+  "details": [
+    {
+      "dataset": "pavia",
+      "micro_batch": 5,
+      "accumulation": 10,
+      "finite_effective_batch50_update": true,
+      "sfno_gradient_equivalence": {
+        "true_reference_batch": 4,
+        "micro_reference_batch": 2,
+        "gradient_relative_l2_error": 2.6571963049147584e-07,
+        "pr_rng_equivalent": true
+      },
+      "monitor_rng_and_mode_preserved": true,
+      "initial_micro_losses": [
+        0.4089731276035309,
+        0.4344359338283539,
+        0.4284004867076874,
+        0.437648743391037,
+        0.4039853513240814,
+        0.43669626116752625,
+        0.44124338030815125,
+        0.41589054465293884,
+        0.4283845126628876,
+        0.4177005887031555
+      ],
+      "peak_training_allocated_bytes": 2343757312,
+      "technical_probe": {
+        "L1": 0.297721303999424,
+        "bicubic_L1": 0.012712150113657117,
+        "psnr": 17.958985342257712,
+        "bicubic_psnr": 40.06910702674382,
+        "sam_degrees": 54.08218838316367,
+        "bicubic_sam_degrees": 6.6297854385080175,
+        "ergas": 842.9898064868266,
+        "bicubic_ergas": 7.091208991263288
+      }
+    },
+    {
+      "dataset": "chikusei",
+      "micro_batch": 5,
+      "accumulation": 10,
+      "finite_effective_batch50_update": true,
+      "sfno_gradient_equivalence": {
+        "true_reference_batch": 4,
+        "micro_reference_batch": 2,
+        "gradient_relative_l2_error": 2.9478542056981946e-07,
+        "pr_rng_equivalent": true
+      },
+      "monitor_rng_and_mode_preserved": true,
+      "initial_micro_losses": [
+        0.43928924202919006,
+        0.44400888681411743,
+        0.44833412766456604,
+        0.42928144335746765,
+        0.4137294888496399,
+        0.427411288022995,
+        0.43429967761039734,
+        0.4533211886882782,
+        0.44747334718704224,
+        0.4320116937160492
+      ],
+      "peak_training_allocated_bytes": 2751677440,
+      "technical_probe": {
+        "L1": 0.3114573508501053,
+        "bicubic_L1": 0.014035384869202971,
+        "psnr": 17.23679126653991,
+        "bicubic_psnr": 35.601290604505124,
+        "sam_degrees": 49.346409102837114,
+        "bicubic_sam_degrees": 3.0829277861430873,
+        "ergas": 200.58158069072437,
+        "bicubic_ergas": 6.235433173706528
+      }
+    }
+  ]
+}

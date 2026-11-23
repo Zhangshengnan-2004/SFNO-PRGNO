@@ -1,0 +1,381 @@
+{
+  "requested_at": "2026-11-10T20:12:11.808186+08:00",
+  "request": "覆盖当前未完成100轮训练，六组全部从头600轮×1000块",
+  "old_protocol": {
+    "protocol": "sfno_corrected_v4_20261110",
+    "model": "SFNO",
+    "defaults": {
+      "epochs": 100,
+      "samples": 6000,
+      "micro_batch": 5,
+      "effective_batch": 50,
+      "lr": 0.0002,
+      "lr_gamma": 0.95,
+      "train_sf": 4,
+      "test_seed": 1,
+      "patch_size": 64,
+      "save_every": 20
+    },
+    "train_seeds": [
+      42,
+      43,
+      44
+    ],
+    "known_paper_settings": {
+      "patch": 64,
+      "effective_batch": 50,
+      "optimizer": "Adam",
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "initial_lr": 0.0002,
+      "gamma": 0.95,
+      "init": "He"
+    },
+    "implementation": {
+      "precision": "FP32",
+      "amp": false,
+      "workers": 0,
+      "deterministic": true,
+      "loss": "mean per-image GT-nonzero masked L1",
+      "initialization": "Conv2d/Linear kaiming_normal fan_in ReLU; bias0; normalization defaults retained",
+      "schedule": "lr(epoch_index)=2e-4*0.95**epoch_index; decay after each completed epoch",
+      "optimizer_updates_per_epoch": 120,
+      "total_optimizer_updates": 12000,
+      "total_patches_per_seed": 600000,
+      "eval": "common_hsi_eval_v1; test_seed1 independent of train seed; x4 trained, x4/x8 evaluated"
+    },
+    "datasets": {
+      "pavia": {
+        "hsi_channels": 102,
+        "msi_channels": 4,
+        "normalization": 8000,
+        "response_file": "response_pavia.npy",
+        "response_sha256": "ed9305859acdcc572d7466f18c14fde43189ac95c44bc3a5dc220109a438bb3e",
+        "raw_sha256": {
+          "/home/zsn/projects/SFNO-PRGNO/Pavia/Data/Pavia.mat": "b60341da323fd271cd97dd6d7a69514d385ccd7fdfc5a60c4ff5994b047f152e"
+        },
+        "train_rectangles_yxhw": [
+          [
+            0,
+            0,
+            704,
+            715
+          ]
+        ],
+        "test_origins_yx": [
+          [
+            712,
+            0
+          ],
+          [
+            712,
+            192
+          ],
+          [
+            904,
+            0
+          ],
+          [
+            904,
+            192
+          ]
+        ],
+        "test_size": {
+          "4": 192,
+          "8": 192
+        },
+        "response_source": "/home/zsn/projects/SHOTUN-main/data/pavia/paviac_256_s8.mat",
+        "response_source_sha256": "0749421b36cf2d4aa1803e5b3e70deb5625e3b2495177b5343708db9a0fd6e1b",
+        "verification": {
+          "ref_crop_origin": [
+            246,
+            235
+          ],
+          "ref_crop_max_abs": 0.0,
+          "msi_reconstruction_max_abs": 2.220446049250313e-16,
+          "note": "Only validates already-training-region crop; this 256px sample is not used as a test scene"
+        },
+        "physical_sensor": "unconfirmed; reusable supplied 102x4 matrix, not claimed as SFNO author SRF"
+      },
+      "chikusei": {
+        "hsi_channels": 128,
+        "msi_channels": 3,
+        "normalization": 10000,
+        "response_file": "response_chikusei.npy",
+        "response_sha256": "e8e300a49c65bb47b371571053a29c307a45d5ca24a4c08828c4d03eb2d2ab7f",
+        "raw_sha256": {
+          "/home/zsn/projects/SFNO-PRGNO/Chikusei/HyperspecVNIR_Chikusei_20140729.bsq": "89715ed9a6ab725644707b2c1732642dd1634755f3914d0ecec9bc77f62a741b",
+          "/home/zsn/projects/SFNO-PRGNO/Chikusei/HyperspecVNIR_Chikusei_20140729.hdr": "8e68b2d13005a96d8d5e057e626c47dd8eb1993c78d4492038a49544360d5d14"
+        },
+        "train_rectangles_yxhw": [
+          [
+            0,
+            0,
+            500,
+            500
+          ],
+          [
+            0,
+            500,
+            500,
+            500
+          ],
+          [
+            0,
+            1000,
+            500,
+            500
+          ],
+          [
+            0,
+            1500,
+            500,
+            500
+          ],
+          [
+            500,
+            0,
+            500,
+            500
+          ],
+          [
+            500,
+            500,
+            500,
+            500
+          ],
+          [
+            500,
+            1000,
+            500,
+            500
+          ],
+          [
+            500,
+            1500,
+            500,
+            500
+          ],
+          [
+            1000,
+            0,
+            500,
+            500
+          ],
+          [
+            1000,
+            500,
+            500,
+            500
+          ],
+          [
+            1000,
+            1000,
+            500,
+            500
+          ],
+          [
+            1000,
+            1500,
+            500,
+            500
+          ]
+        ],
+        "test_origins_yx": [
+          [
+            1500,
+            0
+          ],
+          [
+            1500,
+            500
+          ],
+          [
+            1500,
+            1000
+          ],
+          [
+            1500,
+            1500
+          ],
+          [
+            2000,
+            0
+          ],
+          [
+            2000,
+            500
+          ],
+          [
+            2000,
+            1000
+          ],
+          [
+            2000,
+            1500
+          ]
+        ],
+        "test_size": {
+          "4": 500,
+          "8": 496
+        },
+        "response_source": "AcademySoftwareFoundation/rawtoaces-data Canon EOS 5D Mark II",
+        "response_source_sha256": "3dd2394e07f00c3fff51de631394ff67b4b72463657f4383ac14855969b93c14",
+        "response_interpolation": "HDR wavelengths; linear; zero outside380-780nm; row sum1"
+      }
+    },
+    "assumptions": [
+      "Approximate reproduction; SFNO-author MSI, exact test coordinates and full training configuration unavailable.",
+      "100 epochs x6000 patches fixes600000 samples per seed, equal to prior600x1000 exposure; not author-confirmed epochs.",
+      "Effective batch50 via microbatch5 x10 accumulation; native PR randperm shared within each microbatch, unlike one true batch50.",
+      "He normal fan_in ReLU initialization applied to Conv2d/Linear; biases zero; norm layers unchanged; exact author layer rules unconfirmed.",
+      "Per-image GT-nonzero masked L1 chosen as baseline objective; paper training loss not verified; no joint spectral/relative terms.",
+      "Fixed normalization8000/10000 and current disjoint spatial splits retained; not tuned against paper/test results.",
+      "Chikusei eight test blocks follow4.1;4.2 says six; exact author test set remains unresolved.",
+      "Periodic sigma2 degradation, kernel size sf, half-pixel center, phase sf/2-1; boundary details not author-confirmed.",
+      "No added noise; test invalid pixels nearest-filled for input, excluded from common metrics.",
+      "Final checkpoint selected by fixed budget only; no test-based early stopping/model selection.",
+      "SFNO only; V3-stage3 deferred until this protocol is reviewed."
+    ],
+    "references": {
+      "dtdnml_simulation_url": "https://github.com/Shawn-H-Wang/DTDNML/blob/1a19a8722924e6ed7f310bff3bbb80eef2036df3/simulation/simulation.m",
+      "dtdnml_simulation_sha256": "2d013c031def595a0a7de25fe1c4fecbcede726d6539f3ea376f98ba03f97e45",
+      "note": "Upstream simulation loads external SRF without naming sensor; only supplied matrix is reused, not its sigma0.5/noise pipeline"
+    },
+    "source_hashes": {
+      "data.py": "9f8594d78aa9a195d7e36eff3af5775ff959b3238199d78d2384e3f354d7b5a2",
+      "inference_memory.py": "1600d32995bba46ee65db9dace812e5f49cddfa464c636f637e8a1f42ca62424",
+      "metrics.py": "4914c61635d9b2d0d8e1775f0b822288632292bf7920e422d787393cfb5f114a",
+      "model/SFNO.py": "d167acbd8d58cf4e38406855f8f5c58feeaa6b9fadd47f6834843f1de337ad18",
+      "model/Utils.py": "ab0b9c947eb099184cec989b4c7e8dd4cd764a9cc1a220d8cdcc02c7ecfed2dd",
+      "model/VectorAttention.py": "ac02fe488c05fa802ca1762607e0b67b7989cc3b63a018e3970cc9584762e7f7",
+      "prepare.py": "e378b4b1cb6f0f58590a0606e264018489897458179345c3d5c52b878b9b5f71",
+      "protocol.py": "82ff8510660ce4594f82221ee26f17a86382d497cbbd7c268b0f9e37d9eb383e",
+      "run.py": "de64e342e7413ed5ade97d9da39a5db90cd3b421f8f980eebe9a5f7f28847194",
+      "run_queue.py": "e1a8e2cec40e9b8cd25b210d26ba82658c768e1a3733e9cda4637b199e3a82b7",
+      "validate.py": "d5e4f07b75bcdbd9c95ed8455e2ac826fd4b36b74350e9448762f03f63eddda0"
+    }
+  },
+  "old_progress": {
+    "phase": "training",
+    "epoch": 39,
+    "epochs": 100,
+    "patches": 4500,
+    "samples": 6000,
+    "optimizer_steps": 4650,
+    "lr": 2.8479148269274936e-05,
+    "L1": 0.0786050348314974,
+    "elapsed_seconds": 156.13905007392168
+  },
+  "protected_historical_hashes_verified": {
+    "CAVE/Model/SFNO.py": "d167acbd8d58cf4e38406855f8f5c58feeaa6b9fadd47f6834843f1de337ad18",
+    "CAVE/Model/SFNO_PRGNO_V3.py": "738b26323b25c99eccd50220248f27b621386a8cf747a62150eb8cc21e061cec",
+    "CAVE/Model/VectorAttention.py": "ac02fe488c05fa802ca1762607e0b67b7989cc3b63a018e3970cc9584762e7f7",
+    "CAVE/reproduction/baseline_stage3_three_seeds/mean_std.md": "acc143250f8e003a25c05d056633090453c93570ca696ec5700aa457be3b5d50",
+    "Chikusei/HyperspecVNIR_Chikusei_20140729.bsq": "89715ed9a6ab725644707b2c1732642dd1634755f3914d0ecec9bc77f62a741b",
+    "Chikusei/HyperspecVNIR_Chikusei_20140729.hdr": "8e68b2d13005a96d8d5e057e626c47dd8eb1993c78d4492038a49544360d5d14",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/config.json": "95c2ffc6e327c9af1895d4269464befad3502e170780ae2341938e9f24ea5ae8",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/epoch_200.pth": "b29ae7925734fea930c099730b4af9b6a45ce4f4a0fa208d38c529eeef6c2cbb",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/epoch_400.pth": "faba06a7dafc3350b88920c575fc998f094ff4ce9cd3f23e8932183b059a6ee2",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/epoch_600.pth": "1f0a69a3c83745d193708bf1f3dd7ef6ffd5a219258cd64e61f81138869814b4",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/last.pth": "1f0a69a3c83745d193708bf1f3dd7ef6ffd5a219258cd64e61f81138869814b4",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/last_test_x4.json": "485375e274ae44df8586796b02c3fe8199e84a266631ab20f41ce2c5c848f4a0",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/last_test_x8.json": "efdb1a584d71f4d5fa5abb275f2baf88ade19eea966ee78a23166729fd0b4302",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/response.npy": "e8e300a49c65bb47b371571053a29c307a45d5ca24a4c08828c4d03eb2d2ab7f",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/test.log": "9ed2071666094dc9621a6878fa5fcb639b47735375f45fc5545c2d6578479578",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/test_x8.log": "c7ae2208dcfc1969463a95636adf14cf9fc463f234f3414474bf82fd2740995e",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/train.csv": "d341041037f36a552bf8461e7f9e201bf996862ad9e8febc3511b59906b32fcd",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/config.json": "fb1ebfeed0941737fa74f4aa284fa56849fb0e958fe2fae0ffcdcf19d9e41c98",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_200.pth": "25d4cfaddbfcbe0bd27239e9528fc8ad8928dd8012a7b3e25e1f931a8ea1ffc6",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_400.pth": "2977fe168a64d9df6f8ffc3df9623471935c9b2324b5434cb774c28a6e945dc7",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_600.pth": "40159259dd02e082f2cc7a6ba78c911493847051028000fc3f0e1e106cb919c0",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last.pth": "40159259dd02e082f2cc7a6ba78c911493847051028000fc3f0e1e106cb919c0",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x4.json": "181cfaedb8dceff678821dfa1956b989b72d4af2d42f19326cd751c6dabb34d8",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x8.json": "d3857f5756bd9c9b92c7e64833787710884416490017b7de6707e72c3ea0830d",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/response.npy": "e8e300a49c65bb47b371571053a29c307a45d5ca24a4c08828c4d03eb2d2ab7f",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/test.log": "05aa543581c73ae9f571a402afc4a6c6051c8e98e8049be409216056081d90bf",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/test_x8.log": "e2acdb1faa39b6d296370575100f80311af005b034ab5dfca847c7e145530548",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/train.csv": "0e8372c2f4ae03af478d92fde497bdca91c1949a244ef7da4a3d35035ac83d8a",
+    "Chikusei/protocol_v3_joint_loss/Runs/comparison_seed42/execution.log": "abdf3f2656d59adbe2085a9dd2b724bf860c5bd841c7513311c0c3105026305a",
+    "Chikusei/protocol_v3_joint_loss/Runs/comparison_seed42/lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Chikusei/protocol_v3_joint_loss/Runs/comparison_seed42/status.json": "cfd23b4cc2b464bae414ba327bc424c2deecefa93747cdfabbcbd69c3f843750",
+    "Chikusei/protocol_v3_joint_loss/Runs/sfno_continuous600_x4_seed42/lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Chikusei/protocol_v3_joint_loss/Runs/sfno_continuous600_x4_seed42/status.json": "2e29bc03076d47e170e9d01cc63fff7083de0b4c4dc947bdfd2c1d152b6b2ac0",
+    "Chikusei/protocol_v3_joint_loss/Runs/sfno_continuous600_x4_seed42/test_x4.log": "8f788539a784d74b36742f44774f449d8e48fa52d336e92b1641dfa35a25fb79",
+    "Chikusei/protocol_v3_joint_loss/Runs/sfno_continuous600_x4_seed42/test_x8.log": "336e68a08010e6b631dd15c5283368e185041873e9fd28f710df69cd3f035086",
+    "Chikusei/protocol_v3_joint_loss/Runs/sfno_continuous600_x4_seed42/train.log": "68f6cd19ad7adbee58ab67803119dd1109d6ff88962bca35907c6a33d803dcd4",
+    "Chikusei/protocol_v3_joint_loss/Runs/v3_deform_stage3_continuous600_x4_seed42/lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Chikusei/protocol_v3_joint_loss/Runs/v3_deform_stage3_continuous600_x4_seed42/status.json": "bd6a22b4119eba3647c55260ba7346bb1708154fa158b7aac8e348ffd7ef45f4",
+    "Chikusei/protocol_v3_joint_loss/Runs/v3_deform_stage3_continuous600_x4_seed42/test_x4.log": "287ca5bf5a565a82d6ea0cf01ba2d10dd7f12caf02f9e736f0d0f34857f0aba0",
+    "Chikusei/protocol_v3_joint_loss/Runs/v3_deform_stage3_continuous600_x4_seed42/test_x8.log": "a0c61ac0457cfb3ce709f79ede85efa1cb65af721c202dab2ada3a587ecb47ef",
+    "Chikusei/protocol_v3_joint_loss/Runs/v3_deform_stage3_continuous600_x4_seed42/train.log": "597c0da4446a932e3c48d9fb15a65204ef1ebd4f751b49e3fb6b8a10b29c9cc8",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/config.json": "2ac1b11f2af6829722d912655f4d4fee7163f1b1f20da5347ac8e61a9c12472c",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/epoch_200.pth": "b56644d8c4a4ac9d1f38b7afd24271e9d4cb77d92d2a7ad5f4c13167aa0b6bcd",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/epoch_400.pth": "af0df5726488524ad77685a6ec792937a34adb2efc2eab28b39c0fa9fb20684a",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/epoch_600.pth": "0eb4eb75b6f18609a6b80238b8b59d171d0e509ef66a191d11265ded3314ffab",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/last.pth": "0eb4eb75b6f18609a6b80238b8b59d171d0e509ef66a191d11265ded3314ffab",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/last_test_x4.json": "554bd302691018355eaad2819ab8375ea2fedfb28639ecfcfdb669a746fd6ac7",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/last_test_x8.json": "d54f995ec03c963f4a09718dbc8ba8caeee8686ac217c30acb71286bb68606f0",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/response.npy": "eaf3468b8b8184c9d69af3f1c1f3fc42fe6a7ae0fce08c2327e548d4b3aa4bf9",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/test.log": "c8072898c392b9d7245234fef2c82157f53f66704a7d86f59dc693e4ed9be5a1",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/test_x8.log": "10490d306bd4dea0902e68483a9d1eda212254366abd9174013a25a75d11e1d5",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/train.csv": "6993f7c5a1faef60c03c88049caa47c3874e2531d3385fa380070a86f1a5f41d",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/config.json": "32c503bd94f1b502c7f22845a3d0a3e3e4b3e396efdb56f7cb246e1bce0b7b8c",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_200.pth": "6ba246c7be8dd5b5bb6288fbb86b2cef5faa324941881972c5d5cdb1e861b45e",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_400.pth": "1fb03204cc733804289b5068caa7c25699de974124ce1c7c9cf781df071f45e0",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_600.pth": "463682b4bc466daaa66a0e63aa44d586dbac680895e1a998f9a1b764573e5875",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last.pth": "463682b4bc466daaa66a0e63aa44d586dbac680895e1a998f9a1b764573e5875",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x4.json": "e1dc593a473e9c64f408195a52b2ef87320a388009e2a48ebe4afe9d61832a1b",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x8.json": "4ffd0130b05c4f8b02ea7c261150f28e874bb32df69643df8a77ee46943f7d2f",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/response.npy": "eaf3468b8b8184c9d69af3f1c1f3fc42fe6a7ae0fce08c2327e548d4b3aa4bf9",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/test.log": "cc4055c00595b28326b140ebc47c1ffb823a6e0f26e9979ac0929edb961b250b",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/test_x8.log": "6455328d2359e7c4c5f46c0cce4fa07cde30ab2bb2f5b386d287acffee111b84",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/train.csv": "4e60c7c54b3da6944311d63e787072956be937e35f3933f6a05b11741f7b101a",
+    "Pavia/Data/Pavia.mat": "b60341da323fd271cd97dd6d7a69514d385ccd7fdfc5a60c4ff5994b047f152e",
+    "Pavia/Runs/sfno_continuous600_x4_seed42/lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Pavia/Runs/sfno_continuous600_x4_seed42/runner.log": "73eddd78fcdac53b36207372d35df8502e82d243232dc1692a4710c26185f0df",
+    "Pavia/Runs/sfno_continuous600_x4_seed42/status.json": "775eb9a063a6024813e39a32c51dbd0c51532c0f06b49396f00ee9cbd8bfa59e",
+    "Pavia/Runs/sfno_continuous600_x4_seed42/test_x4.log": "51583b0765748080f8da99fccd058028856c8d83c4afb3c850ab377a71d3a35c",
+    "Pavia/Runs/sfno_continuous600_x4_seed42/test_x8.log": "34ed71c8b96cff84422d1a93ccf316b7ed31a24a02a36843e729d59c596453d5",
+    "Pavia/Runs/sfno_continuous600_x4_seed42/train.log": "8ab6c9d4977fb9f03fc204d0abd412227b88b2625cebe2d86fc9c1c6e7ab5c25",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42/lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42/runner.log": "65e7b77c2912e3b9e6163c3693b0454e1a3460a80b218b1601e5218e9a9987da",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42/status.json": "78422ca5110d71ae415a9e1f26a78090bc823353526aebef1033e886c937093b",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42/test_x4.log": "cd1a0806bf31dbdaea4ebbd85cdc9eabbdd59dfbaea3bb74df0bfc1cb26df922",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42/test_x8.log": "7199efef564c67df507277146e3b8ff44722356a97c6a2dab570bedf6c578672",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42/train.log": "9c103a6f430401e74b7e178ea96c2936e1f63c510369ae19d648b7dd93ea9368"
+  },
+  "old_processes_stopped": [
+    580579,
+    580582
+  ],
+  "new_jobs": [
+    [
+      "pavia",
+      42
+    ],
+    [
+      "chikusei",
+      42
+    ],
+    [
+      "pavia",
+      43
+    ],
+    [
+      "chikusei",
+      43
+    ],
+    [
+      "pavia",
+      44
+    ],
+    [
+      "chikusei",
+      44
+    ]
+  ]
+}

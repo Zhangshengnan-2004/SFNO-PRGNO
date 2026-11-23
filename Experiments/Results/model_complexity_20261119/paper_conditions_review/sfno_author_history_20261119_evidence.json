@@ -1,0 +1,238 @@
+{
+  "upstream": "https://github.com/weili419/SFNO",
+  "head": "156fecb52c230e554d46e9c3be8533263fa9eb75",
+  "commit_count": 20,
+  "commits": [
+    "156fecb52c230e554d46e9c3be8533263fa9eb75 2025-11-30T16:28:00+08:00 Update README.md",
+    "ec7686ecc6e1461cbb9aa3f3993fc88e1802ac2e 2025-11-30T15:44:37+08:00 Update README.md",
+    "a1b4651ade0d9ccbc8100ca59c28a86cb2559b0a 2025-11-30T13:29:52+08:00 Update README.md",
+    "350122d299c20548d29129e0b4d92b89afffcfb4 2025-11-30T12:59:27+08:00 update",
+    "702eca549001629d26324949841830b58111f037 2025-06-17T14:59:38+08:00 Update README.md",
+    "250109424da0032e13f90ff40f1e38480511d98c 2025-06-17T14:58:09+08:00 Add files via upload",
+    "78781ef41b3b0437cd8a4774e352bd7901dadd1a 2025-06-17T14:53:59+08:00 Update README.md",
+    "bcc00a10261828d5b76be42b0b4750834b0cb79e 2025-05-27T14:15:22+08:00 Update README.md",
+    "89394b06dcdb08ab6e2a470fe98e3f07bbfd7255 2025-05-27T14:10:29+08:00 Add files via upload",
+    "554a19653c9186b62b0c9f86ee75e829dbae8e2b 2025-05-27T14:10:17+08:00 Update SFNO.py",
+    "be640cc6d852acf2fc4e98e342d488940bf09690 2025-05-27T14:09:59+08:00 Create SFNO.py",
+    "b3056e0fdbaffef9555c31fb9ae4bc3d6f383f10 2025-05-27T14:08:30+08:00 Delete CAVE/Model directory",
+    "21169b5309c3d129f4261c8c9dc68d91412c4348 2025-05-27T14:03:50+08:00 Model for cave",
+    "1b34a7eb2ae15c2bf80948da0950e86ff09a9cbd 2025-05-27T14:03:18+08:00 Create VectorAttention",
+    "466650eb72841cad67c08cad4b142531af95f155 2025-05-27T14:02:12+08:00 Delete CAVE/Model",
+    "89760331092afd6392aeb48604778a5511c61e5b 2025-05-27T14:00:44+08:00 Model",
+    "218c84f505449b662d6f479780ceacbbcf5900fa 2025-05-26T19:47:49+08:00 Update README.md",
+    "f2ad6a03ed5ec41a7619843d9eb4f7d210298c29 2025-05-26T17:48:07+08:00 Update README.md",
+    "909f55b4c92d78eeaa3aabd60850bbcc0df1bf1e 2025-05-26T17:39:38+08:00 Spatial–Spectral Fusion Neural Operator Demo",
+    "7d1e5bd294657810b22dda812ce6f5d04f30e992 2025-05-26T17:15:00+08:00 Initial commit"
+  ],
+  "refs": [
+    "156fecb52c230e554d46e9c3be8533263fa9eb75 refs/heads/main"
+  ],
+  "all_historical_paths": [
+    "Assets/framework.png",
+    "CAVE/CAVE_Dataset.py",
+    "CAVE/Checkpoint/BestModel_ts.pt",
+    "CAVE/Data/Test/Test.txt",
+    "CAVE/Data/Train/Train.txt",
+    "CAVE/Model",
+    "CAVE/Model/SFNO.py",
+    "CAVE/Model/VectorAttention",
+    "CAVE/Model/VectorAttention.py",
+    "CAVE/Pypher.py",
+    "CAVE/Result/jelly_beans_11.png",
+    "CAVE/Result/jelly_beans_16.png",
+    "CAVE/Result/jelly_beans_21.png",
+    "CAVE/Result/jelly_beans_26.png",
+    "CAVE/Result/jelly_beans_31.png",
+    "CAVE/Result/jelly_beans_6.png",
+    "CAVE/Result/oil_painting_11.png",
+    "CAVE/Result/oil_painting_16.png",
+    "CAVE/Result/oil_painting_21.png",
+    "CAVE/Result/oil_painting_26.png",
+    "CAVE/Result/oil_painting_31.png",
+    "CAVE/Result/oil_painting_6.png",
+    "CAVE/Result/paints_11.png",
+    "CAVE/Result/paints_16.png",
+    "CAVE/Result/paints_21.png",
+    "CAVE/Result/paints_26.png",
+    "CAVE/Result/paints_31.png",
+    "CAVE/Result/paints_6.png",
+    "CAVE/Result/photo_and_face_11.png",
+    "CAVE/Result/photo_and_face_16.png",
+    "CAVE/Result/photo_and_face_21.png",
+    "CAVE/Result/photo_and_face_26.png",
+    "CAVE/Result/photo_and_face_31.png",
+    "CAVE/Result/photo_and_face_6.png",
+    "CAVE/Result/pompoms_11.png",
+    "CAVE/Result/pompoms_16.png",
+    "CAVE/Result/pompoms_21.png",
+    "CAVE/Result/pompoms_26.png",
+    "CAVE/Result/pompoms_31.png",
+    "CAVE/Result/pompoms_6.png",
+    "CAVE/Result/real_and_fake_apples_11.png",
+    "CAVE/Result/real_and_fake_apples_16.png",
+    "CAVE/Result/real_and_fake_apples_21.png",
+    "CAVE/Result/real_and_fake_apples_26.png",
+    "CAVE/Result/real_and_fake_apples_31.png",
+    "CAVE/Result/real_and_fake_apples_6.png",
+    "CAVE/Result/real_and_fake_peppers_11.png",
+    "CAVE/Result/real_and_fake_peppers_16.png",
+    "CAVE/Result/real_and_fake_peppers_21.png",
+    "CAVE/Result/real_and_fake_peppers_26.png",
+    "CAVE/Result/real_and_fake_peppers_31.png",
+    "CAVE/Result/real_and_fake_peppers_6.png",
+    "CAVE/Result/sponges_11.png",
+    "CAVE/Result/sponges_16.png",
+    "CAVE/Result/sponges_21.png",
+    "CAVE/Result/sponges_26.png",
+    "CAVE/Result/sponges_31.png",
+    "CAVE/Result/sponges_6.png",
+    "CAVE/Result/stuffed_toys_11.png",
+    "CAVE/Result/stuffed_toys_16.png",
+    "CAVE/Result/stuffed_toys_21.png",
+    "CAVE/Result/stuffed_toys_26.png",
+    "CAVE/Result/stuffed_toys_31.png",
+    "CAVE/Result/stuffed_toys_6.png",
+    "CAVE/Result/superballs_11.png",
+    "CAVE/Result/superballs_16.png",
+    "CAVE/Result/superballs_21.png",
+    "CAVE/Result/superballs_26.png",
+    "CAVE/Result/superballs_31.png",
+    "CAVE/Result/superballs_6.png",
+    "CAVE/Result/thread_spools_11.png",
+    "CAVE/Result/thread_spools_16.png",
+    "CAVE/Result/thread_spools_21.png",
+    "CAVE/Result/thread_spools_26.png",
+    "CAVE/Result/thread_spools_31.png",
+    "CAVE/Result/thread_spools_6.png",
+    "CAVE/Result/watercolors_11.png",
+    "CAVE/Result/watercolors_16.png",
+    "CAVE/Result/watercolors_21.png",
+    "CAVE/Result/watercolors_26.png",
+    "CAVE/Result/watercolors_31.png",
+    "CAVE/Result/watercolors_6.png",
+    "CAVE/SSIM.py",
+    "CAVE/Test.py",
+    "CAVE/Utils.py",
+    "CAVE/__pycache__/CAVE_Dataset.cpython-38.pyc",
+    "CAVE/__pycache__/Pypher.cpython-38.pyc",
+    "CAVE/__pycache__/SSIM.cpython-38.pyc",
+    "CAVE/__pycache__/Utils.cpython-38.pyc",
+    "Figure/framework.png",
+    "README.md"
+  ],
+  "unique_nonbinary_text_blob_path_count": 23,
+  "profiling_keyword_hits": [
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "5d73b957bb48a67baa250e4f3cc20844ef9d23e5",
+      "line": 69,
+      "text": "def flops(self, N):"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "5d73b957bb48a67baa250e4f3cc20844ef9d23e5",
+      "line": 70,
+      "text": "flops = 0"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "5d73b957bb48a67baa250e4f3cc20844ef9d23e5",
+      "line": 71,
+      "text": "flops += N * self.dim * 3 * self.dim"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "5d73b957bb48a67baa250e4f3cc20844ef9d23e5",
+      "line": 72,
+      "text": "flops += self.num_heads * N * (self.dim // self.num_heads) * N"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "5d73b957bb48a67baa250e4f3cc20844ef9d23e5",
+      "line": 73,
+      "text": "flops += self.num_heads * N * N * (self.dim // self.num_heads)"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "5d73b957bb48a67baa250e4f3cc20844ef9d23e5",
+      "line": 74,
+      "text": "flops += N * self.dim * self.dim"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "5d73b957bb48a67baa250e4f3cc20844ef9d23e5",
+      "line": 75,
+      "text": "return flops"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "ebfa6d558f670187576ead9c629c4ea61ca81818",
+      "line": 68,
+      "text": "def flops(self, N):"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "ebfa6d558f670187576ead9c629c4ea61ca81818",
+      "line": 69,
+      "text": "flops = 0"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "ebfa6d558f670187576ead9c629c4ea61ca81818",
+      "line": 70,
+      "text": "flops += N * self.dim * 3 * self.dim"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "ebfa6d558f670187576ead9c629c4ea61ca81818",
+      "line": 71,
+      "text": "flops += self.num_heads * N * (self.dim // self.num_heads) * N"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "ebfa6d558f670187576ead9c629c4ea61ca81818",
+      "line": 72,
+      "text": "flops += self.num_heads * N * N * (self.dim // self.num_heads)"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "ebfa6d558f670187576ead9c629c4ea61ca81818",
+      "line": 73,
+      "text": "flops += N * self.dim * self.dim"
+    },
+    {
+      "path": "CAVE/Model/SFNO.py",
+      "blob": "ebfa6d558f670187576ead9c629c4ea61ca81818",
+      "line": 74,
+      "text": "return flops"
+    }
+  ],
+  "full_model_profiling_script_found": false,
+  "chikusei_or_pavia_model_or_checkpoint_found": false,
+  "official_test_defaults": {
+    "batch_size": 1,
+    "sizeI": 512,
+    "sf": 4,
+    "is_profiling_entry": false
+  },
+  "official_cave_torchscript": {
+    "path": "/tmp/sfno_author_verify_20261116/CAVE/Checkpoint/BestModel_ts.pt",
+    "registered_parameters": 318245,
+    "forward_class": "__torch__.Model.M5SFNO.M5SFNO",
+    "trace_input_shapes": [
+      [
+        1,
+        31,
+        128,
+        128
+      ],
+      [
+        1,
+        3,
+        512,
+        512
+      ]
+    ],
+    "trace_input_geometry_is_not_proof_of_paper_flops_geometry": true
+  }
+}

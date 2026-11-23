@@ -1,0 +1,11 @@
+{
+  "model": "v3_stage3",
+  "original_model": "sfno_prgno_v3",
+  "ablation": "deform_stage3",
+  "train_seed": 43,
+  "test_seed": 1,
+  "epoch": 600,
+  "checkpoint": "Checkpoint/cave_v3_stage3_x4_seed43/last.pth",
+  "legacy_checkpoint": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed43/last.pth",
+  "training_log": "Runs/cave_v3_stage3_x4_seed43/train.log"
+}

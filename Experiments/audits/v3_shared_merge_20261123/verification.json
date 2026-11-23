@@ -1,0 +1,753 @@
+{
+  "status": "passed",
+  "torch": "2.6.0+cu126",
+  "device": "cpu",
+  "threads": 2,
+  "reference_dir": "/home/zsn/projects/SFNO-PRGNO/Experiments/v3_stage3_restart_20261111/model",
+  "candidate_dir": "/home/zsn/projects/SFNO-PRGNO/CAVE/Model",
+  "seed": 42,
+  "atol": 1e-06,
+  "rtol": 1e-05,
+  "package_import": true,
+  "ablations": [
+    {
+      "state_tensors": 240,
+      "state_sha256": "72af03b1bb9b91589a2cdc53a383ddabb9a5e0cfac0d4960b018256a49d9b2be",
+      "registered_parameters": 614036,
+      "rng_after_constructor": {
+        "torch_cpu": "22922c4cdf0ae6509f443eb8c5c6608f55994fc143f87f4f302db22871bf3cd0",
+        "python": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+        "numpy": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b"
+      },
+      "ablation": "full",
+      "stage_modes": [
+        "full",
+        "full",
+        "full"
+      ],
+      "forward": {
+        "sf": 4,
+        "lr_shape": [
+          1,
+          31,
+          2,
+          3
+        ],
+        "msi_shape": [
+          1,
+          3,
+          8,
+          12
+        ],
+        "output_shape": [
+          1,
+          31,
+          8,
+          12
+        ],
+        "max_abs_error": 0.0,
+        "rng_equal": true
+      }
+    },
+    {
+      "state_tensors": 240,
+      "state_sha256": "72af03b1bb9b91589a2cdc53a383ddabb9a5e0cfac0d4960b018256a49d9b2be",
+      "registered_parameters": 614036,
+      "rng_after_constructor": {
+        "torch_cpu": "22922c4cdf0ae6509f443eb8c5c6608f55994fc143f87f4f302db22871bf3cd0",
+        "python": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+        "numpy": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b"
+      },
+      "ablation": "no_deformable",
+      "stage_modes": [
+        "no_deformable",
+        "no_deformable",
+        "no_deformable"
+      ],
+      "forward": {
+        "sf": 4,
+        "lr_shape": [
+          1,
+          31,
+          2,
+          3
+        ],
+        "msi_shape": [
+          1,
+          3,
+          8,
+          12
+        ],
+        "output_shape": [
+          1,
+          31,
+          8,
+          12
+        ],
+        "max_abs_error": 0.0,
+        "rng_equal": true
+      }
+    },
+    {
+      "state_tensors": 240,
+      "state_sha256": "72af03b1bb9b91589a2cdc53a383ddabb9a5e0cfac0d4960b018256a49d9b2be",
+      "registered_parameters": 614036,
+      "rng_after_constructor": {
+        "torch_cpu": "22922c4cdf0ae6509f443eb8c5c6608f55994fc143f87f4f302db22871bf3cd0",
+        "python": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+        "numpy": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b"
+      },
+      "ablation": "no_regional",
+      "stage_modes": [
+        "no_regional",
+        "no_regional",
+        "no_regional"
+      ],
+      "forward": {
+        "sf": 4,
+        "lr_shape": [
+          1,
+          31,
+          2,
+          3
+        ],
+        "msi_shape": [
+          1,
+          3,
+          8,
+          12
+        ],
+        "output_shape": [
+          1,
+          31,
+          8,
+          12
+        ],
+        "max_abs_error": 0.0,
+        "rng_equal": true
+      }
+    },
+    {
+      "state_tensors": 240,
+      "state_sha256": "72af03b1bb9b91589a2cdc53a383ddabb9a5e0cfac0d4960b018256a49d9b2be",
+      "registered_parameters": 614036,
+      "rng_after_constructor": {
+        "torch_cpu": "22922c4cdf0ae6509f443eb8c5c6608f55994fc143f87f4f302db22871bf3cd0",
+        "python": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+        "numpy": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b"
+      },
+      "ablation": "fixed_gate",
+      "stage_modes": [
+        "fixed_gate",
+        "fixed_gate",
+        "fixed_gate"
+      ],
+      "forward": {
+        "sf": 4,
+        "lr_shape": [
+          1,
+          31,
+          2,
+          3
+        ],
+        "msi_shape": [
+          1,
+          3,
+          8,
+          12
+        ],
+        "output_shape": [
+          1,
+          31,
+          8,
+          12
+        ],
+        "max_abs_error": 0.0,
+        "rng_equal": true
+      }
+    },
+    {
+      "state_tensors": 240,
+      "state_sha256": "72af03b1bb9b91589a2cdc53a383ddabb9a5e0cfac0d4960b018256a49d9b2be",
+      "registered_parameters": 614036,
+      "rng_after_constructor": {
+        "torch_cpu": "22922c4cdf0ae6509f443eb8c5c6608f55994fc143f87f4f302db22871bf3cd0",
+        "python": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+        "numpy": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b"
+      },
+      "ablation": "fixed_grid",
+      "stage_modes": [
+        "fixed_grid",
+        "fixed_grid",
+        "fixed_grid"
+      ],
+      "forward": {
+        "sf": 4,
+        "lr_shape": [
+          1,
+          31,
+          2,
+          3
+        ],
+        "msi_shape": [
+          1,
+          3,
+          8,
+          12
+        ],
+        "output_shape": [
+          1,
+          31,
+          8,
+          12
+        ],
+        "max_abs_error": 0.0,
+        "rng_equal": true
+      },
+      "forward_x8": {
+        "sf": 8,
+        "lr_shape": [
+          1,
+          31,
+          1,
+          2
+        ],
+        "msi_shape": [
+          1,
+          3,
+          8,
+          16
+        ],
+        "output_shape": [
+          1,
+          31,
+          8,
+          16
+        ],
+        "max_abs_error": 0.0,
+        "rng_equal": true
+      }
+    },
+    {
+      "state_tensors": 240,
+      "state_sha256": "72af03b1bb9b91589a2cdc53a383ddabb9a5e0cfac0d4960b018256a49d9b2be",
+      "registered_parameters": 614036,
+      "rng_after_constructor": {
+        "torch_cpu": "22922c4cdf0ae6509f443eb8c5c6608f55994fc143f87f4f302db22871bf3cd0",
+        "python": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+        "numpy": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b"
+      },
+      "ablation": "deform_stage1",
+      "stage_modes": [
+        "full",
+        "no_deformable",
+        "no_deformable"
+      ],
+      "forward": {
+        "sf": 4,
+        "lr_shape": [
+          1,
+          31,
+          2,
+          3
+        ],
+        "msi_shape": [
+          1,
+          3,
+          8,
+          12
+        ],
+        "output_shape": [
+          1,
+          31,
+          8,
+          12
+        ],
+        "max_abs_error": 0.0,
+        "rng_equal": true
+      }
+    },
+    {
+      "state_tensors": 240,
+      "state_sha256": "72af03b1bb9b91589a2cdc53a383ddabb9a5e0cfac0d4960b018256a49d9b2be",
+      "registered_parameters": 614036,
+      "rng_after_constructor": {
+        "torch_cpu": "22922c4cdf0ae6509f443eb8c5c6608f55994fc143f87f4f302db22871bf3cd0",
+        "python": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+        "numpy": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b"
+      },
+      "ablation": "deform_stage2",
+      "stage_modes": [
+        "no_deformable",
+        "full",
+        "no_deformable"
+      ],
+      "forward": {
+        "sf": 4,
+        "lr_shape": [
+          1,
+          31,
+          2,
+          3
+        ],
+        "msi_shape": [
+          1,
+          3,
+          8,
+          12
+        ],
+        "output_shape": [
+          1,
+          31,
+          8,
+          12
+        ],
+        "max_abs_error": 0.0,
+        "rng_equal": true
+      }
+    },
+    {
+      "state_tensors": 240,
+      "state_sha256": "72af03b1bb9b91589a2cdc53a383ddabb9a5e0cfac0d4960b018256a49d9b2be",
+      "registered_parameters": 614036,
+      "rng_after_constructor": {
+        "torch_cpu": "22922c4cdf0ae6509f443eb8c5c6608f55994fc143f87f4f302db22871bf3cd0",
+        "python": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+        "numpy": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b"
+      },
+      "ablation": "deform_stage3",
+      "stage_modes": [
+        "no_deformable",
+        "no_deformable",
+        "full"
+      ],
+      "forward": {
+        "sf": 4,
+        "lr_shape": [
+          1,
+          31,
+          2,
+          3
+        ],
+        "msi_shape": [
+          1,
+          3,
+          8,
+          12
+        ],
+        "output_shape": [
+          1,
+          31,
+          8,
+          12
+        ],
+        "max_abs_error": 0.0,
+        "rng_equal": true
+      }
+    }
+  ],
+  "datasets": {
+    "cave": {
+      "checkpoint": "/home/zsn/projects/SFNO-PRGNO/Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed42/last.pth",
+      "checkpoint_sha256": "47cf0c2b501421ed9245e4d12d17b741e5f2f2bb65c6ebe5dcadd3f507a77b2c",
+      "epoch": 600,
+      "strict_load": true,
+      "initialization": {
+        "state_tensors": 240,
+        "state_sha256": "72af03b1bb9b91589a2cdc53a383ddabb9a5e0cfac0d4960b018256a49d9b2be",
+        "registered_parameters": 614036,
+        "rng_after_constructor": {
+          "torch_cpu": "22922c4cdf0ae6509f443eb8c5c6608f55994fc143f87f4f302db22871bf3cd0",
+          "python": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+          "numpy": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b"
+        }
+      },
+      "forwards": [
+        {
+          "sf": 4,
+          "lr_shape": [
+            1,
+            31,
+            4,
+            6
+          ],
+          "msi_shape": [
+            1,
+            3,
+            16,
+            24
+          ],
+          "output_shape": [
+            1,
+            31,
+            16,
+            24
+          ],
+          "max_abs_error": 0.0,
+          "rng_equal": true
+        },
+        {
+          "sf": 8,
+          "lr_shape": [
+            1,
+            31,
+            2,
+            3
+          ],
+          "msi_shape": [
+            1,
+            3,
+            16,
+            24
+          ],
+          "output_shape": [
+            1,
+            31,
+            16,
+            24
+          ],
+          "max_abs_error": 0.0,
+          "rng_equal": true
+        }
+      ],
+      "backward": {
+        "sf": 4,
+        "loss": 0.45764315128326416,
+        "parameter_gradients_compared": 198,
+        "none_gradients": [
+          "block1.MDG.correction_logit",
+          "block1.MDG.deformable.norm.weight",
+          "block1.MDG.deformable.norm.bias",
+          "block1.MDG.deformable.local.weight",
+          "block1.MDG.deformable.local.bias",
+          "block1.MDG.deformable.context.0.weight",
+          "block1.MDG.deformable.context.0.bias",
+          "block1.MDG.deformable.offset.weight",
+          "block1.MDG.deformable.offset.bias",
+          "block1.MDG.deformable.weight.weight",
+          "block1.MDG.deformable.weight.bias",
+          "block1.MDG.deformable.proj.weight",
+          "block1.MDG.deformable.proj.bias",
+          "block1.MDG.deformable.norm2.weight",
+          "block1.MDG.deformable.norm2.bias",
+          "block1.MDG.deformable.ffn.0.weight",
+          "block1.MDG.deformable.ffn.0.bias",
+          "block1.MDG.deformable.ffn.2.weight",
+          "block1.MDG.deformable.ffn.2.bias",
+          "block2.MDG.correction_logit",
+          "block2.MDG.deformable.norm.weight",
+          "block2.MDG.deformable.norm.bias",
+          "block2.MDG.deformable.local.weight",
+          "block2.MDG.deformable.local.bias",
+          "block2.MDG.deformable.context.0.weight",
+          "block2.MDG.deformable.context.0.bias",
+          "block2.MDG.deformable.offset.weight",
+          "block2.MDG.deformable.offset.bias",
+          "block2.MDG.deformable.weight.weight",
+          "block2.MDG.deformable.weight.bias",
+          "block2.MDG.deformable.proj.weight",
+          "block2.MDG.deformable.proj.bias",
+          "block2.MDG.deformable.norm2.weight",
+          "block2.MDG.deformable.norm2.bias",
+          "block2.MDG.deformable.ffn.0.weight",
+          "block2.MDG.deformable.ffn.0.bias",
+          "block2.MDG.deformable.ffn.2.weight",
+          "block2.MDG.deformable.ffn.2.bias"
+        ],
+        "gradient_max_abs_error": 0.0,
+        "input_gradient_max_errors": {
+          "lr_hsi": 0.0,
+          "hr_msi": 0.0
+        },
+        "rng_equal": true,
+        "optimizer_steps": 0
+      }
+    },
+    "pavia": {
+      "checkpoint": "/home/zsn/projects/SFNO-PRGNO/Experiments/v3_stage3_restart_20261111/Checkpoint/pavia_v3_stage3_x4_seed42/last.pth",
+      "checkpoint_sha256": "8e34d580de62018b5794cee0618e54180e22e196350e8296158b65a247c7d09c",
+      "epoch": 600,
+      "strict_load": true,
+      "initialization": {
+        "state_tensors": 240,
+        "state_sha256": "efb10ce7808ee66e0d6368cfce129957dfce22c4fa14eaa3a139b96f7a63686f",
+        "registered_parameters": 828570,
+        "rng_after_constructor": {
+          "torch_cpu": "adb77902777d6f260b33d6110ee72d1f3910b5c18cbac625f8022f886d09629c",
+          "python": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+          "numpy": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b"
+        }
+      },
+      "forwards": [
+        {
+          "sf": 4,
+          "lr_shape": [
+            1,
+            102,
+            4,
+            6
+          ],
+          "msi_shape": [
+            1,
+            4,
+            16,
+            24
+          ],
+          "output_shape": [
+            1,
+            102,
+            16,
+            24
+          ],
+          "max_abs_error": 0.0,
+          "rng_equal": true
+        },
+        {
+          "sf": 8,
+          "lr_shape": [
+            1,
+            102,
+            2,
+            3
+          ],
+          "msi_shape": [
+            1,
+            4,
+            16,
+            24
+          ],
+          "output_shape": [
+            1,
+            102,
+            16,
+            24
+          ],
+          "max_abs_error": 0.0,
+          "rng_equal": true
+        }
+      ],
+      "backward": {
+        "sf": 4,
+        "loss": 0.5795680284500122,
+        "parameter_gradients_compared": 198,
+        "none_gradients": [
+          "block1.MDG.correction_logit",
+          "block1.MDG.deformable.norm.weight",
+          "block1.MDG.deformable.norm.bias",
+          "block1.MDG.deformable.local.weight",
+          "block1.MDG.deformable.local.bias",
+          "block1.MDG.deformable.context.0.weight",
+          "block1.MDG.deformable.context.0.bias",
+          "block1.MDG.deformable.offset.weight",
+          "block1.MDG.deformable.offset.bias",
+          "block1.MDG.deformable.weight.weight",
+          "block1.MDG.deformable.weight.bias",
+          "block1.MDG.deformable.proj.weight",
+          "block1.MDG.deformable.proj.bias",
+          "block1.MDG.deformable.norm2.weight",
+          "block1.MDG.deformable.norm2.bias",
+          "block1.MDG.deformable.ffn.0.weight",
+          "block1.MDG.deformable.ffn.0.bias",
+          "block1.MDG.deformable.ffn.2.weight",
+          "block1.MDG.deformable.ffn.2.bias",
+          "block2.MDG.correction_logit",
+          "block2.MDG.deformable.norm.weight",
+          "block2.MDG.deformable.norm.bias",
+          "block2.MDG.deformable.local.weight",
+          "block2.MDG.deformable.local.bias",
+          "block2.MDG.deformable.context.0.weight",
+          "block2.MDG.deformable.context.0.bias",
+          "block2.MDG.deformable.offset.weight",
+          "block2.MDG.deformable.offset.bias",
+          "block2.MDG.deformable.weight.weight",
+          "block2.MDG.deformable.weight.bias",
+          "block2.MDG.deformable.proj.weight",
+          "block2.MDG.deformable.proj.bias",
+          "block2.MDG.deformable.norm2.weight",
+          "block2.MDG.deformable.norm2.bias",
+          "block2.MDG.deformable.ffn.0.weight",
+          "block2.MDG.deformable.ffn.0.bias",
+          "block2.MDG.deformable.ffn.2.weight",
+          "block2.MDG.deformable.ffn.2.bias"
+        ],
+        "gradient_max_abs_error": 0.0,
+        "input_gradient_max_errors": {
+          "lr_hsi": 0.0,
+          "hr_msi": 0.0
+        },
+        "rng_equal": true,
+        "optimizer_steps": 0
+      }
+    },
+    "chikusei": {
+      "checkpoint": "/home/zsn/projects/SFNO-PRGNO/Experiments/v3_stage3_restart_20261111/Checkpoint/chikusei_v3_stage3_x4_seed42/last.pth",
+      "checkpoint_sha256": "12c5b7f18b43cd7c909e4908fb9789702cc0003b9c6fbf20c5b1b95d3956c5ae",
+      "epoch": 600,
+      "strict_load": true,
+      "initialization": {
+        "state_tensors": 240,
+        "state_sha256": "541c3991d2149471801525f490ce95990135cbd94f375dad4f256aad0c66b53d",
+        "registered_parameters": 947231,
+        "rng_after_constructor": {
+          "torch_cpu": "73fca12a1375bfe975f4156470e08480446aec617189ba6fd921e1327b7931c1",
+          "python": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+          "numpy": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b"
+        }
+      },
+      "forwards": [
+        {
+          "sf": 4,
+          "lr_shape": [
+            1,
+            128,
+            4,
+            6
+          ],
+          "msi_shape": [
+            1,
+            3,
+            16,
+            24
+          ],
+          "output_shape": [
+            1,
+            128,
+            16,
+            24
+          ],
+          "max_abs_error": 0.0,
+          "rng_equal": true
+        },
+        {
+          "sf": 8,
+          "lr_shape": [
+            1,
+            128,
+            2,
+            3
+          ],
+          "msi_shape": [
+            1,
+            3,
+            16,
+            24
+          ],
+          "output_shape": [
+            1,
+            128,
+            16,
+            24
+          ],
+          "max_abs_error": 0.0,
+          "rng_equal": true
+        }
+      ],
+      "backward": {
+        "sf": 4,
+        "loss": 0.5928995013237,
+        "parameter_gradients_compared": 198,
+        "none_gradients": [
+          "block1.MDG.correction_logit",
+          "block1.MDG.deformable.norm.weight",
+          "block1.MDG.deformable.norm.bias",
+          "block1.MDG.deformable.local.weight",
+          "block1.MDG.deformable.local.bias",
+          "block1.MDG.deformable.context.0.weight",
+          "block1.MDG.deformable.context.0.bias",
+          "block1.MDG.deformable.offset.weight",
+          "block1.MDG.deformable.offset.bias",
+          "block1.MDG.deformable.weight.weight",
+          "block1.MDG.deformable.weight.bias",
+          "block1.MDG.deformable.proj.weight",
+          "block1.MDG.deformable.proj.bias",
+          "block1.MDG.deformable.norm2.weight",
+          "block1.MDG.deformable.norm2.bias",
+          "block1.MDG.deformable.ffn.0.weight",
+          "block1.MDG.deformable.ffn.0.bias",
+          "block1.MDG.deformable.ffn.2.weight",
+          "block1.MDG.deformable.ffn.2.bias",
+          "block2.MDG.correction_logit",
+          "block2.MDG.deformable.norm.weight",
+          "block2.MDG.deformable.norm.bias",
+          "block2.MDG.deformable.local.weight",
+          "block2.MDG.deformable.local.bias",
+          "block2.MDG.deformable.context.0.weight",
+          "block2.MDG.deformable.context.0.bias",
+          "block2.MDG.deformable.offset.weight",
+          "block2.MDG.deformable.offset.bias",
+          "block2.MDG.deformable.weight.weight",
+          "block2.MDG.deformable.weight.bias",
+          "block2.MDG.deformable.proj.weight",
+          "block2.MDG.deformable.proj.bias",
+          "block2.MDG.deformable.norm2.weight",
+          "block2.MDG.deformable.norm2.bias",
+          "block2.MDG.deformable.ffn.0.weight",
+          "block2.MDG.deformable.ffn.0.bias",
+          "block2.MDG.deformable.ffn.2.weight",
+          "block2.MDG.deformable.ffn.2.bias"
+        ],
+        "gradient_max_abs_error": 0.0,
+        "input_gradient_max_errors": {
+          "lr_hsi": 0.0,
+          "hr_msi": 0.0
+        },
+        "rng_equal": true,
+        "optimizer_steps": 0
+      }
+    }
+  },
+  "legacy_import": {
+    "reference_and_candidate_equal": true,
+    "fresh_subprocesses": 2,
+    "state_sha256": "72af03b1bb9b91589a2cdc53a383ddabb9a5e0cfac0d4960b018256a49d9b2be",
+    "rng_after_constructor": {
+      "torch_cpu": "22922c4cdf0ae6509f443eb8c5c6608f55994fc143f87f4f302db22871bf3cd0",
+      "python": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+      "numpy": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b"
+    },
+    "loaded_checkpoint_output_sha256": "d47015727d1e4e8bf0a5c854281e4534f3da027ac2bff5c3270e2e4a0b97ff2f",
+    "output_shape": [
+      1,
+      31,
+      8,
+      12
+    ],
+    "ablations": [
+      "full",
+      "no_deformable",
+      "no_regional",
+      "fixed_gate",
+      "fixed_grid",
+      "deform_stage1",
+      "deform_stage2",
+      "deform_stage3"
+    ]
+  },
+  "reference_source_hashes": {
+    "FusionBackbone.py": "8486110de67d0f90655931ffe366f0353f73db79bfa808965ef5478a3998037b",
+    "SFNO.py": "d167acbd8d58cf4e38406855f8f5c58feeaa6b9fadd47f6834843f1de337ad18",
+    "SpacingDeformableSampling.py": "0a51e2847a0f0bcf689a5f5e65b6b05329decc19ef28ccecc6d841b2d98d68eb",
+    "DynamicSpatial.py": "88bf15853b3903fd1e95abafbc330b2edac513b603bfc7626b56c8c18333aa05",
+    "Utils.py": "ab0b9c947eb099184cec989b4c7e8dd4cd764a9cc1a220d8cdcc02c7ecfed2dd",
+    "MultiScaleDynamicGating.py": "ea2dbb7e620b65db9744971f2e32f00fe56dc4b560882340c959a4f25f37be4f",
+    "ObservationGrid.py": "d8d82b2e985fa41d992261cdbf9fcb3ebf317221b086ae10a18b7a5a29a75029",
+    "SFNO_PRGNO_V2.py": "e9e32758bdf96ace191b3665d8127eace3430490ef62e0faf70a9bcc77939c1c",
+    "MultiScaleDynamicGatingV2.py": "3faffae2c1393789f9b2f364d5e80d3b888b47c37f3298dd3ca8cb277037f274",
+    "VectorAttention.py": "ac02fe488c05fa802ca1762607e0b67b7989cc3b63a018e3970cc9584762e7f7",
+    "PhysicsGalerkin.py": "3dcba045f933439051bc8db9c844c3ecb2de45e41e3c4fc37e075e20e4f4903f",
+    "SFNO_PRGNO_V3.py": "738b26323b25c99eccd50220248f27b621386a8cf747a62150eb8cc21e061cec"
+  },
+  "candidate_source_hashes": {
+    "FusionBackbone.py": "8486110de67d0f90655931ffe366f0353f73db79bfa808965ef5478a3998037b",
+    "SFNO.py": "d167acbd8d58cf4e38406855f8f5c58feeaa6b9fadd47f6834843f1de337ad18",
+    "SpacingDeformableSampling.py": "0a51e2847a0f0bcf689a5f5e65b6b05329decc19ef28ccecc6d841b2d98d68eb",
+    "SFNO_PRGNO.py": "a027d85e8c007e63edf0c446af6d6d85b7bfc0965f1f16be2991526218567e55",
+    "DynamicSpatial.py": "88bf15853b3903fd1e95abafbc330b2edac513b603bfc7626b56c8c18333aa05",
+    "MultiScaleDynamicGating.py": "ecdcd44aaaed4863e50188011eb2c118d450fbed7537c4d1ba3c9b22433fda27",
+    "ObservationGrid.py": "a2ec47ec97e2804014a5d8c3dcc330fb8fceff3e31b4b2ae0d3ca2aaf99715ea",
+    "VectorAttention.py": "ac02fe488c05fa802ca1762607e0b67b7989cc3b63a018e3970cc9584762e7f7",
+    "PhysicsGalerkin.py": "3dcba045f933439051bc8db9c844c3ecb2de45e41e3c4fc37e075e20e4f4903f",
+    "SFNO_PRGNO_V3.py": "738b26323b25c99eccd50220248f27b621386a8cf747a62150eb8cc21e061cec"
+  },
+  "elapsed_seconds": 3.468566987197846
+}

@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "migrated_files": 102,
+  "reports": 12,
+  "training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "test_seed": 1,
+  "models": [
+    "sfno",
+    "v3_stage3"
+  ],
+  "loaded_weights": [
+    {
+      "model": "sfno",
+      "seed": 42,
+      "epoch": 600,
+      "strict_load": true,
+      "cpu_forward_scales": [
+        4,
+        8
+      ]
+    },
+    {
+      "model": "sfno",
+      "seed": 43,
+      "epoch": 600,
+      "strict_load": true,
+      "cpu_forward_scales": [
+        4,
+        8
+      ]
+    },
+    {
+      "model": "sfno",
+      "seed": 44,
+      "epoch": 600,
+      "strict_load": true,
+      "cpu_forward_scales": [
+        4,
+        8
+      ]
+    },
+    {
+      "model": "v3_stage3",
+      "seed": 42,
+      "epoch": 600,
+      "strict_load": true,
+      "cpu_forward_scales": [
+        4,
+        8
+      ]
+    },
+    {
+      "model": "v3_stage3",
+      "seed": 43,
+      "epoch": 600,
+      "strict_load": true,
+      "cpu_forward_scales": [
+        4,
+        8
+      ]
+    },
+    {
+      "model": "v3_stage3",
+      "seed": 44,
+      "epoch": 600,
+      "strict_load": true,
+      "cpu_forward_scales": [
+        4,
+        8
+      ]
+    }
+  ],
+  "training_testing_entry_imports": "passed (Train.py, Test.py, Train_V3.py, Test_V3.py)",
+  "dry_run_commands": "passed (SFNO and Stage3 train/test; train seed42, test seed1)",
+  "three_seed_summary": "identical to original statistics",
+  "scene_analysis": "regenerated using relocated reports; identical to original summary",
+  "active_protocols": "Pavia/Chikusei frozen SFNO and Stage3 protocols verified unchanged"
+}

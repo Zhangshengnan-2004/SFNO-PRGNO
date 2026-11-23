@@ -1,0 +1,7 @@
+{
+  "reason": "First epoch L1 >1: abnormal output scale",
+  "epoch": 1,
+  "optimizer_steps": 1,
+  "checkpoint_saved": true,
+  "health_failures": 0
+}

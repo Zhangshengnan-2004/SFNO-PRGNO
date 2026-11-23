@@ -1,0 +1,11 @@
+{
+  "model": "sfno",
+  "original_model": "sfno",
+  "ablation": null,
+  "train_seed": 42,
+  "test_seed": 1,
+  "epoch": 600,
+  "checkpoint": "Checkpoint/cave_sfno_x4_seed42/last.pth",
+  "legacy_checkpoint": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/last.pth",
+  "training_log": "Runs/cave_sfno_x4_seed42/train.log"
+}

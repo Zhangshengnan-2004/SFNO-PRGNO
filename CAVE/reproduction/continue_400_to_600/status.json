@@ -1,0 +1,30 @@
+{
+  "phase": "complete",
+  "target_epoch": 600,
+  "models": {
+    "sfno": {
+      "state": "complete",
+      "source_epoch": 400,
+      "target_epoch": 600,
+      "output": "Checkpoint/train_x4_e600"
+    },
+    "v1": {
+      "state": "complete",
+      "source_epoch": 400,
+      "target_epoch": 600,
+      "output": "Checkpoint/train_x4_prgno_e600"
+    },
+    "v2": {
+      "state": "complete",
+      "source_epoch": 400,
+      "target_epoch": 600,
+      "output": "Checkpoint/train_x4_prgno_v2_e600"
+    },
+    "v3": {
+      "state": "complete",
+      "source_epoch": 400,
+      "target_epoch": 600,
+      "output": "Checkpoint/train_x4_prgno_v3_e600"
+    }
+  }
+}

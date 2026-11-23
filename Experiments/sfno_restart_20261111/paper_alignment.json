@@ -1,0 +1,40 @@
+{
+  "paper": "/home/zsn/projects/SFNO-PRGNO/Li 等 - 2026 - Arbitrary-scale spatial-spectral fusion using kernel integral and progressive resampling.pdf",
+  "paper_sha256": "46e20e2f2f1cdcf950d93b915928ca7544457304173128996e4ee54c3a0a09cc",
+  "implementation_page": 7,
+  "section": "4.1 Experimental settings",
+  "official_code": "https://github.com/weili419/SFNO",
+  "confirmed": {
+    "patch_size": 64,
+    "augmentation": "rotation and flipping",
+    "gaussian_kernel": "s x s, sigma2",
+    "optimizer": "Adam",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "batch_size": 50,
+    "initial_lr": 0.0002,
+    "decay_factor": 0.95,
+    "chikusei_train": "top-left1500x2000,12 blocks500",
+    "chikusei_test": "eight disjoint500 blocks in4.1; six in4.2"
+  },
+  "implementation_choices": {
+    "initialization": "retain public model constructor defaults; blanket He reset rejected after measured activation amplification; exact author initializer unavailable",
+    "batch50": "micro5 x10 accumulation, identical PR random permutations within each effective batch; actual SFNO gradient equivalence required before launch",
+    "decay_interval": "six epochs (6000 patches); interval remains unconfirmed by author; gamma0.95 is confirmed",
+    "budget": "600 epochs x1000 patches explicitly requested by user;12000 Adam updates, not claimed author budget",
+    "quality_warmup": "Technical preflight only; actual six training jobs persist every epoch. Probe monitoring every20epochs, convergence stop only after2000 Adam updates and3 consecutive failures; numerical failures stop immediately. No temporary convergence runs."
+  },
+  "unresolved": [
+    "Pavia original MSI source and author SRF",
+    "author exact test coordinates",
+    "normalization and layer-specific initialization",
+    "full schedule and total optimizer update budget",
+    "full training loss"
+  ],
+  "classification": "paper-known settings aligned where implementable; explicit initialization exception and unresolved details; not exact paper reproduction",
+  "previous_stable_experiment": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_corrected_20261110",
+  "previous_candidate_experiment": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_paper_guarded_20261111"
+}

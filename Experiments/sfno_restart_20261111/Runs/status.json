@@ -1,0 +1,11 @@
+{
+  "phase": "managed_by_combined_queue",
+  "pid": 616776,
+  "updated_at": "2026-11-11T17:21:48.342775+08:00",
+  "job": "chikusei_seed42",
+  "output": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_restart_20261111/Checkpoint/chikusei_sfno_x4_seed42",
+  "completed_jobs": 1,
+  "total_jobs": 6,
+  "manager_pid": 620531,
+  "manager_status": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_v3_queue_20261111/status.json"
+}

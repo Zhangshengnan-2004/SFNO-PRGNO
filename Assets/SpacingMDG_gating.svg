@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1460" viewBox="0 0 1560 1460"><defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#53667c"/></marker></defs><style>text{font-family:Arial,'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#23364c}.title{font-size:30px;font-weight:700}.label{font-size:19px;font-weight:600}.small{font-size:16px}.sub{font-size:16px;fill:#60748a}</style><rect width="1560" height="1460" fill="#f5f8fc"/>
+<text x="40" y="49" class="title" text-anchor="start">SpacingMDG | 多尺度区域聚合与动态门控</text>
+<text x="40" y="80" class="sub" text-anchor="start">C = 64（通道门控隐藏维度 16）· LR grid = h × w · HR grid = H × W · Softmax is applied across the 4 branches</text>
+<rect x="650" y="110" width="260" height="65" rx="12" fill="#edf3ff" stroke="#adbfdf" stroke-width="1.5"/>
+<text x="780.0" y="136.0" class="label" text-anchor="middle">输入 X</text>
+<text x="780.0" y="161.0" class="small" text-anchor="middle">B × C × H × W</text>
+<rect x="650" y="210" width="260" height="55" rx="12" fill="#edf3ff" stroke="#adbfdf" stroke-width="1.5"/>
+<text x="780.0" y="243.5" class="label" text-anchor="middle">Channel LayerNorm</text>
+<polyline points="780,175 780,210" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="780,265 780,290 225,290 225,320" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="780,290 595,290 595,320" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="780,290 965,290 965,320" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="780,290 1335,290 1335,320" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="60" y="320" width="330" height="65" rx="12" fill="#eaf5ee" stroke="#a1cbb0" stroke-width="1.5"/>
+<text x="225.0" y="346.0" class="label" text-anchor="middle">HR 局部分支</text>
+<text x="225.0" y="371.0" class="small" text-anchor="middle">H × W</text>
+<rect x="60" y="415" width="330" height="65" rx="12" fill="#eaf5ee" stroke="#a1cbb0" stroke-width="1.5"/>
+<text x="225.0" y="441.0" class="label" text-anchor="middle">DWConv 3×3 → GELU</text>
+<text x="225.0" y="466.0" class="small" text-anchor="middle">Conv 1×1：C → C</text>
+<rect x="60" y="510" width="330" height="55" rx="12" fill="#eaf5ee" stroke="#a1cbb0" stroke-width="1.5"/>
+<text x="225.0" y="543.5" class="label" text-anchor="middle">保持 H × W（无需插值）</text>
+<polyline points="225,385 225,415" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="225,480 225,510" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<text x="225" y="595" class="label" text-anchor="middle">F₁</text>
+<rect x="430" y="320" width="330" height="65" rx="12" fill="#eaf5ee" stroke="#a1cbb0" stroke-width="1.5"/>
+<text x="595.0" y="346.0" class="label" text-anchor="middle">中尺度局部分支</text>
+<text x="595.0" y="371.0" class="small" text-anchor="middle">min(H,2h) × min(W,2w)</text>
+<rect x="430" y="415" width="330" height="65" rx="12" fill="#eaf5ee" stroke="#a1cbb0" stroke-width="1.5"/>
+<text x="595.0" y="441.0" class="label" text-anchor="middle">DWConv 3×3 → GELU</text>
+<text x="595.0" y="466.0" class="small" text-anchor="middle">Conv 1×1：C → C</text>
+<rect x="430" y="510" width="330" height="55" rx="12" fill="#eaf5ee" stroke="#a1cbb0" stroke-width="1.5"/>
+<text x="595.0" y="543.5" class="label" text-anchor="middle">对齐到 H × W</text>
+<polyline points="595,385 595,415" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="595,480 595,510" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<text x="595" y="595" class="label" text-anchor="middle">F₂</text>
+<rect x="800" y="320" width="330" height="65" rx="12" fill="#eaf5ee" stroke="#a1cbb0" stroke-width="1.5"/>
+<text x="965.0" y="346.0" class="label" text-anchor="middle">LR 网格分支</text>
+<text x="965.0" y="371.0" class="small" text-anchor="middle">h × w</text>
+<rect x="800" y="415" width="330" height="65" rx="12" fill="#eaf5ee" stroke="#a1cbb0" stroke-width="1.5"/>
+<text x="965.0" y="441.0" class="label" text-anchor="middle">DWConv 3×3 → GELU</text>
+<text x="965.0" y="466.0" class="small" text-anchor="middle">Conv 1×1：C → C</text>
+<rect x="800" y="510" width="330" height="55" rx="12" fill="#eaf5ee" stroke="#a1cbb0" stroke-width="1.5"/>
+<text x="965.0" y="543.5" class="label" text-anchor="middle">对齐到 H × W</text>
+<polyline points="965,385 965,415" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="965,480 965,510" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<text x="965" y="595" class="label" text-anchor="middle">F₃</text>
+<rect x="1170" y="320" width="330" height="65" rx="12" fill="#eaf5ee" stroke="#a1cbb0" stroke-width="1.5"/>
+<text x="1335.0" y="346.0" class="label" text-anchor="middle">全局上下文分支</text>
+<text x="1335.0" y="371.0" class="small" text-anchor="middle">Adaptive AvgPool → ≤8×8 grid</text>
+<rect x="1170" y="415" width="330" height="65" rx="12" fill="#eaf5ee" stroke="#a1cbb0" stroke-width="1.5"/>
+<text x="1335.0" y="441.0" class="label" text-anchor="middle">4-head Self-Attention</text>
+<text x="1335.0" y="466.0" class="small" text-anchor="middle">Attention(tokens) + pooled features</text>
+<rect x="1170" y="510" width="330" height="55" rx="12" fill="#eaf5ee" stroke="#a1cbb0" stroke-width="1.5"/>
+<text x="1335.0" y="543.5" class="label" text-anchor="middle">Conv 1×1 → 对齐到 H × W</text>
+<polyline points="1335,385 1335,415" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="1335,480 1335,510" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<text x="1335" y="595" class="label" text-anchor="middle">F₄</text>
+<polyline points="225,565 225,578" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="595,565 595,578" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="965,565 965,578" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="1335,565 1335,578" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<text x="780" y="630" class="sub" text-anchor="middle">四个分支输出均为 B × C × H × W；下采样为抗混叠双线性插值，恢复 HR 使用双线性插值</text>
+<rect x="60" y="670" width="1440" height="75" rx="12" fill="#fff" stroke="#ccd6e3" stroke-width="1.5"/>
+<text x="780.0" y="701.0" class="label" text-anchor="middle">分支特征集合：{F₁, F₂, F₃, F₄}</text>
+<text x="780.0" y="726.0" class="small" text-anchor="middle">同一组特征同时用于门控预测和最终加权融合</text>
+<polyline points="225,602 225,670" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="595,602 595,670" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="965,602 965,670" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="1335,602 1335,670" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="90" y="790" width="570" height="90" rx="12" fill="#fff3e2" stroke="#ddbf92" stroke-width="1.5"/>
+<text x="375.0" y="816.0" class="label" text-anchor="middle">空间门控 / Spatial logits</text>
+<text x="375.0" y="841.0" class="small" text-anchor="middle">Concat channels → Conv 1×1：4C→C → GELU → Conv：C→4</text>
+<text x="375.0" y="866.0" class="small" text-anchor="middle">S：B × 4 × 1 × H × W</text>
+<rect x="790" y="790" width="570" height="90" rx="12" fill="#f1edfc" stroke="#beafe1" stroke-width="1.5"/>
+<text x="1075.0" y="816.0" class="label" text-anchor="middle">通道门控 / Channel logits</text>
+<text x="1075.0" y="841.0" class="small" text-anchor="middle">各分支全局平均池化 → Concat → Conv：4C→C/4</text>
+<text x="1075.0" y="866.0" class="small" text-anchor="middle">GELU → Conv：C/4→4C → reshape</text>
+<polyline points="375,745 375,790" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="1075,745 1075,790" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<text x="1075" y="912" class="small" text-anchor="middle">T：B × 4 × C × 1 × 1</text>
+<rect x="445" y="950" width="650" height="85" rx="12" fill="#edf3ff" stroke="#adbfdf" stroke-width="1.5"/>
+<text x="770.0" y="973.5" class="label" text-anchor="middle">广播相加 → 分支维度 Softmax</text>
+<text x="770.0" y="998.5" class="small" text-anchor="middle">W = Softmaxₛ(S + T)</text>
+<text x="770.0" y="1023.5" class="small" text-anchor="middle">W：B × 4 × C × H × W</text>
+<polyline points="375,880 375,990 445,990" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="1075,880 1075,888 1400,888 1400,990 1095,990" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<rect x="445" y="1075" width="650" height="65" rx="12" fill="#edf3ff" stroke="#adbfdf" stroke-width="1.5"/>
+<text x="770.0" y="1101.0" class="label" text-anchor="middle">加权求和 / Weighted sum</text>
+<text x="770.0" y="1126.0" class="small" text-anchor="middle">Fmix = Σₛ W[:,s] ⊙ Fₛ</text>
+<polyline points="770,1035 770,1075" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="1500,708 1525,708 1525,1108 1095,1108" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<text x="1330" y="1082" class="small" text-anchor="middle">四分支特征作为 values</text>
+<rect x="445" y="1180" width="650" height="65" rx="12" fill="#edf3ff" stroke="#adbfdf" stroke-width="1.5"/>
+<text x="770.0" y="1206.0" class="label" text-anchor="middle">投影 + 第一条残差</text>
+<text x="770.0" y="1231.0" class="small" text-anchor="middle">Y = X + Conv₁×₁(Fmix)</text>
+<polyline points="770,1140 770,1180" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<polyline points="650,142 30,142 30,1213 445,1213" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<text x="155" y="1187" class="small" text-anchor="middle">输入 X 的跳连</text>
+<rect x="445" y="1285" width="650" height="65" rx="12" fill="#edf3ff" stroke="#adbfdf" stroke-width="1.5"/>
+<text x="770.0" y="1311.0" class="label" text-anchor="middle">归一化 + FFN + 第二条残差</text>
+<text x="770.0" y="1336.0" class="small" text-anchor="middle">输出 = Y + FFN(ChannelLayerNorm(Y))</text>
+<polyline points="770,1245 770,1285" fill="none" stroke="#53667c" stroke-width="2" stroke-linejoin="round" marker-end="url(#a)"/>
+<text x="1190" y="1232" class="small" text-anchor="middle">FFN：Conv 1×1</text>
+<text x="1190" y="1257" class="small" text-anchor="middle">C→4C → GELU → 4C→C</text>
+<text x="770" y="1387" class="label" text-anchor="middle">输出尺寸：B × C × H × W；⊙ 为逐元素相乘</text>
+<text x="40" y="1431" class="sub" text-anchor="start">Source: CAVE/Model/ObservationGrid.py::SpacingMDG · MultiScaleDynamicGating.py::GlobalContextDynamicGating</text>
+</svg>

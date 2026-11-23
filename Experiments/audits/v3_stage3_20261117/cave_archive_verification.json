@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "migrated_files": 102,
+  "reports": 12,
+  "training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "test_seed": 1,
+  "models": [
+    "sfno",
+    "v3_stage3"
+  ],
+  "loaded_weights": [
+    {
+      "model": "sfno",
+      "seed": 42,
+      "epoch": 600,
+      "strict_load": true,
+      "cpu_forward_scales": [
+        4,
+        8
+      ]
+    },
+    {
+      "model": "sfno",
+      "seed": 43,
+      "epoch": 600,
+      "strict_load": true,
+      "cpu_forward_scales": [
+        4,
+        8
+      ]
+    },
+    {
+      "model": "sfno",
+      "seed": 44,
+      "epoch": 600,
+      "strict_load": true,
+      "cpu_forward_scales": [
+        4,
+        8
+      ]
+    },
+    {
+      "model": "v3_stage3",
+      "seed": 42,
+      "epoch": 600,
+      "strict_load": true,
+      "cpu_forward_scales": [
+        4,
+        8
+      ]
+    },
+    {
+      "model": "v3_stage3",
+      "seed": 43,
+      "epoch": 600,
+      "strict_load": true,
+      "cpu_forward_scales": [
+        4,
+        8
+      ]
+    },
+    {
+      "model": "v3_stage3",
+      "seed": 44,
+      "epoch": 600,
+      "strict_load": true,
+      "cpu_forward_scales": [
+        4,
+        8
+      ]
+    }
+  ]
+}

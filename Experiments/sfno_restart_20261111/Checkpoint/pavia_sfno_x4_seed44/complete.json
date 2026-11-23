@@ -1,0 +1,10 @@
+{
+  "model": "sfno",
+  "dataset": "pavia",
+  "seed": 44,
+  "epoch": 600,
+  "scales": [
+    4,
+    8
+  ]
+}

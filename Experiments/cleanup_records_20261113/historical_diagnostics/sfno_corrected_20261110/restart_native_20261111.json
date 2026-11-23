@@ -1,0 +1,430 @@
+{
+  "request": "删除本次失败的两个已完成seed42和中断Pavia seed43；修复配置后六组从头训练",
+  "at": "2026-11-11T09:41:23.656831+08:00",
+  "deleted_groups": [
+    {
+      "path": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_corrected_20261110/Checkpoint/chikusei_sfno_x4_seed42",
+      "metadata": {
+        "epoch": 600,
+        "optimizer_steps": 12000,
+        "config": {
+          "protocol": "sfno_corrected_600x1000_v5_20261110",
+          "protocol_sha256": "c4e8756598ae678bd677029864254a83677010825b4b6dc3379079cb4b72280e",
+          "dataset": "chikusei",
+          "model": "sfno",
+          "seed": 42,
+          "epochs": 600,
+          "samples": 1000,
+          "micro_batch": 5,
+          "effective_batch": 50,
+          "lr": 0.0002,
+          "lr_gamma": 0.95,
+          "lr_decay_samples": 6000,
+          "train_sf": 4,
+          "test_seed": 1,
+          "patch_size": 64,
+          "precision": "FP32",
+          "deterministic": true,
+          "tf32": false,
+          "workers": 0,
+          "optimizer": "Adam beta0.9,0.999 eps1e-8",
+          "loss": "mean per-image GT-nonzero masked L1",
+          "initialization": "He normal Conv/Linear fan_in ReLU bias0",
+          "response_file": "response_chikusei.npy",
+          "response_sha256": "e8e300a49c65bb47b371571053a29c307a45d5ca24a4c08828c4d03eb2d2ab7f",
+          "raw_sha256": {
+            "/home/zsn/projects/SFNO-PRGNO/Chikusei/HyperspecVNIR_Chikusei_20140729.bsq": "89715ed9a6ab725644707b2c1732642dd1634755f3914d0ecec9bc77f62a741b",
+            "/home/zsn/projects/SFNO-PRGNO/Chikusei/HyperspecVNIR_Chikusei_20140729.hdr": "8e68b2d13005a96d8d5e057e626c47dd8eb1993c78d4492038a49544360d5d14"
+          }
+        }
+      },
+      "file_count": 16
+    },
+    {
+      "path": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_corrected_20261110/Checkpoint/pavia_sfno_x4_seed42",
+      "metadata": {
+        "epoch": 600,
+        "optimizer_steps": 12000,
+        "config": {
+          "protocol": "sfno_corrected_600x1000_v5_20261110",
+          "protocol_sha256": "c4e8756598ae678bd677029864254a83677010825b4b6dc3379079cb4b72280e",
+          "dataset": "pavia",
+          "model": "sfno",
+          "seed": 42,
+          "epochs": 600,
+          "samples": 1000,
+          "micro_batch": 5,
+          "effective_batch": 50,
+          "lr": 0.0002,
+          "lr_gamma": 0.95,
+          "lr_decay_samples": 6000,
+          "train_sf": 4,
+          "test_seed": 1,
+          "patch_size": 64,
+          "precision": "FP32",
+          "deterministic": true,
+          "tf32": false,
+          "workers": 0,
+          "optimizer": "Adam beta0.9,0.999 eps1e-8",
+          "loss": "mean per-image GT-nonzero masked L1",
+          "initialization": "He normal Conv/Linear fan_in ReLU bias0",
+          "response_file": "response_pavia.npy",
+          "response_sha256": "ed9305859acdcc572d7466f18c14fde43189ac95c44bc3a5dc220109a438bb3e",
+          "raw_sha256": {
+            "/home/zsn/projects/SFNO-PRGNO/Pavia/Data/Pavia.mat": "b60341da323fd271cd97dd6d7a69514d385ccd7fdfc5a60c4ff5994b047f152e"
+          }
+        }
+      },
+      "file_count": 16
+    },
+    {
+      "path": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_corrected_20261110/Checkpoint/pavia_sfno_x4_seed43",
+      "metadata": {
+        "epoch": 40,
+        "optimizer_steps": 800,
+        "config": {
+          "protocol": "sfno_corrected_600x1000_v5_20261110",
+          "protocol_sha256": "c4e8756598ae678bd677029864254a83677010825b4b6dc3379079cb4b72280e",
+          "dataset": "pavia",
+          "model": "sfno",
+          "seed": 43,
+          "epochs": 600,
+          "samples": 1000,
+          "micro_batch": 5,
+          "effective_batch": 50,
+          "lr": 0.0002,
+          "lr_gamma": 0.95,
+          "lr_decay_samples": 6000,
+          "train_sf": 4,
+          "test_seed": 1,
+          "patch_size": 64,
+          "precision": "FP32",
+          "deterministic": true,
+          "tf32": false,
+          "workers": 0,
+          "optimizer": "Adam beta0.9,0.999 eps1e-8",
+          "loss": "mean per-image GT-nonzero masked L1",
+          "initialization": "He normal Conv/Linear fan_in ReLU bias0",
+          "response_file": "response_pavia.npy",
+          "response_sha256": "ed9305859acdcc572d7466f18c14fde43189ac95c44bc3a5dc220109a438bb3e",
+          "raw_sha256": {
+            "/home/zsn/projects/SFNO-PRGNO/Pavia/Data/Pavia.mat": "b60341da323fd271cd97dd6d7a69514d385ccd7fdfc5a60c4ff5994b047f152e"
+          }
+        }
+      },
+      "file_count": 6
+    }
+  ],
+  "previous_protocol": {
+    "protocol": "sfno_corrected_600x1000_v5_20261110",
+    "model": "SFNO",
+    "defaults": {
+      "epochs": 600,
+      "samples": 1000,
+      "micro_batch": 5,
+      "effective_batch": 50,
+      "lr": 0.0002,
+      "lr_gamma": 0.95,
+      "lr_decay_samples": 6000,
+      "train_sf": 4,
+      "test_seed": 1,
+      "patch_size": 64,
+      "save_every": 120
+    },
+    "train_seeds": [
+      42,
+      43,
+      44
+    ],
+    "known_paper_settings": {
+      "patch": 64,
+      "effective_batch": 50,
+      "optimizer": "Adam",
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "initial_lr": 0.0002,
+      "gamma": 0.95,
+      "init": "He"
+    },
+    "implementation": {
+      "precision": "FP32",
+      "amp": false,
+      "workers": 0,
+      "deterministic": true,
+      "loss": "mean per-image GT-nonzero masked L1",
+      "initialization": "Conv2d/Linear kaiming_normal fan_in ReLU; bias0; normalization defaults retained",
+      "schedule": "lr(epoch_index)=2e-4*0.95**floor(epoch_index*1000/6000); decay every six completed epochs",
+      "lr_decay_samples": 6000,
+      "optimizer_updates_per_epoch": 20,
+      "total_optimizer_updates": 12000,
+      "total_patches_per_seed": 600000,
+      "eval": "common_hsi_eval_v1; test_seed1 independent of train seed; x4 trained, x4/x8 evaluated"
+    },
+    "datasets": {
+      "pavia": {
+        "hsi_channels": 102,
+        "msi_channels": 4,
+        "normalization": 8000,
+        "response_file": "response_pavia.npy",
+        "response_sha256": "ed9305859acdcc572d7466f18c14fde43189ac95c44bc3a5dc220109a438bb3e",
+        "raw_sha256": {
+          "/home/zsn/projects/SFNO-PRGNO/Pavia/Data/Pavia.mat": "b60341da323fd271cd97dd6d7a69514d385ccd7fdfc5a60c4ff5994b047f152e"
+        },
+        "train_rectangles_yxhw": [
+          [
+            0,
+            0,
+            704,
+            715
+          ]
+        ],
+        "test_origins_yx": [
+          [
+            712,
+            0
+          ],
+          [
+            712,
+            192
+          ],
+          [
+            904,
+            0
+          ],
+          [
+            904,
+            192
+          ]
+        ],
+        "test_size": {
+          "4": 192,
+          "8": 192
+        },
+        "response_source": "/home/zsn/projects/SHOTUN-main/data/pavia/paviac_256_s8.mat",
+        "response_source_sha256": "0749421b36cf2d4aa1803e5b3e70deb5625e3b2495177b5343708db9a0fd6e1b",
+        "verification": {
+          "ref_crop_origin": [
+            246,
+            235
+          ],
+          "ref_crop_max_abs": 0.0,
+          "msi_reconstruction_max_abs": 2.220446049250313e-16,
+          "note": "Only validates already-training-region crop; this 256px sample is not used as a test scene"
+        },
+        "physical_sensor": "unconfirmed; reusable supplied 102x4 matrix, not claimed as SFNO author SRF"
+      },
+      "chikusei": {
+        "hsi_channels": 128,
+        "msi_channels": 3,
+        "normalization": 10000,
+        "response_file": "response_chikusei.npy",
+        "response_sha256": "e8e300a49c65bb47b371571053a29c307a45d5ca24a4c08828c4d03eb2d2ab7f",
+        "raw_sha256": {
+          "/home/zsn/projects/SFNO-PRGNO/Chikusei/HyperspecVNIR_Chikusei_20140729.bsq": "89715ed9a6ab725644707b2c1732642dd1634755f3914d0ecec9bc77f62a741b",
+          "/home/zsn/projects/SFNO-PRGNO/Chikusei/HyperspecVNIR_Chikusei_20140729.hdr": "8e68b2d13005a96d8d5e057e626c47dd8eb1993c78d4492038a49544360d5d14"
+        },
+        "train_rectangles_yxhw": [
+          [
+            0,
+            0,
+            500,
+            500
+          ],
+          [
+            0,
+            500,
+            500,
+            500
+          ],
+          [
+            0,
+            1000,
+            500,
+            500
+          ],
+          [
+            0,
+            1500,
+            500,
+            500
+          ],
+          [
+            500,
+            0,
+            500,
+            500
+          ],
+          [
+            500,
+            500,
+            500,
+            500
+          ],
+          [
+            500,
+            1000,
+            500,
+            500
+          ],
+          [
+            500,
+            1500,
+            500,
+            500
+          ],
+          [
+            1000,
+            0,
+            500,
+            500
+          ],
+          [
+            1000,
+            500,
+            500,
+            500
+          ],
+          [
+            1000,
+            1000,
+            500,
+            500
+          ],
+          [
+            1000,
+            1500,
+            500,
+            500
+          ]
+        ],
+        "test_origins_yx": [
+          [
+            1500,
+            0
+          ],
+          [
+            1500,
+            500
+          ],
+          [
+            1500,
+            1000
+          ],
+          [
+            1500,
+            1500
+          ],
+          [
+            2000,
+            0
+          ],
+          [
+            2000,
+            500
+          ],
+          [
+            2000,
+            1000
+          ],
+          [
+            2000,
+            1500
+          ]
+        ],
+        "test_size": {
+          "4": 500,
+          "8": 496
+        },
+        "response_source": "AcademySoftwareFoundation/rawtoaces-data Canon EOS 5D Mark II",
+        "response_source_sha256": "3dd2394e07f00c3fff51de631394ff67b4b72463657f4383ac14855969b93c14",
+        "response_interpolation": "HDR wavelengths; linear; zero outside380-780nm; row sum1"
+      }
+    },
+    "assumptions": [
+      "Approximate reproduction; SFNO-author MSI, exact test coordinates and full training configuration unavailable.",
+      "600 epochs x1000 patches fixes600000 samples per seed; all six jobs restarted, including the interrupted Pavia seed42; not author-confirmed epochs.",
+      "LR decays by0.95 every6000 sampled patches (six epochs), preserving the prior100x6000 per-update LR schedule; this decay interval is an implementation choice, not paper-confirmed.",
+      "Effective batch50 via microbatch5 x10 accumulation; native PR randperm shared within each microbatch, unlike one true batch50.",
+      "He normal fan_in ReLU initialization applied to Conv2d/Linear; biases zero; norm layers unchanged; exact author layer rules unconfirmed.",
+      "Per-image GT-nonzero masked L1 chosen as baseline objective; paper training loss not verified; no joint spectral/relative terms.",
+      "Fixed normalization8000/10000 and current disjoint spatial splits retained; not tuned against paper/test results.",
+      "Chikusei eight test blocks follow4.1;4.2 says six; exact author test set remains unresolved.",
+      "Periodic sigma2 degradation, kernel size sf, half-pixel center, phase sf/2-1; boundary details not author-confirmed.",
+      "No added noise; test invalid pixels nearest-filled for input, excluded from common metrics.",
+      "Final checkpoint selected by fixed budget only; no test-based early stopping/model selection.",
+      "SFNO only; V3-stage3 deferred until this protocol is reviewed."
+    ],
+    "references": {
+      "dtdnml_simulation_url": "https://github.com/Shawn-H-Wang/DTDNML/blob/1a19a8722924e6ed7f310bff3bbb80eef2036df3/simulation/simulation.m",
+      "dtdnml_simulation_sha256": "2d013c031def595a0a7de25fe1c4fecbcede726d6539f3ea376f98ba03f97e45",
+      "note": "Upstream simulation loads external SRF without naming sensor; only supplied matrix is reused, not its sigma0.5/noise pipeline"
+    },
+    "source_hashes": {
+      "data.py": "9f8594d78aa9a195d7e36eff3af5775ff959b3238199d78d2384e3f354d7b5a2",
+      "inference_memory.py": "1600d32995bba46ee65db9dace812e5f49cddfa464c636f637e8a1f42ca62424",
+      "metrics.py": "4914c61635d9b2d0d8e1775f0b822288632292bf7920e422d787393cfb5f114a",
+      "model/SFNO.py": "d167acbd8d58cf4e38406855f8f5c58feeaa6b9fadd47f6834843f1de337ad18",
+      "model/Utils.py": "ab0b9c947eb099184cec989b4c7e8dd4cd764a9cc1a220d8cdcc02c7ecfed2dd",
+      "model/VectorAttention.py": "ac02fe488c05fa802ca1762607e0b67b7989cc3b63a018e3970cc9584762e7f7",
+      "prepare.py": "d1cc55614c335e4281d8a089f69e17efc7b2277196d81652e6b994a2b7223e69",
+      "protocol.py": "07c66434f4b591932500c481a4dc1ac2481b31409720bafe7d6aa52dc0193231",
+      "run.py": "eeeef9b9c92d49e06720cb9a478f104097e4413f89eb10bb882add859c896a0a",
+      "run_queue.py": "e1a8e2cec40e9b8cd25b210d26ba82658c768e1a3733e9cda4637b199e3a82b7",
+      "validate.py": "f44af352221ecec9fafd7e131a6fc85ba0a90fcec758a8f5981f31984aa33458"
+    }
+  },
+  "previous_validation": {
+    "status": "passed",
+    "protocol_sha256": "c4e8756598ae678bd677029864254a83677010825b4b6dc3379079cb4b72280e",
+    "accumulation_check": true,
+    "budget_600x1000": true,
+    "learning_rate_schedule_12000_updates": true,
+    "exact_resume_model_and_adam": true,
+    "full_test_entry_and_logs": true,
+    "details": [
+      {
+        "dataset": "pavia",
+        "micro_batch": 5,
+        "accumulation": 10,
+        "finite_effective_batch50_update": true,
+        "initial_micro_losses": [
+          111.2375717163086,
+          131.40371704101562,
+          109.30097961425781,
+          142.3038330078125,
+          140.8045654296875,
+          150.3017578125,
+          143.75564575195312,
+          119.6192626953125,
+          149.191650390625,
+          120.1268081665039
+        ],
+        "peak_training_allocated_bytes": 2343757312
+      },
+      {
+        "dataset": "chikusei",
+        "micro_batch": 5,
+        "accumulation": 10,
+        "finite_effective_batch50_update": true,
+        "initial_micro_losses": [
+          175.91700744628906,
+          183.9750213623047,
+          165.92320251464844,
+          155.10147094726562,
+          159.92730712890625,
+          166.95347595214844,
+          154.0143280029297,
+          150.56773376464844,
+          175.7133026123047,
+          166.56858825683594
+        ],
+        "peak_training_allocated_bytes": 2751677440
+      }
+    ]
+  },
+  "historical_files_verified": 76,
+  "previous_diagnosis_retained": "diagnosis_20261111.json"
+}

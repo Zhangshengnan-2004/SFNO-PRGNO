@@ -1,0 +1,87 @@
+{
+  "timm_shim_used": true,
+  "tests": {
+    "spatial_adjoint_sf4": {
+      "relative_error": 1.3554833202428355e-16,
+      "passed": true
+    },
+    "dataset_db_match_sf4": {
+      "max_absolute_error": 2.7303671656930817e-08,
+      "note": "Difference is limited to the dataset's float32 PSF conversion",
+      "passed": true
+    },
+    "spatial_adjoint_sf8": {
+      "relative_error": 2.445523752023093e-16,
+      "passed": true
+    },
+    "dataset_db_match_sf8": {
+      "max_absolute_error": 4.961165728234462e-09,
+      "note": "Difference is limited to the dataset's float32 PSF conversion",
+      "passed": true
+    },
+    "spectral_adjoint": {
+      "relative_error": 1.2926698484265546e-16,
+      "passed": true
+    },
+    "forward_shape_sf4": {
+      "shape": [
+        1,
+        31,
+        16,
+        16
+      ],
+      "passed": true
+    },
+    "forward_shape_sf8": {
+      "shape": [
+        1,
+        31,
+        16,
+        16
+      ],
+      "passed": true
+    },
+    "delta_qk_zero_initialization": {
+      "passed": true
+    },
+    "backward_delta_qk": {
+      "gradient_norms": [
+        0.11785825341939926,
+        0.048629030585289,
+        0.015039509162306786
+      ],
+      "passed": true
+    },
+    "one_step_training": {
+      "loss": 1.255615234375,
+      "parameter_changed": true,
+      "passed": true
+    },
+    "baseline_checkpoint_loading": {
+      "missing_keys": [
+        "block1.GI.delta_qk.weight",
+        "block1.GI.delta_qk.bias",
+        "block2.GI.delta_qk.weight",
+        "block2.GI.delta_qk.bias",
+        "block3.GI.delta_qk.weight",
+        "block3.GI.delta_qk.bias",
+        "intermediate_reconstruction.weight",
+        "intermediate_reconstruction.bias",
+        "physics.spatial.psf",
+        "physics.spectral.response",
+        "physics.lift.weight",
+        "physics.lift.bias"
+      ],
+      "unexpected_keys": [],
+      "passed": true
+    },
+    "checkpoint_initial_behavior": {
+      "max_absolute_error": 5.960464477539062e-07,
+      "passed": true
+    }
+  },
+  "baseline_parameters": 244645,
+  "prgno_parameters": 273668,
+  "parameter_difference": 29023,
+  "all_passed": true
+}

@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "configurations": 18,
+  "unclassified_ops": 0,
+  "checks": [
+    {
+      "test": "SSRNET independent closed-form count",
+      "channels": 31,
+      "scale": 4,
+      "flops": 214835328
+    },
+    {
+      "test": "SSRNET independent closed-form count",
+      "channels": 31,
+      "scale": 8,
+      "flops": 214835328
+    },
+    {
+      "test": "SSRNET independent closed-form count",
+      "channels": 102,
+      "scale": 4,
+      "flops": 2308701440
+    },
+    {
+      "test": "SSRNET independent closed-form count",
+      "channels": 102,
+      "scale": 8,
+      "flops": 2308701440
+    },
+    {
+      "test": "SSRNET independent closed-form count",
+      "channels": 128,
+      "scale": 4,
+      "flops": 3633295360
+    },
+    {
+      "test": "SSRNET independent closed-form count",
+      "channels": 128,
+      "scale": 8,
+      "flops": 3633295360
+    },
+    {
+      "test": "MHA optimized and counted paths agree",
+      "max_abs_error": 7.450580596923828e-08
+    },
+    {
+      "test": "grouped conv+bias independent count",
+      "flops": 7770
+    }
+  ]
+}

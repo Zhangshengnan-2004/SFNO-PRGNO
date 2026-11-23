@@ -1,0 +1,640 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3060 Ti",
+  "torch": "2.6.0+cu126",
+  "checkpoint": "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/last.pth",
+  "HR_size": [
+    256,
+    256
+  ],
+  "batch": 1,
+  "precision": "FP32; TF32 disabled",
+  "warmup": 10,
+  "iterations": 30,
+  "timing": "CUDA events, inclusive per module; groups are non-nested, summed per forward then median",
+  "memory": "separate 3-pass probes; maximum extra allocated bytes above module-entry baseline; includes output and temporaries, excludes already-allocated weights and inputs; group peaks must NOT be summed",
+  "scope": "Physics covers model.physics only; intermediate HSI reconstruction head, initial/final projections, interpolation and residual arithmetic are in unassigned time; inference only, not training",
+  "results": [
+    {
+      "sf": 4,
+      "clean_forward_median_ms": 115.82905578613281,
+      "instrumented_forward_median_ms": 116.32635116577148,
+      "whole_forward_peak_allocated_MiB": 607.18701171875,
+      "groups": [
+        {
+          "group": "VectorAttention",
+          "calls_per_forward": 3,
+          "median_ms": 39.79468822479248,
+          "std_ms": 0.006830399827438469,
+          "percent_of_instrumented_forward": 34.2095215967729,
+          "max_single_call_additional_peak_MiB": 570.0
+        },
+        {
+          "group": "Regional",
+          "calls_per_forward": 3,
+          "median_ms": 30.697472095489502,
+          "std_ms": 0.04456552582833073,
+          "percent_of_instrumented_forward": 26.38909566736423,
+          "max_single_call_additional_peak_MiB": 305.033203125
+        },
+        {
+          "group": "Deformable",
+          "calls_per_forward": 1,
+          "median_ms": 11.821056365966797,
+          "std_ms": 0.060639461403598396,
+          "percent_of_instrumented_forward": 10.161976411622451,
+          "max_single_call_additional_peak_MiB": 168.25341796875
+        },
+        {
+          "group": "Physics",
+          "calls_per_forward": 3,
+          "median_ms": 5.004335999488831,
+          "std_ms": 0.003075634347140655,
+          "percent_of_instrumented_forward": 4.3019796884691885,
+          "max_single_call_additional_peak_MiB": 47.484375
+        },
+        {
+          "group": "GI",
+          "calls_per_forward": 3,
+          "median_ms": 25.093632459640503,
+          "std_ms": 0.006047718374656734,
+          "percent_of_instrumented_forward": 21.57175240877339,
+          "max_single_call_additional_peak_MiB": 192.37744140625
+        }
+      ],
+      "individual_calls": {
+        "VI1_1": {
+          "median_ms": 13.233152389526367,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 28.68701171875,
+              "additional_peak_MiB": 570.0,
+              "retained_delta_MiB": 8.5
+            },
+            {
+              "entry_MiB": 28.68701171875,
+              "additional_peak_MiB": 570.0,
+              "retained_delta_MiB": 8.5
+            },
+            {
+              "entry_MiB": 28.68701171875,
+              "additional_peak_MiB": 570.0,
+              "retained_delta_MiB": 8.5
+            }
+          ]
+        },
+        "VI1_2": {
+          "median_ms": 13.241888046264648,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 37.18701171875,
+              "additional_peak_MiB": 570.0,
+              "retained_delta_MiB": 8.5
+            },
+            {
+              "entry_MiB": 37.18701171875,
+              "additional_peak_MiB": 570.0,
+              "retained_delta_MiB": 8.5
+            },
+            {
+              "entry_MiB": 37.18701171875,
+              "additional_peak_MiB": 570.0,
+              "retained_delta_MiB": 8.5
+            }
+          ]
+        },
+        "VI1_3": {
+          "median_ms": 13.316720008850098,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 37.18701171875,
+              "additional_peak_MiB": 569.5,
+              "retained_delta_MiB": 9.0
+            },
+            {
+              "entry_MiB": 37.18701171875,
+              "additional_peak_MiB": 569.5,
+              "retained_delta_MiB": 9.0
+            },
+            {
+              "entry_MiB": 37.18701171875,
+              "additional_peak_MiB": 569.5,
+              "retained_delta_MiB": 9.0
+            }
+          ]
+        },
+        "physics": {
+          "median_ms": 1.6680959463119507,
+          "calls_per_forward": 3,
+          "memory_probes": [
+            {
+              "entry_MiB": 53.43701171875,
+              "additional_peak_MiB": 47.484375,
+              "retained_delta_MiB": 24.984375
+            },
+            {
+              "entry_MiB": 101.43701171875,
+              "additional_peak_MiB": 47.484375,
+              "retained_delta_MiB": 24.984375
+            },
+            {
+              "entry_MiB": 117.43701171875,
+              "additional_peak_MiB": 47.484375,
+              "retained_delta_MiB": 24.984375
+            },
+            {
+              "entry_MiB": 53.43701171875,
+              "additional_peak_MiB": 47.484375,
+              "retained_delta_MiB": 24.984375
+            },
+            {
+              "entry_MiB": 101.43701171875,
+              "additional_peak_MiB": 47.484375,
+              "retained_delta_MiB": 24.984375
+            },
+            {
+              "entry_MiB": 117.43701171875,
+              "additional_peak_MiB": 47.484375,
+              "retained_delta_MiB": 24.984375
+            },
+            {
+              "entry_MiB": 53.43701171875,
+              "additional_peak_MiB": 47.484375,
+              "retained_delta_MiB": 24.984375
+            },
+            {
+              "entry_MiB": 101.43701171875,
+              "additional_peak_MiB": 47.484375,
+              "retained_delta_MiB": 24.984375
+            },
+            {
+              "entry_MiB": 117.43701171875,
+              "additional_peak_MiB": 47.484375,
+              "retained_delta_MiB": 24.984375
+            }
+          ]
+        },
+        "block1.regional": {
+          "median_ms": 10.836991786956787,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 61.68701171875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 61.68701171875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 61.68701171875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        },
+        "block1.GI": {
+          "median_ms": 4.133983850479126,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 77.68701171875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 77.68701171875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 77.68701171875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        },
+        "block2.regional": {
+          "median_ms": 9.927680015563965,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 93.68701171875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 93.68701171875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 93.68701171875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        },
+        "block2.GI": {
+          "median_ms": 10.480640411376953,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 93.68701171875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 93.68701171875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 93.68701171875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        },
+        "block3.regional": {
+          "median_ms": 9.922048091888428,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 109.68701171875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 109.68701171875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 109.68701171875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        },
+        "block3.deformable": {
+          "median_ms": 11.821056365966797,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 125.68701171875,
+              "additional_peak_MiB": 168.25341796875,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 125.68701171875,
+              "additional_peak_MiB": 168.25341796875,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 125.68701171875,
+              "additional_peak_MiB": 168.25341796875,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        },
+        "block3.GI": {
+          "median_ms": 10.479616165161133,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 109.68701171875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 109.68701171875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 109.68701171875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sf": 8,
+      "clean_forward_median_ms": 115.53556823730469,
+      "instrumented_forward_median_ms": 115.58540725708008,
+      "whole_forward_peak_allocated_MiB": 607.37060546875,
+      "groups": [
+        {
+          "group": "VectorAttention",
+          "calls_per_forward": 3,
+          "median_ms": 39.7294397354126,
+          "std_ms": 0.017622761998976777,
+          "percent_of_instrumented_forward": 34.37236644159422,
+          "max_single_call_additional_peak_MiB": 570.0
+        },
+        {
+          "group": "Regional",
+          "calls_per_forward": 3,
+          "median_ms": 30.290847778320312,
+          "std_ms": 0.11342771996771658,
+          "percent_of_instrumented_forward": 26.206463685289194,
+          "max_single_call_additional_peak_MiB": 305.033203125
+        },
+        {
+          "group": "Deformable",
+          "calls_per_forward": 1,
+          "median_ms": 11.844048023223877,
+          "std_ms": 0.024979993141875986,
+          "percent_of_instrumented_forward": 10.24700981230343,
+          "max_single_call_additional_peak_MiB": 168.25341796875
+        },
+        {
+          "group": "Physics",
+          "calls_per_forward": 3,
+          "median_ms": 4.787087976932526,
+          "std_ms": 0.006109601076049139,
+          "percent_of_instrumented_forward": 4.141602379169968,
+          "max_single_call_additional_peak_MiB": 47.12109375
+        },
+        {
+          "group": "GI",
+          "calls_per_forward": 3,
+          "median_ms": 25.01911950111389,
+          "std_ms": 0.01737598419540981,
+          "percent_of_instrumented_forward": 21.64556936280671,
+          "max_single_call_additional_peak_MiB": 192.37744140625
+        }
+      ],
+      "individual_calls": {
+        "VI1_1": {
+          "median_ms": 13.212080001831055,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 28.87060546875,
+              "additional_peak_MiB": 570.0,
+              "retained_delta_MiB": 8.5
+            },
+            {
+              "entry_MiB": 28.87060546875,
+              "additional_peak_MiB": 570.0,
+              "retained_delta_MiB": 8.5
+            },
+            {
+              "entry_MiB": 28.87060546875,
+              "additional_peak_MiB": 570.0,
+              "retained_delta_MiB": 8.5
+            }
+          ]
+        },
+        "VI1_2": {
+          "median_ms": 13.220719814300537,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 37.37060546875,
+              "additional_peak_MiB": 570.0,
+              "retained_delta_MiB": 8.5
+            },
+            {
+              "entry_MiB": 37.37060546875,
+              "additional_peak_MiB": 570.0,
+              "retained_delta_MiB": 8.5
+            },
+            {
+              "entry_MiB": 37.37060546875,
+              "additional_peak_MiB": 570.0,
+              "retained_delta_MiB": 8.5
+            }
+          ]
+        },
+        "VI1_3": {
+          "median_ms": 13.296207904815674,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 37.37060546875,
+              "additional_peak_MiB": 569.5,
+              "retained_delta_MiB": 9.0
+            },
+            {
+              "entry_MiB": 37.37060546875,
+              "additional_peak_MiB": 569.5,
+              "retained_delta_MiB": 9.0
+            },
+            {
+              "entry_MiB": 37.37060546875,
+              "additional_peak_MiB": 569.5,
+              "retained_delta_MiB": 9.0
+            }
+          ]
+        },
+        "physics": {
+          "median_ms": 1.59580796957016,
+          "calls_per_forward": 3,
+          "memory_probes": [
+            {
+              "entry_MiB": 53.62060546875,
+              "additional_peak_MiB": 47.12109375,
+              "retained_delta_MiB": 24.62109375
+            },
+            {
+              "entry_MiB": 101.62060546875,
+              "additional_peak_MiB": 47.12109375,
+              "retained_delta_MiB": 24.62109375
+            },
+            {
+              "entry_MiB": 117.62060546875,
+              "additional_peak_MiB": 47.12109375,
+              "retained_delta_MiB": 24.62109375
+            },
+            {
+              "entry_MiB": 53.62060546875,
+              "additional_peak_MiB": 47.12109375,
+              "retained_delta_MiB": 24.62109375
+            },
+            {
+              "entry_MiB": 101.62060546875,
+              "additional_peak_MiB": 47.12109375,
+              "retained_delta_MiB": 24.62109375
+            },
+            {
+              "entry_MiB": 117.62060546875,
+              "additional_peak_MiB": 47.12109375,
+              "retained_delta_MiB": 24.62109375
+            },
+            {
+              "entry_MiB": 53.62060546875,
+              "additional_peak_MiB": 47.12109375,
+              "retained_delta_MiB": 24.62109375
+            },
+            {
+              "entry_MiB": 101.62060546875,
+              "additional_peak_MiB": 47.12109375,
+              "retained_delta_MiB": 24.62109375
+            },
+            {
+              "entry_MiB": 117.62060546875,
+              "additional_peak_MiB": 47.12109375,
+              "retained_delta_MiB": 24.62109375
+            }
+          ]
+        },
+        "block1.regional": {
+          "median_ms": 10.706143856048584,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 61.87060546875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 61.87060546875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 61.87060546875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        },
+        "block1.GI": {
+          "median_ms": 4.12987208366394,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 77.87060546875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 77.87060546875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 77.87060546875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        },
+        "block2.regional": {
+          "median_ms": 9.7882080078125,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 93.87060546875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 93.87060546875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 93.87060546875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        },
+        "block2.GI": {
+          "median_ms": 10.446463584899902,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 93.87060546875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 93.87060546875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 93.87060546875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        },
+        "block3.regional": {
+          "median_ms": 9.790272235870361,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 109.87060546875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 109.87060546875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 109.87060546875,
+              "additional_peak_MiB": 305.033203125,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        },
+        "block3.deformable": {
+          "median_ms": 11.844048023223877,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 125.87060546875,
+              "additional_peak_MiB": 168.25341796875,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 125.87060546875,
+              "additional_peak_MiB": 168.25341796875,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 125.87060546875,
+              "additional_peak_MiB": 168.25341796875,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        },
+        "block3.GI": {
+          "median_ms": 10.442928314208984,
+          "calls_per_forward": 1,
+          "memory_probes": [
+            {
+              "entry_MiB": 109.87060546875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 109.87060546875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            },
+            {
+              "entry_MiB": 109.87060546875,
+              "additional_peak_MiB": 192.37744140625,
+              "retained_delta_MiB": 16.0
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

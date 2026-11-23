@@ -1,0 +1,558 @@
+{
+  "frozen_protocol_and_source_hashes": "passed",
+  "protocol_sha256": "2674e05528afff7cb4f3c507637ac378a6438098e2948c2d5123d386453cb137",
+  "inventory": {
+    "comparison": {
+      "same_data_protocol": true,
+      "same_metric_source": true,
+      "same_defaults": true
+    },
+    "datasets": {
+      "pavia": {
+        "hsi_channels": 102,
+        "msi_channels": 4,
+        "response_row_sums": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "response_hash_checked": true,
+        "raw_hash_checked": true,
+        "train_test_overlap_pixels": 0
+      },
+      "chikusei": {
+        "hsi_channels": 128,
+        "msi_channels": 3,
+        "response_row_sums": [
+          1.0,
+          1.0,
+          0.9999999403953552
+        ],
+        "response_hash_checked": true,
+        "raw_hash_checked": true,
+        "train_test_overlap_pixels": 0
+      }
+    },
+    "runs": [
+      {
+        "name": "chikusei_v3_stage3_x4_seed42",
+        "seed": 42,
+        "dataset": "chikusei",
+        "epoch": 600,
+        "updates": 12000,
+        "patches": 600000,
+        "first_l1": 0.10055803623050451,
+        "last_l1": 0.005764065957628191,
+        "min_l1": 0.005700681703165174,
+        "last_lr": 1.2464272042808417e-06,
+        "last100_l1_mean": 0.005851286788436118,
+        "health_psnr": 46.639520555373586,
+        "health_bicubic_psnr": 35.601290604505124,
+        "health_checks": 30,
+        "fatal_errors": [],
+        "resumed": false,
+        "checkpoint_sha256": "12c5b7f18b43cd7c909e4908fb9789702cc0003b9c6fbf20c5b1b95d3956c5ae",
+        "stage3_gate": 0.05387795716524124,
+        "optimizer_active_tensor_count": 198,
+        "learned_weight_norms": {
+          "intermediate_reconstruction.weight": 0.8629370927810669,
+          "physics.lift.weight": 5.352985858917236,
+          "block1.GI.delta_qk.weight": 0.40197324752807617,
+          "block2.GI.delta_qk.weight": 0.5827558040618896,
+          "block3.GI.delta_qk.weight": 0.6967670917510986,
+          "block3.MDG.deformable.offset.weight": 0.9074785113334656,
+          "block3.MDG.deformable.weight.weight": 1.3858591318130493
+        },
+        "nondeterminism_warnings": [
+          "adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)",
+          "grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)",
+          "upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)"
+        ]
+      },
+      {
+        "name": "chikusei_v3_stage3_x4_seed43",
+        "seed": 43,
+        "dataset": "chikusei",
+        "epoch": 600,
+        "updates": 12000,
+        "patches": 600000,
+        "first_l1": 0.09766863303259016,
+        "last_l1": 0.005837282699067145,
+        "min_l1": 0.005816205888986587,
+        "last_lr": 1.2464272042808417e-06,
+        "last100_l1_mean": 0.005973209820804186,
+        "health_psnr": 46.14938376306436,
+        "health_bicubic_psnr": 35.601290604505124,
+        "health_checks": 30,
+        "fatal_errors": [],
+        "resumed": false,
+        "checkpoint_sha256": "abe450f887cb6e47f2d96cc46aef32913f03f480315f0d93d859cab3f7f60df4",
+        "stage3_gate": 0.05140521749854088,
+        "optimizer_active_tensor_count": 198,
+        "learned_weight_norms": {
+          "intermediate_reconstruction.weight": 1.247762680053711,
+          "physics.lift.weight": 5.3910064697265625,
+          "block1.GI.delta_qk.weight": 0.3582286238670349,
+          "block2.GI.delta_qk.weight": 0.5844675898551941,
+          "block3.GI.delta_qk.weight": 0.9194545745849609,
+          "block3.MDG.deformable.offset.weight": 1.30689537525177,
+          "block3.MDG.deformable.weight.weight": 1.4386816024780273
+        },
+        "nondeterminism_warnings": [
+          "adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)",
+          "grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)",
+          "upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)"
+        ]
+      },
+      {
+        "name": "chikusei_v3_stage3_x4_seed44",
+        "seed": 44,
+        "dataset": "chikusei",
+        "epoch": 600,
+        "updates": 12000,
+        "patches": 600000,
+        "first_l1": 0.09628175349906087,
+        "last_l1": 0.005831605375278741,
+        "min_l1": 0.0057123451796360315,
+        "last_lr": 1.2464272042808417e-06,
+        "last100_l1_mean": 0.005848449615039863,
+        "health_psnr": 46.49582399990706,
+        "health_bicubic_psnr": 35.601290604505124,
+        "health_checks": 30,
+        "fatal_errors": [],
+        "resumed": false,
+        "checkpoint_sha256": "4ae7648efaf6a7ca2c5f3dea76b7b39f09f653c9a4f6d94e05e612a0e4bfee42",
+        "stage3_gate": 0.051335904747247696,
+        "optimizer_active_tensor_count": 198,
+        "learned_weight_norms": {
+          "intermediate_reconstruction.weight": 1.1024774312973022,
+          "physics.lift.weight": 5.666930675506592,
+          "block1.GI.delta_qk.weight": 0.43790414929389954,
+          "block2.GI.delta_qk.weight": 0.7097622752189636,
+          "block3.GI.delta_qk.weight": 0.6553416848182678,
+          "block3.MDG.deformable.offset.weight": 0.9134560823440552,
+          "block3.MDG.deformable.weight.weight": 1.2632954120635986
+        },
+        "nondeterminism_warnings": [
+          "adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)",
+          "grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)",
+          "upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)"
+        ]
+      },
+      {
+        "name": "pavia_v3_stage3_x4_seed42",
+        "seed": 42,
+        "dataset": "pavia",
+        "epoch": 600,
+        "updates": 12000,
+        "patches": 600000,
+        "first_l1": 0.1205030257627368,
+        "last_l1": 0.0037036081659607588,
+        "min_l1": 0.0036893513717222957,
+        "last_lr": 1.2464272042808417e-06,
+        "last100_l1_mean": 0.0037358058288344182,
+        "health_psnr": 49.10501423355536,
+        "health_bicubic_psnr": 40.06910702674382,
+        "health_checks": 30,
+        "fatal_errors": [],
+        "resumed": false,
+        "checkpoint_sha256": "8e34d580de62018b5794cee0618e54180e22e196350e8296158b65a247c7d09c",
+        "stage3_gate": 0.04795438423752785,
+        "optimizer_active_tensor_count": 198,
+        "learned_weight_norms": {
+          "intermediate_reconstruction.weight": 0.5663849115371704,
+          "physics.lift.weight": 5.177447319030762,
+          "block1.GI.delta_qk.weight": 0.37354931235313416,
+          "block2.GI.delta_qk.weight": 0.4895542860031128,
+          "block3.GI.delta_qk.weight": 0.7091102004051208,
+          "block3.MDG.deformable.offset.weight": 1.0496172904968262,
+          "block3.MDG.deformable.weight.weight": 1.093381643295288
+        },
+        "nondeterminism_warnings": [
+          "adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)",
+          "grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)",
+          "upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)"
+        ]
+      },
+      {
+        "name": "pavia_v3_stage3_x4_seed43",
+        "seed": 43,
+        "dataset": "pavia",
+        "epoch": 600,
+        "updates": 12000,
+        "patches": 600000,
+        "first_l1": 0.10233671095222235,
+        "last_l1": 0.0037502955738455057,
+        "min_l1": 0.0036802782863378527,
+        "last_lr": 1.2464272042808417e-06,
+        "last100_l1_mean": 0.0037426054064999335,
+        "health_psnr": 49.17718030267072,
+        "health_bicubic_psnr": 40.06910702674382,
+        "health_checks": 30,
+        "fatal_errors": [],
+        "resumed": false,
+        "checkpoint_sha256": "4ccc6c717d0a611d333f7963af059860b31f5652588f785534d65e8407e11e42",
+        "stage3_gate": 0.053056925535202026,
+        "optimizer_active_tensor_count": 198,
+        "learned_weight_norms": {
+          "intermediate_reconstruction.weight": 0.49284428358078003,
+          "physics.lift.weight": 5.108512878417969,
+          "block1.GI.delta_qk.weight": 0.34729230403900146,
+          "block2.GI.delta_qk.weight": 0.42396122217178345,
+          "block3.GI.delta_qk.weight": 0.6673135757446289,
+          "block3.MDG.deformable.offset.weight": 0.9456698894500732,
+          "block3.MDG.deformable.weight.weight": 1.5704628229141235
+        },
+        "nondeterminism_warnings": [
+          "adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)",
+          "grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)",
+          "upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)"
+        ]
+      },
+      {
+        "name": "pavia_v3_stage3_x4_seed44",
+        "seed": 44,
+        "dataset": "pavia",
+        "epoch": 600,
+        "updates": 12000,
+        "patches": 600000,
+        "first_l1": 0.09434238908812403,
+        "last_l1": 0.003724072725744918,
+        "min_l1": 0.003715082173002884,
+        "last_lr": 1.2464272042808417e-06,
+        "last100_l1_mean": 0.003772579588473309,
+        "health_psnr": 49.063590881798845,
+        "health_bicubic_psnr": 40.06910702674382,
+        "health_checks": 30,
+        "fatal_errors": [],
+        "resumed": false,
+        "checkpoint_sha256": "ee85ec9af8d9ccf3597728ef4a8f7b45909a92732100d7d74b2fc1fe88e6c58d",
+        "stage3_gate": 0.05031202733516693,
+        "optimizer_active_tensor_count": 198,
+        "learned_weight_norms": {
+          "intermediate_reconstruction.weight": 0.80949467420578,
+          "physics.lift.weight": 5.6299147605896,
+          "block1.GI.delta_qk.weight": 0.4352341592311859,
+          "block2.GI.delta_qk.weight": 0.5619944334030151,
+          "block3.GI.delta_qk.weight": 0.8795828819274902,
+          "block3.MDG.deformable.offset.weight": 0.7505881190299988,
+          "block3.MDG.deformable.weight.weight": 1.138873815536499
+        },
+        "nondeterminism_warnings": [
+          "adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)",
+          "grid_sampler_2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)",
+          "upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:92.)"
+        ]
+      }
+    ],
+    "test_reports": [
+      {
+        "dataset": "chikusei",
+        "seed": 42,
+        "sf": 4,
+        "psnr": 46.466836666609595,
+        "sam_degrees": 1.480301471472358,
+        "ergas": 2.089409225203013
+      },
+      {
+        "dataset": "chikusei",
+        "seed": 42,
+        "sf": 8,
+        "psnr": 43.726254235560205,
+        "sam_degrees": 1.9404824664774045,
+        "ergas": 1.3243584051475905
+      },
+      {
+        "dataset": "chikusei",
+        "seed": 43,
+        "sf": 4,
+        "psnr": 46.0351303663258,
+        "sam_degrees": 1.4946839655612427,
+        "ergas": 2.1503746768161265
+      },
+      {
+        "dataset": "chikusei",
+        "seed": 43,
+        "sf": 8,
+        "psnr": 42.902719988129235,
+        "sam_degrees": 1.9828523055041205,
+        "ergas": 1.3877066497359656
+      },
+      {
+        "dataset": "chikusei",
+        "seed": 44,
+        "sf": 4,
+        "psnr": 46.39881104516426,
+        "sam_degrees": 1.5124010157906134,
+        "ergas": 2.1147583787761572
+      },
+      {
+        "dataset": "chikusei",
+        "seed": 44,
+        "sf": 8,
+        "psnr": 43.39630323033264,
+        "sam_degrees": 1.9620337309861628,
+        "ergas": 1.3532560532254
+      },
+      {
+        "dataset": "pavia",
+        "seed": 42,
+        "sf": 4,
+        "psnr": 45.41404127618455,
+        "sam_degrees": 2.8420167847990347,
+        "ergas": 1.5322616488351146
+      },
+      {
+        "dataset": "pavia",
+        "seed": 42,
+        "sf": 8,
+        "psnr": 44.14606238215368,
+        "sam_degrees": 3.112264631280059,
+        "ergas": 0.8227865836111217
+      },
+      {
+        "dataset": "pavia",
+        "seed": 43,
+        "sf": 4,
+        "psnr": 45.44435484437602,
+        "sam_degrees": 2.853401757748805,
+        "ergas": 1.5355435548632845
+      },
+      {
+        "dataset": "pavia",
+        "seed": 43,
+        "sf": 8,
+        "psnr": 43.886903217247635,
+        "sam_degrees": 3.1912272345870116,
+        "ergas": 0.8349816498611307
+      },
+      {
+        "dataset": "pavia",
+        "seed": 44,
+        "sf": 4,
+        "psnr": 45.34131935773023,
+        "sam_degrees": 2.8629876670922343,
+        "ergas": 1.5426867672644877
+      },
+      {
+        "dataset": "pavia",
+        "seed": 44,
+        "sf": 8,
+        "psnr": 44.1687069531299,
+        "sam_degrees": 3.111816746358353,
+        "ergas": 0.8259573211122161
+      }
+    ],
+    "unclipped_claim_mismatch": true,
+    "source_comparison": {
+      "FusionBackbone.py": true,
+      "SFNO.py": true,
+      "SpacingDeformableSampling.py": true,
+      "DynamicSpatial.py": true,
+      "MultiScaleDynamicGating.py": true,
+      "ObservationGrid.py": true,
+      "SFNO_PRGNO_V2.py": true,
+      "MultiScaleDynamicGatingV2.py": true,
+      "VectorAttention.py": true,
+      "PhysicsGalerkin.py": true,
+      "SFNO_PRGNO_V3.py": true
+    }
+  },
+  "general_dynamicspatial_cache": {
+    "bug_reproduced": true,
+    "inference_tensors_in_cache": 9,
+    "error": "Inference tensors cannot be saved for backward. To work around you can make a clone to get a normal tensor and use it in autograd.",
+    "used_in_current_restart": false
+  },
+  "cave": {
+    "runs": [
+      {
+        "seed": 42,
+        "epochs": 600,
+        "first_l1": 0.02499175,
+        "last_l1": 0.00111845,
+        "batch_size": 1,
+        "amp": false
+      },
+      {
+        "seed": 43,
+        "epochs": 600,
+        "first_l1": 0.02990204,
+        "last_l1": 0.00114184,
+        "batch_size": 1,
+        "amp": false
+      },
+      {
+        "seed": 44,
+        "epochs": 600,
+        "first_l1": 0.02287345,
+        "last_l1": 0.00109867,
+        "batch_size": 1,
+        "amp": false
+      }
+    ],
+    "train_scenes": 20,
+    "test_scenes": 12,
+    "train_test_overlap": [],
+    "spectral_response_fit_uses_only_training_scenes": true
+  },
+  "runtime": {
+    "device": "cpu",
+    "torch": "2.6.0+cu126",
+    "spatial": [
+      {
+        "sf": 4,
+        "hr": [
+          32,
+          40
+        ],
+        "forward_max_error": 3.3306690738754696e-16,
+        "adjoint_dot_error": 1.7763568394002505e-15,
+        "inference_cache_then_backward": true
+      },
+      {
+        "sf": 4,
+        "hr": [
+          64,
+          64
+        ],
+        "forward_max_error": 3.3306690738754696e-16,
+        "adjoint_dot_error": 1.3322676295501878e-15,
+        "inference_cache_then_backward": true
+      },
+      {
+        "sf": 8,
+        "hr": [
+          32,
+          40
+        ],
+        "forward_max_error": 1.6653345369377348e-16,
+        "adjoint_dot_error": 8.881784197001252e-16,
+        "inference_cache_then_backward": true
+      },
+      {
+        "sf": 8,
+        "hr": [
+          64,
+          64
+        ],
+        "forward_max_error": 3.3306690738754696e-16,
+        "adjoint_dot_error": 8.881784197001252e-16,
+        "inference_cache_then_backward": true
+      }
+    ],
+    "datasets": {
+      "pavia": {
+        "scales": [
+          {
+            "sf": 4,
+            "shape": [
+              1,
+              102,
+              16,
+              24
+            ],
+            "calls": {
+              "1.regional": 1,
+              "1.GI": 1,
+              "2.regional": 1,
+              "2.GI": 1,
+              "3.regional": 1,
+              "3.deformable": 1,
+              "3.GI": 1
+            }
+          },
+          {
+            "sf": 8,
+            "shape": [
+              1,
+              102,
+              16,
+              24
+            ],
+            "calls": {
+              "1.regional": 1,
+              "1.GI": 1,
+              "2.regional": 1,
+              "2.GI": 1,
+              "3.regional": 1,
+              "3.deformable": 1,
+              "3.GI": 1
+            }
+          }
+        ],
+        "backward_finite": true,
+        "stage_gradients": {
+          "1.offset": null,
+          "1.sampling_weight": null,
+          "1.physics_qk": 0.0030829194001853466,
+          "2.offset": null,
+          "2.sampling_weight": null,
+          "2.physics_qk": 0.0012343754060566425,
+          "3.offset": 0.0005901292897760868,
+          "3.sampling_weight": 0.00023579788103234023,
+          "3.physics_qk": 0.0009787783492356539
+        },
+        "gradient_accumulation_relative_l2": 2.0609094442978417e-07,
+        "masked_l1_matches_manual": true,
+        "chunked_vector_attention_max_error": 4.76837158203125e-07
+      },
+      "chikusei": {
+        "scales": [
+          {
+            "sf": 4,
+            "shape": [
+              1,
+              128,
+              16,
+              24
+            ],
+            "calls": {
+              "1.regional": 1,
+              "1.GI": 1,
+              "2.regional": 1,
+              "2.GI": 1,
+              "3.regional": 1,
+              "3.deformable": 1,
+              "3.GI": 1
+            }
+          },
+          {
+            "sf": 8,
+            "shape": [
+              1,
+              128,
+              16,
+              24
+            ],
+            "calls": {
+              "1.regional": 1,
+              "1.GI": 1,
+              "2.regional": 1,
+              "2.GI": 1,
+              "3.regional": 1,
+              "3.deformable": 1,
+              "3.GI": 1
+            }
+          }
+        ],
+        "backward_finite": true,
+        "stage_gradients": {
+          "1.offset": null,
+          "1.sampling_weight": null,
+          "1.physics_qk": 0.0046846880577504635,
+          "2.offset": null,
+          "2.sampling_weight": null,
+          "2.physics_qk": 0.004688509274274111,
+          "3.offset": 0.004206455312669277,
+          "3.sampling_weight": 0.0006933410186320543,
+          "3.physics_qk": 0.004284980706870556
+        },
+        "gradient_accumulation_relative_l2": 1.715864907369272e-07,
+        "masked_l1_matches_manual": true,
+        "chunked_vector_attention_max_error": 4.76837158203125e-07
+      }
+    }
+  }
+}

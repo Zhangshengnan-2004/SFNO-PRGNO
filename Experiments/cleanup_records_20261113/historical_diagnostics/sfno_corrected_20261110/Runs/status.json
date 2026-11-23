@@ -1,0 +1,16 @@
+{
+  "phase": "superseded_by_restart",
+  "pid": 601682,
+  "updated_at": "2026-11-11T10:03:22.177540+08:00",
+  "job": "pavia_seed42",
+  "output": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_corrected_20261110/Checkpoint/pavia_sfno_x4_seed42",
+  "completed_jobs": 0,
+  "total_jobs": 6,
+  "next_experiment": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_restart_20261111",
+  "stopped_pids": [
+    601682,
+    601685
+  ],
+  "reason": "\u7528\u6237\u8981\u6c42\u5176\u4f59\u8bad\u7ec3\u53c2\u6570\u5bf9\u9f50\u8bba\u6587\uff1b\u4fdd\u7559\u65e7\u7248\uff0c\u72ec\u7acb\u5019\u9009\u9a8c\u6536\u540e\u5207\u6362",
+  "last_saved_epoch": 15
+}

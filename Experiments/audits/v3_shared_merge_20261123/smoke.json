@@ -1,0 +1,7 @@
+{
+  "initialization_state_dict_equal": true,
+  "constructor_rng_equal": true,
+  "initial_forward_equal": true,
+  "forward_max_error": 0.0,
+  "params": 614036
+}

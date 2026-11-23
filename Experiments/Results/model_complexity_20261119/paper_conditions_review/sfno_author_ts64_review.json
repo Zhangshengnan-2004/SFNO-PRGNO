@@ -1,0 +1,122 @@
+{
+  "scope": "Released author CAVE TorchScript; CPU actual HR64, LR16, 31/3 bands, batch1; Table1 FLOPs protocol unconfirmed",
+  "torch": "2.6.0+cu126",
+  "path": "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/BestModel_ts.pt",
+  "sha256": "7c761933b0099110443a3398ab200880c6dcd979ad1ace29acab7f9b4ed585dd",
+  "prior_rules_path": "/home/zsn/projects/SFNO-PRGNO/Experiments/Results/model_complexity_20261116/profile_complete.py",
+  "prior_rules_sha256": "ccadaf76207c8a2eaec726144ce46334e590325a1d9287ae87a84ce5bbb72b27",
+  "params": 318245,
+  "unused_parameter_prefixes": {
+    "spe1": 48768,
+    "spa1": 2912,
+    "conv00": 8256,
+    "conv01": 4160,
+    "fc1": 4160,
+    "fc2": 4160,
+    "convw": 1184
+  },
+  "input_shapes": [
+    [
+      1,
+      31,
+      16,
+      16
+    ],
+    [
+      1,
+      3,
+      64,
+      64
+    ]
+  ],
+  "output_shape": [
+    1,
+    31,
+    64,
+    64
+  ],
+  "finite": true,
+  "raw_counter_unclassified": {
+    "aten.equal": 12,
+    "aten.floor_divide": 18
+  },
+  "added_zero_rules": {
+    "equal": "Boolean comparison",
+    "floor_divide": "Integer tensor shape geometry only, asserted"
+  },
+  "additional_bias_rule": "aten._convolution bias: one extra add per output element, same as eager convolution rule",
+  "additional_convolution_bias": 4739072,
+  "core_FLOPs": 2532376576,
+  "supplement_FLOPs": 154277376,
+  "algorithmic_FLOPs": 2686653952,
+  "core_ops": {
+    "aten._convolution": 699793408,
+    "aten.addmm": 1719336960,
+    "aten.bmm": 113246208
+  },
+  "supplement_ops": {
+    "bicubic_weighted_sum": 3936256,
+    "sub": 9093120,
+    "bias_add": 19337216,
+    "mean": 5332992,
+    "std": 21639168,
+    "add": 10117120,
+    "div": 5334528,
+    "mul": 9879552,
+    "relu_": 3760128,
+    "_softmax": 31531008,
+    "sum": 3342336,
+    "mul_": 0,
+    "native_layer_norm": 11059200,
+    "gelu": 19660800,
+    "leaky_relu_": 253952
+  },
+  "operator_calls": {
+    "upsample_bicubic2d": 1,
+    "cat": 2,
+    "_convolution": 17,
+    "split": 6,
+    "im2col": 6,
+    "view": 93,
+    "unsqueeze": 3,
+    "sub": 12,
+    "permute": 36,
+    "clone": 30,
+    "t": 18,
+    "addmm": 18,
+    "mean": 9,
+    "std": 9,
+    "add": 37,
+    "div": 12,
+    "mul": 22,
+    "relu_": 3,
+    "_softmax": 6,
+    "sum": 3,
+    "mul_": 3,
+    "_local_scalar_dense": 25,
+    "native_layer_norm": 6,
+    "floor_divide": 18,
+    "select": 9,
+    "transpose": 9,
+    "expand": 24,
+    "_unsafe_view": 27,
+    "bmm": 12,
+    "gelu": 6,
+    "leaky_relu_": 1
+  },
+  "unclassified": {},
+  "top_forward": "def forward(self,\n    ms: Tensor,\n    rgb: Tensor) -> Tensor:\n  conv = self.conv\n  block3 = self.block3\n  block2 = self.block2\n  block1 = self.block1\n  conv_block = self.conv_block\n  VI1_3 = self.VI1_3\n  VI1_2 = self.VI1_2\n  VI1_1 = self.VI1_1\n  ms_up = torch.upsample_bicubic2d(ms, None, False, [4., 4.])\n  x = torch.cat([rgb, ms_up], 1)\n  _0 = (VI1_2).forward((VI1_1).forward(x, ), )\n  _1 = (VI1_3).forward(_0, )\n  H = ops.prim.NumToTensor(torch.size(_1, 2))\n  _2 = int(H)\n  _3 = int(H)\n  _4 = int(H)\n  _5 = int(H)\n  _6 = int(H)\n  _7 = int(H)\n  _8 = int(H)\n  _9 = int(H)\n  _10 = int(H)\n  W = ops.prim.NumToTensor(torch.size(_1, 3))\n  _11 = int(W)\n  _12 = int(W)\n  _13 = int(W)\n  _14 = int(W)\n  _15 = int(W)\n  _16 = int(W)\n  _17 = (conv_block).forward(_1, )\n  _18 = (block1).forward(_17, H, W, _10, _16, _9, _15, _8, )\n  _19 = (block2).forward(_18, H, W, _7, _14, _6, _13, _5, )\n  _20 = (block3).forward(_19, H, W, _4, _12, _3, _11, _2, )\n  input = torch.cat([_17, _18, _19, _20], 1)\n  _21 = torch.add((conv).forward(input, ), ms_up)\n  return _21\n",
+  "ADE_forward": "def forward(self,\n    x: Tensor) -> Tensor:\n  gate = self.gate\n  mlp = self.mlp\n  qkv_conv = self.qkv_conv\n  b = ops.prim.NumToTensor(torch.size(x, 0))\n  _0 = int(b)\n  _1 = int(b)\n  c = ops.prim.NumToTensor(torch.size(x, 1))\n  _2 = int(c)\n  _3 = int(c)\n  h = ops.prim.NumToTensor(torch.size(x, 2))\n  _4 = int(h)\n  _5 = int(h)\n  w = ops.prim.NumToTensor(torch.size(x, 3))\n  _6 = int(w)\n  _7 = int(w)\n  _8 = torch.chunk((qkv_conv).forward(x, ), 3, 1)\n  q, input, input0, = _8\n  _9 = torch.im2col(input, [3, 3], [1, 1], [1, 1], [1, 1])\n  k_unfold = torch.view(_9, [_1, _3, 9, _5, _7])\n  _10 = torch.im2col(input0, [3, 3], [1, 1], [1, 1], [1, 1])\n  v_unfold = torch.view(_10, [_0, _2, 9, _4, _6])\n  q_expanded = torch.unsqueeze(q, 2)\n  q_minus_k = torch.sub(q_expanded, k_unfold)\n  _11 = torch.permute(q_minus_k, [0, 3, 4, 2, 1])\n  input1 = torch.contiguous(_11)\n  attention_scores = torch.softmax((mlp).forward(input1, ), -2)\n  _12 = torch.permute(v_unfold, [0, 3, 4, 2, 1])\n  neighbors_v = torch.contiguous(_12)\n  _13 = torch.mul(neighbors_v, attention_scores)\n  weighted_v = torch.sum(_13, [3])\n  _14 = torch.permute(weighted_v, [0, 3, 1, 2])\n  weighted_v0 = torch.contiguous(_14)\n  x0 = torch.add(weighted_v0, (gate).forward(x, ))\n  return x0\n",
+  "PR_forward": {
+    "block1": "def forward(self,\n    argument_1: Tensor,\n    H: Tensor,\n    W: Tensor,\n    argument_4: int,\n    argument_5: int,\n    argument_6: int,\n    argument_7: int,\n    argument_8: int) -> Tensor:\n  mlp = self.mlp\n  norm2 = self.norm2\n  drop_path = self.drop_path\n  attn = self.attn\n  norm1 = self.norm1\n  element = ops.prim.NumToTensor(torch.size(argument_1, 0))\n  element0 = ops.prim.NumToTensor(torch.size(argument_1, 1))\n  element1 = ops.prim.NumToTensor(torch.size(argument_1, 2))\n  element2 = ops.prim.NumToTensor(torch.size(argument_1, 3))\n  _0 = int(torch.mul(element, CONSTANTS.c0))\n  result = torch.mul(element1, CONSTANTS.c0)\n  _1 = int(torch.mul_(result, element2))\n  _2 = int(torch.mul(element0, CONSTANTS.c0))\n  x = torch.permute(argument_1, [0, 2, 3, 1])\n  x0 = torch.reshape(x, [_0, _1, _2])\n  B = ops.prim.NumToTensor(torch.size(x0, 0))\n  _3 = int(B)\n  _4 = int(B)\n  C = ops.prim.NumToTensor(torch.size(x0, 2))\n  _5 = int(C)\n  _6 = int(C)\n  _7 = int(C)\n  _8 = int(C)\n  x1 = torch.view((norm1).forward(x0, ), [_4, argument_4, argument_5, _8])\n  B0 = ops.prim.NumToTensor(torch.size(x1, 0))\n  _9 = int(B0)\n  _10 = ops.prim.NumToTensor(torch.size(x1, 1))\n  _11 = ops.prim.NumToTensor(torch.size(x1, 2))\n  C0 = ops.prim.NumToTensor(torch.size(x1, 3))\n  _12 = int(C0)\n  _13 = int(C0)\n  _14 = int(torch.floor_divide(_10, CONSTANTS.c1))\n  _15 = int(torch.floor_divide(_11, CONSTANTS.c1))\n  x2 = torch.view(x1, [_9, _14, 8, _15, 8, _13])\n  _16 = torch.contiguous(torch.permute(x2, [0, 1, 3, 2, 4, 5]))\n  sampling_area = torch.view(_16, [-1, 8, 8, _12])\n  x3 = torch.view(sampling_area, [-1, 64, _7])\n  sampling_area0 = torch.view((attn).forward(x3, ), [-1, 8, 8, _6])\n  _17 = int(torch.floor_divide(H, CONSTANTS.c1))\n  _18 = int(torch.floor_divide(W, CONSTANTS.c1))\n  x4 = torch.view(sampling_area0, [1, _17, _18, 8, 8, -1])\n  _19 = torch.contiguous(torch.permute(x4, [0, 1, 3, 2, 4, 5]))\n  x5 = torch.view(_19, [1, argument_6, argument_7, -1])\n  x6 = torch.view(x5, [_3, int(torch.mul(H, W)), _5])\n  _20 = (drop_path).forward()\n  input = torch.add(x0, x6)\n  _21 = (mlp).forward((norm2).forward(input, ), )\n  _22 = (drop_path).forward1()\n  x7 = torch.add(input, _21)\n  element3 = ops.prim.NumToTensor(torch.size(x7, 0))\n  _23 = int(element3)\n  _24 = ops.prim.NumToTensor(torch.size(x7, 1))\n  element4 = ops.prim.NumToTensor(torch.size(x7, 2))\n  _25 = int(element4)\n  other = torch.mul(H, CONSTANTS.c0)\n  element5 = torch.floor_divide(_24, other)\n  x8 = torch.reshape(x7, [_23, argument_8, int(element5), _25])\n  return torch.permute(x8, [0, 3, 1, 2])\n",
+    "block2": "def forward(self,\n    argument_1: Tensor,\n    H: Tensor,\n    W: Tensor,\n    argument_4: int,\n    argument_5: int,\n    argument_6: int,\n    argument_7: int,\n    argument_8: int) -> Tensor:\n  mlp = self.mlp\n  norm2 = self.norm2\n  drop_path = self.drop_path\n  attn = self.attn\n  norm1 = self.norm1\n  element = ops.prim.NumToTensor(torch.size(argument_1, 0))\n  element0 = ops.prim.NumToTensor(torch.size(argument_1, 1))\n  element1 = ops.prim.NumToTensor(torch.size(argument_1, 2))\n  element2 = ops.prim.NumToTensor(torch.size(argument_1, 3))\n  _0 = int(torch.mul(element, CONSTANTS.c0))\n  result = torch.mul(element1, CONSTANTS.c0)\n  _1 = int(torch.mul_(result, element2))\n  _2 = int(torch.mul(element0, CONSTANTS.c0))\n  x = torch.permute(argument_1, [0, 2, 3, 1])\n  x0 = torch.reshape(x, [_0, _1, _2])\n  B = ops.prim.NumToTensor(torch.size(x0, 0))\n  _3 = int(B)\n  _4 = int(B)\n  C = ops.prim.NumToTensor(torch.size(x0, 2))\n  _5 = int(C)\n  _6 = int(C)\n  _7 = int(C)\n  _8 = int(C)\n  x1 = torch.view((norm1).forward(x0, ), [_4, argument_4, argument_5, _8])\n  B0 = ops.prim.NumToTensor(torch.size(x1, 0))\n  _9 = int(B0)\n  _10 = ops.prim.NumToTensor(torch.size(x1, 1))\n  _11 = ops.prim.NumToTensor(torch.size(x1, 2))\n  C0 = ops.prim.NumToTensor(torch.size(x1, 3))\n  _12 = int(C0)\n  _13 = int(C0)\n  _14 = int(torch.floor_divide(_10, CONSTANTS.c1))\n  _15 = int(torch.floor_divide(_11, CONSTANTS.c1))\n  x2 = torch.view(x1, [_9, _14, 4, _15, 4, _13])\n  _16 = torch.contiguous(torch.permute(x2, [0, 1, 3, 2, 4, 5]))\n  sampling_area = torch.view(_16, [-1, 4, 4, _12])\n  x3 = torch.view(sampling_area, [-1, 16, _7])\n  sampling_area0 = torch.view((attn).forward(x3, ), [-1, 4, 4, _6])\n  _17 = int(torch.floor_divide(H, CONSTANTS.c1))\n  _18 = int(torch.floor_divide(W, CONSTANTS.c1))\n  x4 = torch.view(sampling_area0, [1, _17, _18, 4, 4, -1])\n  _19 = torch.contiguous(torch.permute(x4, [0, 1, 3, 2, 4, 5]))\n  x5 = torch.view(_19, [1, argument_6, argument_7, -1])\n  x6 = torch.view(x5, [_3, int(torch.mul(H, W)), _5])\n  _20 = (drop_path).forward()\n  input = torch.add(x0, x6)\n  _21 = (mlp).forward((norm2).forward(input, ), )\n  _22 = (drop_path).forward1()\n  x7 = torch.add(input, _21)\n  element3 = ops.prim.NumToTensor(torch.size(x7, 0))\n  _23 = int(element3)\n  _24 = ops.prim.NumToTensor(torch.size(x7, 1))\n  element4 = ops.prim.NumToTensor(torch.size(x7, 2))\n  _25 = int(element4)\n  other = torch.mul(H, CONSTANTS.c0)\n  element5 = torch.floor_divide(_24, other)\n  x8 = torch.reshape(x7, [_23, argument_8, int(element5), _25])\n  return torch.permute(x8, [0, 3, 1, 2])\n",
+    "block3": "def forward(self,\n    argument_1: Tensor,\n    H: Tensor,\n    W: Tensor,\n    argument_4: int,\n    argument_5: int,\n    argument_6: int,\n    argument_7: int,\n    argument_8: int) -> Tensor:\n  mlp = self.mlp\n  norm2 = self.norm2\n  drop_path = self.drop_path\n  attn = self.attn\n  norm1 = self.norm1\n  element = ops.prim.NumToTensor(torch.size(argument_1, 0))\n  element0 = ops.prim.NumToTensor(torch.size(argument_1, 1))\n  element1 = ops.prim.NumToTensor(torch.size(argument_1, 2))\n  element2 = ops.prim.NumToTensor(torch.size(argument_1, 3))\n  _0 = int(torch.mul(element, CONSTANTS.c0))\n  result = torch.mul(element1, CONSTANTS.c0)\n  _1 = int(torch.mul_(result, element2))\n  _2 = int(torch.mul(element0, CONSTANTS.c0))\n  x = torch.permute(argument_1, [0, 2, 3, 1])\n  x0 = torch.reshape(x, [_0, _1, _2])\n  B = ops.prim.NumToTensor(torch.size(x0, 0))\n  _3 = int(B)\n  _4 = int(B)\n  C = ops.prim.NumToTensor(torch.size(x0, 2))\n  _5 = int(C)\n  _6 = int(C)\n  _7 = int(C)\n  _8 = int(C)\n  x1 = torch.view((norm1).forward(x0, ), [_4, argument_4, argument_5, _8])\n  B0 = ops.prim.NumToTensor(torch.size(x1, 0))\n  _9 = int(B0)\n  _10 = ops.prim.NumToTensor(torch.size(x1, 1))\n  _11 = ops.prim.NumToTensor(torch.size(x1, 2))\n  C0 = ops.prim.NumToTensor(torch.size(x1, 3))\n  _12 = int(C0)\n  _13 = int(C0)\n  _14 = int(torch.floor_divide(_10, CONSTANTS.c1))\n  _15 = int(torch.floor_divide(_11, CONSTANTS.c1))\n  x2 = torch.view(x1, [_9, _14, 2, _15, 2, _13])\n  _16 = torch.contiguous(torch.permute(x2, [0, 1, 3, 2, 4, 5]))\n  sampling_area = torch.view(_16, [-1, 2, 2, _12])\n  x3 = torch.view(sampling_area, [-1, 4, _7])\n  sampling_area0 = torch.view((attn).forward(x3, ), [-1, 2, 2, _6])\n  _17 = int(torch.floor_divide(H, CONSTANTS.c1))\n  _18 = int(torch.floor_divide(W, CONSTANTS.c1))\n  x4 = torch.view(sampling_area0, [1, _17, _18, 2, 2, -1])\n  _19 = torch.contiguous(torch.permute(x4, [0, 1, 3, 2, 4, 5]))\n  x5 = torch.view(_19, [1, argument_6, argument_7, -1])\n  x6 = torch.view(x5, [_3, int(torch.mul(H, W)), _5])\n  _20 = (drop_path).forward()\n  input = torch.add(x0, x6)\n  _21 = (mlp).forward((norm2).forward(input, ), )\n  _22 = (drop_path).forward1()\n  x7 = torch.add(input, _21)\n  element3 = ops.prim.NumToTensor(torch.size(x7, 0))\n  _23 = int(element3)\n  _24 = ops.prim.NumToTensor(torch.size(x7, 1))\n  element4 = ops.prim.NumToTensor(torch.size(x7, 2))\n  _25 = int(element4)\n  other = torch.mul(H, CONSTANTS.c0)\n  element5 = torch.floor_divide(_24, other)\n  x8 = torch.reshape(x7, [_23, argument_8, int(element5), _25])\n  return torch.permute(x8, [0, 3, 1, 2])\n"
+  },
+  "source_vs_script_differences": [
+    "Script hardcodes x4 in bicubic and accepts only ms,rgb",
+    "Script PR windows (8,4,2), public source (4,4,2)",
+    "Script PR lacks random permutation and inverse permutation",
+    "Script ADE returns weighted_v+gate(x); public source also adds x",
+    "Registered extra modules with 73600 parameters are unused by top forward"
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "protocol": "sfno_corrected_native_v6_20261111",
+  "model": "SFNO",
+  "defaults": {
+    "epochs": 600,
+    "samples": 1000,
+    "micro_batch": 1,
+    "effective_batch": 1,
+    "lr": 0.0001,
+    "lr_gamma": 0.5,
+    "lr_milestones": [
+      200,
+      300,
+      350,
+      500,
+      550
+    ],
+    "train_sf": 4,
+    "test_seed": 1,
+    "patch_size": 64,
+    "save_every": 120
+  },
+  "train_seeds": [
+    42,
+    43,
+    44
+  ],
+  "known_paper_settings": {
+    "patch": 64,
+    "effective_batch": 50,
+    "optimizer": "Adam",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "initial_lr": 0.0002,
+    "gamma": 0.95,
+    "init": "He"
+  },
+  "implementation": {
+    "precision": "FP32",
+    "amp": false,
+    "workers": 0,
+    "deterministic": true,
+    "loss": "mean per-image GT-nonzero masked L1",
+    "initialization": "native SFNO/PyTorch constructor defaults; no blanket reinitialization",
+    "schedule": "lr(epoch_index)=1e-4*0.5**count(epoch_index >= milestone), milestones=[200,300,350,500,550]",
+    "lr_milestones": [
+      200,
+      300,
+      350,
+      500,
+      550
+    ],
+    "optimizer_updates_per_epoch": 1000,
+    "total_optimizer_updates": 600000,
+    "total_patches_per_seed": 600000,
+    "eval": "common_hsi_eval_v1; test_seed1 independent of train seed; x4 trained, x4/x8 evaluated"
+  },
+  "datasets": {
+    "pavia": {
+      "hsi_channels": 102,
+      "msi_channels": 4,
+      "normalization": 8000,
+      "response_file": "response_pavia.npy",
+      "response_sha256": "ed9305859acdcc572d7466f18c14fde43189ac95c44bc3a5dc220109a438bb3e",
+      "raw_sha256": {
+        "/home/zsn/projects/SFNO-PRGNO/Pavia/Data/Pavia.mat": "b60341da323fd271cd97dd6d7a69514d385ccd7fdfc5a60c4ff5994b047f152e"
+      },
+      "train_rectangles_yxhw": [
+        [
+          0,
+          0,
+          704,
+          715
+        ]
+      ],
+      "test_origins_yx": [
+        [
+          712,
+          0
+        ],
+        [
+          712,
+          192
+        ],
+        [
+          904,
+          0
+        ],
+        [
+          904,
+          192
+        ]
+      ],
+      "test_size": {
+        "4": 192,
+        "8": 192
+      },
+      "response_source": "/home/zsn/projects/SHOTUN-main/data/pavia/paviac_256_s8.mat",
+      "response_source_sha256": "0749421b36cf2d4aa1803e5b3e70deb5625e3b2495177b5343708db9a0fd6e1b",
+      "verification": {
+        "ref_crop_origin": [
+          246,
+          235
+        ],
+        "ref_crop_max_abs": 0.0,
+        "msi_reconstruction_max_abs": 2.220446049250313e-16,
+        "note": "Only validates already-training-region crop; this 256px sample is not used as a test scene"
+      },
+      "physical_sensor": "unconfirmed; reusable supplied 102x4 matrix, not claimed as SFNO author SRF"
+    },
+    "chikusei": {
+      "hsi_channels": 128,
+      "msi_channels": 3,
+      "normalization": 10000,
+      "response_file": "response_chikusei.npy",
+      "response_sha256": "e8e300a49c65bb47b371571053a29c307a45d5ca24a4c08828c4d03eb2d2ab7f",
+      "raw_sha256": {
+        "/home/zsn/projects/SFNO-PRGNO/Chikusei/HyperspecVNIR_Chikusei_20140729.bsq": "89715ed9a6ab725644707b2c1732642dd1634755f3914d0ecec9bc77f62a741b",
+        "/home/zsn/projects/SFNO-PRGNO/Chikusei/HyperspecVNIR_Chikusei_20140729.hdr": "8e68b2d13005a96d8d5e057e626c47dd8eb1993c78d4492038a49544360d5d14"
+      },
+      "train_rectangles_yxhw": [
+        [
+          0,
+          0,
+          500,
+          500
+        ],
+        [
+          0,
+          500,
+          500,
+          500
+        ],
+        [
+          0,
+          1000,
+          500,
+          500
+        ],
+        [
+          0,
+          1500,
+          500,
+          500
+        ],
+        [
+          500,
+          0,
+          500,
+          500
+        ],
+        [
+          500,
+          500,
+          500,
+          500
+        ],
+        [
+          500,
+          1000,
+          500,
+          500
+        ],
+        [
+          500,
+          1500,
+          500,
+          500
+        ],
+        [
+          1000,
+          0,
+          500,
+          500
+        ],
+        [
+          1000,
+          500,
+          500,
+          500
+        ],
+        [
+          1000,
+          1000,
+          500,
+          500
+        ],
+        [
+          1000,
+          1500,
+          500,
+          500
+        ]
+      ],
+      "test_origins_yx": [
+        [
+          1500,
+          0
+        ],
+        [
+          1500,
+          500
+        ],
+        [
+          1500,
+          1000
+        ],
+        [
+          1500,
+          1500
+        ],
+        [
+          2000,
+          0
+        ],
+        [
+          2000,
+          500
+        ],
+        [
+          2000,
+          1000
+        ],
+        [
+          2000,
+          1500
+        ]
+      ],
+      "test_size": {
+        "4": 500,
+        "8": 496
+      },
+      "response_source": "AcademySoftwareFoundation/rawtoaces-data Canon EOS 5D Mark II",
+      "response_source_sha256": "3dd2394e07f00c3fff51de631394ff67b4b72463657f4383ac14855969b93c14",
+      "response_interpolation": "HDR wavelengths; linear; zero outside380-780nm; row sum1"
+    }
+  },
+  "assumptions": [
+    "Approximate reproduction; SFNO-author MSI, exact test coordinates and full training configuration unavailable.",
+    "600 epochs x1000 patches, batch1:600000 Adam updates per seed, restoring the historical optimizer budget. All six jobs restart from scratch.",
+    "LR restores historical schedule: initial1e-4, times0.5 after completed epochs200/300/350/500/550. This intentionally differs from paper-reported batch50, initial2e-4 and gamma0.95.",
+    "Native SFNO constructor defaults retained; no blanket He reset. The previous all-layer He reset caused severe initial activation amplification; author layer-specific initialization remains unconfirmed.",
+    "Training quality gates use only training-region probes, not final test images: before queue launch pilot must improve on Bicubic; epoch1 L1<=1 and epoch10 L1<=0.05 required during formal runs.",
+    "Per-image GT-nonzero masked L1 chosen as baseline objective; paper training loss not verified; no joint spectral/relative terms.",
+    "Fixed normalization8000/10000 and current disjoint spatial splits retained; not tuned against paper/test results.",
+    "Chikusei eight test blocks follow4.1;4.2 says six; exact author test set remains unresolved.",
+    "Periodic sigma2 degradation, kernel size sf, half-pixel center, phase sf/2-1; boundary details not author-confirmed.",
+    "No added noise; test invalid pixels nearest-filled for input, excluded from common metrics.",
+    "Final checkpoint selected by fixed budget only; no test-based early stopping/model selection.",
+    "SFNO only; V3-stage3 deferred until this protocol is reviewed."
+  ],
+  "references": {
+    "dtdnml_simulation_url": "https://github.com/Shawn-H-Wang/DTDNML/blob/1a19a8722924e6ed7f310bff3bbb80eef2036df3/simulation/simulation.m",
+    "dtdnml_simulation_sha256": "2d013c031def595a0a7de25fe1c4fecbcede726d6539f3ea376f98ba03f97e45",
+    "note": "Upstream simulation loads external SRF without naming sensor; only supplied matrix is reused, not its sigma0.5/noise pipeline"
+  },
+  "source_hashes": {
+    "data.py": "9f8594d78aa9a195d7e36eff3af5775ff959b3238199d78d2384e3f354d7b5a2",
+    "inference_memory.py": "1600d32995bba46ee65db9dace812e5f49cddfa464c636f637e8a1f42ca62424",
+    "metrics.py": "4914c61635d9b2d0d8e1775f0b822288632292bf7920e422d787393cfb5f114a",
+    "model/SFNO.py": "d167acbd8d58cf4e38406855f8f5c58feeaa6b9fadd47f6834843f1de337ad18",
+    "model/Utils.py": "ab0b9c947eb099184cec989b4c7e8dd4cd764a9cc1a220d8cdcc02c7ecfed2dd",
+    "model/VectorAttention.py": "ac02fe488c05fa802ca1762607e0b67b7989cc3b63a018e3970cc9584762e7f7",
+    "prepare.py": "07e3f21cab4c1bc272f78436614d02d7c863429987fbb0095399bc33ba8e3c74",
+    "protocol.py": "9746e29671c677d0f8de945f56dbf0471ec4fccbc419b3e2ab13effbe918ccba",
+    "run.py": "7e18a2039d06558234e84f60613fcbf19dff8df80bbc0d235c35471cd598e01e",
+    "run_queue.py": "8ba391e820811f6333413a67a6ddbda20c9e8da18c3e26ba9c0ca2a5d7461cfc",
+    "validate.py": "177bf348067b7f588f762ca9a125a6c2fa3148669cf0c853914fce1426cf4b58"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sfno": {
+    "state": "complete",
+    "training_epoch": 400,
+    "target_epoch": 400,
+    "output": "Checkpoint/train_x4_e400"
+  },
+  "v1": {
+    "state": "complete",
+    "training_epoch": 400,
+    "target_epoch": 400,
+    "output": "Checkpoint/train_x4_prgno_e400"
+  },
+  "v2": {
+    "state": "complete",
+    "training_epoch": 400,
+    "target_epoch": 400,
+    "output": "Checkpoint/train_x4_prgno_v2_e400"
+  },
+  "v3": {
+    "state": "complete",
+    "training_epoch": 400,
+    "target_epoch": 400,
+    "output": "Checkpoint/train_x4_prgno_v3_e400"
+  }
+}

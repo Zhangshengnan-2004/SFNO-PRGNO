@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "protocol_sha256": "5267ce718a49240bba8c1cdb33efaaf831e70ef4679396d2b133a23964ca7c91",
+  "accumulation_check": true,
+  "budget_600x1000": true,
+  "optimizer_updates_per_seed": 600000,
+  "historical_learning_rate_schedule": true,
+  "training_region_convergence": [
+    {
+      "dataset": "pavia",
+      "probe_seed": 1729,
+      "probe_count": 4,
+      "scope": "training-region only, not generalization or final test results",
+      "initial": {
+        "L1": 0.4020538628101349,
+        "psnr": 16.094279775359766,
+        "sam_degrees": 53.11303287969222,
+        "ergas": 972.757266606265
+      },
+      "bicubic": {
+        "L1": 0.012712150113657117,
+        "psnr": 40.06910702674382,
+        "sam_degrees": 6.6297854385080175,
+        "ergas": 7.091208991263288
+      },
+      "attempts": [
+        {
+          "epoch": 3,
+          "optimizer_steps": 3000,
+          "metrics": {
+            "L1": 0.0063854342442937195,
+            "psnr": 43.43737084130267,
+            "sam_degrees": 6.652596983505507,
+            "ergas": 7.612451798283748
+          },
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "threshold": "L1 <0.1*initial and <0.9*Bicubic; PSNR >Bicubic+1dB; check at epochs3/5/10"
+    },
+    {
+      "dataset": "chikusei",
+      "probe_seed": 1729,
+      "probe_count": 4,
+      "scope": "training-region only, not generalization or final test results",
+      "initial": {
+        "L1": 0.4359930753707886,
+        "psnr": 15.455513755107237,
+        "sam_degrees": 50.16173074537615,
+        "ergas": 243.02731754402663
+      },
+      "bicubic": {
+        "L1": 0.014035384869202971,
+        "psnr": 35.601290604505124,
+        "sam_degrees": 3.0829277861430873,
+        "ergas": 6.235433173706528
+      },
+      "attempts": [
+        {
+          "epoch": 3,
+          "optimizer_steps": 3000,
+          "metrics": {
+            "L1": 0.011991352774202824,
+            "psnr": 38.14259765382065,
+            "sam_degrees": 3.623457161614234,
+            "ergas": 4.452897173461853
+          },
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "threshold": "L1 <0.1*initial and <0.9*Bicubic; PSNR >Bicubic+1dB; check at epochs3/5/10"
+    }
+  ],
+  "training_quality_gate": true,
+  "exact_resume_model_and_adam": true,
+  "full_test_entry_and_logs": true,
+  "details": [
+    {
+      "dataset": "pavia",
+      "micro_batch": 1,
+      "accumulation": 1,
+      "finite_batch1_update": true,
+      "initial_micro_losses": [
+        0.4263748824596405
+      ],
+      "peak_training_allocated_bytes": 518974976
+    },
+    {
+      "dataset": "chikusei",
+      "micro_batch": 1,
+      "accumulation": 1,
+      "finite_batch1_update": true,
+      "initial_micro_losses": [
+        0.455885648727417
+      ],
+      "peak_training_allocated_bytes": 606950912
+    }
+  ]
+}

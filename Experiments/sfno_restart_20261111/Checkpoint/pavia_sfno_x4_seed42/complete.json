@@ -1,0 +1,9 @@
+{
+  "dataset": "pavia",
+  "seed": 42,
+  "epoch": 600,
+  "scales": [
+    4,
+    8
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "spatial": {
+    "parameters": 273668,
+    "forward_backward_passed": true
+  },
+  "spectral": {
+    "parameters": 273668,
+    "forward_backward_passed": true
+  },
+  "dual": {
+    "parameters": 273668,
+    "forward_backward_passed": true
+  },
+  "capacity": {
+    "parameters": 273668,
+    "forward_backward_passed": true
+  }
+}

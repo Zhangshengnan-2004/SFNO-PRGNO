@@ -1,0 +1,372 @@
+{
+  "source_hashes": {
+    "SFNO-PRGNO/Experiments/Results/model_complexity_20261116/profile_complete.py": "ccadaf76207c8a2eaec726144ce46334e590325a1d9287ae87a84ce5bbb72b27",
+    "SFNO-PRGNO/Experiments/Results/model_complexity_20261116/verify_complete.py": "ea28a90ee3dacdc2f6503683bce2ffde2ef22dd43b600b9f941af782e945988e",
+    "SFNO-PRGNO/CAVE/Model/SFNO.py": "d167acbd8d58cf4e38406855f8f5c58feeaa6b9fadd47f6834843f1de337ad18",
+    "SFNO-PRGNO/CAVE/Model/SFNO_PRGNO_V3.py": "738b26323b25c99eccd50220248f27b621386a8cf747a62150eb8cc21e061cec",
+    "SSRNET-master/comparison/adapter.py": "064004db911ad4099cc5395ebf47c08f1649ac3f4fd61ad3fffd166ac0050b56",
+    "MHF-net-master/comparison/adapter.py": "9c8e86c4042493b80be6b24de70f2b793f61cbbcb040249e17cd02388cc287f2"
+  },
+  "metric_reports": [
+    {
+      "dataset": "cave",
+      "model": "SSR-Net",
+      "sf": 4,
+      "report": "/home/zsn/projects/SSRNET-master/comparison/Checkpoint/cave_ssrnet_x4_seed42/last_test_x4.json",
+      "sha256": "b72efd9c3e03d91b36cc6beacfac6077ed5f3f44688a77fea7d31b97b3504e08"
+    },
+    {
+      "dataset": "cave",
+      "model": "SSR-Net",
+      "sf": 8,
+      "report": "/home/zsn/projects/SSRNET-master/comparison/Checkpoint/cave_ssrnet_x4_seed42/last_test_x8.json",
+      "sha256": "849db6291b6091e731a55485cf703dcf2c09ba3764fc4354d88f70395a902695"
+    },
+    {
+      "dataset": "cave",
+      "model": "MHF-Net",
+      "sf": 4,
+      "report": "/home/zsn/projects/MHF-net-master/comparison/Checkpoint/cave_mhf_x4_seed42/last_test_x4.json",
+      "sha256": "9c438f20d12d3f4fc0f371d0bc7d394f6a06008b603de171dba318c6910ef090"
+    },
+    {
+      "dataset": "cave",
+      "model": "MHF-Net",
+      "sf": 8,
+      "report": "/home/zsn/projects/MHF-net-master/comparison/Checkpoint/cave_mhf_x4_seed42/last_test_x8.json",
+      "sha256": "2229df02e7f951cfd4edda35d65387cdb994df65d9eb9ba754d926594431dd1c"
+    },
+    {
+      "dataset": "cave",
+      "model": "SFNO",
+      "sf": 4,
+      "report": "/home/zsn/projects/SFNO-PRGNO/Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed42/metrics.json",
+      "sha256": "a34779eaff56526a38c887980f1928462e64715599b226069c459dc91258eb72"
+    },
+    {
+      "dataset": "cave",
+      "model": "SFNO",
+      "sf": 8,
+      "report": "/home/zsn/projects/SFNO-PRGNO/Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed42/metrics_x8.json",
+      "sha256": "99bd13fcc8e0831fb8748f4897c3528c126725aaa98460ad973551270c8905df"
+    },
+    {
+      "dataset": "cave",
+      "model": "V3-stage3",
+      "sf": 4,
+      "report": "/home/zsn/projects/SFNO-PRGNO/Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed42/metrics.json",
+      "sha256": "80d1abcda0ed9aa26f0fa9974de35d4ab639c2212525e9a0b55b820cd76fcf92"
+    },
+    {
+      "dataset": "cave",
+      "model": "V3-stage3",
+      "sf": 8,
+      "report": "/home/zsn/projects/SFNO-PRGNO/Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed42/metrics_x8.json",
+      "sha256": "b60111c73e06030ac7fba999b2dfa490ad637d2d4a7ce868f1d644416232343b"
+    },
+    {
+      "dataset": "chikusei",
+      "model": "SSR-Net",
+      "sf": 4,
+      "report": "/home/zsn/projects/SSRNET-master/comparison/Checkpoint/chikusei_ssrnet_x4_seed42/last_test_x4.json",
+      "sha256": "a1a94146f9aa5764d282011930bf40cc20af7f62a69d5e00bab36d50c90578f0"
+    },
+    {
+      "dataset": "chikusei",
+      "model": "SSR-Net",
+      "sf": 8,
+      "report": "/home/zsn/projects/SSRNET-master/comparison/Checkpoint/chikusei_ssrnet_x4_seed42/last_test_x8.json",
+      "sha256": "ab5c01a9f8be51e20dcbf01947e30a553fbe80af7b66459473eb4bdc703c84f6"
+    },
+    {
+      "dataset": "chikusei",
+      "model": "SFNO",
+      "sf": 4,
+      "report": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_restart_20261111/Checkpoint/chikusei_sfno_x4_seed42/last_test_x4.json",
+      "sha256": "ea6b6fb2fa4ce7720ec5608db08b70eb72ebf1151a7e724c9daa4d741f9790bd"
+    },
+    {
+      "dataset": "chikusei",
+      "model": "SFNO",
+      "sf": 8,
+      "report": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_restart_20261111/Checkpoint/chikusei_sfno_x4_seed42/last_test_x8.json",
+      "sha256": "d2ed2b96b1f3e583ce30ed5ff87278567a2fbe1ae990c52d7eb937ada8face5d"
+    },
+    {
+      "dataset": "chikusei",
+      "model": "V3-stage3",
+      "sf": 4,
+      "report": "/home/zsn/projects/SFNO-PRGNO/Experiments/v3_stage3_restart_20261111/Checkpoint/chikusei_v3_stage3_x4_seed42/last_test_x4.json",
+      "sha256": "e618d2b2a7a448fa76cc885fc6507e84964130561d94c57787b4d3d9d392b8c9"
+    },
+    {
+      "dataset": "chikusei",
+      "model": "V3-stage3",
+      "sf": 8,
+      "report": "/home/zsn/projects/SFNO-PRGNO/Experiments/v3_stage3_restart_20261111/Checkpoint/chikusei_v3_stage3_x4_seed42/last_test_x8.json",
+      "sha256": "99b8082971cb3cb1d1388b4c44af6e63f0b6ef4de7db2b652981e45f41699ec1"
+    },
+    {
+      "dataset": "pavia",
+      "model": "SSR-Net",
+      "sf": 4,
+      "report": "/home/zsn/projects/SSRNET-master/comparison/Checkpoint/pavia_ssrnet_x4_seed42/last_test_x4.json",
+      "sha256": "a006e05bf258cd6a1bb4e23a7218c76c7c71c3312d369c51cae61740ea84d6fd"
+    },
+    {
+      "dataset": "pavia",
+      "model": "SSR-Net",
+      "sf": 8,
+      "report": "/home/zsn/projects/SSRNET-master/comparison/Checkpoint/pavia_ssrnet_x4_seed42/last_test_x8.json",
+      "sha256": "cbfa1174969c11a4fd1b51ddcefdde25b4db313d9f701a94feac65cc14dbcb04"
+    },
+    {
+      "dataset": "pavia",
+      "model": "SFNO",
+      "sf": 4,
+      "report": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_restart_20261111/Checkpoint/pavia_sfno_x4_seed42/last_test_x4.json",
+      "sha256": "b6789f7ba27bcde66718e87f8c6ed8d42875e627b3b7acea7426d917fd4dd2fd"
+    },
+    {
+      "dataset": "pavia",
+      "model": "SFNO",
+      "sf": 8,
+      "report": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_restart_20261111/Checkpoint/pavia_sfno_x4_seed42/last_test_x8.json",
+      "sha256": "9071036c890aa3e66e6321483c1708fef1c245fed318e46e988b49663209ff17"
+    },
+    {
+      "dataset": "pavia",
+      "model": "V3-stage3",
+      "sf": 4,
+      "report": "/home/zsn/projects/SFNO-PRGNO/Experiments/v3_stage3_restart_20261111/Checkpoint/pavia_v3_stage3_x4_seed42/last_test_x4.json",
+      "sha256": "060f800221502c7faa956bf081dbf1b1bd3cc7c0db591d7170cba520f84ecd6b"
+    },
+    {
+      "dataset": "pavia",
+      "model": "V3-stage3",
+      "sf": 8,
+      "report": "/home/zsn/projects/SFNO-PRGNO/Experiments/v3_stage3_restart_20261111/Checkpoint/pavia_v3_stage3_x4_seed42/last_test_x8.json",
+      "sha256": "de354f18bac26f8fef0b589dcf900c52cf0923f502bd802eac8ca60084cd6758"
+    }
+  ],
+  "training_seed": 42,
+  "test_seed": 1,
+  "results": [
+    {
+      "dataset": "cave",
+      "display": "CAVE",
+      "model": "SSR-Net",
+      "params": 26041,
+      "params_M": 0.026041,
+      "FLOPs_G_x4": 0.214835328,
+      "FLOPs_G_x8": 0.214835328,
+      "metrics": [
+        47.89813486735026,
+        3.380653123060862,
+        1.2902076343695323,
+        46.351612408955894,
+        3.8992894689242044,
+        0.756765050192674
+      ],
+      "note": ""
+    },
+    {
+      "dataset": "cave",
+      "display": "CAVE",
+      "model": "MHF-Net",
+      "params": 1211047,
+      "params_M": 1.211047,
+      "FLOPs_G_x4": 7.995188202,
+      "FLOPs_G_x8": 8.016109482,
+      "metrics": [
+        48.48198382059733,
+        3.02144647638003,
+        1.1673521225651105,
+        43.19739373524984,
+        4.895252366860707,
+        1.0232671226064365
+      ],
+      "note": ""
+    },
+    {
+      "dataset": "cave",
+      "display": "CAVE",
+      "model": "SFNO",
+      "params": 244645,
+      "params_M": 0.244645,
+      "FLOPs_G_x4": 2.628875776,
+      "FLOPs_G_x8": 2.628875776,
+      "metrics": [
+        51.89698791503906,
+        2.0270020961761475,
+        0.7788879871368408,
+        49.5333251953125,
+        2.510378360748291,
+        0.5370705127716064
+      ],
+      "note": ""
+    },
+    {
+      "dataset": "cave",
+      "display": "CAVE",
+      "model": "V3-stage3",
+      "params": 614036,
+      "params_M": 0.614036,
+      "FLOPs_G_x4": 3.886657834,
+      "FLOPs_G_x8": 3.85730545,
+      "metrics": [
+        52.01811599731445,
+        1.9486980438232422,
+        0.7660801410675049,
+        49.71211624145508,
+        2.4015324115753174,
+        0.5297637581825256
+      ],
+      "note": ""
+    },
+    {
+      "dataset": "chikusei",
+      "display": "Chikusei",
+      "model": "SSR-Net",
+      "params": 442753,
+      "params_M": 0.442753,
+      "FLOPs_G_x4": 3.63329536,
+      "FLOPs_G_x8": 3.63329536,
+      "metrics": [
+        42.69143079423115,
+        2.0189581495291513,
+        3.0768358546436465,
+        40.5325814673961,
+        2.5560906257253144,
+        1.8328004649603893
+      ],
+      "note": ""
+    },
+    {
+      "dataset": "chikusei",
+      "display": "Chikusei",
+      "model": "MHF-Net",
+      "params": 16604171,
+      "params_M": 16.604171,
+      "FLOPs_G_x4": 98.6603349,
+      "FLOPs_G_x8": 99.018480948,
+      "metrics": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "note": "architecture-only; Chikusei MHF training config/report not present"
+    },
+    {
+      "dataset": "chikusei",
+      "display": "Chikusei",
+      "model": "SFNO",
+      "params": 565327,
+      "params_M": 0.565327,
+      "FLOPs_G_x4": 11.765065216,
+      "FLOPs_G_x8": 11.765065216,
+      "metrics": [
+        43.792386683911815,
+        1.7513557659956835,
+        2.4536553847937976,
+        40.11037573895771,
+        2.463647133850685,
+        1.6881892067705335
+      ],
+      "note": ""
+    },
+    {
+      "dataset": "chikusei",
+      "display": "Chikusei",
+      "model": "V3-stage3",
+      "params": 947231,
+      "params_M": 0.947231,
+      "FLOPs_G_x4": 13.65188305,
+      "FLOPs_G_x8": 13.62276049,
+      "metrics": [
+        46.466836666609595,
+        1.480301471472358,
+        2.089409225203013,
+        43.726254235560205,
+        1.9404824664774045,
+        1.3243584051475905
+      ],
+      "note": ""
+    },
+    {
+      "dataset": "pavia",
+      "display": "Pavia Centre",
+      "model": "SSR-Net",
+      "params": 281215,
+      "params_M": 0.281215,
+      "FLOPs_G_x4": 2.30870144,
+      "FLOPs_G_x8": 2.30870144,
+      "metrics": [
+        44.1305830223504,
+        3.1134564957705493,
+        1.6785354263938523,
+        43.595959791950804,
+        3.2603881510977692,
+        0.8748975658910916
+      ],
+      "note": ""
+    },
+    {
+      "dataset": "pavia",
+      "display": "Pavia Centre",
+      "model": "MHF-Net",
+      "params": 10791840,
+      "params_M": 10.79184,
+      "FLOPs_G_x4": 64.908315004,
+      "FLOPs_G_x8": 65.13566566,
+      "metrics": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "note": ""
+    },
+    {
+      "dataset": "pavia",
+      "display": "Pavia Centre",
+      "model": "SFNO",
+      "params": 450020,
+      "params_M": 0.45002,
+      "FLOPs_G_x4": 8.434927104,
+      "FLOPs_G_x8": 8.434927104,
+      "metrics": [
+        44.5149958590981,
+        2.997502847521886,
+        1.6310299912510016,
+        43.35652463952197,
+        3.295979386766087,
+        0.887035644885876
+      ],
+      "note": ""
+    },
+    {
+      "dataset": "pavia",
+      "display": "Pavia Centre",
+      "model": "V3-stage3",
+      "params": 828570,
+      "params_M": 0.82857,
+      "FLOPs_G_x4": 10.158061098,
+      "FLOPs_G_x8": 10.128953514,
+      "metrics": [
+        45.41404127618455,
+        2.8420167847990347,
+        1.5322616488351146,
+        44.14606238215368,
+        3.112264631280059,
+        0.8227865836111217
+      ],
+      "note": ""
+    }
+  ]
+}

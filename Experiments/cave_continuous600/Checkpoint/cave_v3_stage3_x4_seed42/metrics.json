@@ -1,0 +1,95 @@
+{
+  "checkpoint": "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/last.pth",
+  "epoch": 600,
+  "model": "sfno_prgno_v3",
+  "ablation": "deform_stage3",
+  "guidance_mode": "physics",
+  "spatial_residual": true,
+  "spectral_residual": true,
+  "device": "cuda:0",
+  "ergas_scale_factor": 4,
+  "sf": 4,
+  "source_sf": 4,
+  "cross_scale": false,
+  "rebuilt_buffers": [],
+  "seed": 1,
+  "per_scene": [
+    {
+      "scene": "superballs",
+      "psnr": 53.7974739074707,
+      "sam": 2.62111496925354,
+      "ergas": 1.217759132385254
+    },
+    {
+      "scene": "thread_spools",
+      "psnr": 54.025489807128906,
+      "sam": 2.119903564453125,
+      "ergas": 0.697076678276062
+    },
+    {
+      "scene": "oil_painting",
+      "psnr": 49.88282775878906,
+      "sam": 2.1289451122283936,
+      "ergas": 0.8494292497634888
+    },
+    {
+      "scene": "paints",
+      "psnr": 48.0007209777832,
+      "sam": 1.7422362565994263,
+      "ergas": 0.61300128698349
+    },
+    {
+      "scene": "photo_and_face",
+      "psnr": 47.65021514892578,
+      "sam": 3.4056246280670166,
+      "ergas": 2.094217300415039
+    },
+    {
+      "scene": "pompoms",
+      "psnr": 51.727149963378906,
+      "sam": 1.248853087425232,
+      "ergas": 0.45239484310150146
+    },
+    {
+      "scene": "real_and_fake_apples",
+      "psnr": 58.8161735534668,
+      "sam": 1.8041911125183105,
+      "ergas": 0.6935640573501587
+    },
+    {
+      "scene": "real_and_fake_peppers",
+      "psnr": 57.50343322753906,
+      "sam": 1.434362769126892,
+      "ergas": 0.4451996684074402
+    },
+    {
+      "scene": "sponges",
+      "psnr": 51.711585998535156,
+      "sam": 1.0336698293685913,
+      "ergas": 0.33486437797546387
+    },
+    {
+      "scene": "stuffed_toys",
+      "psnr": 52.83244323730469,
+      "sam": 2.117762327194214,
+      "ergas": 0.5733669400215149
+    },
+    {
+      "scene": "jelly_beans",
+      "psnr": 48.887916564941406,
+      "sam": 1.891869306564331,
+      "ergas": 0.899681568145752
+    },
+    {
+      "scene": "watercolors",
+      "psnr": 49.38199996948242,
+      "sam": 1.8358449935913086,
+      "ergas": 0.32240617275238037
+    }
+  ],
+  "mean": {
+    "psnr": 52.01811599731445,
+    "sam": 1.9486980438232422,
+    "ergas": 0.7660801410675049
+  }
+}

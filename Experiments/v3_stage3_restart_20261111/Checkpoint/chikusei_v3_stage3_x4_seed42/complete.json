@@ -1,0 +1,10 @@
+{
+  "model": "v3_stage3",
+  "dataset": "chikusei",
+  "seed": 42,
+  "epoch": 600,
+  "scales": [
+    4,
+    8
+  ]
+}

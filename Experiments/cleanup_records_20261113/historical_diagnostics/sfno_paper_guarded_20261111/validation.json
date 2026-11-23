@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "protocol_sha256": "dfe5da4c517940268c44f170606990a158325819894f730a7672a75b50402fd1",
+  "error": "chikusei: native training failed the prespecified convergence gate",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_paper_guarded_20261111/validate.py\", line 171, in <module>\n    try:main()\n  File \"/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_paper_guarded_20261111/validate.py\", line 139, in main\n    pilots.append(check_convergence(dataset,spec,cube,r))\n  File \"/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_paper_guarded_20261111/validate.py\", line 89, in check_convergence\n    if not passed:raise AssertionError(f'{dataset}: native training failed the prespecified convergence gate')\nAssertionError: chikusei: native training failed the prespecified convergence gate\n"
+}

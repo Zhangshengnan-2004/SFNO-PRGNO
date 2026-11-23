@@ -1,0 +1,876 @@
+{
+  "audited_at": "2026-11-13T16:33:34.850457+08:00",
+  "scope": "CAVE only; list candidates, no deletion",
+  "assumption": "只考虑今后主要保留SFNO baseline和V3-stage3；未被当前任务调用不等于没有历史或消融证据价值。",
+  "candidate_definition": "旧版V2/完整V3独立实验及专用工具；删除会失去这些旧版本的复测能力。",
+  "candidate_bytes": 1171076936,
+  "optional_bytes": 457146576,
+  "rows": [
+    {
+      "group": "V2旧实验",
+      "path": "Checkpoint/train_x4_prgno_v2",
+      "classification": "candidate",
+      "reason": "旧版独立200/400/600轮实验；不含deform_stage3。",
+      "bytes": 136189060,
+      "files": [
+        "Checkpoint/train_x4_prgno_v2/best_train_loss.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0010.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0020.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0030.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0040.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0050.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0060.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0070.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0080.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0090.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0100.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0110.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0120.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0130.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0140.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0150.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0160.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0170.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0180.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0190.pth",
+        "Checkpoint/train_x4_prgno_v2/epoch_0200.pth",
+        "Checkpoint/train_x4_prgno_v2/last.pth",
+        "Checkpoint/train_x4_prgno_v2/metrics.json",
+        "Checkpoint/train_x4_prgno_v2/test.log",
+        "Checkpoint/train_x4_prgno_v2/train.log",
+        "Checkpoint/train_x4_prgno_v2/train_log.csv"
+      ]
+    },
+    {
+      "group": "V2旧实验",
+      "path": "Checkpoint/train_x4_prgno_v2_e400",
+      "classification": "candidate",
+      "reason": "旧版独立200/400/600轮实验；不含deform_stage3。",
+      "bytes": 120732324,
+      "files": [
+        "Checkpoint/train_x4_prgno_v2_e400/best_train_loss.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0210.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0220.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0230.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0240.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0250.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0260.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0270.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0280.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0290.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0300.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0310.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0320.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0330.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0340.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0350.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0360.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0370.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0380.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0390.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/epoch_0400.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/last.pth",
+        "Checkpoint/train_x4_prgno_v2_e400/metrics.json",
+        "Checkpoint/train_x4_prgno_v2_e400/metrics_x8.json",
+        "Checkpoint/train_x4_prgno_v2_e400/test.log",
+        "Checkpoint/train_x4_prgno_v2_e400/test_x8.log",
+        "Checkpoint/train_x4_prgno_v2_e400/train_log.csv",
+        "Checkpoint/train_x4_prgno_v2_e400/train_resume.log"
+      ]
+    },
+    {
+      "group": "V2旧实验",
+      "path": "Checkpoint/train_x4_prgno_v2_e600",
+      "classification": "candidate",
+      "reason": "旧版独立200/400/600轮实验；不含deform_stage3。",
+      "bytes": 136364522,
+      "files": [
+        "Checkpoint/train_x4_prgno_v2_e600/best_train_loss.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0410.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0420.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0430.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0440.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0450.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0460.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0470.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0480.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0490.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0500.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0510.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0520.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0530.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0540.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0550.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0560.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0570.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0580.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0590.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/epoch_0600.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/last.pth",
+        "Checkpoint/train_x4_prgno_v2_e600/metrics.json",
+        "Checkpoint/train_x4_prgno_v2_e600/metrics_x8.json",
+        "Checkpoint/train_x4_prgno_v2_e600/test.log",
+        "Checkpoint/train_x4_prgno_v2_e600/test_x8.log",
+        "Checkpoint/train_x4_prgno_v2_e600/train.log",
+        "Checkpoint/train_x4_prgno_v2_e600/train_log.csv"
+      ]
+    },
+    {
+      "group": "完整V3旧实验",
+      "path": "Checkpoint/train_x4_prgno_v3",
+      "classification": "candidate",
+      "reason": "旧版独立200/400/600轮实验；不含deform_stage3。",
+      "bytes": 191188338,
+      "files": [
+        "Checkpoint/train_x4_prgno_v3/best_train_loss.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0010.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0020.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0030.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0040.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0050.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0060.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0070.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0080.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0090.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0100.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0110.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0120.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0130.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0140.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0150.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0160.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0170.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0180.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0190.pth",
+        "Checkpoint/train_x4_prgno_v3/epoch_0200.pth",
+        "Checkpoint/train_x4_prgno_v3/last.pth",
+        "Checkpoint/train_x4_prgno_v3/metrics.json",
+        "Checkpoint/train_x4_prgno_v3/metrics_x8.json",
+        "Checkpoint/train_x4_prgno_v3/test.log",
+        "Checkpoint/train_x4_prgno_v3/test_x8.log",
+        "Checkpoint/train_x4_prgno_v3/train.log",
+        "Checkpoint/train_x4_prgno_v3/train_log.csv"
+      ]
+    },
+    {
+      "group": "完整V3旧实验",
+      "path": "Checkpoint/train_x4_prgno_v3_e400",
+      "classification": "candidate",
+      "reason": "旧版独立200/400/600轮实验；不含deform_stage3。",
+      "bytes": 191385643,
+      "files": [
+        "Checkpoint/train_x4_prgno_v3_e400/best_train_loss.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0210.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0220.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0230.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0240.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0250.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0260.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0270.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0280.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0290.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0300.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0310.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0320.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0330.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0340.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0350.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0360.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0370.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0380.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0390.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/epoch_0400.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/last.pth",
+        "Checkpoint/train_x4_prgno_v3_e400/metrics.json",
+        "Checkpoint/train_x4_prgno_v3_e400/metrics_x8.json",
+        "Checkpoint/train_x4_prgno_v3_e400/test.log",
+        "Checkpoint/train_x4_prgno_v3_e400/test_x8.log",
+        "Checkpoint/train_x4_prgno_v3_e400/train_log.csv",
+        "Checkpoint/train_x4_prgno_v3_e400/train_resume.log"
+      ]
+    },
+    {
+      "group": "完整V3旧实验",
+      "path": "Checkpoint/train_x4_prgno_v3_e600",
+      "classification": "candidate",
+      "reason": "旧版独立200/400/600轮实验；不含deform_stage3。",
+      "bytes": 191385056,
+      "files": [
+        "Checkpoint/train_x4_prgno_v3_e600/best_train_loss.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0410.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0420.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0430.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0440.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0450.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0460.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0470.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0480.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0490.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0500.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0510.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0520.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0530.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0540.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0550.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0560.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0570.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0580.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0590.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/epoch_0600.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/last.pth",
+        "Checkpoint/train_x4_prgno_v3_e600/metrics.json",
+        "Checkpoint/train_x4_prgno_v3_e600/metrics_x8.json",
+        "Checkpoint/train_x4_prgno_v3_e600/test.log",
+        "Checkpoint/train_x4_prgno_v3_e600/test_x8.log",
+        "Checkpoint/train_x4_prgno_v3_e600/train.log",
+        "Checkpoint/train_x4_prgno_v3_e600/train_log.csv"
+      ]
+    },
+    {
+      "group": "V2专用入口、诊断和说明",
+      "path": "Train_V2.py",
+      "classification": "candidate",
+      "reason": "只服务旧V2训练、测试或诊断；删除后不能重跑该V2流程。",
+      "bytes": 9201,
+      "files": [
+        "Train_V2.py"
+      ]
+    },
+    {
+      "group": "V2专用入口、诊断和说明",
+      "path": "Test_V2.py",
+      "classification": "candidate",
+      "reason": "只服务旧V2训练、测试或诊断；删除后不能重跑该V2流程。",
+      "bytes": 7273,
+      "files": [
+        "Test_V2.py"
+      ]
+    },
+    {
+      "group": "V2专用入口、诊断和说明",
+      "path": "test_prgno_v2.py",
+      "classification": "candidate",
+      "reason": "只服务旧V2训练、测试或诊断；删除后不能重跑该V2流程。",
+      "bytes": 3654,
+      "files": [
+        "test_prgno_v2.py"
+      ]
+    },
+    {
+      "group": "V2专用入口、诊断和说明",
+      "path": "diagnose_v2_cross_scale.py",
+      "classification": "candidate",
+      "reason": "只服务旧V2训练、测试或诊断；删除后不能重跑该V2流程。",
+      "bytes": 7819,
+      "files": [
+        "diagnose_v2_cross_scale.py"
+      ]
+    },
+    {
+      "group": "V2专用入口、诊断和说明",
+      "path": "probe_v2_branches.py",
+      "classification": "candidate",
+      "reason": "只服务旧V2训练、测试或诊断；删除后不能重跑该V2流程。",
+      "bytes": 7327,
+      "files": [
+        "probe_v2_branches.py"
+      ]
+    },
+    {
+      "group": "V2专用入口、诊断和说明",
+      "path": "probe_v2_followup.py",
+      "classification": "candidate",
+      "reason": "只服务旧V2训练、测试或诊断；删除后不能重跑该V2流程。",
+      "bytes": 7092,
+      "files": [
+        "probe_v2_followup.py"
+      ]
+    },
+    {
+      "group": "V2专用入口、诊断和说明",
+      "path": "probe_v2_local_footprint.py",
+      "classification": "candidate",
+      "reason": "只服务旧V2训练、测试或诊断；删除后不能重跑该V2流程。",
+      "bytes": 7093,
+      "files": [
+        "probe_v2_local_footprint.py"
+      ]
+    },
+    {
+      "group": "V2专用入口、诊断和说明",
+      "path": "probe_v2_spatial_guidance.py",
+      "classification": "candidate",
+      "reason": "只服务旧V2训练、测试或诊断；删除后不能重跑该V2流程。",
+      "bytes": 6825,
+      "files": [
+        "probe_v2_spatial_guidance.py"
+      ]
+    },
+    {
+      "group": "V2专用入口、诊断和说明",
+      "path": "scripts/run_v2_x4.sh",
+      "classification": "candidate",
+      "reason": "只服务旧V2训练、测试或诊断；删除后不能重跑该V2流程。",
+      "bytes": 1187,
+      "files": [
+        "scripts/run_v2_x4.sh"
+      ]
+    },
+    {
+      "group": "V2专用入口、诊断和说明",
+      "path": "V2.md",
+      "classification": "candidate",
+      "reason": "只服务旧V2训练、测试或诊断；删除后不能重跑该V2流程。",
+      "bytes": 2781,
+      "files": [
+        "V2.md"
+      ]
+    },
+    {
+      "group": "V2专用入口、诊断和说明",
+      "path": "v2_training_execution.log",
+      "classification": "candidate",
+      "reason": "只服务旧V2训练、测试或诊断；删除后不能重跑该V2流程。",
+      "bytes": 0,
+      "files": [
+        "v2_training_execution.log"
+      ]
+    },
+    {
+      "group": "V2专用入口、诊断和说明",
+      "path": "test_v2_x4_to_x8_seed42.log",
+      "classification": "candidate",
+      "reason": "只服务旧V2训练、测试或诊断；删除后不能重跑该V2流程。",
+      "bytes": 1301,
+      "files": [
+        "test_v2_x4_to_x8_seed42.log"
+      ]
+    },
+    {
+      "group": "V2物理诊断输出",
+      "path": "physics/v2_branch_sensitivity",
+      "classification": "candidate",
+      "reason": "V2专用报告/敏感性结果；其中stage3字样指V2第三阶段，非V3-stage3实验。",
+      "bytes": 114608,
+      "files": [
+        "physics/v2_branch_sensitivity/per_scene.csv",
+        "physics/v2_branch_sensitivity/results.json",
+        "physics/v2_branch_sensitivity/summary.csv",
+        "physics/v2_branch_sensitivity/summary.md"
+      ]
+    },
+    {
+      "group": "V2物理诊断输出",
+      "path": "physics/v2_branch_sensitivity.log",
+      "classification": "candidate",
+      "reason": "V2专用报告/敏感性结果；其中stage3字样指V2第三阶段，非V3-stage3实验。",
+      "bytes": 5046,
+      "files": [
+        "physics/v2_branch_sensitivity.log"
+      ]
+    },
+    {
+      "group": "V2物理诊断输出",
+      "path": "physics/v2_diagnostics",
+      "classification": "candidate",
+      "reason": "V2专用报告/敏感性结果；其中stage3字样指V2第三阶段，非V3-stage3实验。",
+      "bytes": 146436,
+      "files": [
+        "physics/v2_diagnostics/aggregate.json",
+        "physics/v2_diagnostics/diagnostics.json",
+        "physics/v2_diagnostics/final_localization.md",
+        "physics/v2_diagnostics/per_scene.csv",
+        "physics/v2_diagnostics/stage_statistics.csv",
+        "physics/v2_diagnostics/summary.md"
+      ]
+    },
+    {
+      "group": "V2物理诊断输出",
+      "path": "physics/v2_diagnostics.log",
+      "classification": "candidate",
+      "reason": "V2专用报告/敏感性结果；其中stage3字样指V2第三阶段，非V3-stage3实验。",
+      "bytes": 2466,
+      "files": [
+        "physics/v2_diagnostics.log"
+      ]
+    },
+    {
+      "group": "V2物理诊断输出",
+      "path": "physics/v2_followup_sensitivity",
+      "classification": "candidate",
+      "reason": "V2专用报告/敏感性结果；其中stage3字样指V2第三阶段，非V3-stage3实验。",
+      "bytes": 51622,
+      "files": [
+        "physics/v2_followup_sensitivity/per_scene.csv",
+        "physics/v2_followup_sensitivity/results.json",
+        "physics/v2_followup_sensitivity/summary.csv",
+        "physics/v2_followup_sensitivity/summary.md"
+      ]
+    },
+    {
+      "group": "V2物理诊断输出",
+      "path": "physics/v2_followup_sensitivity.log",
+      "classification": "candidate",
+      "reason": "V2专用报告/敏感性结果；其中stage3字样指V2第三阶段，非V3-stage3实验。",
+      "bytes": 2249,
+      "files": [
+        "physics/v2_followup_sensitivity.log"
+      ]
+    },
+    {
+      "group": "V2物理诊断输出",
+      "path": "physics/v2_gpu_smoke.json",
+      "classification": "candidate",
+      "reason": "V2专用报告/敏感性结果；其中stage3字样指V2第三阶段，非V3-stage3实验。",
+      "bytes": 281,
+      "files": [
+        "physics/v2_gpu_smoke.json"
+      ]
+    },
+    {
+      "group": "V2物理诊断输出",
+      "path": "physics/v2_local_footprint_sensitivity",
+      "classification": "candidate",
+      "reason": "V2专用报告/敏感性结果；其中stage3字样指V2第三阶段，非V3-stage3实验。",
+      "bytes": 37518,
+      "files": [
+        "physics/v2_local_footprint_sensitivity/per_scene.csv",
+        "physics/v2_local_footprint_sensitivity/results.json",
+        "physics/v2_local_footprint_sensitivity/summary.csv",
+        "physics/v2_local_footprint_sensitivity/summary.md"
+      ]
+    },
+    {
+      "group": "V2物理诊断输出",
+      "path": "physics/v2_local_footprint_sensitivity.log",
+      "classification": "candidate",
+      "reason": "V2专用报告/敏感性结果；其中stage3字样指V2第三阶段，非V3-stage3实验。",
+      "bytes": 1637,
+      "files": [
+        "physics/v2_local_footprint_sensitivity.log"
+      ]
+    },
+    {
+      "group": "V2物理诊断输出",
+      "path": "physics/v2_spatial_sensitivity",
+      "classification": "candidate",
+      "reason": "V2专用报告/敏感性结果；其中stage3字样指V2第三阶段，非V3-stage3实验。",
+      "bytes": 90921,
+      "files": [
+        "physics/v2_spatial_sensitivity/per_scene.csv",
+        "physics/v2_spatial_sensitivity/results.json",
+        "physics/v2_spatial_sensitivity/summary.csv",
+        "physics/v2_spatial_sensitivity/summary.md"
+      ]
+    },
+    {
+      "group": "V2物理诊断输出",
+      "path": "physics/v2_spatial_sensitivity.log",
+      "classification": "candidate",
+      "reason": "V2专用报告/敏感性结果；其中stage3字样指V2第三阶段，非V3-stage3实验。",
+      "bytes": 4033,
+      "files": [
+        "physics/v2_spatial_sensitivity.log"
+      ]
+    },
+    {
+      "group": "V2物理诊断输出",
+      "path": "physics/v2_x4_to_x8_seed42.json",
+      "classification": "candidate",
+      "reason": "V2专用报告/敏感性结果；其中stage3字样指V2第三阶段，非V3-stage3实验。",
+      "bytes": 2210,
+      "files": [
+        "physics/v2_x4_to_x8_seed42.json"
+      ]
+    },
+    {
+      "group": "V2续训记录",
+      "path": "reproduction/continue_200_to_400/v2_train.log",
+      "classification": "candidate",
+      "reason": "混合续训目录内的V2专用部分；不包括SFNO/V1。",
+      "bytes": 15663899,
+      "files": [
+        "reproduction/continue_200_to_400/v2_train.log"
+      ]
+    },
+    {
+      "group": "V2续训记录",
+      "path": "reproduction/continue_200_to_400/v2_resume_from_346.log",
+      "classification": "candidate",
+      "reason": "混合续训目录内的V2专用部分；不包括SFNO/V1。",
+      "bytes": 5783529,
+      "files": [
+        "reproduction/continue_200_to_400/v2_resume_from_346.log"
+      ]
+    },
+    {
+      "group": "V2续训记录",
+      "path": "reproduction/continue_400_to_600/v2_train.log",
+      "classification": "candidate",
+      "reason": "混合续训目录内的V2专用部分；不包括SFNO/V1。",
+      "bytes": 21415732,
+      "files": [
+        "reproduction/continue_400_to_600/v2_train.log"
+      ]
+    },
+    {
+      "group": "V2续训记录",
+      "path": "reproduction/continue_200_to_400_startup_failed/v2_train.log",
+      "classification": "candidate",
+      "reason": "混合续训目录内的V2专用部分；不包括SFNO/V1。",
+      "bytes": 94356,
+      "files": [
+        "reproduction/continue_200_to_400_startup_failed/v2_train.log"
+      ]
+    },
+    {
+      "group": "V2续训记录",
+      "path": "reproduction/continue_200_to_400_startup_failed/train_x4_prgno_v2_e400",
+      "classification": "candidate",
+      "reason": "混合续训目录内的V2专用部分；不包括SFNO/V1。",
+      "bytes": 16,
+      "files": [
+        "reproduction/continue_200_to_400_startup_failed/train_x4_prgno_v2_e400/train_log.csv"
+      ]
+    },
+    {
+      "group": "完整V3专用实验及记录",
+      "path": "Checkpoint/v3_balanced_scales/full_seed42",
+      "classification": "candidate",
+      "reason": "完整V3，非V3-stage3；full_seed42仍供逐场景效率benchmark.py的完整V3对照读取。",
+      "bytes": 22949730,
+      "files": [
+        "Checkpoint/v3_balanced_scales/full_seed42/best_train_loss.pth",
+        "Checkpoint/v3_balanced_scales/full_seed42/epoch_0600.pth",
+        "Checkpoint/v3_balanced_scales/full_seed42/last.pth",
+        "Checkpoint/v3_balanced_scales/full_seed42/metrics.json",
+        "Checkpoint/v3_balanced_scales/full_seed42/metrics_x8.json",
+        "Checkpoint/v3_balanced_scales/full_seed42/test.log",
+        "Checkpoint/v3_balanced_scales/full_seed42/test_x8.log",
+        "Checkpoint/v3_balanced_scales/full_seed42/train_log.csv"
+      ]
+    },
+    {
+      "group": "完整V3专用实验及记录",
+      "path": "Checkpoint/v3_balanced_scales/full_seed42_train_continuous.log",
+      "classification": "candidate",
+      "reason": "完整V3，非V3-stage3；full_seed42仍供逐场景效率benchmark.py的完整V3对照读取。",
+      "bytes": 68701295,
+      "files": [
+        "Checkpoint/v3_balanced_scales/full_seed42_train_continuous.log"
+      ]
+    },
+    {
+      "group": "完整V3专用实验及记录",
+      "path": "Checkpoint/v3_balanced_scales/full_seed42_test.log",
+      "classification": "candidate",
+      "reason": "完整V3，非V3-stage3；full_seed42仍供逐场景效率benchmark.py的完整V3对照读取。",
+      "bytes": 1400,
+      "files": [
+        "Checkpoint/v3_balanced_scales/full_seed42_test.log"
+      ]
+    },
+    {
+      "group": "完整V3专用实验及记录",
+      "path": "Checkpoint/v3_balanced_scales/full_seed42_test_x8.log",
+      "classification": "candidate",
+      "reason": "完整V3，非V3-stage3；full_seed42仍供逐场景效率benchmark.py的完整V3对照读取。",
+      "bytes": 1466,
+      "files": [
+        "Checkpoint/v3_balanced_scales/full_seed42_test_x8.log"
+      ]
+    },
+    {
+      "group": "完整V3专用实验及记录",
+      "path": "scripts/run_v3_x4.sh",
+      "classification": "candidate",
+      "reason": "完整V3，非V3-stage3；full_seed42仍供逐场景效率benchmark.py的完整V3对照读取。",
+      "bytes": 1197,
+      "files": [
+        "scripts/run_v3_x4.sh"
+      ]
+    },
+    {
+      "group": "完整V3专用实验及记录",
+      "path": "V3.md",
+      "classification": "candidate",
+      "reason": "完整V3，非V3-stage3；full_seed42仍供逐场景效率benchmark.py的完整V3对照读取。",
+      "bytes": 868,
+      "files": [
+        "V3.md"
+      ]
+    },
+    {
+      "group": "完整V3专用实验及记录",
+      "path": "v3_training_execution.log",
+      "classification": "candidate",
+      "reason": "完整V3，非V3-stage3；full_seed42仍供逐场景效率benchmark.py的完整V3对照读取。",
+      "bytes": 22804397,
+      "files": [
+        "v3_training_execution.log"
+      ]
+    },
+    {
+      "group": "完整V3专用实验及记录",
+      "path": "reproduction/continue_200_to_400/v3_resume_from_200.log",
+      "classification": "candidate",
+      "reason": "完整V3，非V3-stage3；full_seed42仍供逐场景效率benchmark.py的完整V3对照读取。",
+      "bytes": 22947057,
+      "files": [
+        "reproduction/continue_200_to_400/v3_resume_from_200.log"
+      ]
+    },
+    {
+      "group": "完整V3专用实验及记录",
+      "path": "reproduction/continue_400_to_600/v3_train.log",
+      "classification": "candidate",
+      "reason": "完整V3，非V3-stage3；full_seed42仍供逐场景效率benchmark.py的完整V3对照读取。",
+      "bytes": 22946471,
+      "files": [
+        "reproduction/continue_400_to_600/v3_train.log"
+      ]
+    },
+    {
+      "group": "完整V3分支消融及效率对照",
+      "path": "Checkpoint/ablation_v3",
+      "classification": "optional",
+      "reason": "no_deformable/no_regional/fixed_gate等旧消融；可能仍有结构对照价值，不认定已无科研用途。",
+      "bytes": 285777886,
+      "files": [
+        "Checkpoint/ablation_v3/comparison.csv",
+        "Checkpoint/ablation_v3/fixed_gate_seed42/best_train_loss.pth",
+        "Checkpoint/ablation_v3/fixed_gate_seed42/epoch_0600.pth",
+        "Checkpoint/ablation_v3/fixed_gate_seed42/last.pth",
+        "Checkpoint/ablation_v3/fixed_gate_seed42/metrics.json",
+        "Checkpoint/ablation_v3/fixed_gate_seed42/metrics_x8.json",
+        "Checkpoint/ablation_v3/fixed_gate_seed42/test.log",
+        "Checkpoint/ablation_v3/fixed_gate_seed42/test_x8.log",
+        "Checkpoint/ablation_v3/fixed_gate_seed42/train_log.csv",
+        "Checkpoint/ablation_v3/fixed_gate_seed42_test.log",
+        "Checkpoint/ablation_v3/fixed_gate_seed42_test_x8.log",
+        "Checkpoint/ablation_v3/fixed_gate_seed42_train_continuous.log",
+        "Checkpoint/ablation_v3/no_deformable_seed42/best_train_loss.pth",
+        "Checkpoint/ablation_v3/no_deformable_seed42/e200/best_train_loss.pth",
+        "Checkpoint/ablation_v3/no_deformable_seed42/e200/epoch_0200.pth",
+        "Checkpoint/ablation_v3/no_deformable_seed42/e200/last.pth",
+        "Checkpoint/ablation_v3/no_deformable_seed42/e200/train_log.csv",
+        "Checkpoint/ablation_v3/no_deformable_seed42/e400/best_train_loss.pth",
+        "Checkpoint/ablation_v3/no_deformable_seed42/e400/last.pth",
+        "Checkpoint/ablation_v3/no_deformable_seed42/e400/train_log.csv",
+        "Checkpoint/ablation_v3/no_deformable_seed42/epoch_0600.pth",
+        "Checkpoint/ablation_v3/no_deformable_seed42/last.pth",
+        "Checkpoint/ablation_v3/no_deformable_seed42/metrics.json",
+        "Checkpoint/ablation_v3/no_deformable_seed42/metrics_x8.json",
+        "Checkpoint/ablation_v3/no_deformable_seed42/test.log",
+        "Checkpoint/ablation_v3/no_deformable_seed42/test_x8.log",
+        "Checkpoint/ablation_v3/no_deformable_seed42/train_e200.log",
+        "Checkpoint/ablation_v3/no_deformable_seed42/train_e400.log",
+        "Checkpoint/ablation_v3/no_deformable_seed42/train_log.csv",
+        "Checkpoint/ablation_v3/no_deformable_seed42_test.log",
+        "Checkpoint/ablation_v3/no_deformable_seed42_test_x8.log",
+        "Checkpoint/ablation_v3/no_deformable_seed42_train_continuous.log",
+        "Checkpoint/ablation_v3/no_regional_seed42/best_train_loss.pth",
+        "Checkpoint/ablation_v3/no_regional_seed42/epoch_0600.pth",
+        "Checkpoint/ablation_v3/no_regional_seed42/last.pth",
+        "Checkpoint/ablation_v3/no_regional_seed42/metrics.json",
+        "Checkpoint/ablation_v3/no_regional_seed42/metrics_x8.json",
+        "Checkpoint/ablation_v3/no_regional_seed42/test.log",
+        "Checkpoint/ablation_v3/no_regional_seed42/test_x8.log",
+        "Checkpoint/ablation_v3/no_regional_seed42/train_log.csv",
+        "Checkpoint/ablation_v3/no_regional_seed42_test.log",
+        "Checkpoint/ablation_v3/no_regional_seed42_test_x8.log",
+        "Checkpoint/ablation_v3/no_regional_seed42_train_continuous.log"
+      ]
+    },
+    {
+      "group": "完整V3分支消融及效率对照",
+      "path": "v3_ablation_three_execution.log",
+      "classification": "optional",
+      "reason": "no_deformable/no_regional/fixed_gate等旧消融；可能仍有结构对照价值，不认定已无科研用途。",
+      "bytes": 800,
+      "files": [
+        "v3_ablation_three_execution.log"
+      ]
+    },
+    {
+      "group": "完整V3分支消融及效率对照",
+      "path": "v3_ablation_three_continuous_execution.log",
+      "classification": "optional",
+      "reason": "no_deformable/no_regional/fixed_gate等旧消融；可能仍有结构对照价值，不认定已无科研用途。",
+      "bytes": 2926,
+      "files": [
+        "v3_ablation_three_continuous_execution.log"
+      ]
+    },
+    {
+      "group": "完整V3分支消融及效率对照",
+      "path": "physics/benchmark_v3_efficiency.py",
+      "classification": "optional",
+      "reason": "no_deformable/no_regional/fixed_gate等旧消融；可能仍有结构对照价值，不认定已无科研用途。",
+      "bytes": 1674,
+      "files": [
+        "physics/benchmark_v3_efficiency.py"
+      ]
+    },
+    {
+      "group": "完整V3分支消融及效率对照",
+      "path": "physics/v3_efficiency_benchmark.json",
+      "classification": "optional",
+      "reason": "no_deformable/no_regional/fixed_gate等旧消融；可能仍有结构对照价值，不认定已无科研用途。",
+      "bytes": 2211,
+      "files": [
+        "physics/v3_efficiency_benchmark.json"
+      ]
+    },
+    {
+      "group": "Stage1/Stage2位置消融",
+      "path": "Checkpoint/v3_balanced_scales/deform_stage1_seed42",
+      "classification": "optional",
+      "reason": "不是完整V3，也不是V3-stage3；为可变形分支位置消融证据，应单独决定保留。",
+      "bytes": 19711111,
+      "files": [
+        "Checkpoint/v3_balanced_scales/deform_stage1_seed42/best_train_loss.pth",
+        "Checkpoint/v3_balanced_scales/deform_stage1_seed42/epoch_0600.pth",
+        "Checkpoint/v3_balanced_scales/deform_stage1_seed42/last.pth",
+        "Checkpoint/v3_balanced_scales/deform_stage1_seed42/metrics.json",
+        "Checkpoint/v3_balanced_scales/deform_stage1_seed42/metrics_x8.json",
+        "Checkpoint/v3_balanced_scales/deform_stage1_seed42/test.log",
+        "Checkpoint/v3_balanced_scales/deform_stage1_seed42/test_x8.log",
+        "Checkpoint/v3_balanced_scales/deform_stage1_seed42/train_log.csv"
+      ]
+    },
+    {
+      "group": "Stage1/Stage2位置消融",
+      "path": "Checkpoint/v3_balanced_scales/deform_stage1_seed42_train_continuous.log",
+      "classification": "optional",
+      "reason": "不是完整V3，也不是V3-stage3；为可变形分支位置消融证据，应单独决定保留。",
+      "bytes": 65966039,
+      "files": [
+        "Checkpoint/v3_balanced_scales/deform_stage1_seed42_train_continuous.log"
+      ]
+    },
+    {
+      "group": "Stage1/Stage2位置消融",
+      "path": "Checkpoint/v3_balanced_scales/deform_stage1_seed42_test.log",
+      "classification": "optional",
+      "reason": "不是完整V3，也不是V3-stage3；为可变形分支位置消融证据，应单独决定保留。",
+      "bytes": 1427,
+      "files": [
+        "Checkpoint/v3_balanced_scales/deform_stage1_seed42_test.log"
+      ]
+    },
+    {
+      "group": "Stage1/Stage2位置消融",
+      "path": "Checkpoint/v3_balanced_scales/deform_stage1_seed42_test_x8.log",
+      "classification": "optional",
+      "reason": "不是完整V3，也不是V3-stage3；为可变形分支位置消融证据，应单独决定保留。",
+      "bytes": 1493,
+      "files": [
+        "Checkpoint/v3_balanced_scales/deform_stage1_seed42_test_x8.log"
+      ]
+    },
+    {
+      "group": "Stage1/Stage2位置消融",
+      "path": "Checkpoint/v3_balanced_scales/deform_stage2_seed42",
+      "classification": "optional",
+      "reason": "不是完整V3，也不是V3-stage3；为可变形分支位置消融证据，应单独决定保留。",
+      "bytes": 19711114,
+      "files": [
+        "Checkpoint/v3_balanced_scales/deform_stage2_seed42/best_train_loss.pth",
+        "Checkpoint/v3_balanced_scales/deform_stage2_seed42/epoch_0600.pth",
+        "Checkpoint/v3_balanced_scales/deform_stage2_seed42/last.pth",
+        "Checkpoint/v3_balanced_scales/deform_stage2_seed42/metrics.json",
+        "Checkpoint/v3_balanced_scales/deform_stage2_seed42/metrics_x8.json",
+        "Checkpoint/v3_balanced_scales/deform_stage2_seed42/test.log",
+        "Checkpoint/v3_balanced_scales/deform_stage2_seed42/test_x8.log",
+        "Checkpoint/v3_balanced_scales/deform_stage2_seed42/train_log.csv"
+      ]
+    },
+    {
+      "group": "Stage1/Stage2位置消融",
+      "path": "Checkpoint/v3_balanced_scales/deform_stage2_seed42_train_continuous.log",
+      "classification": "optional",
+      "reason": "不是完整V3，也不是V3-stage3；为可变形分支位置消融证据，应单独决定保留。",
+      "bytes": 65966975,
+      "files": [
+        "Checkpoint/v3_balanced_scales/deform_stage2_seed42_train_continuous.log"
+      ]
+    },
+    {
+      "group": "Stage1/Stage2位置消融",
+      "path": "Checkpoint/v3_balanced_scales/deform_stage2_seed42_test.log",
+      "classification": "optional",
+      "reason": "不是完整V3，也不是V3-stage3；为可变形分支位置消融证据，应单独决定保留。",
+      "bytes": 1427,
+      "files": [
+        "Checkpoint/v3_balanced_scales/deform_stage2_seed42_test.log"
+      ]
+    },
+    {
+      "group": "Stage1/Stage2位置消融",
+      "path": "Checkpoint/v3_balanced_scales/deform_stage2_seed42_test_x8.log",
+      "classification": "optional",
+      "reason": "不是完整V3，也不是V3-stage3；为可变形分支位置消融证据，应单独决定保留。",
+      "bytes": 1493,
+      "files": [
+        "Checkpoint/v3_balanced_scales/deform_stage2_seed42_test_x8.log"
+      ]
+    }
+  ],
+  "stage3_transitive_model_dependencies": [
+    "Model/DynamicSpatial.py",
+    "Model/FusionBackbone.py",
+    "Model/MultiScaleDynamicGating.py",
+    "Model/MultiScaleDynamicGatingV2.py",
+    "Model/ObservationGrid.py",
+    "Model/PhysicsGalerkin.py",
+    "Model/SFNO_PRGNO_V2.py",
+    "Model/SFNO_PRGNO_V3.py",
+    "Model/SpacingDeformableSampling.py",
+    "Model/VectorAttention.py"
+  ],
+  "retain": [
+    "Train_V3.py",
+    "Test_V3.py",
+    "test_prgno_v3.py",
+    "test_v3_ablation.py",
+    "run_v3_ablation.py",
+    "run_three_seed_comparison.py",
+    "run_reordered_comparison.py",
+    "run_continuous_baseline.py",
+    "run_continue_400.py",
+    "run_continue_600.py",
+    "recover_continue_400.py",
+    "continuation_schedule.py",
+    "physics/cave_effective_response.npz",
+    "physics/cave_effective_response_report.json",
+    "physics/v3_balanced_scales_plan.md",
+    "physics/v3_ablation_plan.md",
+    "v3_balanced_scales_execution.log",
+    "Checkpoint/v3_balanced_scales/comparison.csv",
+    "reproduction/baseline_stage3_three_seeds",
+    "analysis/stage3_scene_efficiency",
+    "Checkpoint/v3_balanced_scales/baseline_seed42",
+    "Checkpoint/v3_balanced_scales/baseline_seed43",
+    "Checkpoint/v3_balanced_scales/baseline_seed44",
+    "Checkpoint/v3_balanced_scales/deform_stage3_seed42",
+    "Checkpoint/v3_balanced_scales/deform_stage3_seed43",
+    "Checkpoint/v3_balanced_scales/deform_stage3_seed44",
+    "Checkpoint/v3_balanced_scales/deform_stage3_seed42_train_continuous.log",
+    "Checkpoint/v3_balanced_scales/deform_stage3_seed42_test.log",
+    "Checkpoint/v3_balanced_scales/deform_stage3_seed42_test_x8.log"
+  ],
+  "mixed_directories": [
+    "Checkpoint/v3_balanced_scales",
+    "reproduction/continue_200_to_400",
+    "reproduction/continue_400_to_600",
+    "reproduction/continue_200_to_400_startup_failed"
+  ],
+  "dependency_notes": [
+    "完整V3的full_seed42仍是analysis/stage3_scene_efficiency/benchmark.py读取的一个对照，删除后原三模型benchmark不能原样重跑；Stage3权重和已保存分析仍应保留。",
+    "V3-stage3的Train_V3/Test_V3/model类与完整V3共用；Model/SFNO_PRGNO_V2.py与MultiScaleDynamicGatingV2.py属于实际继承/导入链。",
+    "续训目录里的comparison.csv、status.json、original_sha256.json、integrity.json、README和总日志同时记录SFNO/V1/V2/V3，不能把整个目录当作V2/V3专用。",
+    "历史/文档中绝对路径仅作证据，不是当前队列外部代码依赖。"
+  ],
+  "deleted": false
+}

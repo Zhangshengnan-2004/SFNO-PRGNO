@@ -1,0 +1,176 @@
+{
+  "protocol": "sfno_restart_persistent_v9_20261111",
+  "protocol_sha256": "6ca1db3308a2ae506dfc85984a7cf091ef5e4bde21e27a415938c0b922aff16d",
+  "checkpoint": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_restart_20261111/Checkpoint/chikusei_sfno_x4_seed44/last.pth",
+  "checkpoint_sha256": "28292d5cc3e9c461a6ead3fa4b725fe553897df41c76ba02e69b87a51d6d8e6f",
+  "epoch": 600,
+  "dataset": "chikusei",
+  "seed": 44,
+  "model": "sfno",
+  "source_sf": 4,
+  "sf": 8,
+  "test_seed": 1,
+  "rules": {
+    "peak": 1.0,
+    "psnr": "mean of per-band PSNR; MSE floor 1e-12",
+    "mask": "sensor-valid AND GT L2 norm > 1e-8; independent of prediction",
+    "sam": "degrees; zero prediction at valid GT => 90 degrees",
+    "ergas": "100/s * sqrt(mean(MSE_band / max(mean_GT_band^2,1e-12)))",
+    "prediction": "clamp [0,1]; unclipped results also reported",
+    "aggregation": "arithmetic mean of patch metrics; not training-seed std"
+  },
+  "patches": [
+    {
+      "index": 1,
+      "y": 1500,
+      "x": 0,
+      "size": 496,
+      "valid_pixels": 231873,
+      "total_pixels": 246016,
+      "psnr": 43.66070624378553,
+      "sam_degrees": 1.8721042527062466,
+      "ergas": 1.2751333089108803,
+      "bicubic": {
+        "psnr": 33.9118813948718,
+        "sam_degrees": 3.5125041359421703,
+        "ergas": 3.246417053767414
+      },
+      "ergas_fixed4_diagnostic": 2.5502666178217606
+    },
+    {
+      "index": 2,
+      "y": 1500,
+      "x": 500,
+      "size": 496,
+      "valid_pixels": 246016,
+      "total_pixels": 246016,
+      "psnr": 42.375493943228015,
+      "sam_degrees": 2.419157754582765,
+      "ergas": 1.440799870218174,
+      "bicubic": {
+        "psnr": 32.46075811618466,
+        "sam_degrees": 4.56462908138705,
+        "ergas": 4.396395870030763
+      },
+      "ergas_fixed4_diagnostic": 2.881599740436348
+    },
+    {
+      "index": 3,
+      "y": 1500,
+      "x": 1000,
+      "size": 496,
+      "valid_pixels": 246016,
+      "total_pixels": 246016,
+      "psnr": 41.29441155192052,
+      "sam_degrees": 2.2632924693169545,
+      "ergas": 1.625676089731762,
+      "bicubic": {
+        "psnr": 32.422678449690764,
+        "sam_degrees": 3.9637803906150704,
+        "ergas": 4.075742628791166
+      },
+      "ergas_fixed4_diagnostic": 3.251352179463524
+    },
+    {
+      "index": 4,
+      "y": 1500,
+      "x": 1500,
+      "size": 496,
+      "valid_pixels": 246013,
+      "total_pixels": 246016,
+      "psnr": 42.13755735746645,
+      "sam_degrees": 2.0159620283440516,
+      "ergas": 1.3839073049283264,
+      "bicubic": {
+        "psnr": 32.52258945213315,
+        "sam_degrees": 3.4078019538914477,
+        "ergas": 4.2450065617603014
+      },
+      "ergas_fixed4_diagnostic": 2.7678146098566527
+    },
+    {
+      "index": 5,
+      "y": 2000,
+      "x": 0,
+      "size": 496,
+      "valid_pixels": 213397,
+      "total_pixels": 246016,
+      "psnr": 43.32854939970933,
+      "sam_degrees": 1.7567695556579805,
+      "ergas": 1.312266797255512,
+      "bicubic": {
+        "psnr": 33.84714486156284,
+        "sam_degrees": 3.4314422996487157,
+        "ergas": 3.623551453493886
+      },
+      "ergas_fixed4_diagnostic": 2.624533594511024
+    },
+    {
+      "index": 6,
+      "y": 2000,
+      "x": 500,
+      "size": 496,
+      "valid_pixels": 227274,
+      "total_pixels": 246016,
+      "psnr": 41.783488977865254,
+      "sam_degrees": 2.150036140905526,
+      "ergas": 1.6095576099172897,
+      "bicubic": {
+        "psnr": 32.79728669706698,
+        "sam_degrees": 4.035124684826627,
+        "ergas": 4.338036931504018
+      },
+      "ergas_fixed4_diagnostic": 3.2191152198345794
+    },
+    {
+      "index": 7,
+      "y": 2000,
+      "x": 1000,
+      "size": 496,
+      "valid_pixels": 235110,
+      "total_pixels": 246016,
+      "psnr": 40.924520412696424,
+      "sam_degrees": 2.8098566537148217,
+      "ergas": 1.6060485318220086,
+      "bicubic": {
+        "psnr": 31.299008486696458,
+        "sam_degrees": 4.9521427026599705,
+        "ergas": 4.623453010584185
+      },
+      "ergas_fixed4_diagnostic": 3.212097063644017
+    },
+    {
+      "index": 8,
+      "y": 2000,
+      "x": 1500,
+      "size": 496,
+      "valid_pixels": 240658,
+      "total_pixels": 246016,
+      "psnr": 42.260353653297955,
+      "sam_degrees": 2.2428926435425325,
+      "ergas": 1.5549084872483754,
+      "bicubic": {
+        "psnr": 32.90637982179361,
+        "sam_degrees": 4.040014763999265,
+        "ergas": 4.354836064516006
+      },
+      "ergas_fixed4_diagnostic": 3.1098169744967508
+    }
+  ],
+  "mean": {
+    "psnr": 42.22063519249618,
+    "sam_degrees": 2.19125893734636,
+    "ergas": 1.476037250004041
+  },
+  "bicubic_mean": {
+    "psnr": 32.77096591000003,
+    "sam_degrees": 3.9884300016212895,
+    "ergas": 4.112929946805967
+  },
+  "comparison": {
+    "psnr_gain": 9.449669282496153,
+    "sam_reduction": 1.7971710642749295,
+    "ergas_reduction": 2.636892696801926
+  },
+  "better_than_bicubic_all_metrics": true
+}

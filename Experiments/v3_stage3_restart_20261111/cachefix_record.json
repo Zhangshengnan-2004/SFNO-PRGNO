@@ -1,0 +1,5 @@
+{
+  "cause": "FFT kernel cache created in inference_mode and reused during training backward",
+  "change": "create fixed FFT cache tensors inside inference_mode(False) and no_grad",
+  "previous_protocol_sha256": "3734c106e42ca837b7b56ffe5039d3a193aec9de54db5348072ccc3cc867327a"
+}

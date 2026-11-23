@@ -1,0 +1,34 @@
+{
+  "original_supervisor_pid": 616776,
+  "worker_pid": 619724,
+  "worker_args": [
+    "/home/zsn/miniconda3/envs/sfno/bin/python",
+    "-u",
+    "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_restart_20261111/run.py",
+    "train",
+    "--dataset",
+    "chikusei",
+    "--seed",
+    "42",
+    "--output",
+    "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_restart_20261111/Checkpoint/chikusei_sfno_x4_seed42",
+    "--device",
+    "cuda",
+    ""
+  ],
+  "worker_start": "120378548",
+  "adopted_job": [
+    "sfno",
+    "chikusei",
+    42
+  ],
+  "original_status": {
+    "phase": "training",
+    "pid": 616776,
+    "updated_at": "2026-11-11T17:21:48.342775+08:00",
+    "job": "chikusei_seed42",
+    "output": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_restart_20261111/Checkpoint/chikusei_sfno_x4_seed42",
+    "completed_jobs": 1,
+    "total_jobs": 6
+  }
+}

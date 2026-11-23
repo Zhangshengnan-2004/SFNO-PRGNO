@@ -1,0 +1,1473 @@
+{
+  "phase": "complete",
+  "created_at": "2026-11-10T18:12:36.743222+08:00",
+  "request": "保留截图四组结果及正在运行的新版六种子任务，清理其他已结束历史结果",
+  "preserved": [
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42",
+    "Pavia/Runs/sfno_continuous600_x4_seed42",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42",
+    "Chikusei/protocol_v3_joint_loss/Runs"
+  ],
+  "active_experiment": "Experiments/sfno_corrected_20261110",
+  "retained_reports": [
+    {
+      "path": "Pavia/Checkpoint/sfno_continuous600_x4_seed42/last_test_x4.json",
+      "epoch": 600,
+      "sf": 4,
+      "mean": {
+        "psnr": 47.73076104954781,
+        "sam_degrees": 2.634245653090068,
+        "ergas": 1.4246941477090016
+      }
+    },
+    {
+      "path": "Pavia/Checkpoint/sfno_continuous600_x4_seed42/last_test_x8.json",
+      "epoch": 600,
+      "sf": 8,
+      "mean": {
+        "psnr": 46.514568717919026,
+        "sam_degrees": 2.789519153748911,
+        "ergas": 0.7599074713849754
+      }
+    },
+    {
+      "path": "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x4.json",
+      "epoch": 600,
+      "sf": 4,
+      "mean": {
+        "psnr": 47.6757113710722,
+        "sam_degrees": 2.6038696850266945,
+        "ergas": 1.4182249782522278
+      }
+    },
+    {
+      "path": "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x8.json",
+      "epoch": 600,
+      "sf": 8,
+      "mean": {
+        "psnr": 46.45845838816924,
+        "sam_degrees": 2.7726911176741798,
+        "ergas": 0.7596856593084074
+      }
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/last_test_x4.json",
+      "epoch": 600,
+      "sf": 4,
+      "mean": {
+        "psnr": 52.20265347128713,
+        "sam_degrees": 1.1268495158536622,
+        "ergas": 1.7110249440504768
+      }
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/last_test_x8.json",
+      "epoch": 600,
+      "sf": 8,
+      "mean": {
+        "psnr": 49.270619828312036,
+        "sam_degrees": 1.471699534547207,
+        "ergas": 1.0513966923329199
+      }
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x4.json",
+      "epoch": 600,
+      "sf": 4,
+      "mean": {
+        "psnr": 52.97688615229272,
+        "sam_degrees": 1.0690920160596988,
+        "ergas": 1.6683761435407165
+      }
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x8.json",
+      "epoch": 600,
+      "sf": 8,
+      "mean": {
+        "psnr": 49.46930592151374,
+        "sam_degrees": 1.4432484679686255,
+        "ergas": 1.0190132342573595
+      }
+    }
+  ],
+  "protected_sha256": {
+    "CAVE/Model/SFNO.py": "d167acbd8d58cf4e38406855f8f5c58feeaa6b9fadd47f6834843f1de337ad18",
+    "CAVE/Model/SFNO_PRGNO_V3.py": "738b26323b25c99eccd50220248f27b621386a8cf747a62150eb8cc21e061cec",
+    "CAVE/Model/VectorAttention.py": "ac02fe488c05fa802ca1762607e0b67b7989cc3b63a018e3970cc9584762e7f7",
+    "CAVE/reproduction/baseline_stage3_three_seeds/mean_std.md": "acc143250f8e003a25c05d056633090453c93570ca696ec5700aa457be3b5d50",
+    "Chikusei/HyperspecVNIR_Chikusei_20140729.bsq": "89715ed9a6ab725644707b2c1732642dd1634755f3914d0ecec9bc77f62a741b",
+    "Chikusei/HyperspecVNIR_Chikusei_20140729.hdr": "8e68b2d13005a96d8d5e057e626c47dd8eb1993c78d4492038a49544360d5d14",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/config.json": "95c2ffc6e327c9af1895d4269464befad3502e170780ae2341938e9f24ea5ae8",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/epoch_200.pth": "b29ae7925734fea930c099730b4af9b6a45ce4f4a0fa208d38c529eeef6c2cbb",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/epoch_400.pth": "faba06a7dafc3350b88920c575fc998f094ff4ce9cd3f23e8932183b059a6ee2",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/epoch_600.pth": "1f0a69a3c83745d193708bf1f3dd7ef6ffd5a219258cd64e61f81138869814b4",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/last.pth": "1f0a69a3c83745d193708bf1f3dd7ef6ffd5a219258cd64e61f81138869814b4",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/last_test_x4.json": "485375e274ae44df8586796b02c3fe8199e84a266631ab20f41ce2c5c848f4a0",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/last_test_x8.json": "efdb1a584d71f4d5fa5abb275f2baf88ade19eea966ee78a23166729fd0b4302",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/response.npy": "e8e300a49c65bb47b371571053a29c307a45d5ca24a4c08828c4d03eb2d2ab7f",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/test.log": "9ed2071666094dc9621a6878fa5fcb639b47735375f45fc5545c2d6578479578",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/test_x8.log": "c7ae2208dcfc1969463a95636adf14cf9fc463f234f3414474bf82fd2740995e",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/sfno_continuous600_x4_seed42/train.csv": "d341041037f36a552bf8461e7f9e201bf996862ad9e8febc3511b59906b32fcd",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/config.json": "fb1ebfeed0941737fa74f4aa284fa56849fb0e958fe2fae0ffcdcf19d9e41c98",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_200.pth": "25d4cfaddbfcbe0bd27239e9528fc8ad8928dd8012a7b3e25e1f931a8ea1ffc6",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_400.pth": "2977fe168a64d9df6f8ffc3df9623471935c9b2324b5434cb774c28a6e945dc7",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_600.pth": "40159259dd02e082f2cc7a6ba78c911493847051028000fc3f0e1e106cb919c0",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last.pth": "40159259dd02e082f2cc7a6ba78c911493847051028000fc3f0e1e106cb919c0",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x4.json": "181cfaedb8dceff678821dfa1956b989b72d4af2d42f19326cd751c6dabb34d8",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x8.json": "d3857f5756bd9c9b92c7e64833787710884416490017b7de6707e72c3ea0830d",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/response.npy": "e8e300a49c65bb47b371571053a29c307a45d5ca24a4c08828c4d03eb2d2ab7f",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/test.log": "05aa543581c73ae9f571a402afc4a6c6051c8e98e8049be409216056081d90bf",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/test_x8.log": "e2acdb1faa39b6d296370575100f80311af005b034ab5dfca847c7e145530548",
+    "Chikusei/protocol_v3_joint_loss/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/train.csv": "0e8372c2f4ae03af478d92fde497bdca91c1949a244ef7da4a3d35035ac83d8a",
+    "Chikusei/protocol_v3_joint_loss/Runs/comparison_seed42/execution.log": "abdf3f2656d59adbe2085a9dd2b724bf860c5bd841c7513311c0c3105026305a",
+    "Chikusei/protocol_v3_joint_loss/Runs/comparison_seed42/lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Chikusei/protocol_v3_joint_loss/Runs/comparison_seed42/status.json": "cfd23b4cc2b464bae414ba327bc424c2deecefa93747cdfabbcbd69c3f843750",
+    "Chikusei/protocol_v3_joint_loss/Runs/sfno_continuous600_x4_seed42/lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Chikusei/protocol_v3_joint_loss/Runs/sfno_continuous600_x4_seed42/status.json": "2e29bc03076d47e170e9d01cc63fff7083de0b4c4dc947bdfd2c1d152b6b2ac0",
+    "Chikusei/protocol_v3_joint_loss/Runs/sfno_continuous600_x4_seed42/test_x4.log": "8f788539a784d74b36742f44774f449d8e48fa52d336e92b1641dfa35a25fb79",
+    "Chikusei/protocol_v3_joint_loss/Runs/sfno_continuous600_x4_seed42/test_x8.log": "336e68a08010e6b631dd15c5283368e185041873e9fd28f710df69cd3f035086",
+    "Chikusei/protocol_v3_joint_loss/Runs/sfno_continuous600_x4_seed42/train.log": "68f6cd19ad7adbee58ab67803119dd1109d6ff88962bca35907c6a33d803dcd4",
+    "Chikusei/protocol_v3_joint_loss/Runs/v3_deform_stage3_continuous600_x4_seed42/lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Chikusei/protocol_v3_joint_loss/Runs/v3_deform_stage3_continuous600_x4_seed42/status.json": "bd6a22b4119eba3647c55260ba7346bb1708154fa158b7aac8e348ffd7ef45f4",
+    "Chikusei/protocol_v3_joint_loss/Runs/v3_deform_stage3_continuous600_x4_seed42/test_x4.log": "287ca5bf5a565a82d6ea0cf01ba2d10dd7f12caf02f9e736f0d0f34857f0aba0",
+    "Chikusei/protocol_v3_joint_loss/Runs/v3_deform_stage3_continuous600_x4_seed42/test_x8.log": "a0c61ac0457cfb3ce709f79ede85efa1cb65af721c202dab2ada3a587ecb47ef",
+    "Chikusei/protocol_v3_joint_loss/Runs/v3_deform_stage3_continuous600_x4_seed42/train.log": "597c0da4446a932e3c48d9fb15a65204ef1ebd4f751b49e3fb6b8a10b29c9cc8",
+    "Experiments/sfno_corrected_20261110/data.py": "9f8594d78aa9a195d7e36eff3af5775ff959b3238199d78d2384e3f354d7b5a2",
+    "Experiments/sfno_corrected_20261110/inference_memory.py": "1600d32995bba46ee65db9dace812e5f49cddfa464c636f637e8a1f42ca62424",
+    "Experiments/sfno_corrected_20261110/metrics.py": "4914c61635d9b2d0d8e1775f0b822288632292bf7920e422d787393cfb5f114a",
+    "Experiments/sfno_corrected_20261110/model/SFNO.py": "d167acbd8d58cf4e38406855f8f5c58feeaa6b9fadd47f6834843f1de337ad18",
+    "Experiments/sfno_corrected_20261110/model/Utils.py": "ab0b9c947eb099184cec989b4c7e8dd4cd764a9cc1a220d8cdcc02c7ecfed2dd",
+    "Experiments/sfno_corrected_20261110/model/VectorAttention.py": "ac02fe488c05fa802ca1762607e0b67b7989cc3b63a018e3970cc9584762e7f7",
+    "Experiments/sfno_corrected_20261110/prepare.py": "e378b4b1cb6f0f58590a0606e264018489897458179345c3d5c52b878b9b5f71",
+    "Experiments/sfno_corrected_20261110/protocol.json": "ed2b7d95c214cf660bb4b4ad55aea27228a8347e8a17716553c3a8071608f99e",
+    "Experiments/sfno_corrected_20261110/protocol.py": "82ff8510660ce4594f82221ee26f17a86382d497cbbd7c268b0f9e37d9eb383e",
+    "Experiments/sfno_corrected_20261110/response_chikusei.npy": "e8e300a49c65bb47b371571053a29c307a45d5ca24a4c08828c4d03eb2d2ab7f",
+    "Experiments/sfno_corrected_20261110/response_pavia.npy": "ed9305859acdcc572d7466f18c14fde43189ac95c44bc3a5dc220109a438bb3e",
+    "Experiments/sfno_corrected_20261110/run.py": "de64e342e7413ed5ade97d9da39a5db90cd3b421f8f980eebe9a5f7f28847194",
+    "Experiments/sfno_corrected_20261110/run_queue.py": "e1a8e2cec40e9b8cd25b210d26ba82658c768e1a3733e9cda4637b199e3a82b7",
+    "Experiments/sfno_corrected_20261110/validate.py": "d5e4f07b75bcdbd9c95ed8455e2ac826fd4b36b74350e9448762f03f63eddda0",
+    "Experiments/sfno_corrected_20261110/validation.json": "b315ba72be608c88488a1860fc82575e2c59be108ade961e0744017a23f42501",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/config.json": "2ac1b11f2af6829722d912655f4d4fee7163f1b1f20da5347ac8e61a9c12472c",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/epoch_200.pth": "b56644d8c4a4ac9d1f38b7afd24271e9d4cb77d92d2a7ad5f4c13167aa0b6bcd",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/epoch_400.pth": "af0df5726488524ad77685a6ec792937a34adb2efc2eab28b39c0fa9fb20684a",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/epoch_600.pth": "0eb4eb75b6f18609a6b80238b8b59d171d0e509ef66a191d11265ded3314ffab",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/last.pth": "0eb4eb75b6f18609a6b80238b8b59d171d0e509ef66a191d11265ded3314ffab",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/last_test_x4.json": "554bd302691018355eaad2819ab8375ea2fedfb28639ecfcfdb669a746fd6ac7",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/last_test_x8.json": "d54f995ec03c963f4a09718dbc8ba8caeee8686ac217c30acb71286bb68606f0",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/response.npy": "eaf3468b8b8184c9d69af3f1c1f3fc42fe6a7ae0fce08c2327e548d4b3aa4bf9",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/test.log": "c8072898c392b9d7245234fef2c82157f53f66704a7d86f59dc693e4ed9be5a1",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/test_x8.log": "10490d306bd4dea0902e68483a9d1eda212254366abd9174013a25a75d11e1d5",
+    "Pavia/Checkpoint/sfno_continuous600_x4_seed42/train.csv": "6993f7c5a1faef60c03c88049caa47c3874e2531d3385fa380070a86f1a5f41d",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/config.json": "32c503bd94f1b502c7f22845a3d0a3e3e4b3e396efdb56f7cb246e1bce0b7b8c",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_200.pth": "6ba246c7be8dd5b5bb6288fbb86b2cef5faa324941881972c5d5cdb1e861b45e",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_400.pth": "1fb03204cc733804289b5068caa7c25699de974124ce1c7c9cf781df071f45e0",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_600.pth": "463682b4bc466daaa66a0e63aa44d586dbac680895e1a998f9a1b764573e5875",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last.pth": "463682b4bc466daaa66a0e63aa44d586dbac680895e1a998f9a1b764573e5875",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x4.json": "e1dc593a473e9c64f408195a52b2ef87320a388009e2a48ebe4afe9d61832a1b",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x8.json": "4ffd0130b05c4f8b02ea7c261150f28e874bb32df69643df8a77ee46943f7d2f",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/response.npy": "eaf3468b8b8184c9d69af3f1c1f3fc42fe6a7ae0fce08c2327e548d4b3aa4bf9",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/test.log": "cc4055c00595b28326b140ebc47c1ffb823a6e0f26e9979ac0929edb961b250b",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/test_x8.log": "6455328d2359e7c4c5f46c0cce4fa07cde30ab2bb2f5b386d287acffee111b84",
+    "Pavia/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/train.csv": "4e60c7c54b3da6944311d63e787072956be937e35f3933f6a05b11741f7b101a",
+    "Pavia/Data/Pavia.mat": "b60341da323fd271cd97dd6d7a69514d385ccd7fdfc5a60c4ff5994b047f152e",
+    "Pavia/Runs/sfno_continuous600_x4_seed42/lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Pavia/Runs/sfno_continuous600_x4_seed42/runner.log": "73eddd78fcdac53b36207372d35df8502e82d243232dc1692a4710c26185f0df",
+    "Pavia/Runs/sfno_continuous600_x4_seed42/status.json": "775eb9a063a6024813e39a32c51dbd0c51532c0f06b49396f00ee9cbd8bfa59e",
+    "Pavia/Runs/sfno_continuous600_x4_seed42/test_x4.log": "51583b0765748080f8da99fccd058028856c8d83c4afb3c850ab377a71d3a35c",
+    "Pavia/Runs/sfno_continuous600_x4_seed42/test_x8.log": "34ed71c8b96cff84422d1a93ccf316b7ed31a24a02a36843e729d59c596453d5",
+    "Pavia/Runs/sfno_continuous600_x4_seed42/train.log": "8ab6c9d4977fb9f03fc204d0abd412227b88b2625cebe2d86fc9c1c6e7ab5c25",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42/lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42/runner.log": "65e7b77c2912e3b9e6163c3693b0454e1a3460a80b218b1601e5218e9a9987da",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42/status.json": "78422ca5110d71ae415a9e1f26a78090bc823353526aebef1033e886c937093b",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42/test_x4.log": "cd1a0806bf31dbdaea4ebbd85cdc9eabbdd59dfbaea3bb74df0bfc1cb26df922",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42/test_x8.log": "7199efef564c67df507277146e3b8ff44722356a97c6a2dab570bedf6c578672",
+    "Pavia/Runs/v3_deform_stage3_continuous600_x4_seed42/train.log": "9c103a6f430401e74b7e178ea96c2936e1f63c510369ae19d648b7dd93ea9368"
+  },
+  "delete_targets": [
+    {
+      "path": "Pavia/Checkpoint/v3_full_continuous600_x4_seed42",
+      "files": 11,
+      "bytes": 40648699,
+      "inventory": [
+        {
+          "path": "Pavia/Checkpoint/v3_full_continuous600_x4_seed42/config.json",
+          "bytes": 633
+        },
+        {
+          "path": "Pavia/Checkpoint/v3_full_continuous600_x4_seed42/epoch_200.pth",
+          "bytes": 10155736
+        },
+        {
+          "path": "Pavia/Checkpoint/v3_full_continuous600_x4_seed42/epoch_400.pth",
+          "bytes": 10155736
+        },
+        {
+          "path": "Pavia/Checkpoint/v3_full_continuous600_x4_seed42/epoch_600.pth",
+          "bytes": 10155800
+        },
+        {
+          "path": "Pavia/Checkpoint/v3_full_continuous600_x4_seed42/last.pth",
+          "bytes": 10155800
+        },
+        {
+          "path": "Pavia/Checkpoint/v3_full_continuous600_x4_seed42/last_test_x4.json",
+          "bytes": 974
+        },
+        {
+          "path": "Pavia/Checkpoint/v3_full_continuous600_x4_seed42/last_test_x8.json",
+          "bytes": 975
+        },
+        {
+          "path": "Pavia/Checkpoint/v3_full_continuous600_x4_seed42/response.npy",
+          "bytes": 1352
+        },
+        {
+          "path": "Pavia/Checkpoint/v3_full_continuous600_x4_seed42/test.log",
+          "bytes": 606
+        },
+        {
+          "path": "Pavia/Checkpoint/v3_full_continuous600_x4_seed42/test_x8.log",
+          "bytes": 606
+        },
+        {
+          "path": "Pavia/Checkpoint/v3_full_continuous600_x4_seed42/train.csv",
+          "bytes": 20481
+        }
+      ]
+    },
+    {
+      "path": "Pavia/Runs/v3_full_continuous600_x4_seed42",
+      "files": 6,
+      "bytes": 37063,
+      "inventory": [
+        {
+          "path": "Pavia/Runs/v3_full_continuous600_x4_seed42/lock",
+          "bytes": 0
+        },
+        {
+          "path": "Pavia/Runs/v3_full_continuous600_x4_seed42/runner.log",
+          "bytes": 1659
+        },
+        {
+          "path": "Pavia/Runs/v3_full_continuous600_x4_seed42/status.json",
+          "bytes": 181
+        },
+        {
+          "path": "Pavia/Runs/v3_full_continuous600_x4_seed42/test_x4.log",
+          "bytes": 768
+        },
+        {
+          "path": "Pavia/Runs/v3_full_continuous600_x4_seed42/test_x8.log",
+          "bytes": 768
+        },
+        {
+          "path": "Pavia/Runs/v3_full_continuous600_x4_seed42/train.log",
+          "bytes": 33687
+        }
+      ]
+    },
+    {
+      "path": "Chikusei/Checkpoint",
+      "files": 15,
+      "bytes": 38170018,
+      "inventory": [
+        {
+          "path": "Chikusei/Checkpoint/sfno_continuous600_x4_seed42/config.json",
+          "bytes": 662
+        },
+        {
+          "path": "Chikusei/Checkpoint/sfno_continuous600_x4_seed42/epoch_200.pth",
+          "bytes": 6897416
+        },
+        {
+          "path": "Chikusei/Checkpoint/sfno_continuous600_x4_seed42/epoch_400.pth",
+          "bytes": 6897480
+        },
+        {
+          "path": "Chikusei/Checkpoint/sfno_continuous600_x4_seed42/epoch_600.pth",
+          "bytes": 6897480
+        },
+        {
+          "path": "Chikusei/Checkpoint/sfno_continuous600_x4_seed42/last.pth",
+          "bytes": 6897480
+        },
+        {
+          "path": "Chikusei/Checkpoint/sfno_continuous600_x4_seed42/last_test_x4.json",
+          "bytes": 982
+        },
+        {
+          "path": "Chikusei/Checkpoint/sfno_continuous600_x4_seed42/last_test_x8.json",
+          "bytes": 983
+        },
+        {
+          "path": "Chikusei/Checkpoint/sfno_continuous600_x4_seed42/response.npy",
+          "bytes": 1664
+        },
+        {
+          "path": "Chikusei/Checkpoint/sfno_continuous600_x4_seed42/test.log",
+          "bytes": 448
+        },
+        {
+          "path": "Chikusei/Checkpoint/sfno_continuous600_x4_seed42/test_x8.log",
+          "bytes": 448
+        },
+        {
+          "path": "Chikusei/Checkpoint/sfno_continuous600_x4_seed42/train.csv",
+          "bytes": 20653
+        },
+        {
+          "path": "Chikusei/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/config.json",
+          "bytes": 681
+        },
+        {
+          "path": "Chikusei/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last.pth",
+          "bytes": 10549906
+        },
+        {
+          "path": "Chikusei/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/response.npy",
+          "bytes": 1664
+        },
+        {
+          "path": "Chikusei/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/train.csv",
+          "bytes": 2071
+        }
+      ]
+    },
+    {
+      "path": "Chikusei/Runs",
+      "files": 11,
+      "bytes": 42198,
+      "inventory": [
+        {
+          "path": "Chikusei/Runs/comparison_seed42/execution.log",
+          "bytes": 2503
+        },
+        {
+          "path": "Chikusei/Runs/comparison_seed42/lock",
+          "bytes": 0
+        },
+        {
+          "path": "Chikusei/Runs/comparison_seed42/status.json",
+          "bytes": 226
+        },
+        {
+          "path": "Chikusei/Runs/sfno_continuous600_x4_seed42/lock",
+          "bytes": 0
+        },
+        {
+          "path": "Chikusei/Runs/sfno_continuous600_x4_seed42/status.json",
+          "bytes": 181
+        },
+        {
+          "path": "Chikusei/Runs/sfno_continuous600_x4_seed42/test_x4.log",
+          "bytes": 768
+        },
+        {
+          "path": "Chikusei/Runs/sfno_continuous600_x4_seed42/test_x8.log",
+          "bytes": 768
+        },
+        {
+          "path": "Chikusei/Runs/sfno_continuous600_x4_seed42/train.log",
+          "bytes": 33687
+        },
+        {
+          "path": "Chikusei/Runs/v3_deform_stage3_continuous600_x4_seed42/lock",
+          "bytes": 0
+        },
+        {
+          "path": "Chikusei/Runs/v3_deform_stage3_continuous600_x4_seed42/status.json",
+          "bytes": 323
+        },
+        {
+          "path": "Chikusei/Runs/v3_deform_stage3_continuous600_x4_seed42/train.log",
+          "bytes": 3742
+        }
+      ]
+    },
+    {
+      "path": "Chikusei/protocol_v2/Checkpoint",
+      "files": 22,
+      "bytes": 69857345,
+      "inventory": [
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/sfno_continuous600_x4_seed42/config.json",
+          "bytes": 2131
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/sfno_continuous600_x4_seed42/epoch_200.pth",
+          "bytes": 6898504
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/sfno_continuous600_x4_seed42/epoch_400.pth",
+          "bytes": 6898568
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/sfno_continuous600_x4_seed42/epoch_600.pth",
+          "bytes": 6898568
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/sfno_continuous600_x4_seed42/last.pth",
+          "bytes": 6898568
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/sfno_continuous600_x4_seed42/last_test_x4.json",
+          "bytes": 2009
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/sfno_continuous600_x4_seed42/last_test_x8.json",
+          "bytes": 2005
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/sfno_continuous600_x4_seed42/response.npy",
+          "bytes": 1664
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/sfno_continuous600_x4_seed42/test.log",
+          "bytes": 633
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/sfno_continuous600_x4_seed42/test_x8.log",
+          "bytes": 633
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/sfno_continuous600_x4_seed42/train.csv",
+          "bytes": 20324
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/config.json",
+          "bytes": 2150
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_200.pth",
+          "bytes": 10550994
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_400.pth",
+          "bytes": 10551058
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/epoch_600.pth",
+          "bytes": 10551058
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last.pth",
+          "bytes": 10551058
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x4.json",
+          "bytes": 2023
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/last_test_x8.json",
+          "bytes": 2024
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/response.npy",
+          "bytes": 1664
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/test.log",
+          "bytes": 645
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/test_x8.log",
+          "bytes": 645
+        },
+        {
+          "path": "Chikusei/protocol_v2/Checkpoint/v3_deform_stage3_continuous600_x4_seed42/train.csv",
+          "bytes": 20419
+        }
+      ]
+    },
+    {
+      "path": "Chikusei/protocol_v2/Runs",
+      "files": 13,
+      "bytes": 75872,
+      "inventory": [
+        {
+          "path": "Chikusei/protocol_v2/Runs/comparison_seed42/execution.log",
+          "bytes": 4177
+        },
+        {
+          "path": "Chikusei/protocol_v2/Runs/comparison_seed42/lock",
+          "bytes": 0
+        },
+        {
+          "path": "Chikusei/protocol_v2/Runs/comparison_seed42/status.json",
+          "bytes": 87
+        },
+        {
+          "path": "Chikusei/protocol_v2/Runs/sfno_continuous600_x4_seed42/lock",
+          "bytes": 0
+        },
+        {
+          "path": "Chikusei/protocol_v2/Runs/sfno_continuous600_x4_seed42/status.json",
+          "bytes": 193
+        },
+        {
+          "path": "Chikusei/protocol_v2/Runs/sfno_continuous600_x4_seed42/test_x4.log",
+          "bytes": 953
+        },
+        {
+          "path": "Chikusei/protocol_v2/Runs/sfno_continuous600_x4_seed42/test_x8.log",
+          "bytes": 953
+        },
+        {
+          "path": "Chikusei/protocol_v2/Runs/sfno_continuous600_x4_seed42/train.log",
+          "bytes": 33687
+        },
+        {
+          "path": "Chikusei/protocol_v2/Runs/v3_deform_stage3_continuous600_x4_seed42/lock",
+          "bytes": 0
+        },
+        {
+          "path": "Chikusei/protocol_v2/Runs/v3_deform_stage3_continuous600_x4_seed42/status.json",
+          "bytes": 205
+        },
+        {
+          "path": "Chikusei/protocol_v2/Runs/v3_deform_stage3_continuous600_x4_seed42/test_x4.log",
+          "bytes": 965
+        },
+        {
+          "path": "Chikusei/protocol_v2/Runs/v3_deform_stage3_continuous600_x4_seed42/test_x8.log",
+          "bytes": 965
+        },
+        {
+          "path": "Chikusei/protocol_v2/Runs/v3_deform_stage3_continuous600_x4_seed42/train.log",
+          "bytes": 33687
+        }
+      ]
+    },
+    {
+      "path": "Chikusei/protocol_v2/validation.json",
+      "files": 1,
+      "bytes": 3742,
+      "inventory": [
+        {
+          "path": "Chikusei/protocol_v2/validation.json",
+          "bytes": 3742
+        }
+      ]
+    },
+    {
+      "path": "Chikusei/protocol_v2/validation.log",
+      "files": 1,
+      "bytes": 679,
+      "inventory": [
+        {
+          "path": "Chikusei/protocol_v2/validation.log",
+          "bytes": 679
+        }
+      ]
+    },
+    {
+      "path": "Evaluation/Runs/unified_20261109",
+      "files": 35,
+      "bytes": 130911,
+      "inventory": [
+        {
+          "path": "Evaluation/Runs/unified_20261109/chikusei_protocol_v2_sfno_x4.log",
+          "bytes": 1317
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/chikusei_protocol_v2_sfno_x8.log",
+          "bytes": 1315
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/chikusei_protocol_v2_v3_deform_stage3_x4.log",
+          "bytes": 1372
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/chikusei_protocol_v2_v3_deform_stage3_x8.log",
+          "bytes": 1377
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/chikusei_protocol_v3_joint_loss_sfno_x4.log",
+          "bytes": 1407
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/chikusei_protocol_v3_joint_loss_sfno_x8.log",
+          "bytes": 1410
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/chikusei_protocol_v3_joint_loss_v3_deform_stage3_x4.log",
+          "bytes": 1458
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/chikusei_protocol_v3_joint_loss_v3_deform_stage3_x8.log",
+          "bytes": 1460
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/execution.log",
+          "bytes": 2419
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/lock",
+          "bytes": 0
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/manifest.json",
+          "bytes": 4197
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/paired_deltas.json",
+          "bytes": 3442
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/pavia_pavia_sfno_x4.log",
+          "bytes": 781
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/pavia_pavia_sfno_x8.log",
+          "bytes": 781
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/pavia_pavia_v3_deform_stage3_x4.log",
+          "bytes": 810
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/pavia_pavia_v3_deform_stage3_x8.log",
+          "bytes": 808
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/pavia_pavia_v3_full_x4.log",
+          "bytes": 775
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/pavia_pavia_v3_full_x8.log",
+          "bytes": 774
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/chikusei_protocol_v2_sfno_x4.json",
+          "bytes": 8304
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/chikusei_protocol_v2_sfno_x8.json",
+          "bytes": 8294
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/chikusei_protocol_v2_v3_deform_stage3_x4.json",
+          "bytes": 8322
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/chikusei_protocol_v2_v3_deform_stage3_x8.json",
+          "bytes": 8334
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/chikusei_protocol_v3_joint_loss_sfno_x4.json",
+          "bytes": 8338
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/chikusei_protocol_v3_joint_loss_sfno_x8.json",
+          "bytes": 8339
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/chikusei_protocol_v3_joint_loss_v3_deform_stage3_x4.json",
+          "bytes": 8362
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/chikusei_protocol_v3_joint_loss_v3_deform_stage3_x8.json",
+          "bytes": 8364
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/pavia_pavia_sfno_x4.json",
+          "bytes": 5289
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/pavia_pavia_sfno_x8.json",
+          "bytes": 5286
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/pavia_pavia_v3_deform_stage3_x4.json",
+          "bytes": 5328
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/pavia_pavia_v3_deform_stage3_x8.json",
+          "bytes": 5325
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/pavia_pavia_v3_full_x4.json",
+          "bytes": 5296
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/reports/pavia_pavia_v3_full_x8.json",
+          "bytes": 5295
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/status.json",
+          "bytes": 129
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/summary.csv",
+          "bytes": 3522
+        },
+        {
+          "path": "Evaluation/Runs/unified_20261109/summary.md",
+          "bytes": 2881
+        }
+      ]
+    },
+    {
+      "path": "Evaluation/Runs/triplets_20261109",
+      "files": 48,
+      "bytes": 129200315,
+      "inventory": [
+        {
+          "path": "Evaluation/Runs/triplets_20261109/execution.log",
+          "bytes": 4279
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/precision_diagnostic.json",
+          "bytes": 3880
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/precision_diagnostic_matched_rng.json",
+          "bytes": 3891
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/provenance.json",
+          "bytes": 1220
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/reports/pavia_bicubic.json",
+          "bytes": 11671
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/status.json",
+          "bytes": 254
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/manifest.json",
+          "bytes": 15624
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/response.npy",
+          "bytes": 1352
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_01/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_01/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_01/LR_HSI.npy",
+          "bytes": 940160
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_01/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_01/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_02/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_02/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_02/LR_HSI.npy",
+          "bytes": 940160
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_02/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_02/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_03/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_03/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_03/LR_HSI.npy",
+          "bytes": 940160
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_03/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_03/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_04/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_04/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_04/LR_HSI.npy",
+          "bytes": 940160
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_04/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x4/patch_04/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_01/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_01/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_01/LR_HSI.npy",
+          "bytes": 235136
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_01/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_01/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_02/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_02/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_02/LR_HSI.npy",
+          "bytes": 235136
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_02/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_02/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_03/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_03/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_03/LR_HSI.npy",
+          "bytes": 235136
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_03/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_03/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_04/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_04/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_04/LR_HSI.npy",
+          "bytes": 235136
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_04/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109/triplets/pavia/x8/patch_04/sensor_valid.npy",
+          "bytes": 36992
+        }
+      ]
+    },
+    {
+      "path": "Evaluation/Runs/triplets_20261109_fixed",
+      "files": 134,
+      "bytes": 2296282177,
+      "inventory": [
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/comparison.json",
+          "bytes": 7418
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/execution.log",
+          "bytes": 12023
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/provenance.json",
+          "bytes": 1220
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/reports/chikusei_bicubic.json",
+          "bytes": 20606
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/reports/chikusei_sfno_L1.json",
+          "bytes": 11090
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/reports/chikusei_sfno_joint_loss.json",
+          "bytes": 11130
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/reports/pavia_bicubic.json",
+          "bytes": 11671
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/reports/pavia_sfno_L1.json",
+          "bytes": 6799
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/status.json",
+          "bytes": 206
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/summary.md",
+          "bytes": 2720
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/manifest.json",
+          "bytes": 29918
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/response.npy",
+          "bytes": 1664
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_01/GT.npy",
+          "bytes": 128000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_01/HR_MSI.npy",
+          "bytes": 3000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_01/LR_HSI.npy",
+          "bytes": 8000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_01/evaluation_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_01/sensor_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_02/GT.npy",
+          "bytes": 128000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_02/HR_MSI.npy",
+          "bytes": 3000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_02/LR_HSI.npy",
+          "bytes": 8000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_02/evaluation_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_02/sensor_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_03/GT.npy",
+          "bytes": 128000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_03/HR_MSI.npy",
+          "bytes": 3000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_03/LR_HSI.npy",
+          "bytes": 8000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_03/evaluation_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_03/sensor_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_04/GT.npy",
+          "bytes": 128000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_04/HR_MSI.npy",
+          "bytes": 3000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_04/LR_HSI.npy",
+          "bytes": 8000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_04/evaluation_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_04/sensor_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_05/GT.npy",
+          "bytes": 128000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_05/HR_MSI.npy",
+          "bytes": 3000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_05/LR_HSI.npy",
+          "bytes": 8000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_05/evaluation_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_05/sensor_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_06/GT.npy",
+          "bytes": 128000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_06/HR_MSI.npy",
+          "bytes": 3000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_06/LR_HSI.npy",
+          "bytes": 8000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_06/evaluation_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_06/sensor_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_07/GT.npy",
+          "bytes": 128000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_07/HR_MSI.npy",
+          "bytes": 3000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_07/LR_HSI.npy",
+          "bytes": 8000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_07/evaluation_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_07/sensor_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_08/GT.npy",
+          "bytes": 128000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_08/HR_MSI.npy",
+          "bytes": 3000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_08/LR_HSI.npy",
+          "bytes": 8000128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_08/evaluation_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x4/patch_08/sensor_valid.npy",
+          "bytes": 250128
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_01/GT.npy",
+          "bytes": 125960320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_01/HR_MSI.npy",
+          "bytes": 2952320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_01/LR_HSI.npy",
+          "bytes": 1968256
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_01/evaluation_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_01/sensor_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_02/GT.npy",
+          "bytes": 125960320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_02/HR_MSI.npy",
+          "bytes": 2952320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_02/LR_HSI.npy",
+          "bytes": 1968256
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_02/evaluation_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_02/sensor_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_03/GT.npy",
+          "bytes": 125960320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_03/HR_MSI.npy",
+          "bytes": 2952320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_03/LR_HSI.npy",
+          "bytes": 1968256
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_03/evaluation_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_03/sensor_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_04/GT.npy",
+          "bytes": 125960320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_04/HR_MSI.npy",
+          "bytes": 2952320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_04/LR_HSI.npy",
+          "bytes": 1968256
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_04/evaluation_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_04/sensor_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_05/GT.npy",
+          "bytes": 125960320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_05/HR_MSI.npy",
+          "bytes": 2952320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_05/LR_HSI.npy",
+          "bytes": 1968256
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_05/evaluation_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_05/sensor_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_06/GT.npy",
+          "bytes": 125960320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_06/HR_MSI.npy",
+          "bytes": 2952320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_06/LR_HSI.npy",
+          "bytes": 1968256
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_06/evaluation_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_06/sensor_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_07/GT.npy",
+          "bytes": 125960320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_07/HR_MSI.npy",
+          "bytes": 2952320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_07/LR_HSI.npy",
+          "bytes": 1968256
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_07/evaluation_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_07/sensor_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_08/GT.npy",
+          "bytes": 125960320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_08/HR_MSI.npy",
+          "bytes": 2952320
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_08/LR_HSI.npy",
+          "bytes": 1968256
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_08/evaluation_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/chikusei/x8/patch_08/sensor_valid.npy",
+          "bytes": 246144
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/manifest.json",
+          "bytes": 15624
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/response.npy",
+          "bytes": 1352
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_01/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_01/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_01/LR_HSI.npy",
+          "bytes": 940160
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_01/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_01/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_02/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_02/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_02/LR_HSI.npy",
+          "bytes": 940160
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_02/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_02/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_03/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_03/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_03/LR_HSI.npy",
+          "bytes": 940160
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_03/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_03/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_04/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_04/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_04/LR_HSI.npy",
+          "bytes": 940160
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_04/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x4/patch_04/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_01/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_01/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_01/LR_HSI.npy",
+          "bytes": 235136
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_01/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_01/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_02/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_02/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_02/LR_HSI.npy",
+          "bytes": 235136
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_02/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_02/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_03/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_03/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_03/LR_HSI.npy",
+          "bytes": 235136
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_03/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_03/sensor_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_04/GT.npy",
+          "bytes": 15040640
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_04/HR_MSI.npy",
+          "bytes": 442496
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_04/LR_HSI.npy",
+          "bytes": 235136
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_04/evaluation_valid.npy",
+          "bytes": 36992
+        },
+        {
+          "path": "Evaluation/Runs/triplets_20261109_fixed/triplets/pavia/x8/patch_04/sensor_valid.npy",
+          "bytes": 36992
+        }
+      ]
+    }
+  ],
+  "deleted": [
+    "Pavia/Checkpoint/v3_full_continuous600_x4_seed42",
+    "Pavia/Runs/v3_full_continuous600_x4_seed42",
+    "Chikusei/Checkpoint",
+    "Chikusei/Runs",
+    "Chikusei/protocol_v2/Checkpoint",
+    "Chikusei/protocol_v2/Runs",
+    "Chikusei/protocol_v2/validation.json",
+    "Chikusei/protocol_v2/validation.log",
+    "Evaluation/Runs/unified_20261109",
+    "Evaluation/Runs/triplets_20261109",
+    "Evaluation/Runs/triplets_20261109_fixed"
+  ],
+  "planned_bytes": 2574449019,
+  "finished_at": "2026-11-10T18:13:22.084532+08:00",
+  "preserved_hashes_verified": true
+}

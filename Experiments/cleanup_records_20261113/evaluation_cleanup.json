@@ -1,0 +1,73 @@
+{
+  "deleted_directory": "Evaluation",
+  "deleted_at": "2026-11-13T16:18:58.142063+08:00",
+  "reason": "User requested removal of unused historical evaluation tools; no active tasks or current training dependencies.",
+  "files": [
+    {
+      "path": "Evaluation/README.md",
+      "size": 4501,
+      "sha256": "3673743dc262b378214bef794b7803a58a2b0359c95b7635ccadb07ba4465167"
+    },
+    {
+      "path": "Evaluation/metrics.py",
+      "size": 2058,
+      "sha256": "4914c61635d9b2d0d8e1775f0b822288632292bf7920e422d787393cfb5f114a"
+    },
+    {
+      "path": "Evaluation/run_all.py",
+      "size": 7764,
+      "sha256": "1fcb14812a0515fa3ae21baee827e555e6df8b3a3b28279556953047cd40f3ea"
+    },
+    {
+      "path": "Evaluation/reevaluate.py",
+      "size": 7543,
+      "sha256": "7e6a28adc0e8d0fba51252de78f2064b28a99ae40c93a1818061ad56f1ab0500"
+    },
+    {
+      "path": "Evaluation/TRIPLET_AUDIT.md",
+      "size": 5091,
+      "sha256": "be91992d61c5ebb90e559088c8df8b3933c1e88b7681e0a0140ea7a5051b7227"
+    },
+    {
+      "path": "Evaluation/check_metrics.py",
+      "size": 1565,
+      "sha256": "5040438af822eb3ed1c2de7a05d68bd6ca76d5a1c76f3df275f36fbb38f0b443"
+    },
+    {
+      "path": "Evaluation/triplet_audit.py",
+      "size": 18940,
+      "sha256": "be0663eec8839f06a785e5178db76c5e38ecbf28fac551d7fccf23b6120566c3"
+    },
+    {
+      "path": "Evaluation/references/sfno_public_utils.py",
+      "size": 14806,
+      "sha256": "d2e447e593b3f7478340cbe447f5681a687b7065a617dadd58f5a29ef887ae34"
+    },
+    {
+      "path": "Evaluation/__pycache__/reevaluate.cpython-310.pyc",
+      "size": 7318,
+      "sha256": "85d342d79679151b96a49423e9c59838df984dd41f7e433b6fd6a3a4d63f6716"
+    },
+    {
+      "path": "Evaluation/__pycache__/run_all.cpython-310.pyc",
+      "size": 7618,
+      "sha256": "ada289a1622555df018e3ec4de55959a4b0c4eafdb47295ce924b4f06bcfbea4"
+    },
+    {
+      "path": "Evaluation/__pycache__/check_metrics.cpython-310.pyc",
+      "size": 1710,
+      "sha256": "cc647c369f1c8d63236abcefb773b08cc8e7c4fdfe5a2d1a28d29225a65f3293"
+    },
+    {
+      "path": "Evaluation/__pycache__/metrics.cpython-310.pyc",
+      "size": 2014,
+      "sha256": "7038b9b796bc253dee2ba925ac3c41aa4a36b89f564f0dbbb20753bfd1f02ab0"
+    },
+    {
+      "path": "Evaluation/__pycache__/triplet_audit.cpython-310.pyc",
+      "size": 18318,
+      "sha256": "eafc847dcacf8688dc236221861a28d4f8cc8f92fa0319fefe6d8298d267eb8d"
+    }
+  ],
+  "deleted_bytes": 99246
+}

@@ -1,0 +1,72 @@
+{
+  "jobs": [
+    {
+      "model": "sfno",
+      "dataset": "pavia",
+      "seed": 42
+    },
+    {
+      "model": "sfno",
+      "dataset": "chikusei",
+      "seed": 42
+    },
+    {
+      "model": "v3_stage3",
+      "dataset": "pavia",
+      "seed": 42
+    },
+    {
+      "model": "v3_stage3",
+      "dataset": "chikusei",
+      "seed": 42
+    },
+    {
+      "model": "sfno",
+      "dataset": "pavia",
+      "seed": 43
+    },
+    {
+      "model": "sfno",
+      "dataset": "chikusei",
+      "seed": 43
+    },
+    {
+      "model": "v3_stage3",
+      "dataset": "pavia",
+      "seed": 43
+    },
+    {
+      "model": "v3_stage3",
+      "dataset": "chikusei",
+      "seed": 43
+    },
+    {
+      "model": "sfno",
+      "dataset": "pavia",
+      "seed": 44
+    },
+    {
+      "model": "sfno",
+      "dataset": "chikusei",
+      "seed": 44
+    },
+    {
+      "model": "v3_stage3",
+      "dataset": "pavia",
+      "seed": 44
+    },
+    {
+      "model": "v3_stage3",
+      "dataset": "chikusei",
+      "seed": 44
+    }
+  ],
+  "protocol_sha256": {
+    "sfno": "6ca1db3308a2ae506dfc85984a7cf091ef5e4bde21e27a415938c0b922aff16d",
+    "v3_stage3": "2674e05528afff7cb4f3c507637ac378a6438098e2948c2d5123d386453cb137"
+  },
+  "queue_source_sha256": "b43bd80272b8b1a5751c7436de194af16d1f5523dde3891520721fb4a23da249",
+  "validation_policy": "V3 GPU full preflight only after current Chikusei SFNO42 completes and before first V3 train",
+  "handoff_policy": "signal dispatcher only; preserve running Chikusei42 worker; retain original protocol sources",
+  "required_reports": 24
+}

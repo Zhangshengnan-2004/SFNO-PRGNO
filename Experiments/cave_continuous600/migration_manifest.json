@@ -1,0 +1,771 @@
+{
+  "status": "complete",
+  "completed_at": "2026-11-13T22:14:46.188330+08:00",
+  "files": [
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/best_train_loss.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed42/best_train_loss.pth",
+      "bytes": 3054314,
+      "sha256": "5278e911bd1be2c99e8783db9671e4d740280bb40ae4a8b98a6b8be1ce441031",
+      "current_sha256": "5278e911bd1be2c99e8783db9671e4d740280bb40ae4a8b98a6b8be1ce441031"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/epoch_0600.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed42/epoch_0600.pth",
+      "bytes": 3052290,
+      "sha256": "90b16ee846f0a18f6d3993dce2130b2f28f7189d668a760ee891f3e4f6c72beb",
+      "current_sha256": "90b16ee846f0a18f6d3993dce2130b2f28f7189d668a760ee891f3e4f6c72beb"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/last.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed42/last.pth",
+      "bytes": 3036562,
+      "sha256": "01792a041a4b4a50e9dabbcd181b3600fb534828b65b3d78b947b58afbe787d1",
+      "current_sha256": "01792a041a4b4a50e9dabbcd181b3600fb534828b65b3d78b947b58afbe787d1"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/metrics.json",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed42/metrics.json",
+      "bytes": 2234,
+      "sha256": "a34779eaff56526a38c887980f1928462e64715599b226069c459dc91258eb72",
+      "current_sha256": "a34779eaff56526a38c887980f1928462e64715599b226069c459dc91258eb72"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/metrics_x8.json",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed42/metrics_x8.json",
+      "bytes": 2232,
+      "sha256": "99bd13fcc8e0831fb8748f4897c3528c126725aaa98460ad973551270c8905df",
+      "current_sha256": "99bd13fcc8e0831fb8748f4897c3528c126725aaa98460ad973551270c8905df"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/test.log",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed42/test.log",
+      "bytes": 965,
+      "sha256": "331de5dbfcd02b6dae9466ea9098a3a3d2a00d571b50d97414a6768bde3d7bdb",
+      "current_sha256": "331de5dbfcd02b6dae9466ea9098a3a3d2a00d571b50d97414a6768bde3d7bdb"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/test_x8.log",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed42/test_x8.log",
+      "bytes": 968,
+      "sha256": "9a2308a1b3b780a67547995c525fea6c11c0f1ee1b38e4b115159410573aeab2",
+      "current_sha256": "9a2308a1b3b780a67547995c525fea6c11c0f1ee1b38e4b115159410573aeab2"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/train_log.csv",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed42/train_log.csv",
+      "bytes": 9508,
+      "sha256": "566a4c19a7607f5eb5a045d827f5f2bf544ca9fdb5339c8bbbd8f97dd75dc508",
+      "current_sha256": "566a4c19a7607f5eb5a045d827f5f2bf544ca9fdb5339c8bbbd8f97dd75dc508"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed43/best_train_loss.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed43/best_train_loss.pth",
+      "bytes": 3054314,
+      "sha256": "23e1b486b744126f0429465e7319f0f9e4ccdf7ffcd6edad11c12bbcc1a590a2",
+      "current_sha256": "23e1b486b744126f0429465e7319f0f9e4ccdf7ffcd6edad11c12bbcc1a590a2"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed43/epoch_0600.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed43/epoch_0600.pth",
+      "bytes": 3052290,
+      "sha256": "8ed7cb3a17c0805648dd685d3f586217fc96d4343bb075320d89f1c41503f6f7",
+      "current_sha256": "8ed7cb3a17c0805648dd685d3f586217fc96d4343bb075320d89f1c41503f6f7"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed43/last.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed43/last.pth",
+      "bytes": 3036562,
+      "sha256": "8a77bbe3e617f1804de13f2c985b2e3380c093d395ee2bd878a498ac68013bae",
+      "current_sha256": "8a77bbe3e617f1804de13f2c985b2e3380c093d395ee2bd878a498ac68013bae"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed43/metrics.json",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed43/metrics.json",
+      "bytes": 2233,
+      "sha256": "93b95f49cca1a0b0bee18212610d069616fcc6d3b70cdb29757da6014997bffb",
+      "current_sha256": "93b95f49cca1a0b0bee18212610d069616fcc6d3b70cdb29757da6014997bffb"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed43/metrics_x8.json",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed43/metrics_x8.json",
+      "bytes": 2236,
+      "sha256": "f1defd0d9b259af5ebe5ce202d57075a5f643da434c31463076756fddcf4db11",
+      "current_sha256": "f1defd0d9b259af5ebe5ce202d57075a5f643da434c31463076756fddcf4db11"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed43/test.log",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed43/test.log",
+      "bytes": 965,
+      "sha256": "d2952d6b8e636c6dae5f490647a9315732a8b14d13951b09c5c34c76f2a8f40a",
+      "current_sha256": "d2952d6b8e636c6dae5f490647a9315732a8b14d13951b09c5c34c76f2a8f40a"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed43/test_x8.log",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed43/test_x8.log",
+      "bytes": 968,
+      "sha256": "4ad7b2137739b458cdba2a34cb48ee114fce945e621c65f365136f55c126965b",
+      "current_sha256": "4ad7b2137739b458cdba2a34cb48ee114fce945e621c65f365136f55c126965b"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed43/train_log.csv",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed43/train_log.csv",
+      "bytes": 9508,
+      "sha256": "a6e4be95c846ef45e0abdffd91f48a0145625cbaaa9761f8564f9352ab79522b",
+      "current_sha256": "a6e4be95c846ef45e0abdffd91f48a0145625cbaaa9761f8564f9352ab79522b"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed44/best_train_loss.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed44/best_train_loss.pth",
+      "bytes": 3054314,
+      "sha256": "7d12051444040f6701aa2f197f1f98f03d47063ffecceabdd026ca8b71f8488a",
+      "current_sha256": "7d12051444040f6701aa2f197f1f98f03d47063ffecceabdd026ca8b71f8488a"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed44/epoch_0600.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed44/epoch_0600.pth",
+      "bytes": 3052290,
+      "sha256": "af25cd4e8f8cd519cb135375fb7903e3dfca8c70bdd29b3b8b10f2a2f0fa1eb7",
+      "current_sha256": "af25cd4e8f8cd519cb135375fb7903e3dfca8c70bdd29b3b8b10f2a2f0fa1eb7"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed44/last.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed44/last.pth",
+      "bytes": 3036562,
+      "sha256": "4e9cfda94cc1d09cc3bd3a997798c665dae2991d60754ca59189c9d7f34d40b6",
+      "current_sha256": "4e9cfda94cc1d09cc3bd3a997798c665dae2991d60754ca59189c9d7f34d40b6"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed44/metrics.json",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed44/metrics.json",
+      "bytes": 2240,
+      "sha256": "e4cb23808cac830756a05406ad2f70b814f01dc80956798c39081d268e895e47",
+      "current_sha256": "e4cb23808cac830756a05406ad2f70b814f01dc80956798c39081d268e895e47"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed44/metrics_x8.json",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed44/metrics_x8.json",
+      "bytes": 2232,
+      "sha256": "5eae733f64da22cd196b19a57f55efb728b0561cb5feeb5936e7ea102320ef23",
+      "current_sha256": "5eae733f64da22cd196b19a57f55efb728b0561cb5feeb5936e7ea102320ef23"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed44/test.log",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed44/test.log",
+      "bytes": 810,
+      "sha256": "5c0ad01550faf000d7fe7135855dcc4bbef359923b4b3cf8769ba8c5bb1fc8e7",
+      "current_sha256": "5c0ad01550faf000d7fe7135855dcc4bbef359923b4b3cf8769ba8c5bb1fc8e7"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed44/test_x8.log",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed44/test_x8.log",
+      "bytes": 810,
+      "sha256": "711743bf9b732e3ad1a0ba2df9f4ed2a697f4b9b6174948784a5c6cca06c9059",
+      "current_sha256": "711743bf9b732e3ad1a0ba2df9f4ed2a697f4b9b6174948784a5c6cca06c9059"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/baseline_seed44/train_log.csv",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_sfno_x4_seed44/train_log.csv",
+      "bytes": 9508,
+      "sha256": "998f66beb34d70a19bd8e2fd4fda278f60d170b0e2990141f3b4845783c39249",
+      "current_sha256": "998f66beb34d70a19bd8e2fd4fda278f60d170b0e2990141f3b4845783c39249"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/best_train_loss.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed42/best_train_loss.pth",
+      "bytes": 6580766,
+      "sha256": "94375fa849f3a984bde8fbbf6d3efd932f9afa63e25445d9e61fecd5cc427656",
+      "current_sha256": "94375fa849f3a984bde8fbbf6d3efd932f9afa63e25445d9e61fecd5cc427656"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/epoch_0600.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed42/epoch_0600.pth",
+      "bytes": 6576512,
+      "sha256": "b2cbb0bdd0a6d4653c1d2f94503638d554e94d928fb7b79741a6c6449c382157",
+      "current_sha256": "b2cbb0bdd0a6d4653c1d2f94503638d554e94d928fb7b79741a6c6449c382157"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/last.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed42/last.pth",
+      "bytes": 6537820,
+      "sha256": "47cf0c2b501421ed9245e4d12d17b741e5f2f2bb65c6ebe5dcadd3f507a77b2c",
+      "current_sha256": "47cf0c2b501421ed9245e4d12d17b741e5f2f2bb65c6ebe5dcadd3f507a77b2c"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/metrics.json",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed42/metrics.json",
+      "bytes": 2270,
+      "sha256": "80d1abcda0ed9aa26f0fa9974de35d4ab639c2212525e9a0b55b820cd76fcf92",
+      "current_sha256": "80d1abcda0ed9aa26f0fa9974de35d4ab639c2212525e9a0b55b820cd76fcf92"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/metrics_x8.json",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed42/metrics_x8.json",
+      "bytes": 2283,
+      "sha256": "b60111c73e06030ac7fba999b2dfa490ad637d2d4a7ce868f1d644416232343b",
+      "current_sha256": "b60111c73e06030ac7fba999b2dfa490ad637d2d4a7ce868f1d644416232343b"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/test.log",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed42/test.log",
+      "bytes": 975,
+      "sha256": "5b5ff60c80a52ebc0a61effce139181b08a97191611a27c89ca59fd831ba447b",
+      "current_sha256": "5b5ff60c80a52ebc0a61effce139181b08a97191611a27c89ca59fd831ba447b"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/test_x8.log",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed42/test_x8.log",
+      "bytes": 978,
+      "sha256": "4d866f3d75df292e9819097e1afa67f7671ed9f2e5b56437fecd49aa4bf786ba",
+      "current_sha256": "4d866f3d75df292e9819097e1afa67f7671ed9f2e5b56437fecd49aa4bf786ba"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/train_log.csv",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed42/train_log.csv",
+      "bytes": 9508,
+      "sha256": "3784fdc08f83a5970a642afd63f26832ed542e8258b1ef14815e8b3ee6026da0",
+      "current_sha256": "3784fdc08f83a5970a642afd63f26832ed542e8258b1ef14815e8b3ee6026da0"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed43/best_train_loss.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed43/best_train_loss.pth",
+      "bytes": 6580766,
+      "sha256": "9eb55a8c554e21df32f242c9727b408d6d68f785ff08d8627c12b07fa107c505",
+      "current_sha256": "9eb55a8c554e21df32f242c9727b408d6d68f785ff08d8627c12b07fa107c505"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed43/epoch_0600.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed43/epoch_0600.pth",
+      "bytes": 6576512,
+      "sha256": "3024dd997d93d6dbc5ca52f96f747797adb5f8954104292c955913eaab7930bc",
+      "current_sha256": "3024dd997d93d6dbc5ca52f96f747797adb5f8954104292c955913eaab7930bc"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed43/last.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed43/last.pth",
+      "bytes": 6537820,
+      "sha256": "f7ccf6684d5f79ae19ea919dd3bfe0aac6ee92f806bc5beddbf53514d70ec364",
+      "current_sha256": "f7ccf6684d5f79ae19ea919dd3bfe0aac6ee92f806bc5beddbf53514d70ec364"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed43/metrics.json",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed43/metrics.json",
+      "bytes": 2280,
+      "sha256": "7399fceff8a3a2a614586dba8548bc57a2f92a4dade93f0ec225d56912ec1a0a",
+      "current_sha256": "7399fceff8a3a2a614586dba8548bc57a2f92a4dade93f0ec225d56912ec1a0a"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed43/metrics_x8.json",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed43/metrics_x8.json",
+      "bytes": 2279,
+      "sha256": "50a311b88660affa0cbdba06f1b3b1dfbae9c2b17a42eb9625beaa0cf793ce0a",
+      "current_sha256": "50a311b88660affa0cbdba06f1b3b1dfbae9c2b17a42eb9625beaa0cf793ce0a"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed43/test.log",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed43/test.log",
+      "bytes": 975,
+      "sha256": "27e2d6a4e305f49dda402cb1eeeffbe826ceaafde4ad183dc8bd0ef4fe09af5e",
+      "current_sha256": "27e2d6a4e305f49dda402cb1eeeffbe826ceaafde4ad183dc8bd0ef4fe09af5e"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed43/test_x8.log",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed43/test_x8.log",
+      "bytes": 978,
+      "sha256": "14de9bf6de688846e4b67e4b2837efd1209e8709f441539223b10c2f21e39551",
+      "current_sha256": "14de9bf6de688846e4b67e4b2837efd1209e8709f441539223b10c2f21e39551"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed43/train_log.csv",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed43/train_log.csv",
+      "bytes": 9508,
+      "sha256": "d168c18522a0b66fcdde80cbcac230f3eba20ab153b48bc6a69e42a3878ed8f1",
+      "current_sha256": "d168c18522a0b66fcdde80cbcac230f3eba20ab153b48bc6a69e42a3878ed8f1"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed44/best_train_loss.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed44/best_train_loss.pth",
+      "bytes": 6580766,
+      "sha256": "1eeb9de9db3c06317135a73def6a49708c9703e194dd3d8ac5edba4fe0df92d2",
+      "current_sha256": "1eeb9de9db3c06317135a73def6a49708c9703e194dd3d8ac5edba4fe0df92d2"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed44/epoch_0600.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed44/epoch_0600.pth",
+      "bytes": 6576512,
+      "sha256": "4bc4009985206f8af967b1346318ffee5fa9f3cd77fbfacfb4540843ad00d585",
+      "current_sha256": "4bc4009985206f8af967b1346318ffee5fa9f3cd77fbfacfb4540843ad00d585"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed44/last.pth",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed44/last.pth",
+      "bytes": 6537820,
+      "sha256": "8e299825d82a663088f121cb3aa6a84e32c1f09f61f95ba187d99eca6846290e",
+      "current_sha256": "8e299825d82a663088f121cb3aa6a84e32c1f09f61f95ba187d99eca6846290e"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed44/metrics.json",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed44/metrics.json",
+      "bytes": 2272,
+      "sha256": "c6656521150010849dd3016942ce0be1739ff4f314f524559df9a856244931e3",
+      "current_sha256": "c6656521150010849dd3016942ce0be1739ff4f314f524559df9a856244931e3"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed44/metrics_x8.json",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed44/metrics_x8.json",
+      "bytes": 2279,
+      "sha256": "7552a05b69412131d79a5adbc9ef4aa8ab0440aff9ae8dc0a1c6eb1f0abf52d0",
+      "current_sha256": "7552a05b69412131d79a5adbc9ef4aa8ab0440aff9ae8dc0a1c6eb1f0abf52d0"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed44/test.log",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed44/test.log",
+      "bytes": 815,
+      "sha256": "955bd8e3e56a69edbe3cb0e6e436bc9032a0e6b9830e5f74bbcde6fff9ac8d87",
+      "current_sha256": "955bd8e3e56a69edbe3cb0e6e436bc9032a0e6b9830e5f74bbcde6fff9ac8d87"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed44/test_x8.log",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed44/test_x8.log",
+      "bytes": 815,
+      "sha256": "96bdd9e54f06635367b738ea8a07b50aec71319567acd32c62683f3440517d1c",
+      "current_sha256": "96bdd9e54f06635367b738ea8a07b50aec71319567acd32c62683f3440517d1c"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed44/train_log.csv",
+      "new": "Experiments/cave_continuous600/Checkpoint/cave_v3_stage3_x4_seed44/train_log.csv",
+      "bytes": 9508,
+      "sha256": "94af3c525a452b1c0e295b02355303d27aa38a29c9ced3f0df70ec3ddbfb5644",
+      "current_sha256": "94af3c525a452b1c0e295b02355303d27aa38a29c9ced3f0df70ec3ddbfb5644"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_continuous_600/train.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_sfno_x4_seed42/train.log",
+      "bytes": 64127527,
+      "sha256": "91abd01448d42d15f3e292104d893c902394ce3cda9669f008353317d2822175",
+      "current_sha256": "91abd01448d42d15f3e292104d893c902394ce3cda9669f008353317d2822175"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_continuous_600/README.md",
+      "new": "Experiments/cave_continuous600/History/baseline_seed42_queue/README.md",
+      "bytes": 1085,
+      "sha256": "c221779bbf7c01fb51e63705902a7baa71f60ef098b7ad8aa2e459567fde79cb",
+      "current_sha256": "738fc279de276ac16e859743a707c8acea062f4f4c55bd6d9dc8773269167091"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_continuous_600/summary.log",
+      "new": "Experiments/cave_continuous600/History/baseline_seed42_queue/summary.log",
+      "bytes": 95,
+      "sha256": "aac4ba7b7b1eb5a4769a79da51694899606193c3d0b8e74383b5991ca8b1f29b",
+      "current_sha256": "aac4ba7b7b1eb5a4769a79da51694899606193c3d0b8e74383b5991ca8b1f29b"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_continuous_600/execution.log",
+      "new": "Experiments/cave_continuous600/History/baseline_seed42_queue/execution.log",
+      "bytes": 49566,
+      "sha256": "b716da4bfcd16e3206a7f2478d6351e3be8c40079aa92e61fbf462c2e57fe3df",
+      "current_sha256": "b716da4bfcd16e3206a7f2478d6351e3be8c40079aa92e61fbf462c2e57fe3df"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_continuous_600/lock",
+      "new": "Experiments/cave_continuous600/History/baseline_seed42_queue/lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_continuous_600/test_x8.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_sfno_x4_seed42/test_x8.log",
+      "bytes": 1756,
+      "sha256": "3fc39556b647ffa24a2f7cbb1a5359b1d90250c121836abf6a1f94ab89ce8700",
+      "current_sha256": "3fc39556b647ffa24a2f7cbb1a5359b1d90250c121836abf6a1f94ab89ce8700"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_continuous_600/test.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_sfno_x4_seed42/test_x4.log",
+      "bytes": 1690,
+      "sha256": "6beccfbbd768a10a85a88d0afaa2bf7c47ca50f2e4c24c3603650b7597e83ad5",
+      "current_sha256": "6beccfbbd768a10a85a88d0afaa2bf7c47ca50f2e4c24c3603650b7597e83ad5"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_continuous_600/status.json",
+      "new": "Experiments/cave_continuous600/History/baseline_seed42_queue/status.json",
+      "bytes": 70,
+      "sha256": "b9bd3dc993dfc24d7f0df25d6139f9d54ce8ead99c90ff487d655bd118862ea0",
+      "current_sha256": "b9bd3dc993dfc24d7f0df25d6139f9d54ce8ead99c90ff487d655bd118862ea0"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/baseline_seed43_train.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_sfno_x4_seed43/train.log",
+      "bytes": 64118541,
+      "sha256": "10d24965b1c94a79dd146b33a8841725bdc4829027fd8146e21701ec5a59f36c",
+      "current_sha256": "10d24965b1c94a79dd146b33a8841725bdc4829027fd8146e21701ec5a59f36c"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/seed42_sha256.json",
+      "new": "Experiments/cave_continuous600/History/three_seed_queue/seed42_sha256.json",
+      "bytes": 1018,
+      "sha256": "daf6c42f740d7d33be2a7f7e82bb21e6be1d23079221d7716a40fa32e19076e7",
+      "current_sha256": "daf6c42f740d7d33be2a7f7e82bb21e6be1d23079221d7716a40fa32e19076e7"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/deform_stage3_seed44_train.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_v3_stage3_x4_seed44/train.log",
+      "bytes": 65967546,
+      "sha256": "5e3011d51e906d0fad23247b164ecfacc200345bd9ecf15e0a87492d557a04e6",
+      "current_sha256": "5e3011d51e906d0fad23247b164ecfacc200345bd9ecf15e0a87492d557a04e6"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/baseline_seed43_test_x8.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_sfno_x4_seed43/test_x8.log",
+      "bytes": 1756,
+      "sha256": "ea3d0c9bfe62ecebb2f997688ed4fc3c843f3abe5c53bedba8b3a467c0468176",
+      "current_sha256": "ea3d0c9bfe62ecebb2f997688ed4fc3c843f3abe5c53bedba8b3a467c0468176"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/deform_stage3_seed43_test.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_v3_stage3_x4_seed43/test_x4.log",
+      "bytes": 1427,
+      "sha256": "120a037a16643ba156add495db14090656f6f0eb8f2bfa22c1636460bf149b7e",
+      "current_sha256": "120a037a16643ba156add495db14090656f6f0eb8f2bfa22c1636460bf149b7e"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/mean_std.csv",
+      "new": "Experiments/cave_continuous600/Summary/mean_std.csv",
+      "bytes": 608,
+      "sha256": "559bb4b5ecd59187ddb603b02c8a4f39d5b0dbdeac248d667b17535bfc5564e3",
+      "current_sha256": "559bb4b5ecd59187ddb603b02c8a4f39d5b0dbdeac248d667b17535bfc5564e3"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/baseline_seed44_test_x8.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_sfno_x4_seed44/test_x8.log",
+      "bytes": 1756,
+      "sha256": "cb06ff78b536ab52566a893d899f3f13fe072c71cd779eb2fb8bbbe2487ecfe3",
+      "current_sha256": "cb06ff78b536ab52566a893d899f3f13fe072c71cd779eb2fb8bbbe2487ecfe3"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/deform_stage3_seed44_test_x8.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_v3_stage3_x4_seed44/test_x8.log",
+      "bytes": 1493,
+      "sha256": "dcc185d65581d9c3bf445ca31d5552d558ae15dbd5617c64c101b853b3946089",
+      "current_sha256": "dcc185d65581d9c3bf445ca31d5552d558ae15dbd5617c64c101b853b3946089"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/deform_stage3_seed43_train.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_v3_stage3_x4_seed43/train.log",
+      "bytes": 65966837,
+      "sha256": "e4ebc2101d2a0018eb8be070e74b7d7daa461a14884fdd53617586c9ff10a872",
+      "current_sha256": "e4ebc2101d2a0018eb8be070e74b7d7daa461a14884fdd53617586c9ff10a872"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/README.md",
+      "new": "Experiments/cave_continuous600/History/three_seed_queue/README.md",
+      "bytes": 2762,
+      "sha256": "241056444d356f7a3356cd8c4b3f9c43b98aeab3acd4a7023797df00c34a6770",
+      "current_sha256": "8e00ffa185779d8a4fec17d33f57800b327d8ca4fbff7a9a738e52942f6ad17c"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/execution.log",
+      "new": "Experiments/cave_continuous600/History/three_seed_queue/execution.log",
+      "bytes": 93139,
+      "sha256": "2b9c552f1e4ac747d1a6896e30bdd916eb289cb880d44924a99abc1ca62f00db",
+      "current_sha256": "2b9c552f1e4ac747d1a6896e30bdd916eb289cb880d44924a99abc1ca62f00db"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/summary.json",
+      "new": "Experiments/cave_continuous600/Summary/summary.json",
+      "bytes": 2096,
+      "sha256": "22fdba206a785690be84b1fa7c7e85992ea1d08304637ff36f85581fbb87889e",
+      "current_sha256": "22fdba206a785690be84b1fa7c7e85992ea1d08304637ff36f85581fbb87889e"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/before_reorder.json",
+      "new": "Experiments/cave_continuous600/History/three_seed_queue/before_reorder.json",
+      "bytes": 608,
+      "sha256": "1e6957dca6d6df73f0709ea8d5e18a0847ed8b1270e3d0b1291d66cb3f63d574",
+      "current_sha256": "1e6957dca6d6df73f0709ea8d5e18a0847ed8b1270e3d0b1291d66cb3f63d574"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/per_seed.csv",
+      "new": "Experiments/cave_continuous600/Summary/per_seed.csv",
+      "bytes": 908,
+      "sha256": "ef44aebda28b252e390f5f5c4aee2439a49ed240f271f449d4b3405e522466f5",
+      "current_sha256": "ef44aebda28b252e390f5f5c4aee2439a49ed240f271f449d4b3405e522466f5"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/baseline_seed44_test.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_sfno_x4_seed44/test_x4.log",
+      "bytes": 1690,
+      "sha256": "90f0c76b6bd7fa9e1aeee5139ee3b6ab4b52c0bfef287424b5f5c3141b1a5f39",
+      "current_sha256": "90f0c76b6bd7fa9e1aeee5139ee3b6ab4b52c0bfef287424b5f5c3141b1a5f39"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/baseline_seed44_train.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_sfno_x4_seed44/train.log",
+      "bytes": 64118586,
+      "sha256": "d545a219315b50324d8a6bb39413195813e828f974b3e3a0dcff766062a380f4",
+      "current_sha256": "d545a219315b50324d8a6bb39413195813e828f974b3e3a0dcff766062a380f4"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/baseline_seed43_test.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_sfno_x4_seed43/test_x4.log",
+      "bytes": 1690,
+      "sha256": "47d7a8428860bd69c1f00bc1c2bafd0332e4f123e8097f43aa7382a1e88c15b5",
+      "current_sha256": "47d7a8428860bd69c1f00bc1c2bafd0332e4f123e8097f43aa7382a1e88c15b5"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/deform_stage3_seed43_test_x8.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_v3_stage3_x4_seed43/test_x8.log",
+      "bytes": 1493,
+      "sha256": "7d1457b215547f5fec1c1b44e6ddbd10fc64cd3bf9d58e258eacd66ffc28f8d2",
+      "current_sha256": "7d1457b215547f5fec1c1b44e6ddbd10fc64cd3bf9d58e258eacd66ffc28f8d2"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/deform_stage3_seed44_test.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_v3_stage3_x4_seed44/test_x4.log",
+      "bytes": 1427,
+      "sha256": "19b22bfe5d0e79658438f958914c072f68390e941bd6a4dde4594815b3d1a09b",
+      "current_sha256": "19b22bfe5d0e79658438f958914c072f68390e941bd6a4dde4594815b3d1a09b"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/mean_std.md",
+      "new": "Experiments/cave_continuous600/Summary/mean_std.md",
+      "bytes": 433,
+      "sha256": "acc143250f8e003a25c05d056633090453c93570ca696ec5700aa457be3b5d50",
+      "current_sha256": "acc143250f8e003a25c05d056633090453c93570ca696ec5700aa457be3b5d50"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/reordered_execution.log",
+      "new": "Experiments/cave_continuous600/History/three_seed_queue/reordered_execution.log",
+      "bytes": 6038,
+      "sha256": "fab25181df9e78a13f071263aaee1bdf3738f2980b1b635b18f48131c4dcdf72",
+      "current_sha256": "fab25181df9e78a13f071263aaee1bdf3738f2980b1b635b18f48131c4dcdf72"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/lock",
+      "new": "Experiments/cave_continuous600/History/three_seed_queue/lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/status.json",
+      "new": "Experiments/cave_continuous600/History/three_seed_queue/status.json",
+      "bytes": 70,
+      "sha256": "491f01bdee061126d41917bafb1c9f0b4402873bef949e41f4ad5b9106cf55be",
+      "current_sha256": "491f01bdee061126d41917bafb1c9f0b4402873bef949e41f4ad5b9106cf55be"
+    },
+    {
+      "old": "CAVE/reproduction/baseline_stage3_three_seeds/reordered_status.json",
+      "new": "Experiments/cave_continuous600/History/three_seed_queue/reordered_status.json",
+      "bytes": 43,
+      "sha256": "dd2b881c8c080b643efe83c54c3095d026a2df0a15ffc3dd6e74bb7b661943ea",
+      "current_sha256": "dd2b881c8c080b643efe83c54c3095d026a2df0a15ffc3dd6e74bb7b661943ea"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42_train_continuous.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_v3_stage3_x4_seed42/train.log",
+      "bytes": 65966990,
+      "sha256": "0ad5e7409c9f4640feb296108f5985ab550566f1abbd888024e48fcc9aa81184",
+      "current_sha256": "0ad5e7409c9f4640feb296108f5985ab550566f1abbd888024e48fcc9aa81184"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42_test.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_v3_stage3_x4_seed42/test_x4.log",
+      "bytes": 1427,
+      "sha256": "de1b5ca9ec644e0c48df4123ae6919e61a2e56f3c47a9e9aba1054c742fe05fc",
+      "current_sha256": "de1b5ca9ec644e0c48df4123ae6919e61a2e56f3c47a9e9aba1054c742fe05fc"
+    },
+    {
+      "old": "CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42_test_x8.log",
+      "new": "Experiments/cave_continuous600/Runs/cave_v3_stage3_x4_seed42/test_x8.log",
+      "bytes": 1493,
+      "sha256": "103717daf8e03252545d0d46c46d7e6703ddfe7a4ddbe078419f1dd44c2acd82",
+      "current_sha256": "103717daf8e03252545d0d46c46d7e6703ddfe7a4ddbe078419f1dd44c2acd82"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/README.md",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/README.md",
+      "bytes": 2568,
+      "sha256": "11663a1e8a247bbefcaaf12e3d9c5b1702df870341a7898e2f454fc5daf1b0fe",
+      "current_sha256": "11663a1e8a247bbefcaaf12e3d9c5b1702df870341a7898e2f454fc5daf1b0fe"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/analyze_scenes.py",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/analyze_scenes.py",
+      "bytes": 2695,
+      "sha256": "b19d49eb20f640a37835a4ec9544ead7f972b44fe2f95391ec8561fba0326833",
+      "current_sha256": "97b4aa187b458ea36e2397fc268641405d73fec94ed0cf80a71b0400a5b54b2f"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/benchmark.log",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/benchmark.log",
+      "bytes": 3428,
+      "sha256": "9fadcd57b46b36e87349e3dba70103fd0a0649bcb6701e1dc6564ba535ef907f",
+      "current_sha256": "9fadcd57b46b36e87349e3dba70103fd0a0649bcb6701e1dc6564ba535ef907f"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/benchmark.py",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/benchmark.py",
+      "bytes": 3988,
+      "sha256": "5e506f68f0947825c8dc2679b0c873e0406ff75731799b99eda1cdfc421a7117",
+      "current_sha256": "422970b78734da95f31270d2f8d3291eca09b73ddaf4e08fa9c3d8b79680b6fe"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/efficiency.json",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/efficiency.json",
+      "bytes": 4318,
+      "sha256": "9ffdebfbfae062cdc5b101a1b2e18fd8da02d0c1e5a7429b2676b78de3ee9399",
+      "current_sha256": "9ffdebfbfae062cdc5b101a1b2e18fd8da02d0c1e5a7429b2676b78de3ee9399"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/efficiency.md",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/efficiency.md",
+      "bytes": 351,
+      "sha256": "6aaed8b7d3fc3951cf3349c8a86a58e0ccb8a91861f250a3da414b5794ab1019",
+      "current_sha256": "6aaed8b7d3fc3951cf3349c8a86a58e0ccb8a91861f250a3da414b5794ab1019"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/module_profile/README.md",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/module_profile/README.md",
+      "bytes": 2562,
+      "sha256": "fc18e1161e58b7ab22b2b529fe15db50203e1c65f01577441c889e62a95373af",
+      "current_sha256": "c87edae39f7bfd0b39317493776b8817e0484a3b9a02b69153554175fa9abe93"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/module_profile/operators_x4.txt",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/module_profile/operators_x4.txt",
+      "bytes": 8701,
+      "sha256": "2629571c81cba5ac206a39ac35cf2621e8f8dbc4f6ce9318cd34773c976e6bb8",
+      "current_sha256": "2629571c81cba5ac206a39ac35cf2621e8f8dbc4f6ce9318cd34773c976e6bb8"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/module_profile/profile.json",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/module_profile/profile.json",
+      "bytes": 20504,
+      "sha256": "df298ec62287fca4fda72764541b7f613639181206183481a047c4ccd178db59",
+      "current_sha256": "df298ec62287fca4fda72764541b7f613639181206183481a047c4ccd178db59"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/module_profile/summary.md",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/module_profile/summary.md",
+      "bytes": 446,
+      "sha256": "f72f6755abbdff83ebfc578bd419de7176923f57d2b8efaf2b755df082d37791",
+      "current_sha256": "f72f6755abbdff83ebfc578bd419de7176923f57d2b8efaf2b755df082d37791"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/module_profile/trace_x4.json",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/module_profile/trace_x4.json",
+      "bytes": 2587352,
+      "sha256": "f7cf1e688f2844148b8b7618b6d5ef035e61e32ab0547ec6766d120978f1aac5",
+      "current_sha256": "f7cf1e688f2844148b8b7618b6d5ef035e61e32ab0547ec6766d120978f1aac5"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/module_profile_execution.log",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/module_profile_execution.log",
+      "bytes": 2583,
+      "sha256": "a7aad4e3eb355a3535bb667245f7d67f5448f97a1d82f6f1d39959f2cd1648cf",
+      "current_sha256": "a7aad4e3eb355a3535bb667245f7d67f5448f97a1d82f6f1d39959f2cd1648cf"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/per_scene_comparison.csv",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/per_scene_comparison.csv",
+      "bytes": 6225,
+      "sha256": "5a6fb09ce09f81bca83158a6cda128147b31ea922cdcb1c34ffe0016463dba3f",
+      "current_sha256": "5a6fb09ce09f81bca83158a6cda128147b31ea922cdcb1c34ffe0016463dba3f"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/per_scene_comparison.md",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/per_scene_comparison.md",
+      "bytes": 1051,
+      "sha256": "330083c50532a4e0b778ca32625a63bb1bc86a60047714a08ce9777ea6898878",
+      "current_sha256": "330083c50532a4e0b778ca32625a63bb1bc86a60047714a08ce9777ea6898878"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/profile_modules.py",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/profile_modules.py",
+      "bytes": 9029,
+      "sha256": "c06cc97266c4172e8df3d35d614e12d0be40c915d78aa2d5019b1e533028c385",
+      "current_sha256": "73f6b6b3be74ea8c59ef46a22c10e7ad9eefcb37efd83a2b9a5a97309358ed34"
+    },
+    {
+      "old": "CAVE/analysis/stage3_scene_efficiency/scene_summary.json",
+      "new": "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/scene_summary.json",
+      "bytes": 964,
+      "sha256": "c149cf285cc58cfc206e45db8af0728b8195548b71ab51784628a0e653a79236",
+      "current_sha256": "c149cf285cc58cfc206e45db8af0728b8195548b71ab51784628a0e653a79236"
+    },
+    {
+      "old": "CAVE/run_continuous_baseline.py",
+      "new": "Experiments/cave_continuous600/History/queue_scripts/run_continuous_baseline.py",
+      "bytes": 3180,
+      "sha256": "facfa08cca86ab2038f59bd4646e8cb881a7a179e2d567471b3bd319f95d5abe",
+      "current_sha256": "facfa08cca86ab2038f59bd4646e8cb881a7a179e2d567471b3bd319f95d5abe"
+    },
+    {
+      "old": "CAVE/run_three_seed_comparison.py",
+      "new": "Experiments/cave_continuous600/History/queue_scripts/run_three_seed_comparison.py",
+      "bytes": 8298,
+      "sha256": "0da8321a9c9187c29b10bb4cb17882099672fa052cec44ac72a9c2ddbd399d83",
+      "current_sha256": "0da8321a9c9187c29b10bb4cb17882099672fa052cec44ac72a9c2ddbd399d83"
+    },
+    {
+      "old": "CAVE/run_reordered_comparison.py",
+      "new": "Experiments/cave_continuous600/History/queue_scripts/run_reordered_comparison.py",
+      "bytes": 5677,
+      "sha256": "bf5286cfb5ea8abca0b53ee545ba95e4b66e1fc243f64aa4a61d97bc64dafcef",
+      "current_sha256": "bf5286cfb5ea8abca0b53ee545ba95e4b66e1fc243f64aa4a61d97bc64dafcef"
+    }
+  ],
+  "moved_files": 102,
+  "moved_bytes": 479727516,
+  "retained_files_verified": 834,
+  "source_snapshot_sha256": {
+    "Source/CAVE_Dataset.py": "8a17171e64a77eeda04195d3a04062b1d5719278830436270839771cf625c21c",
+    "Source/Model/DynamicSpatial.py": "88bf15853b3903fd1e95abafbc330b2edac513b603bfc7626b56c8c18333aa05",
+    "Source/Model/FusionBackbone.py": "8486110de67d0f90655931ffe366f0353f73db79bfa808965ef5478a3998037b",
+    "Source/Model/MultiScaleDynamicGating.py": "ea2dbb7e620b65db9744971f2e32f00fe56dc4b560882340c959a4f25f37be4f",
+    "Source/Model/MultiScaleDynamicGatingV2.py": "3faffae2c1393789f9b2f364d5e80d3b888b47c37f3298dd3ca8cb277037f274",
+    "Source/Model/ObservationGrid.py": "d8d82b2e985fa41d992261cdbf9fcb3ebf317221b086ae10a18b7a5a29a75029",
+    "Source/Model/PhysicsGalerkin.py": "3dcba045f933439051bc8db9c844c3ecb2de45e41e3c4fc37e075e20e4f4903f",
+    "Source/Model/SFNO.py": "d167acbd8d58cf4e38406855f8f5c58feeaa6b9fadd47f6834843f1de337ad18",
+    "Source/Model/SFNO_PRGNO.py": "a027d85e8c007e63edf0c446af6d6d85b7bfc0965f1f16be2991526218567e55",
+    "Source/Model/SFNO_PRGNO_V2.py": "e9e32758bdf96ace191b3665d8127eace3430490ef62e0faf70a9bcc77939c1c",
+    "Source/Model/SFNO_PRGNO_V3.py": "738b26323b25c99eccd50220248f27b621386a8cf747a62150eb8cc21e061cec",
+    "Source/Model/SpacingDeformableSampling.py": "0a51e2847a0f0bcf689a5f5e65b6b05329decc19ef28ccecc6d841b2d98d68eb",
+    "Source/Model/VectorAttention.py": "ac02fe488c05fa802ca1762607e0b67b7989cc3b63a018e3970cc9584762e7f7",
+    "Source/Pypher.py": "62a2ab45f4764fb6c6c71dbfd7367cc4f13ec8b9743020443ef529bf17cb58b7",
+    "Source/Test.py": "11f3672dd9a13bc22a206016f7ca173f914c2ff8ebafc75e1495f6de300718e4",
+    "Source/Test_V3.py": "93ed771506a7230d286308bf2a39034c538073226b3d699e6a864e017c32d2e7",
+    "Source/Train.py": "73f26edbebd2a54afc6d38b9eb402c520d779180ade01553c4a1db7a8bb41c29",
+    "Source/Train_V3.py": "13ef03e05eb9120db7a54e9b1566098aab18a08ce2331224561354c9efc78697",
+    "Source/Utils.py": "563cde4940f27929402c296c29678c803e381b995fa8592fa8c8634f02068714",
+    "Source/continuation_schedule.py": "cc165a6a41a7ac660266de6eceb441457a8bce16cf0a76cb3bebfd62bc314fd8",
+    "Source/numpy_compat.py": "5174db4e7ff99fa61e51e13901013b12861d88e5a8eeb2d1535c25e2564abe7e",
+    "Source/physics/cave_effective_response.npz": "ffe7e3c355ed8ca969d5c104de52ac148bc298c8305cf69cbbb39eef848772be",
+    "Source/physics/cave_effective_response_report.json": "883dfd96a7ab5752f0366971881cd7cf070a4cb408e0ab118895af9995e2c935",
+    "Source/test_result_log.py": "cbd7fbbcf91b0f90bdc48c88664f068c4c46e502cc5d670a92b476130b18eac7"
+  },
+  "analysis_source_edits": {
+    "Analysis/stage3_scene_efficiency/analyze_scenes.py": {
+      "before": "b19d49eb20f640a37835a4ec9544ead7f972b44fe2f95391ec8561fba0326833",
+      "after": "97b4aa187b458ea36e2397fc268641405d73fec94ed0cf80a71b0400a5b54b2f",
+      "original_copy": "History/original_analysis_sources/analyze_scenes.py"
+    },
+    "Analysis/stage3_scene_efficiency/benchmark.py": {
+      "before": "5e506f68f0947825c8dc2679b0c873e0406ff75731799b99eda1cdfc421a7117",
+      "after": "422970b78734da95f31270d2f8d3291eca09b73ddaf4e08fa9c3d8b79680b6fe",
+      "original_copy": "History/original_analysis_sources/benchmark.py"
+    },
+    "Analysis/stage3_scene_efficiency/profile_modules.py": {
+      "before": "c06cc97266c4172e8df3d35d614e12d0be40c915d78aa2d5019b1e533028c385",
+      "after": "73f6b6b3be74ea8c59ef46a22c10e7ad9eefcb37efd83a2b9a5a97309358ed34",
+      "original_copy": "History/original_analysis_sources/profile_modules.py"
+    }
+  },
+  "original_metadata_paths_preserved": true,
+  "old_location_symlinks_created": false,
+  "documentation_path_updates": [
+    "Experiments/cave_continuous600/Analysis/stage3_scene_efficiency/module_profile/README.md"
+  ]
+}

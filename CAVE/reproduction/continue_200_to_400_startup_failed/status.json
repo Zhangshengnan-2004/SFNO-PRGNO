@@ -1,0 +1,25 @@
+{
+  "sfno": {
+    "state": "failed",
+    "source_epoch": 200,
+    "target_epoch": 400,
+    "output": "Checkpoint/train_x4_e400",
+    "error": "Traceback (most recent call last):\n  File \"/home/zsn/projects/SFNO-PRGNO/CAVE/run_continue_400.py\", line 62, in main\n    run_command([sys.executable,'-u',train,'--data_path','Data/Train',\n  File \"/home/zsn/projects/SFNO-PRGNO/CAVE/run_continue_400.py\", line 32, in run_command\n    subprocess.run(list(map(str,command)),cwd=ROOT,stdout=stream,stderr=subprocess.STDOUT,check=True)\n  File \"/home/zsn/miniconda3/envs/sfno/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/home/zsn/miniconda3/envs/sfno/bin/python', '-u', 'Train.py', '--data_path', 'Data/Train', '--epochs', '400', '--batch_size', '1', '--patch_size', '64', '--lr', '0.0001', '--sf', '4', '--trainset_num', '1000', '--num_workers', '2', '--seed', '42', '--model', 'sfno', '--resume', '/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/train_x4/last.pth', '--save_dir', '/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/train_x4_e400', '--resume-lr', '5e-05', '--lr-decay-epochs', '300', '350', '--lr-gamma', '0.5']' returned non-zero exit status 1.\n"
+  },
+  "v1": {
+    "state": "failed",
+    "source_epoch": 200,
+    "target_epoch": 400,
+    "output": "Checkpoint/train_x4_prgno_e400",
+    "error": "Traceback (most recent call last):\n  File \"/home/zsn/projects/SFNO-PRGNO/CAVE/run_continue_400.py\", line 62, in main\n    run_command([sys.executable,'-u',train,'--data_path','Data/Train',\n  File \"/home/zsn/projects/SFNO-PRGNO/CAVE/run_continue_400.py\", line 32, in run_command\n    subprocess.run(list(map(str,command)),cwd=ROOT,stdout=stream,stderr=subprocess.STDOUT,check=True)\n  File \"/home/zsn/miniconda3/envs/sfno/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/home/zsn/miniconda3/envs/sfno/bin/python', '-u', 'Train.py', '--data_path', 'Data/Train', '--epochs', '400', '--batch_size', '1', '--patch_size', '64', '--lr', '0.0001', '--sf', '4', '--trainset_num', '1000', '--num_workers', '2', '--seed', '42', '--model', 'sfno_prgno', '--resume', '/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/train_x4_prgno/last.pth', '--save_dir', '/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/train_x4_prgno_e400', '--resume-lr', '5e-05', '--lr-decay-epochs', '300', '350', '--lr-gamma', '0.5']' returned non-zero exit status 1.\n"
+  },
+  "v2": {
+    "state": "training",
+    "source_epoch": 200,
+    "target_epoch": 400,
+    "output": "Checkpoint/train_x4_prgno_v2_e400"
+  },
+  "v3": {
+    "state": "queued"
+  }
+}

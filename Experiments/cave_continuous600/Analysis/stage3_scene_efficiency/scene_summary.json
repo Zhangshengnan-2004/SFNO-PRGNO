@@ -1,0 +1,46 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "delta_definition": "Stage3 minus baseline; means over 3 paired training seeds",
+  "results": {
+    "4": {
+      "improved_scene_counts": {
+        "psnr": 11,
+        "sam": 12,
+        "ergas": 10
+      },
+      "all_three_metrics_improved": 10,
+      "improved_in_each_of_three_seeds": {
+        "psnr": 6,
+        "sam": 11,
+        "ergas": 8
+      },
+      "mean_delta": {
+        "psnr": 0.1762626436021593,
+        "sam": -0.08088317182328966,
+        "ergas": -0.01570951773060693
+      }
+    },
+    "8": {
+      "improved_scene_counts": {
+        "psnr": 9,
+        "sam": 12,
+        "ergas": 10
+      },
+      "all_three_metrics_improved": 9,
+      "improved_in_each_of_three_seeds": {
+        "psnr": 7,
+        "sam": 10,
+        "ergas": 6
+      },
+      "mean_delta": {
+        "psnr": 0.21429337395562065,
+        "sam": -0.11518702904383342,
+        "ergas": -0.010677577720748054
+      }
+    }
+  }
+}

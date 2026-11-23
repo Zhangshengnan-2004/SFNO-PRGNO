@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-23",
+  "change": "Merge V2 shared implementations into active shared modules; preserve V3 state and initialization.",
+  "migrations": {
+    "CAVE/Model/SFNO_PRGNO_V2.py": "Initialization steps merged into ObservationGridBackbone.__init__; inherits FusionBackbone directly.",
+    "CAVE/Model/MultiScaleDynamicGatingV2.py": "Class moved unchanged to MultiScaleDynamicGating.py as GlobalContextDynamicGating."
+  },
+  "removed_active_files": [
+    "CAVE/Model/SFNO_PRGNO_V2.py",
+    "CAVE/Model/MultiScaleDynamicGatingV2.py"
+  ],
+  "after_hashes": {
+    "CAVE/Model/ObservationGrid.py": "a2ec47ec97e2804014a5d8c3dcc330fb8fceff3e31b4b2ae0d3ca2aaf99715ea",
+    "CAVE/Model/MultiScaleDynamicGating.py": "ecdcd44aaaed4863e50188011eb2c118d450fbed7537c4d1ba3c9b22433fda27",
+    "V3_STAGE3_MODEL.md": "e8f35b8e06c2bf5104ad23bb7d57213df74e4c782b0dfec5d208656bcb967b76",
+    "Assets/SpacingMDG_gating.svg": "345ad9e51f9b3afb4a265f20e8f0e02246cc974456e3a2ffb90b986826e05d97",
+    "tests/verify_v3_shared_merge.py": "a5edd7970dfff5c2104b3f31e706f42cb64a4923102905d1dbf31c27d4623df9"
+  },
+  "verification": "verification.json",
+  "entrypoints": "entrypoints.json",
+  "frozen_source_files_verified_unchanged": 43,
+  "result": "All 8 ablations and CAVE/Pavia/Chikusei seed42 strict checkpoints passed. Constructor states/RNG, x4/x8 forward, input and parameter gradients match exactly on CPU.",
+  "rerun_command": "PYTHONDONTWRITEBYTECODE=1 /home/zsn/miniconda3/envs/sfno/bin/python SFNO-PRGNO/tests/verify_v3_shared_merge.py --output /tmp/verify_v3_shared_merge.json"
+}

@@ -1,0 +1,76 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "std_definition": "sample standard deviation ddof=1 across training seeds; each seed metric is mean over 12 test scenes",
+  "complete": true,
+  "missing": [],
+  "summary": [
+    {
+      "model": "baseline",
+      "sf": 4,
+      "n": 3,
+      "psnr_mean": 51.891963958740234,
+      "psnr_std": 0.014491140202926063,
+      "sam_mean": 2.0328006744384766,
+      "sam_std": 0.007665482691389423,
+      "ergas_mean": 0.7806528608004252,
+      "ergas_std": 0.0015720541050513524
+    },
+    {
+      "model": "baseline",
+      "sf": 8,
+      "n": 3,
+      "psnr_mean": 49.5444221496582,
+      "psnr_std": 0.04784813070033789,
+      "sam_mean": 2.5137715339660645,
+      "sam_std": 0.00871775502724551,
+      "ergas_mean": 0.535993734995524,
+      "ergas_std": 0.00367215703875656
+    },
+    {
+      "model": "deform_stage3",
+      "sf": 4,
+      "n": 3,
+      "psnr_mean": 52.068223317464195,
+      "psnr_std": 0.04595466878269776,
+      "sam_mean": 1.9519174893697102,
+      "sam_std": 0.00860591737839371,
+      "ergas_mean": 0.7649433811505636,
+      "ergas_std": 0.0014904924779696339
+    },
+    {
+      "model": "deform_stage3",
+      "sf": 8,
+      "n": 3,
+      "psnr_mean": 49.758714040120445,
+      "psnr_std": 0.04844024981307661,
+      "sam_mean": 2.3985846042633057,
+      "sam_std": 0.004827262260486579,
+      "ergas_mean": 0.5253161589304606,
+      "ergas_std": 0.005236442079516884
+    }
+  ],
+  "paired_stage3_minus_baseline": [
+    {
+      "sf": 4,
+      "psnr_delta_mean": 0.17625935872395834,
+      "psnr_delta_std": 0.04776285491081997,
+      "sam_delta_mean": -0.08088318506876628,
+      "sam_delta_std": 0.0032422887893462167,
+      "ergas_delta_mean": -0.015709479649861652,
+      "ergas_delta_std": 0.00262280091335839
+    },
+    {
+      "sf": 8,
+      "psnr_delta_mean": 0.2142918904622396,
+      "psnr_delta_std": 0.03672036233629323,
+      "sam_delta_mean": -0.11518692970275879,
+      "sam_delta_std": 0.006859508007639153,
+      "ergas_delta_mean": -0.010677576065063477,
+      "ergas_delta_std": 0.002919220228273424
+    }
+  ]
+}

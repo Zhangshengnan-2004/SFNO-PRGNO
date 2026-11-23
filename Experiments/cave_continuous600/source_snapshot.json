@@ -1,0 +1,29 @@
+{
+  "note": "Byte-identical snapshot of reusable training/testing code at migration time; this is not proof of a training-time source snapshot.",
+  "sha256": {
+    "Source/CAVE_Dataset.py": "8a17171e64a77eeda04195d3a04062b1d5719278830436270839771cf625c21c",
+    "Source/Model/DynamicSpatial.py": "88bf15853b3903fd1e95abafbc330b2edac513b603bfc7626b56c8c18333aa05",
+    "Source/Model/FusionBackbone.py": "8486110de67d0f90655931ffe366f0353f73db79bfa808965ef5478a3998037b",
+    "Source/Model/MultiScaleDynamicGating.py": "ea2dbb7e620b65db9744971f2e32f00fe56dc4b560882340c959a4f25f37be4f",
+    "Source/Model/MultiScaleDynamicGatingV2.py": "3faffae2c1393789f9b2f364d5e80d3b888b47c37f3298dd3ca8cb277037f274",
+    "Source/Model/ObservationGrid.py": "d8d82b2e985fa41d992261cdbf9fcb3ebf317221b086ae10a18b7a5a29a75029",
+    "Source/Model/PhysicsGalerkin.py": "3dcba045f933439051bc8db9c844c3ecb2de45e41e3c4fc37e075e20e4f4903f",
+    "Source/Model/SFNO.py": "d167acbd8d58cf4e38406855f8f5c58feeaa6b9fadd47f6834843f1de337ad18",
+    "Source/Model/SFNO_PRGNO.py": "a027d85e8c007e63edf0c446af6d6d85b7bfc0965f1f16be2991526218567e55",
+    "Source/Model/SFNO_PRGNO_V2.py": "e9e32758bdf96ace191b3665d8127eace3430490ef62e0faf70a9bcc77939c1c",
+    "Source/Model/SFNO_PRGNO_V3.py": "738b26323b25c99eccd50220248f27b621386a8cf747a62150eb8cc21e061cec",
+    "Source/Model/SpacingDeformableSampling.py": "0a51e2847a0f0bcf689a5f5e65b6b05329decc19ef28ccecc6d841b2d98d68eb",
+    "Source/Model/VectorAttention.py": "ac02fe488c05fa802ca1762607e0b67b7989cc3b63a018e3970cc9584762e7f7",
+    "Source/Pypher.py": "62a2ab45f4764fb6c6c71dbfd7367cc4f13ec8b9743020443ef529bf17cb58b7",
+    "Source/Test.py": "11f3672dd9a13bc22a206016f7ca173f914c2ff8ebafc75e1495f6de300718e4",
+    "Source/Test_V3.py": "93ed771506a7230d286308bf2a39034c538073226b3d699e6a864e017c32d2e7",
+    "Source/Train.py": "73f26edbebd2a54afc6d38b9eb402c520d779180ade01553c4a1db7a8bb41c29",
+    "Source/Train_V3.py": "13ef03e05eb9120db7a54e9b1566098aab18a08ce2331224561354c9efc78697",
+    "Source/Utils.py": "563cde4940f27929402c296c29678c803e381b995fa8592fa8c8634f02068714",
+    "Source/continuation_schedule.py": "cc165a6a41a7ac660266de6eceb441457a8bce16cf0a76cb3bebfd62bc314fd8",
+    "Source/numpy_compat.py": "5174db4e7ff99fa61e51e13901013b12861d88e5a8eeb2d1535c25e2564abe7e",
+    "Source/physics/cave_effective_response.npz": "ffe7e3c355ed8ca969d5c104de52ac148bc298c8305cf69cbbb39eef848772be",
+    "Source/physics/cave_effective_response_report.json": "883dfd96a7ab5752f0366971881cd7cf070a4cb408e0ab118895af9995e2c935",
+    "Source/test_result_log.py": "cbd7fbbcf91b0f90bdc48c88664f068c4c46e502cc5d670a92b476130b18eac7"
+  }
+}

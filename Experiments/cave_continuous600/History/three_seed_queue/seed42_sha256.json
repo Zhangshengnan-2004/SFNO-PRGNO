@@ -1,0 +1,8 @@
+{
+  "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/last.pth": "01792a041a4b4a50e9dabbcd181b3600fb534828b65b3d78b947b58afbe787d1",
+  "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/metrics.json": "a34779eaff56526a38c887980f1928462e64715599b226069c459dc91258eb72",
+  "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/metrics_x8.json": "99bd13fcc8e0831fb8748f4897c3528c126725aaa98460ad973551270c8905df",
+  "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/last.pth": "47cf0c2b501421ed9245e4d12d17b741e5f2f2bb65c6ebe5dcadd3f507a77b2c",
+  "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/metrics.json": "80d1abcda0ed9aa26f0fa9974de35d4ab639c2212525e9a0b55b820cd76fcf92",
+  "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/metrics_x8.json": "b60111c73e06030ac7fba999b2dfa490ad637d2d4a7ce868f1d644416232343b"
+}

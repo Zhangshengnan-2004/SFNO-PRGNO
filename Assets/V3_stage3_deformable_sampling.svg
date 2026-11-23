@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1970" viewBox="0 0 1800 1970" role="img" aria-labelledby="title desc">
+<title id="title">V3-stage3 可变形采样与门控增量修正</title>
+<desc id="desc">SpacingDeformableSampling 使用归一化特征和 log 观测间距预测九点偏移和权重，对归一化特征双线性采样加权。采样结果与深度卷积局部分支拼接投影，再经过两条内部残差和 FFN。第三阶段将该输出减去阶段输入，再乘 sigmoid 标量，叠加至区域聚合输出。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#51647a"/></marker></defs>
+<style>text{font-family:'Noto Sans CJK SC',Arial,sans-serif;fill:#23344b} .wire{fill:none;stroke:#51647a;stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round} .cond{stroke-dasharray:7 5}</style><rect width="1800" height="1970" fill="#f4f7fb"/>
+<text x="40" y="53" font-size="34" font-weight="700" text-anchor="start" style="fill:#23344b">V3-stage3 | 可变形采样与门控增量修正</text>
+<text x="40" y="88" font-size="18" font-weight="400" text-anchor="start" style="fill:#61738a">SpacingDeformableSampling · A–C 为模块内部计算；D 为 Stage 3 的外部混合方式。特征图尺寸为 B × C × H × W；偏移 / 权重张量另注。</text>
+<rect x="30" y="120" width="1740" height="340" rx="18" fill="white" stroke="#dce3ed"/>
+<text x="55" y="157" font-size="23" font-weight="700" text-anchor="start" style="fill:#23344b">A  间距条件与预测器：从输入特征预测九点偏移和采样权重</text>
+<g><rect x="60" y="210" width="210" height="80" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="165.0" y="243.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">输入特征 F</text>
+<text x="165.0" y="268.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">B × 64 × H × W</text>
+</g>
+<g><rect x="300" y="210" width="260" height="80" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="430.0" y="243.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">归一化特征 z</text>
+<text x="430.0" y="268.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">GroupNorm(1,64)</text>
+</g>
+<polyline points="270,250 300,250" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="620" y="210" width="240" height="80" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="740.0" y="243.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">通道拼接</text>
+<text x="740.0" y="268.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">64 + 2 = 66 通道</text>
+</g>
+<polyline points="560,250 620,250" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="960" y="210" width="280" height="80" rx="12" fill="#fff3e2" stroke="#ddbe90" stroke-width="1.5"/>
+<text x="1100.0" y="243.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">上下文预测器</text>
+<text x="1100.0" y="268.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">3×3 卷积 66→64 → GELU</text>
+</g>
+<polyline points="860,250 960,250" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="60" y="340" width="500" height="80" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="310.0" y="373.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">实际观测间距</text>
+<text x="310.0" y="398.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">s = (sx,sy) = (W/w, H/h)</text>
+</g>
+<g><rect x="620" y="340" width="240" height="80" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="740.0" y="373.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">间距条件 log(s)</text>
+<text x="740.0" y="398.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">广播为 B × 2 × H × W</text>
+</g>
+<polyline points="560,380 620,380" class="wire cond" marker-end="url(#arrow)"/>
+<polyline points="740,340 740,290" class="wire cond" marker-end="url(#arrow)"/>
+<g><rect x="1350" y="180" width="360" height="80" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="1530.0" y="201.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">偏移预测</text>
+<text x="1530.0" y="226.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">1×1 卷积 64→18 → 重排</text>
+<text x="1530.0" y="251.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">Δ：B × 9 × 2 × H × W</text>
+</g>
+<g><rect x="1350" y="320" width="360" height="80" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="1530.0" y="341.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">权重预测</text>
+<text x="1530.0" y="366.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">1×1 卷积 64→9 → 沿九点 Softmax</text>
+<text x="1530.0" y="391.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">π：B × 9 × H × W</text>
+</g>
+<polyline points="1240,250 1290,250 1290,220 1350,220" class="wire" marker-end="url(#arrow)"/>
+<polyline points="1290,250 1290,360 1350,360" class="wire" marker-end="url(#arrow)"/>
+<text x="1100" y="372" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">偏移层、权重层均零初始化。</text>
+<text x="1100" y="412" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">初始 Δ = 0；九点权重均为 1/9。</text>
+<rect x="30" y="480" width="1740" height="600" rx="18" fill="white" stroke="#dce3ed"/>
+<text x="55" y="517" font-size="23" font-weight="700" text-anchor="start" style="fill:#23344b">B  九点采样：构建 HR 像素位置 → 转换归一化坐标 → 双线性采样与加权</text>
+<g><rect x="60" y="570" width="250" height="80" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="185.0" y="603.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">预测偏移 Δ</text>
+<text x="185.0" y="628.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">来自 A；每点含 x、y 两轴</text>
+</g>
+<g><rect x="340" y="570" width="250" height="80" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="465.0" y="603.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">有界偏移</text>
+<text x="465.0" y="628.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">0.5 × tanh(Δᵢ(p))</text>
+</g>
+<polyline points="310,610 340,610" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="620" y="570" width="390" height="100" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="815.0" y="601.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">构建第 i 个采样位置</text>
+<text x="815.0" y="626.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">pᵢ = p + (bᵢ + 0.5 tanh(Δᵢ(p))) ⊙ s</text>
+<text x="815.0" y="651.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">i = 1,…,9；像素轴顺序为 (x,y)</text>
+</g>
+<polyline points="590,610 620,610" class="wire" marker-end="url(#arrow)"/>
+<g id="pixel-to-normalized-grid"><rect x="1050" y="570" width="310" height="100" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="1205.0" y="601.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">转换为归一化坐标</text>
+<text x="1205.0" y="626.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">gridᵢ = 2(pᵢ + 0.5)/(W,H) − 1</text>
+<text x="1205.0" y="651.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">除法按 x、y 分量分别进行</text>
+</g>
+<polyline points="1010,620 1050,620" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="1400" y="570" width="310" height="100" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="1555.0" y="601.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">逐点双线性采样</text>
+<text x="1555.0" y="626.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">grid_sample(z.float(), gridᵢ)</text>
+<text x="1555.0" y="651.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">每次 B × 64 × H × W</text>
+</g>
+<polyline points="1360,620 1400,620" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="350" y="730" width="280" height="80" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="490.0" y="763.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">规则九点基准 bᵢ</text>
+<text x="490.0" y="788.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">(x,y) ∈ {−1,0,1}²</text>
+</g>
+<polyline points="630,770 650,770 650,670" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="760" y="730" width="330" height="80" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="925.0" y="763.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">实际观测间距 s</text>
+<text x="925.0" y="788.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">(W/w, H/h)，来自 A</text>
+</g>
+<polyline points="925,730 925,670" class="wire cond" marker-end="url(#arrow)"/>
+<g><rect x="1400" y="730" width="310" height="80" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="1555.0" y="763.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">被采样的特征 z</text>
+<text x="1555.0" y="788.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">来自 A；使用 FP32 进行采样</text>
+</g>
+<polyline points="1555,730 1555,670" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="60" y="900" width="260" height="80" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="190.0" y="933.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">九点采样权重 π</text>
+<text x="190.0" y="958.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">来自 A；同点权重跨通道共享</text>
+</g>
+<g><rect x="1290" y="900" width="400" height="80" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="1490.0" y="921.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">采样结果 S</text>
+<text x="1490.0" y="946.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">S(p) = Σᵢ πᵢ(p) ⊙ z(pᵢ(p))</text>
+<text x="1490.0" y="971.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">FP32 累加；B × 64 × H × W</text>
+</g>
+<polyline points="320,940 1290,940" class="wire" marker-end="url(#arrow)"/>
+<polyline points="1710,620 1740,620 1740,940 1690,940" class="wire" marker-end="url(#arrow)"/>
+<text x="760" y="862" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">九点偏移和权重随空间位置变化，同一位置的偏移和权重在 64 个通道间共享。</text>
+<text x="760" y="894" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">零初始化的是偏移与权重预测层；不代表可变形采样模块的初始输出等于 F。</text>
+<text x="60" y="1032" font-size="18" font-weight="400" text-anchor="start" style="fill:#23344b">采样设置：bilinear · padding_mode=&quot;border&quot; · align_corners=False；坐标、采样与累加使用 FP32；循环累计九点。</text>
+<rect x="30" y="1100" width="1740" height="370" rx="18" fill="white" stroke="#dce3ed"/>
+<text x="55" y="1137" font-size="23" font-weight="700" text-anchor="start" style="fill:#23344b">C  可变形采样模块输出：采样分支与局部分支融合，再执行内部残差与 FFN</text>
+<g><rect x="60" y="1190" width="250" height="80" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="185.0" y="1223.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">采样结果 S</text>
+<text x="185.0" y="1248.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">来自 B；先转回 z 的数据类型</text>
+</g>
+<g><rect x="60" y="1280" width="250" height="40" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="185.0" y="1306.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">归一化特征 z（来自 A）</text>
+</g>
+<polyline points="185,1320 185,1330" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="60" y="1330" width="250" height="80" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="185.0" y="1351.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">局部卷积分支</text>
+<text x="185.0" y="1376.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">3×3 深度卷积作用于 z</text>
+<text x="185.0" y="1401.0" font-size="15.14" font-weight="400" text-anchor="middle" style="fill:#23344b">64→64，groups=64，padding=1</text>
+</g>
+<g><rect x="430" y="1260" width="250" height="80" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="555.0" y="1293.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">通道拼接 [局部,S]</text>
+<text x="555.0" y="1318.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">B × 128 × H × W</text>
+</g>
+<polyline points="310,1230 380,1230 380,1290 430,1290" class="wire" marker-end="url(#arrow)"/>
+<polyline points="310,1370 380,1370 380,1310 430,1310" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="760" y="1260" width="230" height="80" rx="12" fill="#fff3e2" stroke="#ddbe90" stroke-width="1.5"/>
+<text x="875.0" y="1293.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">融合投影</text>
+<text x="875.0" y="1318.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">1×1 卷积：128→64</text>
+</g>
+<polyline points="680,1300 760,1300" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="950" y="1160" width="220" height="60" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="1060.0" y="1183.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">模块输入 F</text>
+<text x="1060.0" y="1208.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">来自 A 的原始输入</text>
+</g>
+<g id="deform-first-residual-add"><circle cx="1055" cy="1300" r="22" fill="white" stroke="#51647a" stroke-width="2.2"/>
+<text x="1055" y="1309" font-size="30" font-weight="700" text-anchor="middle" style="fill:#23344b">+</text>
+</g>
+<polyline points="990,1300 1033,1300" class="wire" marker-end="url(#arrow)"/>
+<polyline points="1060,1220 1055,1220 1055,1278" class="wire" marker-end="url(#arrow)" id="deform-input-residual"/>
+<g><rect x="1100" y="1260" width="190" height="80" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="1195.0" y="1293.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">融合特征 T</text>
+<text x="1195.0" y="1318.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">B × 64 × H × W</text>
+</g>
+<polyline points="1077,1300 1100,1300" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="1340" y="1245" width="270" height="110" rx="12" fill="#fff3e2" stroke="#ddbe90" stroke-width="1.5"/>
+<text x="1475.0" y="1268.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">归一化 + FFN</text>
+<text x="1475.0" y="1293.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">GroupNorm(1,64)</text>
+<text x="1475.0" y="1318.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">1×1 卷积 64→128</text>
+<text x="1475.0" y="1343.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">GELU → 1×1 卷积 128→64</text>
+</g>
+<polyline points="1290,1300 1340,1300" class="wire" marker-end="url(#arrow)"/>
+<g id="deform-ffn-residual-add"><circle cx="1670" cy="1300" r="22" fill="white" stroke="#51647a" stroke-width="2.2"/>
+<text x="1670" y="1309" font-size="30" font-weight="700" text-anchor="middle" style="fill:#23344b">+</text>
+</g>
+<polyline points="1610,1300 1648,1300" class="wire" marker-end="url(#arrow)"/>
+<polyline points="1195,1260 1195,1235 1670,1235 1670,1278" class="wire" marker-end="url(#arrow)" id="deform-ffn-residual"/>
+<g><rect x="1530" y="1380" width="210" height="60" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="1635.0" y="1403.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">可变形采样输出</text>
+<text x="1635.0" y="1428.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">Deform(F)</text>
+</g>
+<polyline points="1670,1322 1670,1380" class="wire" marker-end="url(#arrow)"/>
+<text x="735" y="1438" font-size="19" font-weight="700" text-anchor="middle" style="fill:#23344b">T = F + Proj([DWConv(z), S])；Deform(F) = T + FFN(GroupNorm(T))</text>
+<rect x="30" y="1490" width="1740" height="340" rx="18" fill="white" stroke="#dce3ed"/>
+<text x="55" y="1527" font-size="23" font-weight="700" text-anchor="start" style="fill:#23344b">D  Stage 3 的门控增量修正：区域聚合与可变形采样接收同一个 F₂</text>
+<g><rect x="60" y="1580" width="210" height="70" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="165.0" y="1608.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">阶段输入 F₂</text>
+<text x="165.0" y="1633.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">B × 64 × H × W</text>
+</g>
+<g><rect x="350" y="1540" width="270" height="70" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="485.0" y="1568.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">区域聚合</text>
+<text x="485.0" y="1593.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">R[3](F₂) · SpacingMDG</text>
+</g>
+<g><rect x="350" y="1660" width="270" height="70" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="485.0" y="1688.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">可变形采样</text>
+<text x="485.0" y="1713.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">来自 C：Deform[3](F₂)</text>
+</g>
+<polyline points="270,1615 300,1615 300,1575 350,1575" class="wire" marker-end="url(#arrow)"/>
+<polyline points="300,1615 300,1695 350,1695" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="700" y="1660" width="420" height="70" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="910.0" y="1688.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">门控增量修正</text>
+<text x="910.0" y="1713.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">g₃ · [Deform[3](F₂) − F₂]</text>
+</g>
+<polyline points="620,1695 700,1695" class="wire" marker-end="url(#arrow)"/>
+<polyline points="300,1695 300,1770 910,1770 910,1730" class="wire" marker-end="url(#arrow)" id="stage3-subtracted-input"/>
+<text x="580" y="1797" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">F₂ 用于减去可变形模块内部的输入残差。</text>
+<g><rect x="1220" y="1540" width="340" height="70" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="1390.0" y="1568.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">混合特征 M[3]</text>
+<text x="1390.0" y="1593.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">区域聚合输出 + 门控增量修正</text>
+</g>
+<g id="regional-correction-add"><circle cx="1160" cy="1575" r="22" fill="white" stroke="#51647a" stroke-width="2.2"/>
+<text x="1160" y="1584" font-size="30" font-weight="700" text-anchor="middle" style="fill:#23344b">+</text>
+</g>
+<polyline points="620,1575 1138,1575" class="wire" marker-end="url(#arrow)"/>
+<polyline points="1120,1695 1160,1695 1160,1597" class="wire" marker-end="url(#arrow)"/>
+<polyline points="1182,1575 1220,1575" class="wire" marker-end="url(#arrow)"/>
+<polyline points="1560,1575 1720,1575" class="wire" marker-end="url(#arrow)"/>
+<text x="1650" y="1620" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">送入物理引导积分</text>
+<text x="1460" y="1748" font-size="18" font-weight="400" text-anchor="middle" style="fill:#23344b">g₃ = sigmoid(a₃)，a₃ 初始为 −3。</text>
+<text x="1460" y="1786" font-size="18" font-weight="400" text-anchor="middle" style="fill:#23344b">g₃ 初始约 0.0474，为可学习标量。</text>
+<text x="40" y="1870" font-size="19" font-weight="700" text-anchor="start" style="fill:#23344b">仅 Stage 3 执行本模块；Stage 1、2 保留区域聚合。九点采样权重 π 与阶段门控 g₃ 是两类不同权重。</text>
+<text x="40" y="1906" font-size="18" font-weight="400" text-anchor="start" style="fill:#23344b">例：×4 基准点每轴位于 −4、0、4 个 HR 像素，学习偏移每轴界限为 ±2；×8 对应 −8、0、8 和 ±4（边界复制前）。</text>
+<text x="40" y="1944" font-size="16" font-weight="400" text-anchor="start" style="fill:#61738a">Source: CAVE/Model/SpacingDeformableSampling.py · CAVE/Model/SFNO_PRGNO_V3.py::RegionalDeformableMixing</text>
+</svg>

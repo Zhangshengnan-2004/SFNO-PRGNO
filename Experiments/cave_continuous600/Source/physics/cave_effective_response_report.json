@@ -1,0 +1,405 @@
+{
+  "label": "training-set fitted effective spectral response (not a measured sensor response)",
+  "fit_scenes": [
+    "balloons",
+    "beads",
+    "cd",
+    "chart_and_stuffed_toy",
+    "clay",
+    "cloth",
+    "egyptian_statue",
+    "face",
+    "fake_and_real_beers",
+    "fake_and_real_food",
+    "fake_and_real_lemon_slices",
+    "fake_and_real_lemons",
+    "fake_and_real_peppers",
+    "fake_and_real_strawberries",
+    "fake_and_real_sushi",
+    "fake_and_real_tomatoes"
+  ],
+  "validation_scenes": [
+    "feathers",
+    "flowers",
+    "glass_tiles",
+    "hairs"
+  ],
+  "test_scenes": [
+    "superballs",
+    "thread_spools",
+    "oil_painting",
+    "paints",
+    "photo_and_face",
+    "pompoms",
+    "real_and_fake_apples",
+    "real_and_fake_peppers",
+    "sponges",
+    "stuffed_toys",
+    "jelly_beans",
+    "watercolors"
+  ],
+  "fit_sample_count": 262144,
+  "sample_stride": 4,
+  "nonnegative": true,
+  "smooth_lambda": 0.0001,
+  "smoothness_note": "A weak second-difference penalty stabilizes an effective response while preserving nonnegativity.",
+  "ranges": [
+    {
+      "scene": "balloons",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9649500267032883,
+      "rgb_min": 0.00011102253862768776,
+      "rgb_max": 0.9563527347308803
+    },
+    {
+      "scene": "beads",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9575188830395972,
+      "rgb_min": 0.00012417686784897778,
+      "rgb_max": 0.9472570412158149
+    },
+    {
+      "scene": "cd",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9521629663538567,
+      "rgb_min": 0.00016216450721587175,
+      "rgb_max": 0.9387811799884317
+    },
+    {
+      "scene": "chart_and_stuffed_toy",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9525139238574807,
+      "rgb_min": 0.00011249788692466382,
+      "rgb_max": 0.9390139979086164
+    },
+    {
+      "scene": "clay",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9605554283970398,
+      "rgb_min": 0.00011387419086044427,
+      "rgb_max": 0.8041842631612803
+    },
+    {
+      "scene": "cloth",
+      "hsi_min": 0.0,
+      "hsi_max": 0.7727473868925002,
+      "rgb_min": 0.00011966681211596408,
+      "rgb_max": 0.6511818710852005
+    },
+    {
+      "scene": "egyptian_statue",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9573510337987335,
+      "rgb_min": 9.717902572641171e-05,
+      "rgb_max": 0.9423647199386932
+    },
+    {
+      "scene": "face",
+      "hsi_min": 0.0,
+      "hsi_max": 0.93159380483711,
+      "rgb_min": 0.0001120790118137741,
+      "rgb_max": 0.7982955971737896
+    },
+    {
+      "scene": "fake_and_real_beers",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9428549629968719,
+      "rgb_min": 0.00012026815288036591,
+      "rgb_max": 0.9321395392672976
+    },
+    {
+      "scene": "fake_and_real_food",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9588311589227131,
+      "rgb_min": 8.658746935105774e-05,
+      "rgb_max": 0.9458270145573325
+    },
+    {
+      "scene": "fake_and_real_lemon_slices",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9609216449225605,
+      "rgb_min": 0.00013237013576395274,
+      "rgb_max": 0.950046773036331
+    },
+    {
+      "scene": "fake_and_real_lemons",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9540550850690471,
+      "rgb_min": 0.00014552918138339488,
+      "rgb_max": 0.9394424473077551
+    },
+    {
+      "scene": "fake_and_real_peppers",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9540703440909438,
+      "rgb_min": 0.00013427939269092853,
+      "rgb_max": 0.9435739920443647
+    },
+    {
+      "scene": "fake_and_real_strawberries",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9529411764705882,
+      "rgb_min": 0.00010017099080419535,
+      "rgb_max": 0.9390019103697022
+    },
+    {
+      "scene": "fake_and_real_sushi",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9533989471274892,
+      "rgb_min": 0.0001215460020047198,
+      "rgb_max": 0.9427562679439146
+    },
+    {
+      "scene": "fake_and_real_tomatoes",
+      "hsi_min": 0.0,
+      "hsi_max": 0.9610742351415275,
+      "rgb_min": 0.0001105830292748823,
+      "rgb_max": 0.9493397481064603
+    }
+  ],
+  "alignment": {
+    "best_shift_dy_dx": [
+      0,
+      0
+    ],
+    "zero_shift_correlation": 0.9993575667612544,
+    "best_correlation": 0.9993575667612544
+  },
+  "solver": [
+    {
+      "channel": 0,
+      "iterations": 5,
+      "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+    },
+    {
+      "channel": 1,
+      "iterations": 0,
+      "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+    },
+    {
+      "channel": 2,
+      "iterations": 4,
+      "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+    }
+  ],
+  "fit": {
+    "mae": 5.4438018973450824e-05,
+    "rmse": 0.00011192199272984588,
+    "relative_l2": 0.0006743624733323092,
+    "per_scene": [
+      {
+        "scene": "balloons",
+        "mae": 0.00011016721276531359,
+        "rmse": 0.00016210117371368845,
+        "relative_l2": 0.0008008817399689576
+      },
+      {
+        "scene": "beads",
+        "mae": 0.00015302492213220995,
+        "rmse": 0.00026352910669465894,
+        "relative_l2": 0.0014135510330890813
+      },
+      {
+        "scene": "cd",
+        "mae": 6.173858445161656e-05,
+        "rmse": 0.0001782732092375269,
+        "relative_l2": 0.0015151384680552667
+      },
+      {
+        "scene": "chart_and_stuffed_toy",
+        "mae": 4.520652518258259e-05,
+        "rmse": 7.704156087725952e-05,
+        "relative_l2": 0.00027263482837454616
+      },
+      {
+        "scene": "clay",
+        "mae": 8.723441227638424e-05,
+        "rmse": 0.0001653145663205409,
+        "relative_l2": 0.0012078577771899334
+      },
+      {
+        "scene": "cloth",
+        "mae": 6.027031235926521e-05,
+        "rmse": 7.380376469821787e-05,
+        "relative_l2": 0.00046828331931641446
+      },
+      {
+        "scene": "egyptian_statue",
+        "mae": 1.5194541178938192e-05,
+        "rmse": 3.200276756670914e-05,
+        "relative_l2": 0.00033633101334862997
+      },
+      {
+        "scene": "face",
+        "mae": 3.224147219043536e-05,
+        "rmse": 5.717762726811318e-05,
+        "relative_l2": 0.0004195456940561463
+      },
+      {
+        "scene": "fake_and_real_beers",
+        "mae": 6.078869820840945e-05,
+        "rmse": 8.510630602095139e-05,
+        "relative_l2": 0.00026763175092444486
+      },
+      {
+        "scene": "fake_and_real_food",
+        "mae": 4.372238184780788e-05,
+        "rmse": 6.988096006083913e-05,
+        "relative_l2": 0.0005623221618290942
+      },
+      {
+        "scene": "fake_and_real_lemon_slices",
+        "mae": 3.5829438370439157e-05,
+        "rmse": 5.267503591323345e-05,
+        "relative_l2": 0.00046887734613748367
+      },
+      {
+        "scene": "fake_and_real_lemons",
+        "mae": 4.2161749229442456e-05,
+        "rmse": 7.052055268911582e-05,
+        "relative_l2": 0.0005044288840196167
+      },
+      {
+        "scene": "fake_and_real_peppers",
+        "mae": 3.665248786709532e-05,
+        "rmse": 5.790058593467444e-05,
+        "relative_l2": 0.00042287639336203666
+      },
+      {
+        "scene": "fake_and_real_strawberries",
+        "mae": 3.328129514763819e-05,
+        "rmse": 5.026532729317391e-05,
+        "relative_l2": 0.00037420183712453533
+      },
+      {
+        "scene": "fake_and_real_sushi",
+        "mae": 2.972508138824198e-05,
+        "rmse": 4.93421105850589e-05,
+        "relative_l2": 0.0006116059476755487
+      },
+      {
+        "scene": "fake_and_real_tomatoes",
+        "mae": 2.3769188979393182e-05,
+        "rmse": 4.1546061710497584e-05,
+        "relative_l2": 0.00046246079994662103
+      }
+    ]
+  },
+  "validation": {
+    "mae": 6.747087585161604e-05,
+    "rmse": 0.00013921433477488,
+    "relative_l2": 0.0008628891062001405,
+    "per_scene": [
+      {
+        "scene": "feathers",
+        "mae": 0.00010537658097074821,
+        "rmse": 0.00017085679743595778,
+        "relative_l2": 0.0008297468752313954
+      },
+      {
+        "scene": "flowers",
+        "mae": 3.934236322234697e-05,
+        "rmse": 7.240629795600255e-05,
+        "relative_l2": 0.00048690020542857087
+      },
+      {
+        "scene": "glass_tiles",
+        "mae": 0.00010198482640382142,
+        "rmse": 0.00020451137642020563,
+        "relative_l2": 0.0012100897329007816
+      },
+      {
+        "scene": "hairs",
+        "mae": 2.3179732809547543e-05,
+        "rmse": 3.553735679812252e-05,
+        "relative_l2": 0.00033824594852201797
+      }
+    ]
+  },
+  "test": {
+    "mae": 7.222014220494503e-05,
+    "rmse": 0.00014030955870052,
+    "relative_l2": 0.0006592952047498395,
+    "per_scene": [
+      {
+        "scene": "superballs",
+        "mae": 7.082869540394697e-05,
+        "rmse": 0.00014799729300919262,
+        "relative_l2": 0.0014461789768250941
+      },
+      {
+        "scene": "thread_spools",
+        "mae": 4.7646968031890606e-05,
+        "rmse": 7.301996648571169e-05,
+        "relative_l2": 0.0005303904937251974
+      },
+      {
+        "scene": "oil_painting",
+        "mae": 3.4860984779195346e-05,
+        "rmse": 4.9674555074574926e-05,
+        "relative_l2": 0.00032448753301074387
+      },
+      {
+        "scene": "paints",
+        "mae": 9.387007251596815e-05,
+        "rmse": 0.00013834633770242984,
+        "relative_l2": 0.0004881399189739678
+      },
+      {
+        "scene": "photo_and_face",
+        "mae": 3.473982466410027e-05,
+        "rmse": 7.293333193920333e-05,
+        "relative_l2": 0.0006750032165259279
+      },
+      {
+        "scene": "pompoms",
+        "mae": 0.00011577229152119595,
+        "rmse": 0.00018648559749127145,
+        "relative_l2": 0.0008683253861497291
+      },
+      {
+        "scene": "real_and_fake_apples",
+        "mae": 3.330172348532269e-05,
+        "rmse": 4.759196798932001e-05,
+        "relative_l2": 0.0004903960197526628
+      },
+      {
+        "scene": "real_and_fake_peppers",
+        "mae": 3.7945642417996786e-05,
+        "rmse": 5.3984445338383524e-05,
+        "relative_l2": 0.00036835208641624613
+      },
+      {
+        "scene": "sponges",
+        "mae": 0.00018496970889898842,
+        "rmse": 0.00032863815339556087,
+        "relative_l2": 0.0010157995229673439
+      },
+      {
+        "scene": "stuffed_toys",
+        "mae": 6.055332603573842e-05,
+        "rmse": 0.00010094690848756449,
+        "relative_l2": 0.0004849589479804154
+      },
+      {
+        "scene": "jelly_beans",
+        "mae": 7.037094887368067e-05,
+        "rmse": 0.00010286767323612507,
+        "relative_l2": 0.0005040865025240329
+      },
+      {
+        "scene": "watercolors",
+        "mae": 8.178151983131598e-05,
+        "rmse": 0.00011553503883751464,
+        "relative_l2": 0.00031803334010830335
+      }
+    ]
+  },
+  "response_row_sums": [
+    0.9998158544937203,
+    1.0000254756212223,
+    0.9995100153121819
+  ],
+  "response_min": 0.0,
+  "response_max": 0.12031389369757063
+}

@@ -1,0 +1,40 @@
+# Model weights and optimizer checkpoints (keep local training files).
+*.pth
+*.pth.tar
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# Raw hyperspectral datasets. Small response .npy/.npz files remain included.
+*.mat
+*.bsq
+*.bip
+*.bil
+
+# Training logs and profiler traces; retain CSV/JSON summaries and configs.
+*.log
+*.log.*
+nohup.out
+trace_*.json
+
+# Generated Python/environment files.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local runtime/environment files.
+*.tmp
+*.lock
+.env
+.env.*
+!.env.example
+.DS_Store

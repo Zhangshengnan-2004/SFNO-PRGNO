@@ -1,0 +1,21 @@
+{
+  "cave": {
+    "phase": "training",
+    "updated_at": "2026-11-06T08:52:25+0800",
+    "model": "deform_stage3",
+    "seed": 43,
+    "target": "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed43"
+  },
+  "pavia": {
+    "phase": "waiting_for_cave",
+    "pid": 469551,
+    "updated_at": "2026-11-06T11:39:30+0800",
+    "upstream": {
+      "phase": "training",
+      "updated_at": "2026-11-06T08:52:25+0800",
+      "model": "deform_stage3",
+      "seed": 43,
+      "target": "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed43"
+    }
+  }
+}

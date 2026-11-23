@@ -1,0 +1,150 @@
+{
+  "status": "completed",
+  "created_at": "2026-11-13T16:28:18.106402+08:00",
+  "directories": [
+    "Chikusei/protocol_v2",
+    "Chikusei/protocol_v3_joint_loss"
+  ],
+  "reason": "User explicitly requested deletion of both obsolete Chikusei protocol directories, including their code and validation files.",
+  "files": [
+    {
+      "path": "Chikusei/protocol_v2/validate.py",
+      "size": 2864,
+      "sha256": "4526325fdfb5722bdcda235d4c49bfb6fc32e4f4fc2a2eb1afedaa472306b27c"
+    },
+    {
+      "path": "Chikusei/protocol_v2/README.md",
+      "size": 3971,
+      "sha256": "1f8320e13fdee9e02e5ad2bcd77bc973415770016d153e19901f28c39651565f"
+    },
+    {
+      "path": "Chikusei/protocol_v2/inference_memory.py",
+      "size": 1207,
+      "sha256": "1600d32995bba46ee65db9dace812e5f49cddfa464c636f637e8a1f42ca62424"
+    },
+    {
+      "path": "Chikusei/protocol_v2/srf_provenance.json",
+      "size": 328,
+      "sha256": "58793635a55cfcacd002b0d86928896e00fdf852ccca55571f434776f357e523"
+    },
+    {
+      "path": "Chikusei/protocol_v2/run.py",
+      "size": 18304,
+      "sha256": "2a91cbf3d8200c6b9c5160302770b10e1d86c0a72ba5500c10c0487411f4742e"
+    },
+    {
+      "path": "Chikusei/protocol_v2/canon_5d_mark_ii.json",
+      "size": 14180,
+      "sha256": "3dd2394e07f00c3fff51de631394ff67b4b72463657f4383ac14855969b93c14"
+    },
+    {
+      "path": "Chikusei/protocol_v2/run_comparison.py",
+      "size": 2393,
+      "sha256": "9c337e1721f3d0a131425fbb4d251eb066e647bcf2061778adaf7865afc76ef7"
+    },
+    {
+      "path": "Chikusei/protocol_v2/train_and_test.py",
+      "size": 5209,
+      "sha256": "20fe59a8a99c3594016cf5a0cb9e03adf85e7df8bdae00151da5fb7f9f398780"
+    },
+    {
+      "path": "Chikusei/protocol_v2/__pycache__/run_comparison.cpython-310.pyc",
+      "size": 2500,
+      "sha256": "9c54006c2efaa2319e6c7b475a2600c22bf456467664c137bccdf2328ca3a3df"
+    },
+    {
+      "path": "Chikusei/protocol_v2/__pycache__/run.cpython-310.pyc",
+      "size": 17161,
+      "sha256": "fb5638252c4c66cc216baeed4af2f731a7143fc812c13dbb45b62c834f4759de"
+    },
+    {
+      "path": "Chikusei/protocol_v2/__pycache__/train_and_test.cpython-310.pyc",
+      "size": 4662,
+      "sha256": "479033abb415a7ce271c2975dd13ae3055491aa806aebbdd29d44cf6b59bdfa0"
+    },
+    {
+      "path": "Chikusei/protocol_v2/__pycache__/inference_memory.cpython-310.pyc",
+      "size": 1492,
+      "sha256": "332e553b10df8bf55829425a62708bfcc62f318a244164ed717e289b70bbba2b"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/validate.py",
+      "size": 3889,
+      "sha256": "631d15f7a98205397167ca251774296496315e210366f403936bc4d70bda2391"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/README.md",
+      "size": 3576,
+      "sha256": "b6c6bd86620f6de64be8113ebf5988169dbb56ca8db651cc3064b0a071adf1c6"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/inference_memory.py",
+      "size": 1207,
+      "sha256": "1600d32995bba46ee65db9dace812e5f49cddfa464c636f637e8a1f42ca62424"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/srf_provenance.json",
+      "size": 328,
+      "sha256": "58793635a55cfcacd002b0d86928896e00fdf852ccca55571f434776f357e523"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/run.py",
+      "size": 20630,
+      "sha256": "2f1194ed23757c2ac557850328acbb7045e7c4b6f2ad4296825ce0e0007b0d10"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/validation.json",
+      "size": 3751,
+      "sha256": "18d36d9406f17d936eba30210bff47f050f4041fe936708acbdd50bbcc5e47de"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/canon_5d_mark_ii.json",
+      "size": 14180,
+      "sha256": "3dd2394e07f00c3fff51de631394ff67b4b72463657f4383ac14855969b93c14"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/validation.log",
+      "size": 682,
+      "sha256": "2bc141a8448cf849604acad6d4942c3e250b83eaeadbab09df81d6b0adf71069"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/run_comparison.py",
+      "size": 2908,
+      "sha256": "874971e5298abf008b6d67783e089bbdd9634d5aedb546eb0831fa65221e116d"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/train_and_test.py",
+      "size": 5209,
+      "sha256": "20fe59a8a99c3594016cf5a0cb9e03adf85e7df8bdae00151da5fb7f9f398780"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/__pycache__/run_comparison.cpython-310.pyc",
+      "size": 2796,
+      "sha256": "eee319d4570ca7d893f31e518f882c7ac0819e43c5b9e49d36fcc754552d4451"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/__pycache__/run.cpython-310.pyc",
+      "size": 18977,
+      "sha256": "276ceec1461c214cfdd991214b6725b489d80383e5c01a24aa3774cadf32e1cf"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/__pycache__/train_and_test.cpython-310.pyc",
+      "size": 4673,
+      "sha256": "af81cb0d774d6bb3703ae808cadd09fb4505464b775e8b60aceecfc79a76f0f2"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/__pycache__/inference_memory.cpython-310.pyc",
+      "size": 1503,
+      "sha256": "32298f8a4cf663f4fa2e0f4b1610319a38f1147635b381c1879f7bba5ade2d3c"
+    },
+    {
+      "path": "Chikusei/protocol_v3_joint_loss/__pycache__/validate.cpython-310.pyc",
+      "size": 3205,
+      "sha256": "b6d0341525db114b7145ff4f77bc6214f72a183f65665930a57471eb7add14a7"
+    }
+  ],
+  "deleted_files": 27,
+  "deleted_bytes": 161785,
+  "retained_files_verified": 116,
+  "completed_at": "2026-11-13T16:28:19.054277+08:00"
+}

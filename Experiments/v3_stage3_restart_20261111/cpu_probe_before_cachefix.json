@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "protocol_sha256": "3734c106e42ca837b7b56ffe5039d3a193aec9de54db5348072ccc3cc867327a",
+  "spatial_operator": [
+    {
+      "sf": 4,
+      "forward_max_error": 2.7755575615628914e-16,
+      "adjoint_dot_error": 1.7763568394002505e-15
+    },
+    {
+      "sf": 8,
+      "forward_max_error": 1.3877787807814457e-16,
+      "adjoint_dot_error": 4.579669976578771e-16
+    }
+  ],
+  "details": [
+    {
+      "dataset": "pavia",
+      "L1": 0.5863074660301208,
+      "stage3_offset_gradient_norm": 2.1509104044525884e-06
+    },
+    {
+      "dataset": "chikusei",
+      "L1": 0.5400465726852417,
+      "stage3_offset_gradient_norm": 1.0078534614876844e-05
+    }
+  ]
+}

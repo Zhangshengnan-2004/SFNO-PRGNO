@@ -1,0 +1,2 @@
+epoch,lr,L1,optimizer_steps,sampled_patches
+1,0.0002,1.362418794631958,1,50

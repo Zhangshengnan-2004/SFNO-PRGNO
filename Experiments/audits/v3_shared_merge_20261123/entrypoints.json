@@ -1,0 +1,18 @@
+[
+  {
+    "entry": "CAVE/Train_V3.py",
+    "help_import_passed": true
+  },
+  {
+    "entry": "CAVE/Test_V3.py",
+    "help_import_passed": true
+  },
+  {
+    "entry": "Chikusei/run.py",
+    "help_import_passed": true
+  },
+  {
+    "entry": "Pavia/run.py",
+    "help_import_passed": true
+  }
+]

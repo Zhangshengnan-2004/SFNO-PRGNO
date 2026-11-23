@@ -1,0 +1,33 @@
+{
+  "protocol": "sfno_restart_persistent_v9_20261111",
+  "protocol_sha256": "6ca1db3308a2ae506dfc85984a7cf091ef5e4bde21e27a415938c0b922aff16d",
+  "dataset": "chikusei",
+  "model": "sfno",
+  "seed": 43,
+  "epochs": 600,
+  "samples": 1000,
+  "micro_batch": 5,
+  "effective_batch": 50,
+  "lr": 0.0002,
+  "lr_gamma": 0.95,
+  "lr_decay_epochs": 6,
+  "shared_pr_within_effective_batch": true,
+  "train_sf": 4,
+  "test_seed": 1,
+  "patch_size": 64,
+  "quality_min_optimizer_steps": 2000,
+  "quality_patience": 3,
+  "precision": "FP32",
+  "deterministic": true,
+  "tf32": false,
+  "workers": 0,
+  "optimizer": "Adam beta0.9,0.999 eps1e-8",
+  "loss": "mean per-image GT-nonzero masked L1",
+  "initialization": "native SFNO/PyTorch constructor defaults; no blanket reinitialization",
+  "response_file": "response_chikusei.npy",
+  "response_sha256": "e8e300a49c65bb47b371571053a29c307a45d5ca24a4c08828c4d03eb2d2ab7f",
+  "raw_sha256": {
+    "/home/zsn/projects/SFNO-PRGNO/Chikusei/HyperspecVNIR_Chikusei_20140729.bsq": "89715ed9a6ab725644707b2c1732642dd1634755f3914d0ecec9bc77f62a741b",
+    "/home/zsn/projects/SFNO-PRGNO/Chikusei/HyperspecVNIR_Chikusei_20140729.hdr": "8e68b2d13005a96d8d5e057e626c47dd8eb1993c78d4492038a49544360d5d14"
+  }
+}

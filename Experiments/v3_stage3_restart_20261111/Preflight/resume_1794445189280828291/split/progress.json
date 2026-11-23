@@ -1,0 +1,5 @@
+{
+  "phase": "trained",
+  "epoch": 2,
+  "optimizer_steps": 2
+}

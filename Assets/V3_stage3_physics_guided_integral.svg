@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1800" viewBox="0 0 1800 1800" role="img" aria-labelledby="title desc">
+<title id="title">V3-stage3 物理引导积分 PhysicsGuidedGalerkin</title>
+<desc id="desc">混合特征 M 生成 Q、K、V，物理引导 G 生成 ΔQ、ΔK。Q 和 K 相加调制，K 与 V 在每头最后八维归一化。每头 A 等于 K 转置乘 V 除以 HW，Z 等于 Q 乘 A。合并多头恢复空间后，先加 M，再执行两层 1×1 卷积及 GELU，再加 M。GI 外部再加阶段输入 F。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#51647a"/></marker></defs>
+<style>text{font-family:'Noto Sans CJK SC',Arial,sans-serif;fill:#23344b} .wire{fill:none;stroke:#51647a;stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round} .guide{stroke-dasharray:7 5}</style><rect width="1800" height="1800" fill="#f4f7fb"/>
+<text x="40" y="53" font-size="34" font-weight="700" text-anchor="start" style="fill:#23344b">V3-stage3 | 物理引导积分（GI）</text>
+<text x="40" y="88" font-size="18" font-weight="400" text-anchor="start" style="fill:#61738a">PhysicsGuidedGalerkin · j = 1, 2, 3 · 主干通道 64 · 8 头 × 每头 8 维 · N = H × W</text>
+<rect x="30" y="120" width="1740" height="390" rx="18" fill="white" stroke="#dce3ed"/>
+<text x="55" y="157" font-size="23" font-weight="700" text-anchor="start" style="fill:#23344b">A  两路输入与投影：混合特征提供 Q、K、V，物理引导仅调制 Q、K</text>
+<g><rect x="70" y="185" width="260" height="100" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="200.0" y="216.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">混合特征 M[j]</text>
+<text x="200.0" y="241.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">区域聚合 / 可变形修正的输出</text>
+<text x="200.0" y="266.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">B × 64 × H × W</text>
+</g>
+<g><rect x="400" y="185" width="340" height="100" rx="12" fill="#fff3e2" stroke="#ddbe90" stroke-width="1.5"/>
+<text x="570.0" y="216.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">Q、K、V 投影</text>
+<text x="570.0" y="241.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">1×1 卷积：64 → 192</text>
+<text x="570.0" y="266.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">按 8 头重排，并拆分 Q、K、V</text>
+</g>
+<g><rect x="820" y="185" width="430" height="100" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="1035.0" y="216.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">Q、K、V</text>
+<text x="1035.0" y="241.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">每组尺寸：B × 8 × N × 8</text>
+<text x="1035.0" y="266.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">空间位置展平，通道拆为 8 头</text>
+</g>
+<polyline points="330,235 400,235" class="wire" marker-end="url(#arrow)"/>
+<polyline points="740,235 820,235" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="70" y="335" width="260" height="100" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="200.0" y="366.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">物理引导 G[j]</text>
+<text x="200.0" y="391.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">来自观测残差与伴随回投</text>
+<text x="200.0" y="416.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">B × 64 × H × W</text>
+</g>
+<g><rect x="400" y="335" width="340" height="100" rx="12" fill="#fff3e2" stroke="#ddbe90" stroke-width="1.5"/>
+<text x="570.0" y="366.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">Q、K 调制层</text>
+<text x="570.0" y="391.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">1×1 卷积：64 → 128</text>
+<text x="570.0" y="416.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">按 8 头重排，并拆分 ΔQ、ΔK</text>
+</g>
+<g><rect x="820" y="335" width="430" height="100" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="1035.0" y="366.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">ΔQ、ΔK</text>
+<text x="1035.0" y="391.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">每组尺寸：B × 8 × N × 8</text>
+<text x="1035.0" y="416.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">调制层的权重与偏置均零初始化</text>
+</g>
+<polyline points="330,385 400,385" class="wire guide" marker-end="url(#arrow)"/>
+<polyline points="740,385 820,385" class="wire guide" marker-end="url(#arrow)"/>
+<text x="1310" y="213" font-size="19" font-weight="700" text-anchor="start" style="fill:#23344b">同一阶段的 M[j] 与 G[j]</text>
+<text x="1310" y="246" font-size="19" font-weight="400" text-anchor="start" style="fill:#23344b">尺寸必须一致。</text>
+<text x="1310" y="345" font-size="19" font-weight="400" text-anchor="start" style="fill:#23344b">初始化时 ΔQ = ΔK = 0；</text>
+<text x="1310" y="380" font-size="19" font-weight="400" text-anchor="start" style="fill:#23344b">各阶段 GI 的参数独立。</text>
+<text x="70" y="479" font-size="18" font-weight="400" text-anchor="start" style="fill:#61738a">A 中各投影结果在 B 中展开；实线表示特征路径，虚线表示物理引导产生的调制路径。</text>
+<rect x="30" y="530" width="1740" height="690" rx="18" fill="white" stroke="#dce3ed"/>
+<text x="55" y="567" font-size="23" font-weight="700" text-anchor="start" style="fill:#23344b">B  每头的积分计算：先汇总全空间信息，再由各位置的 Q′ 读取</text>
+<text x="1260" y="584" font-size="17" font-weight="400" text-anchor="middle" style="fill:#61738a">本区矩阵尺寸省略 B 和 8 头这两维；每个头分别执行相同运算。</text>
+<g><rect x="70" y="670" width="230" height="70" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="185.0" y="698.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">Q</text>
+<text x="185.0" y="723.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">N × 8</text>
+</g>
+<g><rect x="340" y="595" width="220" height="55" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="450.0" y="628.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">ΔQ：N × 8</text>
+</g>
+<g id="query-modulation-add"><circle cx="450" cy="705" r="22" fill="white" stroke="#51647a" stroke-width="2.2"/>
+<text x="450" y="714" font-size="30" font-weight="700" text-anchor="middle" style="fill:#23344b">+</text>
+</g>
+<polyline points="300,705 428,705" class="wire" marker-end="url(#arrow)"/>
+<polyline points="450,650 450,683" class="wire guide" marker-end="url(#arrow)"/>
+<g><rect x="550" y="670" width="260" height="70" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="680.0" y="698.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">Q′ = Q + ΔQ</text>
+<text x="680.0" y="723.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">N × 8</text>
+</g>
+<polyline points="472,705 550,705" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="1450" y="660" width="280" height="100" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="1590.0" y="691.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">积分输出 Z = Q′A</text>
+<text x="1590.0" y="716.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">(N × 8) × (8 × 8)</text>
+<text x="1590.0" y="741.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">每头输出：N × 8</text>
+</g>
+<polyline points="810,705 1450,705" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="70" y="880" width="230" height="70" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="185.0" y="908.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">K</text>
+<text x="185.0" y="933.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">N × 8</text>
+</g>
+<g><rect x="340" y="800" width="220" height="55" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="450.0" y="833.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">ΔK：N × 8</text>
+</g>
+<g id="key-modulation-add"><circle cx="450" cy="915" r="22" fill="white" stroke="#51647a" stroke-width="2.2"/>
+<text x="450" y="924" font-size="30" font-weight="700" text-anchor="middle" style="fill:#23344b">+</text>
+</g>
+<polyline points="300,915 428,915" class="wire" marker-end="url(#arrow)"/>
+<polyline points="450,855 450,893" class="wire guide" marker-end="url(#arrow)"/>
+<g><rect x="550" y="880" width="260" height="70" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="680.0" y="908.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">K′ → 归一化 → Kₙ</text>
+<text x="680.0" y="933.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">每个位置沿每头 8 维归一化</text>
+</g>
+<polyline points="472,915 550,915" class="wire" marker-end="url(#arrow)"/>
+<g id="global-kernel"><rect x="980" y="880" width="300" height="70" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="1130.0" y="908.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">全局矩阵 A = KₙᵀVₙ / N</text>
+<text x="1130.0" y="933.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">(8 × N) × (N × 8) → 8 × 8</text>
+</g>
+<polyline points="810,915 980,915" class="wire" marker-end="url(#arrow)"/>
+<polyline points="1280,915 1360,915 1360,735 1450,735" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="70" y="1070" width="230" height="70" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="185.0" y="1098.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">V</text>
+<text x="185.0" y="1123.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">N × 8</text>
+</g>
+<g><rect x="550" y="1070" width="260" height="70" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="680.0" y="1098.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">V → 归一化 → Vₙ</text>
+<text x="680.0" y="1123.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">每个位置沿每头 8 维归一化</text>
+</g>
+<polyline points="300,1105 550,1105" class="wire" marker-end="url(#arrow)"/>
+<polyline points="810,1105 1130,1105 1130,950" class="wire" marker-end="url(#arrow)"/>
+<text x="430" y="1157" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">V 不直接接受 ΔQ、ΔK 调制。</text>
+<text x="1515" y="1000" font-size="18" font-weight="400" text-anchor="middle" style="fill:#23344b">A 对所有 N 个位置求和并除以 N。</text>
+<text x="1515" y="1040" font-size="18" font-weight="400" text-anchor="middle" style="fill:#23344b">不构造 N × N 空间注意力矩阵；</text>
+<text x="1515" y="1080" font-size="18" font-weight="400" text-anchor="middle" style="fill:#23344b">此处没有 Softmax。</text>
+<text x="910" y="1188" font-size="22" font-weight="700" text-anchor="middle" style="fill:#23344b">等价展开：Z(p) = (1/N) Σᵣ [Q′(p) · Kₙ(r)] Vₙ(r)，r 遍历全部空间位置。</text>
+<rect x="30" y="1240" width="1740" height="420" rx="18" fill="white" stroke="#dce3ed"/>
+<text x="55" y="1277" font-size="23" font-weight="700" text-anchor="start" style="fill:#23344b">C  合并多头、输出投影与残差：两次模块内残差 + 一次阶段外层残差</text>
+<g><rect x="180" y="1295" width="330" height="55" rx="12" fill="#eaf5ee" stroke="#a1ceb3" stroke-width="1.5"/>
+<text x="345.0" y="1328.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">混合特征 M[j]：同一输入</text>
+</g>
+<g><rect x="70" y="1370" width="240" height="80" rx="12" fill="#f2edfc" stroke="#c1afe3" stroke-width="1.5"/>
+<text x="190.0" y="1403.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">合并 8 头 / 恢复空间</text>
+<text x="190.0" y="1428.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">Zimg：B × 64 × H × W</text>
+</g>
+<g id="gi-first-residual-add"><circle cx="390" cy="1410" r="22" fill="white" stroke="#51647a" stroke-width="2.2"/>
+<text x="390" y="1419" font-size="30" font-weight="700" text-anchor="middle" style="fill:#23344b">+</text>
+</g>
+<polyline points="310,1410 368,1410" class="wire" marker-end="url(#arrow)"/>
+<polyline points="345,1350 345,1358 390,1358 390,1388" class="wire" marker-end="url(#arrow)" id="gi-first-residual"/>
+<g><rect x="500" y="1370" width="430" height="80" rx="12" fill="#fff3e2" stroke="#ddbe90" stroke-width="1.5"/>
+<text x="715.0" y="1391.0" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">输出投影</text>
+<text x="715.0" y="1416.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">1×1 卷积 → GELU → 1×1 卷积</text>
+<text x="715.0" y="1441.0" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">64 → 64 → 64</text>
+</g>
+<polyline points="412,1410 500,1410" class="wire" marker-end="url(#arrow)"/>
+<g id="gi-second-residual-add"><circle cx="1080" cy="1410" r="22" fill="white" stroke="#51647a" stroke-width="2.2"/>
+<text x="1080" y="1419" font-size="30" font-weight="700" text-anchor="middle" style="fill:#23344b">+</text>
+</g>
+<polyline points="930,1410 1058,1410" class="wire" marker-end="url(#arrow)"/>
+<polyline points="510,1322 1080,1322 1080,1388" class="wire" marker-end="url(#arrow)" id="gi-second-residual"/>
+<g><rect x="1170" y="1370" width="240" height="80" rx="12" fill="#fff3e2" stroke="#ddbe90" stroke-width="1.5"/>
+<text x="1290.0" y="1403.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">物理引导积分输出</text>
+<text x="1290.0" y="1428.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">GI[j](M[j], G[j])</text>
+</g>
+<polyline points="1102,1410 1170,1410" class="wire" marker-end="url(#arrow)"/>
+<g id="stage-residual-add"><circle cx="1510" cy="1410" r="22" fill="white" stroke="#51647a" stroke-width="2.2"/>
+<text x="1510" y="1419" font-size="30" font-weight="700" text-anchor="middle" style="fill:#23344b">+</text>
+</g>
+<polyline points="1410,1410 1488,1410" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="1570" y="1370" width="160" height="80" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="1650.0" y="1403.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">阶段输出 F[j]</text>
+<text x="1650.0" y="1428.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">B × 64 × H × W</text>
+</g>
+<polyline points="1532,1410 1570,1410" class="wire" marker-end="url(#arrow)"/>
+<g><rect x="1390" y="1520" width="240" height="60" rx="12" fill="#edf3ff" stroke="#b1c5eb" stroke-width="1.5"/>
+<text x="1510.0" y="1543.5" font-size="21" font-weight="700" text-anchor="middle" style="fill:#23344b">阶段输入 F[j−1]</text>
+<text x="1510.0" y="1568.5" font-size="17" font-weight="400" text-anchor="middle" style="fill:#23344b">此残差位于 GI 外部</text>
+</g>
+<polyline points="1510,1520 1510,1432" class="wire" marker-end="url(#arrow)" id="outer-stage-residual"/>
+<text x="700" y="1525" font-size="22" font-weight="700" text-anchor="middle" style="fill:#23344b">T = Zimg + M[j]</text>
+<text x="700" y="1570" font-size="22" font-weight="700" text-anchor="middle" style="fill:#23344b">GI[j] = Conv₂(GELU(Conv₁(T))) + M[j]</text>
+<text x="1510" y="1623" font-size="20" font-weight="700" text-anchor="middle" style="fill:#23344b">F[j] = GI[j] + F[j−1]</text>
+<text x="70" y="1628" font-size="17" font-weight="400" text-anchor="start" style="fill:#61738a">⊕ 表示逐元素相加；M[j] 与阶段输入 F[j−1] 是不同张量。</text>
+<text x="40" y="1704" font-size="18" font-weight="400" text-anchor="start" style="fill:#23344b">Kₙ、Vₙ 为归一化结果：LastDimLayerNorm，分母 std + 1e-5；Q′ 不经过该归一化。</text>
+<text x="40" y="1740" font-size="18" font-weight="400" text-anchor="start" style="fill:#23344b">示例：H = W = 64 时 N = 4096；Q、K、V 为 B × 8 × 4096 × 8，全局矩阵 A 为 B × 8 × 8 × 8。</text>
+<text x="40" y="1776" font-size="16" font-weight="400" text-anchor="start" style="fill:#61738a">Source: CAVE/Model/PhysicsGalerkin.py::PhysicsGuidedGalerkin · CAVE/Model/ObservationGrid.py::forward</text>
+</svg>

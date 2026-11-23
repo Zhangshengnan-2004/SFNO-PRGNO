@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1240" viewBox="0 0 1600 1240"><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#53677e"/></marker></defs><rect width="1600" height="1240" fill="#f6f8fc"/><style>text{font-family:Arial,'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#21344d} .title{font-size:30px;font-weight:700}.sub{font-size:16px;fill:#64758b}.label{font-size:18px;font-weight:600}.small{font-size:15px}</style>
+<text x="55" y="53" class="title" text-anchor="start">SFNO–PRGNO V3</text>
+<text x="55" y="82" class="sub" text-anchor="start">Observation-grid-aware regional mixing · Gated deformable correction · Physics-guided Galerkin</text>
+<rect x="35" y="108" width="1530" height="300" rx="14" fill="#ffffff" stroke="#d7dfec" stroke-width="1.5"/>
+<text x="58" y="141" class="label" text-anchor="start">A  Overall architecture</text>
+<rect x="60" y="172" width="150" height="65" rx="14" fill="#eaf1ff" stroke="#a7bce8" stroke-width="1.5"/>
+<text x="135.0" y="198.5" class="label" text-anchor="middle">LR-HSI</text>
+<text x="135.0" y="222.5" class="small" text-anchor="middle">31 × h × w</text>
+<rect x="60" y="285" width="150" height="65" rx="14" fill="#eaf1ff" stroke="#a7bce8" stroke-width="1.5"/>
+<text x="135.0" y="311.5" class="label" text-anchor="middle">HR-RGB</text>
+<text x="135.0" y="335.5" class="small" text-anchor="middle">3 × H × W</text>
+<rect x="245" y="172" width="150" height="65" rx="14" fill="#eaf1ff" stroke="#a7bce8" stroke-width="1.5"/>
+<text x="320.0" y="198.5" class="label" text-anchor="middle">Bicubic ↑</text>
+<text x="320.0" y="222.5" class="small" text-anchor="middle">31 × H × W</text>
+<rect x="435" y="228" width="100" height="65" rx="14" fill="#eaf1ff" stroke="#a7bce8" stroke-width="1.5"/>
+<text x="485.0" y="254.5" class="label" text-anchor="middle">Concat</text>
+<text x="485.0" y="278.5" class="small" text-anchor="middle">34 ch</text>
+<rect x="570" y="228" width="170" height="65" rx="14" fill="#eaf1ff" stroke="#a7bce8" stroke-width="1.5"/>
+<text x="655.0" y="254.5" class="label" text-anchor="middle">Vector Attention ×3</text>
+<text x="655.0" y="278.5" class="small" text-anchor="middle">34 ch · 3×3 neighbors</text>
+<rect x="775" y="228" width="130" height="65" rx="14" fill="#eaf1ff" stroke="#a7bce8" stroke-width="1.5"/>
+<text x="840.0" y="254.5" class="label" text-anchor="middle">1×1 Conv</text>
+<text x="840.0" y="278.5" class="small" text-anchor="middle">34 → 64</text>
+<rect x="945" y="228" width="125" height="65" rx="14" fill="#eaf1ff" stroke="#a7bce8" stroke-width="1.5"/>
+<text x="1007.5" y="254.5" class="label" text-anchor="middle">Stage 1</text>
+<text x="1007.5" y="278.5" class="small" text-anchor="middle">F₁ · 64 ch</text>
+<rect x="1100" y="228" width="125" height="65" rx="14" fill="#eaf1ff" stroke="#a7bce8" stroke-width="1.5"/>
+<text x="1162.5" y="254.5" class="label" text-anchor="middle">Stage 2</text>
+<text x="1162.5" y="278.5" class="small" text-anchor="middle">F₂ · 64 ch</text>
+<rect x="1255" y="228" width="125" height="65" rx="14" fill="#eaf1ff" stroke="#a7bce8" stroke-width="1.5"/>
+<text x="1317.5" y="254.5" class="label" text-anchor="middle">Stage 3</text>
+<text x="1317.5" y="278.5" class="small" text-anchor="middle">F₃ · 64 ch</text>
+<rect x="1410" y="228" width="130" height="65" rx="14" fill="#e8f5ef" stroke="#9bcab3" stroke-width="1.5"/>
+<text x="1475.0" y="254.5" class="label" text-anchor="middle">Reconstruct</text>
+<text x="1475.0" y="278.5" class="small" text-anchor="middle">256 → 31</text>
+<polyline points="210,204 245,204" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="395,204 415,204 415,250 435,250" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="210,318 415,318 415,275 435,275" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="535,260 570,260" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="740,260 775,260" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="905,260 945,260" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1070,260 1100,260" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1225,260 1255,260" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1380,260 1410,260" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="923" y="215" class="small" text-anchor="middle">F₀</text>
+<polyline points="920,260 920,335 1475,335 1475,293" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1190" y="358" class="small" text-anchor="middle">Concat [F₀, F₁, F₂, F₃] → 1×1 Conv + LeakyReLU</text>
+<polyline points="1007,293 1007,335" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1162,293 1162,335" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1317,293 1317,335" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="320,172 320,160 1510,160 1510,228" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="1160" y="183" class="small" text-anchor="middle">Global residual: + HSI_up → HR-HSI (31 × H × W)</text>
+<text x="60" y="389" class="sub" text-anchor="start">All backbone features F₀…F₃ stay at H × W. Three stages use separate mixing / GI weights.</text>
+<rect x="35" y="430" width="1530" height="225" rx="14" fill="#ffffff" stroke="#d7dfec" stroke-width="1.5"/>
+<text x="58" y="464" class="label" text-anchor="start">B  One fusion stage (repeated three times)</text>
+<rect x="65" y="500" width="150" height="65" rx="14" fill="#eaf1ff" stroke="#a7bce8" stroke-width="1.5"/>
+<text x="140.0" y="526.5" class="label" text-anchor="middle">Input Fₖ</text>
+<text x="140.0" y="550.5" class="small" text-anchor="middle">64 × H × W</text>
+<rect x="290" y="500" width="275" height="65" rx="14" fill="#f0ebff" stroke="#b8a4de" stroke-width="1.5"/>
+<text x="427.5" y="526.5" class="label" text-anchor="middle">Regional Deformable Mixing</text>
+<text x="427.5" y="550.5" class="small" text-anchor="middle">M(Fₖ)</text>
+<rect x="675" y="500" width="255" height="65" rx="14" fill="#fff2df" stroke="#d9bb89" stroke-width="1.5"/>
+<text x="802.5" y="526.5" class="label" text-anchor="middle">Physics-guided Galerkin</text>
+<text x="802.5" y="550.5" class="small" text-anchor="middle">8 heads · Q/K modulation</text>
+<rect x="1060" y="500" width="150" height="65" rx="14" fill="#eaf1ff" stroke="#a7bce8" stroke-width="1.5"/>
+<text x="1135.0" y="526.5" class="label" text-anchor="middle">Residual add</text>
+<text x="1135.0" y="550.5" class="small" text-anchor="middle">+ Fₖ</text>
+<rect x="1305" y="500" width="200" height="65" rx="14" fill="#eaf1ff" stroke="#a7bce8" stroke-width="1.5"/>
+<text x="1405.0" y="526.5" class="label" text-anchor="middle">Output Fₖ₊₁</text>
+<text x="1405.0" y="550.5" class="small" text-anchor="middle">64 × H × W</text>
+<polyline points="215,532 290,532" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="565,532 675,532" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="930,532 1060,532" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1210,532 1305,532" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="235,532 235,605 1135,605 1135,565" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="700" y="628" class="small" text-anchor="middle">Stage skip connection</text>
+<polyline points="803,655 803,565" fill="none" stroke="#b88640" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="960" y="594" class="small" text-anchor="middle">Gₖ from panel D</text>
+<rect x="35" y="678" width="850" height="505" rx="14" fill="#ffffff" stroke="#d7dfec" stroke-width="1.5"/>
+<text x="58" y="713" class="label" text-anchor="start">C  Regional Deformable Mixing</text>
+<rect x="65" y="740" width="470" height="54" rx="14" fill="#f0ebff" stroke="#b8a4de" stroke-width="1.5"/>
+<text x="300.0" y="773.0" class="label" text-anchor="middle">Regional branch: SpacingMDG</text>
+<rect x="65" y="815" width="110" height="72" rx="14" fill="#f7f4ff" stroke="#c8bae5" stroke-width="1.5"/>
+<text x="120.0" y="845.0" class="label" text-anchor="middle">HR grid</text>
+<text x="120.0" y="869.0" class="small" text-anchor="middle">H × W</text>
+<rect x="185" y="815" width="110" height="72" rx="14" fill="#f7f4ff" stroke="#c8bae5" stroke-width="1.5"/>
+<text x="240.0" y="845.0" class="label" text-anchor="middle">Middle grid</text>
+<text x="240.0" y="869.0" class="small" text-anchor="middle">2h × 2w*</text>
+<rect x="305" y="815" width="110" height="72" rx="14" fill="#f7f4ff" stroke="#c8bae5" stroke-width="1.5"/>
+<text x="360.0" y="845.0" class="label" text-anchor="middle">LR grid</text>
+<text x="360.0" y="869.0" class="small" text-anchor="middle">h × w</text>
+<rect x="425" y="815" width="110" height="72" rx="14" fill="#f7f4ff" stroke="#c8bae5" stroke-width="1.5"/>
+<text x="480.0" y="845.0" class="label" text-anchor="middle">Global</text>
+<text x="480.0" y="869.0" class="small" text-anchor="middle">≤8×8 tokens</text>
+<polyline points="300,794 300,803 120,803 120,815" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="240,803 240,815" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="360,803 360,815" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="300,803 480,803 480,815" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="300" y="912" class="small" text-anchor="middle">Local: DWConv 3×3 → GELU → Conv 1×1</text>
+<text x="300" y="935" class="small" text-anchor="middle">Global: pooled 4-head self-attention → resize</text>
+<rect x="65" y="955" width="470" height="62" rx="14" fill="#f0ebff" stroke="#b8a4de" stroke-width="1.5"/>
+<text x="300.0" y="980.0" class="label" text-anchor="middle">Spatial + channel gates → Softmax over 4 branches</text>
+<text x="300.0" y="1004.0" class="small" text-anchor="middle">Weighted sum → projection + residual → FFN + residual</text>
+<polyline points="120,887 120,899" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="240,887 240,899" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="360,887 360,899" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="480,887 480,899" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="565" y="740" width="290" height="277" rx="14" fill="#e7f5f5" stroke="#99c7c7" stroke-width="1.5"/>
+<text x="710.0" y="800.5" class="label" text-anchor="middle">Deformable branch</text>
+<text x="710.0" y="824.5" class="small" text-anchor="middle">GroupNorm + log(HR/LR) condition</text>
+<text x="710.0" y="848.5" class="small" text-anchor="middle">Predict 9 offsets + 9 weights</text>
+<text x="710.0" y="872.5" class="small" text-anchor="middle">3×3 lattice × actual HR/LR spacing</text>
+<text x="710.0" y="896.5" class="small" text-anchor="middle">Bounded offset: 0.5 × tanh(Δ)</text>
+<text x="710.0" y="920.5" class="small" text-anchor="middle">Bilinear grid_sample + Softmax weights</text>
+<text x="710.0" y="944.5" class="small" text-anchor="middle">Concat with local DWConv branch</text>
+<text x="710.0" y="968.5" class="small" text-anchor="middle">1×1 projection + residual + FFN</text>
+<rect x="65" y="1053" width="790" height="78" rx="14" fill="#ffffff" stroke="#b8a4de" stroke-width="1.5"/>
+<text x="460.0" y="1086.0" class="label" text-anchor="middle">M(F) = Regional(F) + sigmoid(α) · [Deformable(F) − F]</text>
+<text x="460.0" y="1110.0" class="small" text-anchor="middle">One learned scalar α per stage; α initialized to −3 (weight ≈ 0.0474)</text>
+<polyline points="300,1017 300,1053" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="710,1017 710,1053" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="65" y="1158" class="small" text-anchor="start">* Capped at HR size. ×4 grids: {HR, HR/2, HR/4}; ×8: {HR, HR/4, HR/8}</text>
+<rect x="905" y="678" width="660" height="505" rx="14" fill="#ffffff" stroke="#d7dfec" stroke-width="1.5"/>
+<text x="928" y="713" class="label" text-anchor="start">D  Shared physics guidance</text>
+<rect x="935" y="740" width="600" height="56" rx="14" fill="#fff2df" stroke="#d9bb89" stroke-width="1.5"/>
+<text x="1235.0" y="774.0" class="label" text-anchor="middle">Current estimate: X̂ₖ = HSI_up + Conv₆₄→₃₁(Fₖ)</text>
+<rect x="935" y="825" width="285" height="83" rx="14" fill="#fff8ed" stroke="#dfc69f" stroke-width="1.5"/>
+<text x="1077.5" y="848.5" class="label" text-anchor="middle">Spatial residual</text>
+<text x="1077.5" y="872.5" class="small" text-anchor="middle">rₛ = LR-HSI − D(X̂ₖ)</text>
+<text x="1077.5" y="896.5" class="small" text-anchor="middle">D: dynamic Gaussian blur + sampling</text>
+<rect x="1250" y="825" width="285" height="83" rx="14" fill="#fff8ed" stroke="#dfc69f" stroke-width="1.5"/>
+<text x="1392.5" y="848.5" class="label" text-anchor="middle">Spectral residual</text>
+<text x="1392.5" y="872.5" class="small" text-anchor="middle">rᵣ = HR-RGB − R(X̂ₖ)</text>
+<text x="1392.5" y="896.5" class="small" text-anchor="middle">R: fixed fitted 3×31 response</text>
+<polyline points="1080,796 1080,825" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1390,796 1390,825" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="935" y="940" width="600" height="63" rx="14" fill="#fff2df" stroke="#d9bb89" stroke-width="1.5"/>
+<text x="1235.0" y="965.5" class="label" text-anchor="middle">Adjoint backprojection + 1×1 lift</text>
+<text x="1235.0" y="989.5" class="small" text-anchor="middle">Gₖ = Conv₃₁→₆₄ [Dᵀ(rₛ) + Rᵀ(rᵣ)]</text>
+<polyline points="1080,908 1080,940" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1390,908 1390,940" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="935" y="1035" width="600" height="79" rx="14" fill="#fff2df" stroke="#d9bb89" stroke-width="1.5"/>
+<text x="1235.0" y="1056.5" class="label" text-anchor="middle">Galerkin: Q′ = Q + ΔQ(Gₖ),  K′ = K + ΔK(Gₖ)</text>
+<text x="1235.0" y="1080.5" class="small" text-anchor="middle">Kernel = Norm(K′)ᵀ Norm(V) / (H·W)</text>
+<text x="1235.0" y="1104.5" class="small" text-anchor="middle">Apply Q′ · Kernel → output projections + residuals</text>
+<polyline points="1235,1003 1235,1035" fill="none" stroke="#53677e" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="935" y="1145" class="small" text-anchor="start">Reconstruction head and physics module are shared across stages.</text>
+<text x="935" y="1168" class="small" text-anchor="start">Current e600 experiment: spatial + spectral residuals enabled.</text>
+<text x="55" y="1217" class="sub" text-anchor="start">Source: Model/SFNO_PRGNO_V3.py · ObservationGrid.py · SpacingDeformableSampling.py · FusionBackbone.py · PhysicsGalerkin.py</text>
+</svg>

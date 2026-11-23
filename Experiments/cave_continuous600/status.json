@@ -1,0 +1,23 @@
+{
+  "phase": "complete",
+  "dataset": "cave",
+  "models": [
+    "sfno",
+    "v3_stage3"
+  ],
+  "train_seeds": [
+    42,
+    43,
+    44
+  ],
+  "test_seed": 1,
+  "epochs": 600,
+  "train_sf": 4,
+  "test_scales": [
+    4,
+    8
+  ],
+  "completed_experiments": 6,
+  "completed_reports": 12,
+  "migrated_at": "2026-11-13T22:14:43.674398+08:00"
+}

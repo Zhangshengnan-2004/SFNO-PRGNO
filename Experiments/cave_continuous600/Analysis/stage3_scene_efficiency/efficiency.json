@@ -1,0 +1,127 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3060 Ti",
+  "torch": "2.6.0+cu126",
+  "batch": 1,
+  "HR_size": [
+    256,
+    256
+  ],
+  "precision": "FP32, TF32 disabled, no autocast",
+  "mode": "eval + inference_mode",
+  "warmup": 10,
+  "timed_calls": 30,
+  "rounds": 3,
+  "threads": 4,
+  "includes": "model forward only; no image I/O, no host-device transfer",
+  "caveat": "Synthetic inputs, one device and size; wall median includes dispatch and synchronization. Forward-used params counted via gradient presence on CPU x4 probe; registered disabled branches are not removed.",
+  "results": [
+    {
+      "model": "baseline",
+      "sf": 4,
+      "registered_params": 244645,
+      "forward_used_params": 244645,
+      "cuda_median_ms": 83.51795196533203,
+      "cuda_mean_ms": 83.55806503295898,
+      "cuda_std_ms": 0.1404944649786818,
+      "round_medians_ms": [
+        83.45996856689453,
+        83.44934463500977,
+        83.71438217163086
+      ],
+      "synchronized_wall_median_ms": 83.52954359725118,
+      "peak_allocated_MiB": 605.064453125,
+      "incremental_peak_MiB": 594.75,
+      "checkpoint": "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/last.pth"
+    },
+    {
+      "model": "baseline",
+      "sf": 8,
+      "registered_params": 244645,
+      "forward_used_params": 244645,
+      "cuda_median_ms": 83.67974472045898,
+      "cuda_mean_ms": 83.6797253926595,
+      "cuda_std_ms": 0.04517433020128441,
+      "round_medians_ms": [
+        83.68281936645508,
+        83.68742370605469,
+        83.67718505859375
+      ],
+      "synchronized_wall_median_ms": 83.69081886485219,
+      "peak_allocated_MiB": 604.701171875,
+      "incremental_peak_MiB": 594.75,
+      "checkpoint": "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/baseline_seed42/last.pth"
+    },
+    {
+      "model": "full_v3",
+      "sf": 4,
+      "registered_params": 614036,
+      "forward_used_params": 614036,
+      "cuda_median_ms": 139.23896026611328,
+      "cuda_mean_ms": 139.23861440022787,
+      "cuda_std_ms": 0.07051139834396045,
+      "round_medians_ms": [
+        139.23896026611328,
+        139.2327651977539,
+        139.25426483154297
+      ],
+      "synchronized_wall_median_ms": 139.24282090738416,
+      "peak_allocated_MiB": 607.18701171875,
+      "incremental_peak_MiB": 594.75,
+      "checkpoint": "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/full_seed42/last.pth"
+    },
+    {
+      "model": "full_v3",
+      "sf": 8,
+      "registered_params": 614036,
+      "forward_used_params": 614036,
+      "cuda_median_ms": 138.69356536865234,
+      "cuda_mean_ms": 138.70403340657552,
+      "cuda_std_ms": 0.10048323639151181,
+      "round_medians_ms": [
+        138.67571258544922,
+        138.64959716796875,
+        138.7222671508789
+      ],
+      "synchronized_wall_median_ms": 138.698625494726,
+      "peak_allocated_MiB": 607.37060546875,
+      "incremental_peak_MiB": 594.75,
+      "checkpoint": "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/full_seed42/last.pth"
+    },
+    {
+      "model": "stage3",
+      "sf": 4,
+      "registered_params": 614036,
+      "forward_used_params": 482908,
+      "cuda_median_ms": 115.97260665893555,
+      "cuda_mean_ms": 116.07397715250652,
+      "cuda_std_ms": 0.21983236109142698,
+      "round_medians_ms": [
+        115.92908477783203,
+        115.92140579223633,
+        116.3166732788086
+      ],
+      "synchronized_wall_median_ms": 115.9792325925082,
+      "peak_allocated_MiB": 607.18701171875,
+      "incremental_peak_MiB": 594.75,
+      "checkpoint": "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/last.pth"
+    },
+    {
+      "model": "stage3",
+      "sf": 8,
+      "registered_params": 614036,
+      "forward_used_params": 482908,
+      "cuda_median_ms": 115.75393676757812,
+      "cuda_mean_ms": 115.7615737915039,
+      "cuda_std_ms": 0.09772002039205038,
+      "round_medians_ms": [
+        115.69868469238281,
+        115.79019165039062,
+        115.81491088867188
+      ],
+      "synchronized_wall_median_ms": 115.76068145222962,
+      "peak_allocated_MiB": 607.37060546875,
+      "incremental_peak_MiB": 594.75,
+      "checkpoint": "/home/zsn/projects/SFNO-PRGNO/CAVE/Checkpoint/v3_balanced_scales/deform_stage3_seed42/last.pth"
+    }
+  ]
+}

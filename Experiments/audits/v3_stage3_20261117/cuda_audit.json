@@ -1,0 +1,163 @@
+{
+  "frozen_protocol_and_source_hashes": "passed",
+  "protocol_sha256": "2674e05528afff7cb4f3c507637ac378a6438098e2948c2d5123d386453cb137",
+  "runtime": {
+    "device": "cuda",
+    "torch": "2.6.0+cu126",
+    "spatial": [
+      {
+        "sf": 4,
+        "hr": [
+          32,
+          40
+        ],
+        "forward_max_error": 3.3306690738754696e-16,
+        "adjoint_dot_error": 2.220446049250313e-16,
+        "inference_cache_then_backward": true
+      },
+      {
+        "sf": 4,
+        "hr": [
+          64,
+          64
+        ],
+        "forward_max_error": 3.3306690738754696e-16,
+        "adjoint_dot_error": 3.1086244689504383e-15,
+        "inference_cache_then_backward": true
+      },
+      {
+        "sf": 8,
+        "hr": [
+          32,
+          40
+        ],
+        "forward_max_error": 1.6653345369377348e-16,
+        "adjoint_dot_error": 0.0,
+        "inference_cache_then_backward": true
+      },
+      {
+        "sf": 8,
+        "hr": [
+          64,
+          64
+        ],
+        "forward_max_error": 2.220446049250313e-16,
+        "adjoint_dot_error": 8.881784197001252e-16,
+        "inference_cache_then_backward": true
+      }
+    ],
+    "datasets": {
+      "pavia": {
+        "scales": [
+          {
+            "sf": 4,
+            "shape": [
+              1,
+              102,
+              16,
+              24
+            ],
+            "calls": {
+              "1.regional": 1,
+              "1.GI": 1,
+              "2.regional": 1,
+              "2.GI": 1,
+              "3.regional": 1,
+              "3.deformable": 1,
+              "3.GI": 1
+            }
+          },
+          {
+            "sf": 8,
+            "shape": [
+              1,
+              102,
+              16,
+              24
+            ],
+            "calls": {
+              "1.regional": 1,
+              "1.GI": 1,
+              "2.regional": 1,
+              "2.GI": 1,
+              "3.regional": 1,
+              "3.deformable": 1,
+              "3.GI": 1
+            }
+          }
+        ],
+        "backward_finite": true,
+        "stage_gradients": {
+          "1.offset": null,
+          "1.sampling_weight": null,
+          "1.physics_qk": 0.0033660628832876682,
+          "2.offset": null,
+          "2.sampling_weight": null,
+          "2.physics_qk": 0.0017528447788208723,
+          "3.offset": 0.0003344722499605268,
+          "3.sampling_weight": 0.00014315248699858785,
+          "3.physics_qk": 0.0012288133148103952
+        },
+        "gradient_accumulation_relative_l2": 5.261875808790944e-07,
+        "masked_l1_matches_manual": true,
+        "chunked_vector_attention_max_error": 4.76837158203125e-07
+      },
+      "chikusei": {
+        "scales": [
+          {
+            "sf": 4,
+            "shape": [
+              1,
+              128,
+              16,
+              24
+            ],
+            "calls": {
+              "1.regional": 1,
+              "1.GI": 1,
+              "2.regional": 1,
+              "2.GI": 1,
+              "3.regional": 1,
+              "3.deformable": 1,
+              "3.GI": 1
+            }
+          },
+          {
+            "sf": 8,
+            "shape": [
+              1,
+              128,
+              16,
+              24
+            ],
+            "calls": {
+              "1.regional": 1,
+              "1.GI": 1,
+              "2.regional": 1,
+              "2.GI": 1,
+              "3.regional": 1,
+              "3.deformable": 1,
+              "3.GI": 1
+            }
+          }
+        ],
+        "backward_finite": true,
+        "stage_gradients": {
+          "1.offset": null,
+          "1.sampling_weight": null,
+          "1.physics_qk": 0.006724782288074493,
+          "2.offset": null,
+          "2.sampling_weight": null,
+          "2.physics_qk": 0.004770469386130571,
+          "3.offset": 0.0039062160067260265,
+          "3.sampling_weight": 0.0013788066571578383,
+          "3.physics_qk": 0.005862942896783352
+        },
+        "gradient_accumulation_relative_l2": 4.5749109151027487e-07,
+        "masked_l1_matches_manual": true,
+        "chunked_vector_attention_max_error": 4.76837158203125e-07
+      }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Ti"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "phase": "waiting_for_paper_candidate_validation",
+  "pid": 601682,
+  "updated_at": "2026-11-11T10:03:22.177540+08:00",
+  "job": "pavia_seed42",
+  "output": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_corrected_20261110/Checkpoint/pavia_sfno_x4_seed42",
+  "completed_jobs": 0,
+  "total_jobs": 6,
+  "next_experiment": "/home/zsn/projects/SFNO-PRGNO/Experiments/sfno_paper_guarded_20261111",
+  "stopped_pids": [
+    601682,
+    601685
+  ],
+  "reason": "用户要求其余训练参数对齐论文；保留旧版，独立候选验收后切换",
+  "last_saved_epoch": 15
+}

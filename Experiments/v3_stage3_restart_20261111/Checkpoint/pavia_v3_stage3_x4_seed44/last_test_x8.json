@@ -1,0 +1,109 @@
+{
+  "protocol": "v3_stage3_matched_cachefix_v2_20261112",
+  "protocol_sha256": "2674e05528afff7cb4f3c507637ac378a6438098e2948c2d5123d386453cb137",
+  "checkpoint": "/home/zsn/projects/SFNO-PRGNO/Experiments/v3_stage3_restart_20261111/Checkpoint/pavia_v3_stage3_x4_seed44/last.pth",
+  "checkpoint_sha256": "ee85ec9af8d9ccf3597728ef4a8f7b45909a92732100d7d74b2fc1fe88e6c58d",
+  "epoch": 600,
+  "dataset": "pavia",
+  "seed": 44,
+  "model": "v3_stage3",
+  "source_sf": 4,
+  "sf": 8,
+  "test_seed": 1,
+  "ablation": "deform_stage3",
+  "rules": {
+    "peak": 1.0,
+    "psnr": "mean of per-band PSNR; MSE floor 1e-12",
+    "mask": "sensor-valid AND GT L2 norm > 1e-8; independent of prediction",
+    "sam": "degrees; zero prediction at valid GT => 90 degrees",
+    "ergas": "100/s * sqrt(mean(MSE_band / max(mean_GT_band^2,1e-12)))",
+    "prediction": "clamp [0,1]; unclipped results also reported",
+    "aggregation": "arithmetic mean of patch metrics; not training-seed std"
+  },
+  "patches": [
+    {
+      "index": 1,
+      "y": 712,
+      "x": 0,
+      "size": 192,
+      "valid_pixels": 36864,
+      "total_pixels": 36864,
+      "psnr": 43.246525144136044,
+      "sam_degrees": 2.941535376563877,
+      "ergas": 0.8711205617014464,
+      "bicubic": {
+        "psnr": 25.05504414009022,
+        "sam_degrees": 8.026828401757976,
+        "ergas": 4.833473357370429
+      },
+      "ergas_fixed4_diagnostic": 1.7422411234028927
+    },
+    {
+      "index": 2,
+      "y": 712,
+      "x": 192,
+      "size": 192,
+      "valid_pixels": 36864,
+      "total_pixels": 36864,
+      "psnr": 45.389655491807545,
+      "sam_degrees": 3.4446438990772412,
+      "ergas": 0.8336775331767197,
+      "bicubic": {
+        "psnr": 25.729447450104242,
+        "sam_degrees": 8.651261400157743,
+        "ergas": 5.056369366020921
+      },
+      "ergas_fixed4_diagnostic": 1.6673550663534393
+    },
+    {
+      "index": 3,
+      "y": 904,
+      "x": 0,
+      "size": 192,
+      "valid_pixels": 36864,
+      "total_pixels": 36864,
+      "psnr": 44.29741365644824,
+      "sam_degrees": 3.1179358524636305,
+      "ergas": 0.8267252579101964,
+      "bicubic": {
+        "psnr": 26.342632451943423,
+        "sam_degrees": 6.7563689887682195,
+        "ergas": 4.596875917198133
+      },
+      "ergas_fixed4_diagnostic": 1.6534505158203927
+    },
+    {
+      "index": 4,
+      "y": 904,
+      "x": 192,
+      "size": 192,
+      "valid_pixels": 36864,
+      "total_pixels": 36864,
+      "psnr": 43.74123352012775,
+      "sam_degrees": 2.9431518573286635,
+      "ergas": 0.7723059316605018,
+      "bicubic": {
+        "psnr": 25.11265681888202,
+        "sam_degrees": 7.634664647251251,
+        "ergas": 4.609339900248663
+      },
+      "ergas_fixed4_diagnostic": 1.5446118633210035
+    }
+  ],
+  "mean": {
+    "psnr": 44.1687069531299,
+    "sam_degrees": 3.111816746358353,
+    "ergas": 0.8259573211122161
+  },
+  "bicubic_mean": {
+    "psnr": 25.559945215254977,
+    "sam_degrees": 7.767280859483797,
+    "ergas": 4.774014635209537
+  },
+  "comparison": {
+    "psnr_gain": 18.60876173787492,
+    "sam_reduction": 4.655464113125444,
+    "ergas_reduction": 3.9480573140973205
+  },
+  "better_than_bicubic_all_metrics": true
+}
